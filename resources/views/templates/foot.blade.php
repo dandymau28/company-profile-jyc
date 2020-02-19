@@ -1,0 +1,1 @@
+<script src="{{ asset('materialize') }}/js/materialize.min.js"></script>

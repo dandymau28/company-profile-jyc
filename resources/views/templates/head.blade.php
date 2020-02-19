@@ -1,0 +1,1 @@
+<link rel="stylesheet" href="{{ asset('materialize') }}/css/materialize.min.css">
