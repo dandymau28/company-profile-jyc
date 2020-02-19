@@ -12,5 +12,13 @@
 */
 
 Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/Profile', function () {
+    return view('Profile');
+});
+
+Route::get('/beranda', function () {
     return view('beranda');
 })->name('beranda');
