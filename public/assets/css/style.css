@@ -41,6 +41,11 @@ h2.center-align {
     height: auto;
 }
 
+.nav-item.active {
+    text-decoration: underline;
+    text-decoration-color: whitesmoke;
+}
+
 
 /* NAVBAR */
 

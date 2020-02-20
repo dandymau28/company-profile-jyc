@@ -8,6 +8,9 @@
 
 <!-- Font Website -->
 <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+
+{{-- Fotorama untuk Galeri --}}
 <link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
 <!-- My Style -->
 <link rel="stylesheet" href="{{ asset('assets') }}/css/style.css">
+<link rel="icon" type="image/png" href="{{ asset('assets') }}/img/circle-cropped.png" />
