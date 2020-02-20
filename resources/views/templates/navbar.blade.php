@@ -1,7 +1,7 @@
-<nav class="navbar-fixed">
+<nav class="navbar-fixed red darken-4">
     <div class="container">
         <div class="nav-wrapper">
-            <a href="#!" class="brand-logo">Logo</a>
+            <a href="{{route('beranda')}}" class="brand-logo"><img class="brand-logo" src="{{asset('assets/img/logo-jyc.png')}}" alt="Logo"></a>
             <a href="#" data-target="mobile-dev" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="{{route('beranda')}}">Beranda</a></li>
