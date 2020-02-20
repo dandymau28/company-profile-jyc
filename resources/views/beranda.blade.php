@@ -8,8 +8,7 @@
 </head>
 <body>
     @include('templates.navbar')
-    <h1>WELCOME</h1>
     
 </body>
-@include('templates.foot')
+    @include('templates.foot')
 </html>
