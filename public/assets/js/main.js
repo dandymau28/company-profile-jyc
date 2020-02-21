@@ -11,3 +11,5 @@ M.Slider.init(slider, {
     duration: 400,
     interval: 3000
 });
+
+$('.carousel').carousel()
