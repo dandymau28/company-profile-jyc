@@ -3,17 +3,31 @@ body {
     font-family: 'Muli', sans-serif;
 }
 
-/**** NAVBAR ****/
-.brand-logo {
-    max-width: 65px;
-    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.8));
+/* Template Warna*/
+.putih-kuning {
+    background-color: #fffff6;
 }
+
+.hitam-abu {
+    background-color: #707070;
+}
+
+.merah {
+    background-color: #C12821;
+}
+
+/**** NAVBAR ****/
+
+
+
 
 h2.center-align {
     border-bottom: 2px solid #b71c1c;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
+
+/* BERITA PAGE */
 .judul-berita.my-0 {
     margin: 0px !important;
     font-weight: bold;
@@ -45,15 +59,3 @@ h2.center-align {
     text-decoration: underline;
     text-decoration-color: whitesmoke;
 }
-
-
-/* NAVBAR */
-
-
-
-
-
-/* Utilities */
-/* .putih-kuning{
-    background-color: #fffff6;
-} */
