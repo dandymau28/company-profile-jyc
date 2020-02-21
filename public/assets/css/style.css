@@ -59,3 +59,25 @@ h2.center-align {
     text-decoration: underline;
     text-decoration-color: whitesmoke;
 }
+
+
+/* NAVBAR */
+
+/* Carousel static */
+
+.btn-min-block {
+    min-width: 170px;
+    line-height: 26px;
+}
+
+.btn-clear {
+    color: #FFF;
+    background-color: transparent;
+    border-color: #FFF;
+    margin-right: 15px;
+}
+
+.btn-clear:hover {
+    color: #000;
+    background-color: #FFF;
+}
