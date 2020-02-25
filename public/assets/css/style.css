@@ -1,6 +1,7 @@
 /* Font Family */
 body {
     font-family: 'Muli', sans-serif;
+    background-color: #fffff6;
 }
 
 /* Template Warna*/
@@ -16,18 +17,41 @@ body {
     background-color: #C12821;
 }
 
+/* ====================================== */
 
-/**** NAVBAR ****/
-.navbar {
-    height: 70px;
-    background-color: rgba(255, 255, 246, 0.8);
-    position: relative;
-    z-index: 1;
+/* DEKSTOP VERSION */
+@media (min-width: 992px) {
+
+    /* Navbar */
+    .nav-link:hover::after {
+        content: '';
+        display: block;
+        border-bottom: 1px solid #C12821;
+        padding-bottom: 5px;
+        margin-bottom: -8px;
+        color: #C12821;
+    }
+
+    /* Beranda */
+    .carousel {
+        margin-top: -85px;
+        z-index: -1;
+    }
 
 }
 
+/* ====================================== */
+
+
+/**** NAVBAR ****/
+.navbar {
+    background-color: #fffff6;
+    font-weight: normal;
+    opacity: 90%;
+}
+
 .navbar-brand img {
-    width: 70px;
+    width: 60px;
 }
 
 .nav-link {
@@ -35,12 +59,49 @@ body {
     color: #C12821 !important;
 }
 
-/* Carousel */
-.carousel {
-    margin-top: -100px;
+.navbar-toggler {
+    background-color: #C12821;
+}
+
+.navbar-toggler-icon {
+    color: #707070 !important;
 }
 
 
+
+/* ====================================== */
+
+
+/* BERANDA PAGE */
+/* Carousel */
+.carousel {
+    z-index: -1;
+}
+
+/* Card Berita */
+.berita {
+    margin-bottom: 200px;
+    margin-top: 100px;
+}
+
+h3 {
+    color: #707070;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 10px;
+    text-align: center;
+    border-bottom: 1.5px solid #C12821;
+    width: 20%;
+
+}
+
+.card {
+    margin-top: 50px;
+    margin-right: 90px;
+    margin-left: 90px;
+}
+
+/* ====================================== */
 
 
 h2.center-align {
