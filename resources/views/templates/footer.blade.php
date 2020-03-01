@@ -1,9 +1,9 @@
-<footer class="page-footer red darken-4">
+<footer class="page-footer merah py-3">
     <div class="container">
         <div class="row">
             <div class="col s12 m3 l3">
                 <h5 class="white-text center-align">Kegiatan</h5>
-                <div class="link-kegiatan .show-on-small center-align" style="display:none;">
+                <div class="link-kegiatan .d-none .d-sm-block .d-md-none center-align" style="display:none;">
                     <a href="#">Latihan Rutin</a> <br>
                     <a href="#">Daftar Kompetisi</a> <br>
                     <a href="#">Jakarta National Choir Competition</a>
@@ -22,7 +22,7 @@
                 </h5>
             </div>
         </div>
-        <div class="row .show-on-medium-and-up">
+        <div class="row .d-sm-none .d-md-block">
             <div class="col s12 m3 l3 footer-border center-align">
                 <ul>
                     <li><a class="grey-text text-lighten-3" href="#!">Latihan Rutin</a></li>

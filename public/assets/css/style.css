@@ -14,7 +14,7 @@ body {
 }
 
 .merah {
-    background-color: #C12821;
+    background-color: #b71c1c;
 }
 
 /* ====================================== */
@@ -23,14 +23,14 @@ body {
 @media (min-width: 992px) {
 
     /* Navbar */
-    .nav-link:hover::after {
+    /* .nav-link:hover::after {
         content: '';
         display: block;
         border-bottom: 1px solid #C12821;
         padding-bottom: 5px;
         margin-bottom: -8px;
         color: #C12821;
-    }
+    } */
 
     /* Beranda */
     .carousel {
@@ -39,6 +39,12 @@ body {
     }
 
 }
+
+/* Mobile version */
+@media (min-width: 576px) {
+    /* Masalah backround untuk active dan hover */
+}
+
 
 /* ====================================== */
 
@@ -67,6 +73,35 @@ body {
     color: #707070 !important;
 }
 
+.nav-item a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border-bottom: 1px solid transparent;
+}
+
+.nav-link.active {
+    border-bottom: 1px solid #C12821 !important;
+}
+
+.nav-link:hover {
+    border-bottom: 1px solid #C12821 !important;
+}
+
+/* li.nav-item.active {
+    border-bottom: 1px solid tomato;
+    text-decoration: underline;
+    text-decoration-color: whitesmoke;
+}
+
+li.nav-item.active:hover {
+    text-decoration: underline;
+    text-decoration-color: whitesmoke;
+} */
+
 
 
 /* ====================================== */
@@ -79,10 +114,10 @@ body {
 }
 
 /* Card Berita */
-.berita {
+/* .berita {
     margin-bottom: 200px;
     margin-top: 100px;
-}
+} */
 
 h3 {
     color: #707070;
@@ -96,9 +131,8 @@ h3 {
 }
 
 .card {
-    margin-top: 50px;
-    margin-right: 90px;
-    margin-left: 90px;
+    /* margin: 20px 10px; */
+    padding: 20px 10px;
 }
 
 /* ====================================== */
@@ -138,10 +172,16 @@ h2.center-align {
     height: auto;
 }
 
-.nav-item.active {
+/* a.nav-link.active {
     text-decoration: underline;
     text-decoration-color: whitesmoke;
 }
+
+a.nav-link.active:hover {
+    text-decoration: underline;
+    text-decoration-color: whitesmoke;
+    border-bottom: whitesmoke;
+} */
 
 
 /* Carousel static */

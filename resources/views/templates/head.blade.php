@@ -1,6 +1,6 @@
 <!-- Boostrap 4.0 -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+<link rel="stylesheet" href="{{ asset('bootstrap-4.4.1-dist') }}/css/bootstrap.min.css">
+<link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
 <!-- Font Website -->
 <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
 
@@ -8,6 +8,4 @@
 <link rel="stylesheet" href="{{ asset('assets') }}/css/style.css">
 <link rel="icon" type="image/png" href="{{ asset('assets') }}/img/circle-cropped.png" />
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
