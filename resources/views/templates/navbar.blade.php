@@ -1,10 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container">
-<<<<<<< HEAD
         <a class="navbar-brand" href="{{route('beranda')}}"><img src="{{asset('assets/img/logo-jyc.png')}}" alt="img"></a>
-=======
     <a class="navbar-brand" href="{{route('beranda')}}"><img src="{{asset('assets/img/logo-jyc.png')}}" alt="img"></a>
->>>>>>> d5bb77af0a8d9f94ed38b9a0b168fd4b87dcf64b
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

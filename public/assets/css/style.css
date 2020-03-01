@@ -23,12 +23,9 @@ body {
 /* DEKSTOP VERSION */
 @media (min-width: 992px) {
 
-<<<<<<< HEAD
     /* Navbar */
     /* .nav-link:hover::after {
-=======
     .nav-link:hover::after {
->>>>>>> d5bb77af0a8d9f94ed38b9a0b168fd4b87dcf64b
         content: '';
         display: block;
         border-bottom: 1px solid #C12821;
