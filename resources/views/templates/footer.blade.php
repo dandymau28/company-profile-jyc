@@ -1,19 +1,19 @@
 <footer class="page-footer merah py-3">
-    <div class="container">
-        <div class="row">
-            <div class="col s12 m3 l3">
-                <h5 class="white-text center-align">Kegiatan</h5>
+    <div class="container-fluid">
+        <div class="row text-white">
+            <div class="col col-sm-12 col-md-3 col-lg-3">
+                <h5 class="text-white text-center">Kegiatan</h5>
                 <div class="link-kegiatan .d-none .d-sm-block .d-md-none center-align" style="display:none;">
                     <a href="#">Latihan Rutin</a> <br>
                     <a href="#">Daftar Kompetisi</a> <br>
                     <a href="#">Jakarta National Choir Competition</a>
                 </div>
             </div>
-            <div class="col s12 m3 l3">
-                <h5 class="white-text center-align">Berita</h5>
+            <div class="col col-sm-12 col-md-3 col-lg-3">
+                <h5 class="text-white text-center">Berita</h5>
             </div>
-            <div class="col s12 m6 l6">
-                <h5 class="white-text right-align">
+            <div class="col text-right col-sm-12 col-md-6 col-lg-5">
+                <h5 class="white-text">
                     <img class="social-links" src="{{asset('/assets/img/youtube.png')}}" alt="Youtbe">
                     <img class="social-links" src="{{asset('/assets/img/email-2.png')}}" alt="Youtbe">
                     <img class="social-links" src="{{asset('/assets/img/facebook.png')}}" alt="Youtbe">
@@ -24,29 +24,29 @@
         </div>
         <div class="row .d-sm-none .d-md-block">
             <div class="col s12 m3 l3 footer-border center-align">
-                <ul>
-                    <li><a class="grey-text text-lighten-3" href="#!">Latihan Rutin</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Daftar Kompetisi</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Jakarta National Choir Competition</a></li>
+                <ul class="list-unstyled d-block text-center text-white">
+                    <li><a class="text-white" href="#!">Latihan Rutin</a></li>
+                    <li><a class="text-white" href="#!">Daftar Kompetisi</a></li>
+                    <li><a class="text-white" href="#!">Jakarta National Choir Competition</a></li>
                 </ul>
             </div>
             <div class="col s12 m3 l3 footer-border center-align">
-                <ul>
-                    <li><a class="grey-text text-lighten-3" href="#!">Recent</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Galeri</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Video</a></li>
+                <ul class="list-unstyled d-block text-center text-white">
+                    <li><a class="text-white" href="#!">Recent</a></li>
+                    <li><a class="text-white" href="#!">Galeri</a></li>
+                    <li><a class="text-white" href="#!">Video</a></li>
                 </ul>
             </div>
             <div class="col s12 m3 l3 center-align">
                 <ul>
-                    <li><a class="grey-text text-lighten-3" href="#!">Prestasi</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!"> </a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!"> </a></li>
+                    <li><a class="text-white" href="#!">Prestasi</a></li>
+                    <li><a class="text-white" href="#!"> </a></li>
+                    <li><a class="text-white" href="#!"> </a></li>
                 </ul>
             </div>
             <div class="col s12 m3 l3 right-align">
                 <div class="row">
-                    <div class="col">
+                    <div class="col text-justify">
                         Jl. Jatinegara Timur No.55, RT.11/RW.3, Bali Mester, Kecamatan Jatinegara, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13310
                     </div>
                     {{-- <div class="col">
@@ -65,10 +65,14 @@
             </div> --}}
         </div>  
     </div>
-    <div class="footer-copyright">
-        <div class="container">
-            © 2014 Copyright Text
-            <a class="grey-text text-lighten-4 right" href="#!">Dev: Pengembang Nusantara</a>
+    <div class="container-fluid .bg-gradient-light">
+        <div class="row justify-content-between footer-copyright text-white">
+            <div class="col align-self-center">
+                <span>&copy; 2020. Hak Cipta</span>
+            </div>
+            <div class="col align-self-center">
+                <a class="text-white float-right" href="#!">Dev: Pengembang Nusantara</a>
+            </div>
         </div>
     </div>
 </footer>
