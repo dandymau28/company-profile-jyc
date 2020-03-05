@@ -214,6 +214,15 @@ li.nav-item.active:hover {
 
 /* PRESTASI PAGE */
 
+.prestasi h3 {
+    color: #707070;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 10px;
+    text-align: center;
+    border-bottom: 1.5px solid #C12821;
+    width: 287px;
+}
 
 
 h2.center-align {
@@ -222,7 +231,7 @@ h2.center-align {
 }
 
 /* BERITA PAGE */
-.judul-berita.my-0 {
+.judul- .my-0 {
     margin: 0px !important;
     font-weight: bold;
 }
