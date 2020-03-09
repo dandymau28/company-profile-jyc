@@ -7,121 +7,125 @@
     <title>JYC: {{$title}}</title>
 </head>
 <body>
+    {{-- Navbar --}}
     @include('templates.navbar')
-    <div class="slider">
-        <ul class="slides">
-            <li>
-                <img src="{{asset('assets/img/slider/1.png')}}">
-                <div class="caption left-align">
-                    <h3>This is our big Tagline!</h3>
-                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+
+    {{-- Slider Berita --}}
+    <div class="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{asset('assets/img/kegiatan/slide-1.png')}}" class="d-block w-100" alt="img">
                 </div>
-            </li>
-            <li>
-                <img src="{{asset('assets/img/slider/2.png')}}">
-                <div class="caption center-align">
-                    <h3>This is our big Tagline!</h3>
-                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                <div class="carousel-item">
+                    <img src="{{asset('assets/img/kegiatan/slide-2.png')}}" class="d-block w-100" alt="img">
                 </div>
-            </li>
-            <li>
-                <img src="{{asset('assets/img/slider/3.png')}}">
-                <div class="caption right-align">
-                    <h3>This is our big Tagline!</h3>
-                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                <div class="carousel-item">
+                    <img src="{{asset('assets/img/kegiatan/slide-3.png')}}" class="d-block w-100" alt="img">
                 </div>
-            </li>
-        </ul>
+            </div>
+        </div>
     </div>
 
-    <!-- Page Layout here -->
+    <!-- Konten -->
     <section class="brown lighten-5">
 
         <div class="container">
-            <div class="row align-items-center">
-                {{-- Berita --}}
-                <div class="col berita-border align-self-center s12 m8 l9">
-                    <div class="row align-items-center">
-                        <div class="col align-self-center">
-                            <h2 id="berita" class="center-align">Berita</h2>
+            {{-- Berita --}}
+            <div class="row my-5">
+                <div class="col-lg-8 mr-auto berita-h text-center pb-2 display-4">{{ __('Berita') }}</div>
+            </div>
+
+            <div class="row">
+                {{-- Card Berita --}}
+                <div class="col-lg-8 col-md-8 col-sm-12">
+                    <div class="row mb-4">
+                        <div class="col-6">
+                            <a href="http://">
+                                <img class="img-fluid" src="{{asset('assets/img/berita/1.png')}}" alt="Gambar Blog">
+                            </a>
                         </div>
-                    </div>
-                    {{-- Card Berita --}}
-                    <div class="row card-border">
-                        <div class="col s12 m6 l6">
-                            <img class="responsive-img" src="{{asset('assets/img/berita/3.png')}}" alt="">
-                        </div>
-                        <div class="col s12 m6 l6">
-                            <div class="judul-berita">
-                                <h5 class="my-0">Judul Berita</h5>
+                        <div class="col-6">
+                            <div class="judul-berita display-5  mb-1">
+                                <a href="http://">Pagelaran Konser JYC Mengagumkan!</a>
                             </div>
-                            <div class="waktu-berita">
-                                <i class="tiny material-icons">access_time</i>
-                                29 Agustus 2019
+                            <div class="tanggal-posting text-muted my-2">
+                                <i class="far fa-clock"></i>
+                                <span>29 Agustus 2019</span>
                             </div>
-                            <div class="isi-berita">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt placeat voluptate, rem deleniti quasi voluptatibus iure minus amet aliquam at laboriosam qui reprehenderit neque repudiandae. Corporis exercitationem velit vero eveniet! Voluptates nemo minima facilis dicta veniam. Officiis, iste perferendis expedita veritatis ab tenetur tempore incidunt dignissimos animi dolorum molestiae labore ullam dolor consequatur suscipit magnam. Nesciunt eaque neque illo labore! Eveniet, atque mollitia laboriosam pariatur dicta molestias quibusdam repellendus magni natus consequatur ab est doloremque, voluptatum nihil ipsa alias vel dolorem iure quod totam sapiente odit, dolorum qui sequi? In suscipit nihil quo iusto expedita pariatur temporibus earum, dolore consectetur?
+                            <div class="konten-berita text-justify">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. At ad velit harum reiciendis amet accusamus repellat, quae voluptas labore. Officiis, voluptatum quos voluptas eveniet odit tempora sapiente quaerat perspiciatis doloremque, laboriosam repellat incidunt accusamus cumque itaque. Eos, adipisci. Molestias....
                             </div>
-                        </div>
-                    </div>
-                    <div class="row card-border">
-                        <div class="col s12 m6 l6">
-                            <img class="responsive-img" src="{{asset('assets/img/berita/3.png')}}" alt="">
-                        </div>
-                        <div class="col s12 m6 l6">
-                            <div class="judul-berita">
-                                <h5 class="my-0">Judul Berita</h5>
-                            </div>
-                            <div class="waktu"></div>
                         </div>
                     </div>
 
-                    <div class="row card-border">
-                        <div class="col s12 m6 l6">
-                            <img class="responsive-img" src="{{asset('assets/img/berita/3.png')}}" alt="">
+                    <div class="row mb-4">
+                        <div class="col-6">
+                            <a href="http://">
+                                <img class="img-fluid" src="{{asset('assets/img/berita/1.png')}}" alt="Gambar Blog">
+                            </a>
                         </div>
-                        <div class="col s12 m6 l6">
-                            <div class="judul-berita">
-                                <h5 class="my-0">Judul Berita</h5>
+                        <div class="col-6">
+                            <div class="judul-berita display-5  mb-1">
+                                <a href="http://">Pagelaran Konser JYC Mengagumkan!</a>
+                            </div>
+                            <div class="tanggal-posting text-muted my-2">
+                                <i class="far fa-clock"></i>
+                                <span>29 Agustus 2019</span>
+                            </div>
+                            <div class="konten-berita text-justify">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. At ad velit harum reiciendis amet accusamus repellat, quae voluptas labore. Officiis, voluptatum quos voluptas eveniet odit tempora sapiente quaerat perspiciatis doloremque, laboriosam repellat incidunt accusamus cumque itaque. Eos, adipisci. Molestias....
                             </div>
                         </div>
                     </div>
-                    <ul class="pagination align-center">
-                        <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-                        <li class="active"><a href="#!">1</a></li>
-                        <li class="waves-effect"><a href="#!">2</a></li>
-                        <li class="waves-effect"><a href="#!">3</a></li>
-                        <li class="waves-effect"><a href="#!">4</a></li>
-                        <li class="waves-effect"><a href="#!">5</a></li>
-                        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-                      </ul>
+
+                    <div class="row mb-4">
+                        <div class="col-6">
+                            <a href="http://">
+                                <img class="img-fluid" src="{{asset('assets/img/berita/1.png')}}" alt="Gambar Blog">
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <div class="judul-berita display-5  mb-1">
+                                <a href="http://">Pagelaran Konser JYC Mengagumkan!</a>
+                            </div>
+                            <div class="tanggal-posting text-muted my-2">
+                                <i class="far fa-clock"></i>
+                                <span>29 Agustus 2019</span>
+                            </div>
+                            <div class="konten-berita text-justify">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. At ad velit harum reiciendis amet accusamus repellat, quae voluptas labore. Officiis, voluptatum quos voluptas eveniet odit tempora sapiente quaerat perspiciatis doloremque, laboriosam repellat incidunt accusamus cumque itaque. Eos, adipisci. Molestias....
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 {{-- Sidebar --}}
-                <div class="col align-self-center s12 m4 l3">
-                    <div class="row"></div>
+                <div class="col">
                     <div class="row">
                         <div class="col">
-                            <div id="search-berita" class="nav-wrapper">
-                                <form>
-                                  <div class="input-field">
-                                    <input id="search" type="search" required>
-                                    <label class="label-icon" for="search"></label>
-                                    <i class="material-icons">search</i>
-                                  </div>
-                                </form>
-                              </div>
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                               </span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
+
             {{-- Galeri --}}
-            <hr />
+            
             <section class="galeri">
                 <div class="row">
-                    <h4>Galeri</h4>
-                    <div class="input-field col s12 m3 l3">
+                    <div class="col-12 mb-2">
+                        <span class="display-4">Galeri</span>
+                    </div>
+                    <div class="input-field col-sm-12 col-md-3 col-lg-3">
                         <select>
                           <option value="" disabled selected>Pilih Kegiatan</option>
                           <option value="1">Option 1</option>
@@ -130,7 +134,7 @@
                         </select>
                         {{-- <label>Materialize Select</label> --}}
                     </div>
-                    <div class="col s12 m12 l12">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
                         <div class="fotorama" 
                             data-nav="thumbs"
                             data-transition="crossfade"
@@ -149,9 +153,9 @@
             {{-- Videos --}}
             <section class="videos">
                 <div class="row">
-                    <h4>Videos</h4>
+                    <span class="display-4 pb-3">Videos</span>
                 </div>
-                <div class="col s12 m12 l12">
+                <div class="col col-sm-12 col-md-12 col-lg-12">
                     <div class="fotorama" 
                         data-nav="thumbs"
                         data-transition="crossfade"
@@ -177,22 +181,6 @@
 </body>
     @include('templates.foot')
     <script>
-        
-        // $('.carousel.carousel-slider').carousel({
-        //     fullWidth: false,
-        //     indicators: true,
-        //     duration: 200
-        // });
-
-        const slider = document.querySelectorAll('.slider');
-        M.Slider.init(slider, {
-            indicators: false,
-            fullWidth: true,
-            // height: 00,
-            duration: 400,
-            interval: 3000
-        });
-
         $(document).ready(function(){
             $('select').formSelect();
         });

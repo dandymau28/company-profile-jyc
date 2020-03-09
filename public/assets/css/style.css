@@ -385,3 +385,8 @@ a.nav-link.active:hover {
     font-weight: bolder;
     text-shadow: 3px 3px 3px #707070;
 }
+
+
+.berita-h {
+    border-bottom: 1px solid #C12821;
+}
