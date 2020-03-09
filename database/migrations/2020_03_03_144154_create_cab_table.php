@@ -17,16 +17,16 @@ class CreateCabTable extends Migration
             $table->bigIncrements('id');
             $table->string('nama_lengkap');
             $table->integer('umur');
-            $table->enum('status_nikah',['sudah_nikah','belum_nikah']);
+            $table->enum('status_nikah',['sudah_nikah','belum_nikah','belum_terisi'])->default('belum_terisi');
             $table->string('pekerjaan');
             $table->char('no_hp',16);
             $table->enum('ambitus',['sopran_1','sopran_2','alto_1','alto_2','tenor_1','tenor_2','bass_1','bass_2','belum_ada'])
             ->default('belum_ada');
             $table->string('tempat_lahir');
             $table->date('tanggal_lahir');
-            $table->string('kemampuan_musik');
+            $table->string('kemampuan_musik')->nullable();
             $table->enum('tingkat_keahlian',['basic','intermediate','advanced','tidak_ada'])->default('tidak_ada');
-            $table->string('keahlian_non_musik');
+            $table->string('keahlian_non_musik')->nullable();
             $table->string('domisili');
             $table->char('emergency_call',16);
             $table->timestamps();
