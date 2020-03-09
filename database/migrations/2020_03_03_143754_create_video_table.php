@@ -16,8 +16,10 @@ class CreateVideoTable extends Migration
         Schema::create('video', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->text('alamat');
-            $table->bigInteger('id_user')->references('id')->on('users');
+            $table->unsignedBigInteger('id_user');
             $table->timestamps();
+
+            $table->foreign('id_user')->references('id')->on('users');
         });
     }
 
