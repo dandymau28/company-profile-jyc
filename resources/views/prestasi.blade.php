@@ -38,11 +38,12 @@
     <div class="prestasi container-fluid bg-light py-5">
         <h3 class="mb-5">Prestasi</h3>
             <div class="row row-cols-1 row-cols-md-3">
+            @foreach( $prestasis as $prestasi)
                 <div class="col mb-4">
                     <div class="card text-center">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <h5 class="card-title">{{ $prestasi->nama_kompetisi }}</h5>
+                            <p class="card-text">{{ $prestasi->gelar_juara }}</p>
                         </div>
                         <div class="card-footer">
                             <small class="text-muted">Lorem lorem</small>
@@ -50,66 +51,7 @@
                         <img src="{{asset('assets/img/prestasi/1.png')}}" class="card-img-top" alt="...">
                     </div>
                 </div>
-                <div class="col mb-4">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Lorem lorem</small>
-                        </div>
-                        <img src="{{asset('assets/img/prestasi/2.png')}}" class="card-img-top" alt="...">
-                    </div>
-                </div>
-                <div class="col mb-4">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Lorem lorem</small>
-                        </div>
-                        <img src="{{asset('assets/img/prestasi/3.png')}}" class="card-img-top" alt="...">
-                    </div>
-                </div>
-                <div class="col mb-4">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Lorem lorem</small>
-                        </div>
-                        <img src="{{asset('assets/img/prestasi/3.png')}}" class="card-img-top" alt="...">
-                    </div>
-                </div>
-                <div class="col mb-4">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Lorem lorem</small>
-                        </div>
-                        <img src="{{asset('assets/img/prestasi/1.png')}}" class="card-img-top" alt="...">
-                    </div>
-                </div>
-                <div class="col mb-4">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Lorem lorem</small>
-                        </div>
-                        <img src="{{asset('assets/img/prestasi/2.png')}}" class="card-img-top" alt="...">
-                    </div>
-                </div>
+            @endforeach
             </div>
     </div>
 

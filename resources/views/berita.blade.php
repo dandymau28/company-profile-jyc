@@ -39,6 +39,7 @@
             <div class="row">
                 {{-- Card Berita --}}
                 <div class="col-lg-8 col-md-8 col-sm-12">
+                @foreach( $beritas as $berita )
                     <div class="row mb-4">
                         <div class="col-6">
                             <a href="http://">
@@ -47,18 +48,18 @@
                         </div>
                         <div class="col-6">
                             <div class="judul-berita display-5  mb-1">
-                                <a href="http://">Pagelaran Konser JYC Mengagumkan!</a>
+                                <a href="/berita/{{ $berita->id }}">{{ $berita->judul }}</a>
                             </div>
                             <div class="tanggal-posting text-muted my-2">
                                 <i class="far fa-clock"></i>
-                                <span>29 Agustus 2019</span>
+                                <span>{{$berita->tgl_publish}}</span>
                             </div>
                             <div class="konten-berita text-justify">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. At ad velit harum reiciendis amet accusamus repellat, quae voluptas labore. Officiis, voluptatum quos voluptas eveniet odit tempora sapiente quaerat perspiciatis doloremque, laboriosam repellat incidunt accusamus cumque itaque. Eos, adipisci. Molestias....
+                                {{ $berita->isi_berita }}
                             </div>
                         </div>
                     </div>
-
+                @endforeach
                     <div class="row mb-4">
                         <div class="col-6">
                             <a href="http://">
@@ -162,16 +163,9 @@
                         data-autoplay="true"
                         data-width="100%"
                         data-ratio="800/600">
-                        <a href="https://www.youtube.com/watch?v=ftNXzo9rovM&list=PL39FGp6oBye4C4xgtKTou-t1iLXRiiulU"></a>
-                        <a href="https://www.youtube.com/watch?v=5wWAc8mVhZw&list=PL39FGp6oBye4C4xgtKTou-t1iLXRiiulU&index=2"></a>
-                        <a href="https://www.youtube.com/watch?v=yXU0tDJCzKc&list=PL39FGp6oBye4C4xgtKTou-t1iLXRiiulU&index=3"></a>
-                        <a href="https://www.youtube.com/watch?v=yXU0tDJCzKc&list=PL39FGp6oBye4C4xgtKTou-t1iLXRiiulU&index=4"></a>
-                        <a href="https://www.youtube.com/watch?v=yXU0tDJCzKc&list=PL39FGp6oBye4C4xgtKTou-t1iLXRiiulU&index=5"></a>
-                        <a href="https://www.youtube.com/watch?v=yXU0tDJCzKc&list=PL39FGp6oBye4C4xgtKTou-t1iLXRiiulU&index=6"></a>
-                        <a href="https://www.youtube.com/watch?v=yXU0tDJCzKc&list=PL39FGp6oBye4C4xgtKTou-t1iLXRiiulU&index=7"></a>
-                        <a href="https://www.youtube.com/watch?v=yXU0tDJCzKc&list=PL39FGp6oBye4C4xgtKTou-t1iLXRiiulU&index=8"></a>
-                        <a href="https://www.youtube.com/watch?v=yXU0tDJCzKc&list=PL39FGp6oBye4C4xgtKTou-t1iLXRiiulU&index=9"></a>
-                        {{-- <a href="https://www.youtube.com/watch?v=ftNXzo9rovM&list=PL39FGp6oBye4C4xgtKTou-t1iLXRiiulU"></a> --}}
+                        @foreach( $videos as $video )
+                        <a href="{{ $video->alamat }}"></a>
+                        @endforeach
                     </div>
                 </div>
             </section>

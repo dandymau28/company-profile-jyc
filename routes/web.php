@@ -22,19 +22,23 @@ Route::get('/profile', function () {
     return view('profile', ["title" => "Profile"]);
 })->name('profile');
 
-Route::get('/kegiatan', function () {
-    return view('kegiatan', ["title" => "Kegiatan"]);
-})->name('kegiatan');
+// Route::get('/kegiatan', function () {
+//     return view('kegiatan', ["title" => "Kegiatan"]);
+// })->name('kegiatan');
 
-Route::get('/prestasi', function () {
-    return view('prestasi', ["title" => "Prestasi"]);
-})->name('prestasi');
+Route::get('/kegiatan', 'kegiatanController@kegiatan')->name('kegiatan');
 
-Route::get('/berita', function () {
-    return view('berita', ["title" => "Berita"]);
-})->name('berita');
+// Route::get('/prestasi', function () {
+//     return view('prestasi', ["title" => "Prestasi"]);
+// })->name('prestasi');
 
-// Route::get('/berita', 'berandaController@beritaTerbaru')->name('berita');
+Route::get('/prestasi', 'prestasiController@prestasi')->name('prestasi');
+
+// Route::get('/berita', function () {
+//     return view('berita', ["title" => "Berita"]);
+// })->name('berita');
+
+Route::get('/berita', 'beritaController@berita')->name('berita');
 
 Route::get('/tentang-kami', function () {
     return view('tentang-kami', ["title" => "Tentang"]);
@@ -52,6 +56,7 @@ Seperti get berita, post pendaftaran, post kegiatan, dll.
 
 Route::get('/testing', 'beritaController@index');
 Route::post('/pendaftaran/create', 'cabController@store'); //untuk menggunakan ini gunakan =>  'method=post' dan 'action=/pendaftaran/' dan name setiap form inputnya sesuai dengan nama atribut di db ya <3
+Route::get('/berita/{berita}','beritaController@show');
 
 
 
