@@ -18,7 +18,7 @@ class berandaController extends Controller
         $beritaTerbaru = DB::table('berita')->latest()->take(3)->get();
 
         //Berita berdasarkan tahun
-        $berita = DB::table('berita')
+        $beritaByYear = DB::table('berita')
             ->where(DB::raw('YEAR(tgl_publish)=2015'))
             ->orderBy('tgl_publish','desc')
             ->take(3)
@@ -33,7 +33,8 @@ class berandaController extends Controller
         return view('beranda', [
             'berita' => $beritaTerbaru,
             'beritaByYear' => $beritaByYear,
-            'beritaCarousel' => $beritaCarouselTerbaru
+            'beritaCarousel' => $beritaCarouselTerbaru,
+            'title' => 'Beranda'
             ]);
     }
 }
