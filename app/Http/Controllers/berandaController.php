@@ -14,25 +14,25 @@ class berandaController extends Controller
      */
     public function beranda()
     {
-        //3 Berita Terbaru
-        $beritaTerbaru = DB::table('berita')->latest()->take(3)->get();
+        try {
+            //3 Berita Terbaru
+            $beritaTerbaru = DB::table('berita')->latest()->take(3)->get();
+        } catch (Exception $e) {
+            return $e;
+        }
 
-        //Berita berdasarkan tahun
-        $beritaByYear = DB::table('berita')
-            ->where(DB::raw('YEAR(tgl_publish)=2015'))
-            ->orderBy('tgl_publish','desc')
-            ->take(3)
-            ->get();
-
-        //Berita Terbaru untuk Carousel
-        $beritaCarouselTerbaru = DB::table('berita')
-            ->latest()
-            ->take(5)
-            ->get();
+        try {
+            //Berita Terbaru untuk Carousel
+            $beritaCarouselTerbaru = DB::table('berita')
+                ->latest()
+                ->take(5)
+                ->get();
+        }catch (Exception $e) {
+            return $e;
+        }
 
         return view('beranda', [
-            'berita' => $beritaTerbaru,
-            'beritaByYear' => $beritaByYear,
+            'beritas' => $beritaTerbaru,
             'beritaCarousel' => $beritaCarouselTerbaru,
             'title' => 'Beranda'
             ]);

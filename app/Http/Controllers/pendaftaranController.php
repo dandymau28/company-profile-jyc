@@ -14,7 +14,11 @@ class pendaftaranController extends Controller
      */
     public function store(Request $request)
     {
-        $cab = CAB::create($request->all());
-        return view('pendaftaran')->with('berhasil daftar!');
+        try {
+            $cab = CAB::create($request->all());
+            return view('pendaftaran')->with('message', 'berhasil daftar!');
+        } catch (Exception $e) {
+            return view('pendaftaran')->with('message', $e);
+        }
     }
 }

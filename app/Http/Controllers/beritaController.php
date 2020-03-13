@@ -20,22 +20,67 @@ class beritaController extends Controller
         $beritaTerbaru = DB::table('berita')->latest()->take(3)->get();
 
         //Berita berdasarkan tahun
-        $berita = DB::table('berita')
-            ->where(DB::raw('YEAR(tgl_publish)=2015'))
-            ->orderBy('tgl_publish','desc')
-            ->take(3)
-            ->get();
+        try {
+            $berita = DB::table('berita')
+                ->where(DB::raw('YEAR(tgl_publish)=2015'))
+                ->orderBy('tgl_publish','desc')
+                ->take(3)
+                ->get();
+        } catch (Exception $e) {
+            report($e);
 
-        //Berita Terbaru untuk Carousel
-        $beritaCarouselTerbaru = DB::table('berita')
+            return false;
+        }
+
+        try {
+            //Berita Terbaru untuk Carousel
+            $beritaCarouselTerbaru = DB::table('berita')
             ->latest()
             ->take(5)
             ->get();
+        } catch (Exception $e) {
+            report($e);
 
-        return view('beranda', [
-            'berita' => $beritaTerbaru,
-            'beritaByYear' => $beritaByYear,
-            'beritaCarousel' => $beritaCarouselTerbaru
+            return false;
+        }
+
+        try {//list berita berdasarkan tahun
+        $beritaPerTahun = DB::table('berita')
+            ->where(DB::raw('YEAR(tgl_publish)=2015'))
+            ->orderBy('tgl_publish','desc')
+            ->get();
+        } catch (Exception $e) {
+            report ($e);
+
+            return false;
+        }
+        
+        try {
+            $allVideo = DB::table('video')
+            ->orderBy('created_at','desc')
+            ->get();
+        } catch (Exception $e) {
+            report ($e);
+    
+            return false;
+        }
+
+
+        return view('berita', [
+            'beritas' => $beritaTerbaru,
+            'beritaCarousel' => $beritaCarouselTerbaru,
+            'beritaPerTahun' => $beritaPerTahun,
+            'videos' => $allVideo,
+            'title' => 'Berita'
             ]);
+    }
+
+    public function show($id)
+    {
+        $berita = DB::table('berita')
+            ->where('id', $id)
+            ->get();
+
+        return $berita;
     }
 }

@@ -42,32 +42,17 @@
         <h3 class="mb-5">Berita</h3>
 
         <div class="card-group ">
+        @foreach ($beritas as $berita)
             <div class="card col col-sm-12 mx-2">
                 <img class="card-img-top" src="{{asset('assets/img/beranda/card-1.png')}}" alt="Card image cap">
                 <div class="card-body">
-                    <h5 class="card-title">Pagelaran Konser JYC mengagumkan!</h5>
-                    <p class="card-text">Isinya adalah cuplikan teks bertia yang nantinya ketika diklik akan ke halaman berita secara penuh…
+                    <h5 class="card-title">{{ $berita->judul }}</h5>
+                    <p class="card-text">{{ $berita->isi_berita }}
                     </p>
-                    <p class="card-text"><small class="text-muted">29 Agustus 2019</small></p>
+                    <p class="card-text"><small class="text-muted">{{ $berita->tgl_publish }}</small></p>
                 </div>
             </div>
-            <div class="card col col-sm-12 mx-2">
-                <img class="card-img-top" src="{{asset('assets/img/beranda/card-2.png')}}" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Bangga! Raih 4 Trofi sekaligus. <br> JYC diundang Gubernur DKI Jakarta</h5>
-                    <p class="card-text">Isinya adalah cuplikan teks bertia yang nantinya ketika diklik akan ke halaman berita secara penuh…
-                    </p>
-                    <p class="card-text"><small class="text-muted">29 Agustus 2019</small></p>
-                </div>
-            </div>
-            <div class="card col col-sm-12 mx-2">
-                <img class="card-img-top" src="{{asset('assets/img/beranda/card-3.png')}}" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">JYC menjadi perwakilan  di Kompetisi Beijing</h5>
-                    <p class="card-text">Isinya adalah cuplikan teks bertia yang nantinya ketika diklik akan ke halaman berita secara penuh… </p>
-                    <p class="card-text"><small class="text-muted">29 Agustus 2019</small></p>
-                </div>
-            </div>
+        @endforeach
         </div>
 
     </div>

@@ -32,6 +32,18 @@
     <!-- Latihan Rutin -->
     <div class="latihan-rutin">
         <h3>Latihan Rutin</h3>
+
+        <div class="container">
+        @foreach( $kegiatans as $kegiatan )
+            <div class="row card-kompetisi">
+                <div class="col detail-kompetisi">
+                    <img src="{{asset('assets/img/kegiatan/kompetisi-1.png')}}" class="rounded float-left" alt="img">
+                    <h4>{{ $kegiatan->nama }}</h4><br>
+                    <p>{{ $kegiatan->jenis }}</p>
+                </div>
+            </div>
+        @endforeach
+        </div>
     </div>
 
 
@@ -76,32 +88,17 @@
 
         <!-- 3 CARD -->
         <div class="card-group">
+            @foreach( $prestasis as $prestasi)
             <div class="card">
                 <img class="card-img-top" src="{{asset('assets/img/beranda/card-1.png')}}" alt="Card image cap">
                 <div class="card-body">
-                    <h5 class="card-title">Pagelaran Konser JYC mengagumkan!</h5>
-                    <p class="card-text">Isinya adalah cuplikan teks bertia yang nantinya ketika diklik akan ke halaman berita secara penuh…
+                    <h5 class="card-title">{{ $prestasi->nama_kompetisi }}</h5>
+                    <p class="card-text">{{ $prestasi->gelar_juara }}
                     </p>
-                    <p class="card-text"><small class="text-muted">29 Agustus 2019</small></p>
+                    <p class="card-text"><small class="text-muted">{{ $prestasi->tanggal_kompetisi }}</small></p>
                 </div>
             </div>
-            <div class="card">
-                <img class="card-img-top" src="{{asset('assets/img/beranda/card-2.png')}}" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Bangga! Raih 4 Trofi sekaligus. <br> JYC diundang Gubernur DKI Jakarta</h5>
-                    <p class="card-text">Isinya adalah cuplikan teks bertia yang nantinya ketika diklik akan ke halaman berita secara penuh…
-                    </p>
-                    <p class="card-text"><small class="text-muted">29 Agustus 2019</small></p>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="{{asset('assets/img/beranda/card-3.png')}}" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">JYC menjadi perwakilan  di Kompetisi Beijing</h5>
-                    <p class="card-text">Isinya adalah cuplikan teks bertia yang nantinya ketika diklik akan ke halaman berita secara penuh… </p>
-                    <p class="card-text"><small class="text-muted">29 Agustus 2019</small></p>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 
@@ -109,5 +106,6 @@
 
 </body>
 @include('templates.foot')
+@include('templates.footer')
 
 </html>
