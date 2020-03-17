@@ -59,4 +59,20 @@ Route::post('/pendaftaran/create', 'cabController@store'); //untuk menggunakan i
 Route::get('/berita/{berita}','beritaController@show');
 
 
+// Admin route
+Route::prefix('admin')->group(function () {
+    Route::get('/', function () {
+        return view('admin.dashboard', ["title" => "Admin"]);
+    })->name('admin');
+
+    Route::get('/index', function () {
+        return view('admin.dashboard2', ["title" => "Admin"]);
+    })->name('admin');
+
+    Route::get('/berita/buat', function () {
+        return view('admin.berita', ["title" => "Buat Berita"]);
+    })->name('buat-berita');
+
+});
+
 
