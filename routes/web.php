@@ -61,6 +61,18 @@ Route::get('/berita/{berita}','beritaController@show');
 
 // Admin route
 Route::prefix('admin')->group(function () {
+    Route::get('/login', function () {
+        return view('admin.login', ["title" => "Login"]);
+    })->name('login');
+
+    Route::get('/daftar', function () {
+        return view('admin.daftar', ["title" => "Daftar"]);
+    })->name('daftar');
+
+    Route::get('/lupa-sandi', function () {
+        return view('admin.lupa-sandi', ["title" => "Lupa Sandi"]);
+    })->name('lupa-sandi');
+
     Route::get('/', function () {
         return view('admin.dashboard', ["title" => "Admin"]);
     })->name('admin');
@@ -70,7 +82,7 @@ Route::prefix('admin')->group(function () {
     })->name('admin');
 
     Route::get('/berita/buat', function () {
-        return view('admin.berita', ["title" => "Buat Berita"]);
+        return view('admin.buatBerita', ["title" => "Buat Berita"]);
     })->name('buat-berita');
 
 });
