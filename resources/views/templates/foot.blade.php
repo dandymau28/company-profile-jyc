@@ -3,7 +3,7 @@
     <script src="{{ asset('assets/js/jquery.js') }}"></script>
     <script src="{{ asset('assets/js/popper.min.js') }}"></script>
     <script src="{{ asset('bootstrap-4.4.1-dist') }}/js/bootstrap.min.js"></script>
-
+    @stack('js')
     <!-- Main JS -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
 
@@ -14,12 +14,12 @@
     let title = $('title').text();
     title = title.slice(5);
     title = title.toLowerCase();
-    console.log(title);
+    // console.log(title);
     var navigasi =  $('#nav-items').find('.nav-link');
     // console.log(navigasi);
     navigasi.each((i, el) => {
         if ($(el).attr('name') == title) {
-            console.log($(el));
+            // console.log($(el));
             $(el).addClass('active')
         } else {
             $(el).removeClass('active');

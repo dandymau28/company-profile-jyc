@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @include('templates.head')
+    <link  href="{{asset('assets/css/jquery.carousel-3d.default.css')}}" rel="stylesheet">
     <title>JYC: {{$title}}</title>
 </head>
 
@@ -102,10 +103,81 @@
         </div>
     </div>
 
+    {{-- Galeri --}}
+            
+    <section class="galeri container">
+        <div class="row">
+            <div class="col-12 mb-2">
+                <span class="display-4">Galeri</span>
+            </div>
+            <div class="input-field col-sm-12 col-md-3 col-lg-3 mb-2">
+                <select class="custom-select">
+                  <option value="" disabled selected>Pilih Kegiatan</option>
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                </select>
+                {{-- <label>Materialize Select</label> --}}
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-12" id="wrapper">
+                <div id="coba-carousel" data-carousel-3d> 
+                    <img src="{{asset('assets/img/berita/1.png')}}">
+                    <img src="{{asset('assets/img/berita/2.png')}}" selected>
+                    <img src="{{asset('assets/img/berita/3.png')}}">
+                    <img src="{{asset('assets/img/berita/4.png')}}">
+                    <img src="{{asset('assets/img/berita/5.png')}}">
+                    <img src="{{asset('assets/img/berita/6.png')}}">
+                </div>
+            </div>
+            {{-- <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="fotorama" 
+                    data-nav="thumbs"
+                    data-transition="crossfade"
+                    data-autoplay="true"
+                    data-width="100%"
+                    data-ratio="800/600">
+                    <img src="{{asset('assets/img/berita/1.png')}}">
+                    <img src="{{asset('assets/img/berita/2.png')}}">
+                    <img src="{{asset('assets/img/berita/3.png')}}">
+                </div>
+            </div> --}}
+        </div>
+    </section>
+    <hr />
 
+    {{-- Videos --}}
+    <section class="videos container">
+        <div class="row">
+            <span class="display-4 pb-3">Videos</span>
+        </div>
+        <div class="col col-sm-12 col-md-12 col-lg-12">
+            <div class="fotorama" 
+                data-nav="thumbs"
+                data-transition="crossfade"
+                data-autoplay="true"
+                data-width="100%"
+                data-ratio="800/600">
+                @foreach( $videos as $video )
+                <a href="{{ $video->alamat }}"></a>
+                @endforeach
+            </div>
+        </div>
+    </section>
 
 </body>
 @include('templates.foot')
 @include('templates.footer')
-
+{{-- <script src="../bower_components/jquery/jquery.js"></script>
+<script src="../bower_components/javascript-detect-element-resize/jquery.resize.js"></script>
+<script src="../bower_components/waitForImages/dist/jquery.waitforimages.js"></script>
+<script src="../bower_components/modernizr/modernizr.js"></script>
+<script src="../dist/jquery.carousel-3d.js" ></script> --}}
+<script src="{{ asset('assets/js/jquery.resize.ex.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.waitforimages.js') }}"></script>
+<script src="{{ asset('assets/js/modernizr.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.carousel-3d.js') }}"></script>
+<script>
+    // $('#coba-carousel').Carousel3d('prev');
+    // $('#coba-carousel').Carousel3d('next');
+</script>
 </html>

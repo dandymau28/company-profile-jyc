@@ -77,14 +77,24 @@ Route::prefix('admin')->group(function () {
         return view('admin.lupa-sandi', ["title" => "Lupa Sandi"]);
     })->name('lupa-sandi');
 
-    Route::get('/index', function () {
-        return view('admin.dashboard2', ["title" => "Admin"]);
-    })->name('admin');
+    //Anggota
+    Route::get('/anggota', function () {
+        return view('admin.anggota.master', ["title" => "Anggota"]);
+    })->name('anggota-master');
 
+    //Calon Anggota
+    Route::get('/cab', function () {
+        return view('admin.anggota.cab-master', ["title" => "Anggota"]);
+    })->name('cab-master');
+
+    //Berita
     Route::get('/berita/buat', function () {
-        return view('admin.buatBerita', ["title" => "Buat Berita"]);
+        return view('admin.berita.buatBerita', ["title" => "Buat Berita"]);
     })->name('buat-berita');
 
 });
+
+//Mail routes
+Route::get('send-mail', 'MailController@sendMail');
 
 
