@@ -38,7 +38,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password">
+          <input type="password" class="form-control" placeholder="Kata Sandi">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -56,7 +56,7 @@
           </div>
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+            <button type="submit" class="btn btn-primary btn-block">Masuk</button>
           </div>
           <!-- /.col -->
         </div>
@@ -74,10 +74,10 @@
       <!-- /.social-auth-links -->
 
       <p class="mb-1">
-        <a href="{{route('lupa-sandi')}}">I forgot my password</a>
+        <a href="{{route('lupa-sandi')}}">Lupa kata sandi?</a>
       </p>
       <p class="mb-0">
-        <a href="{{route('daftar')}}" class="text-center">Register a new membership</a>
+        <a href="{{route('daftar')}}" class="text-center">Buat akun baru</a>
       </p>
     </div>
     <!-- /.login-card-body -->

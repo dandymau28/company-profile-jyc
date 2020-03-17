@@ -21,12 +21,12 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="../../index2.html"><b>Admin</b>LTE</a>
+    <a href="../../index2.html"><b>Admin</b>JYC</a>
   </div>
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
-      <p class="login-box-msg">You forgot your password? Here you can easily retrieve a new password.</p>
+      <p class="login-box-msg">Lupa kata sandi? Silahkan lakukan permintaan pengaturan ulang kata sandi.</p>
 
       <form action="recover-password.html" method="post">
         <div class="input-group mb-3">
@@ -39,7 +39,7 @@
         </div>
         <div class="row">
           <div class="col-12">
-            <button type="submit" class="btn btn-primary btn-block">Request new password</button>
+            <button type="submit" class="btn btn-primary btn-block">Atur ulang kata sandi</button>
           </div>
           <!-- /.col -->
         </div>
@@ -49,7 +49,7 @@
         <a href="{{route('login')}}">Login</a>
       </p>
       <p class="mb-0">
-        <a href="{{route('daftar')}}" class="text-center">Register a new membership</a>
+        <a href="{{route('daftar')}}" class="text-center">Buat akun baru</a>
       </p>
     </div>
     <!-- /.login-card-body -->
