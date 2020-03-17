@@ -61,6 +61,10 @@ Route::get('/berita/{berita}','beritaController@show');
 
 // Admin route
 Route::prefix('admin')->group(function () {
+    Route::get('/', function () {
+        return view('admin.dashboard', ["title" => "Admin"]);
+    })->name('admin');
+
     Route::get('/login', function () {
         return view('admin.login', ["title" => "Login"]);
     })->name('login');
@@ -72,10 +76,6 @@ Route::prefix('admin')->group(function () {
     Route::get('/lupa-sandi', function () {
         return view('admin.lupa-sandi', ["title" => "Lupa Sandi"]);
     })->name('lupa-sandi');
-
-    Route::get('/', function () {
-        return view('admin.dashboard', ["title" => "Admin"]);
-    })->name('admin');
 
     Route::get('/index', function () {
         return view('admin.dashboard2', ["title" => "Admin"]);
