@@ -9,6 +9,10 @@ use DB;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Auth;
 
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Exception;
+
 use Redirect;
 
 class AuthContoller extends Controller
@@ -18,12 +22,13 @@ class AuthContoller extends Controller
         $this->middleware('auth:web');
     }
 
-    public function login()
+    public function login(Request $request)
     {
-        if(Auth::attempt($request->only('username','password')))
+        $credentials = DB::table('users')->where('username', $request->username)->first();
+        
+        if(Auth::attempt($credentials))
         {
-            $credentials = DB::table('users')->where('email', $request->email)->first();
-            dd($credentials);
+            return redirect()->intended('admin');
         }
     }
 }
