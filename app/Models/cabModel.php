@@ -9,7 +9,7 @@ class cabModel extends Model
 {
     use SoftDeletes;
     protected $table = "cab";
-    public $timestamps = false;
+    public $timestamps = true;
     protected $fillable = [
         'id',
         'nama_lengkap',

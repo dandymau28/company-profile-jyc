@@ -92,9 +92,11 @@ Route::prefix('admin')->group(function () {
         return view('admin.berita.buatBerita', ["title" => "Buat Berita"]);
     })->name('buat-berita');
 
-});
 
-//Mail routes
-Route::get('send-mail', 'MailController@sendMail');
+    //Foto
+    Route::get('/foto', 'UploadFotoController@index')->name('foto');
+    Route::post('/upload-foto', 'UploadFotoController@store')->name('upload-foto');
+
+});
 
 
