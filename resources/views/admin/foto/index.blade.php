@@ -30,7 +30,11 @@
                                     @endphp
                                 </div>
                             @endif
-
+                            <select class="w-100 custom-select" name="pilih-kegiatan" id="pilih-kegiatan">
+                                @foreach ($kegiatans as $kegiatan)
+                                    <option value={{$kegiatan->id}}>{{$kegiatan->nama}}</option>   
+                                @endforeach
+                            </select>
                             <label for="images"> Images </label>
                                 <div class="form-group">
                                     <input type="file" name="images[]" class="form-control" id="images" multiple/>

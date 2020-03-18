@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\FotoModel;
+use DB;
 class UploadFotoController extends Controller
 {
     /**
@@ -12,8 +13,19 @@ class UploadFotoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return view('admin.foto.index', ["title" => "Upload Foto"]);
+    {   
+        try{
+            $kegiatans = DB::table('kegiatan')->get();
+        } catch (Exception $e) {
+            return $hasil = [
+                'code' => $e->getCode(),
+                'message' => $e->getMessage()
+            ];
+        }
+        return view('admin.foto.index', [
+            "title" => "Upload Foto",
+            "kegiatans" => $kegiatans
+            ]);
     }
 
     /**
@@ -35,30 +47,38 @@ class UploadFotoController extends Controller
     public function store(Request $request)
     {
         // file validation
-        $this->validate($request, [
-            'images.*' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        ]);
-
+        // $this->validate($request, [
+        //     'images.*' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        // ]);
+        $uploadedPhoto = $request->file('images');        
+        
+        $id_kegiatan = $request->input('pilih-kegiatan');
+        // {{ Storage::url($foto->alamat_foto) }}
+        // return $id_kegiatan;
         // if validation success
-        $images       =       array();
+        // $images = array();
 
-        if($files     =       $request->file('images')) {
-            console.log('woy');
-            foreach($files as $file) {
-                $name     =    time().'.'.$file->getClientOriginalExtension();
-                $destinationPath = public_path('/assets/img/galeri');
-
-                if($file->move($destinationPath, $name)) {
-                    $images[]   =   $name;
-                    $saveResult   =   FotoModel::create([
-                        'id_kegiatan' => 1,
-                        'alamat_foto' => $name
-                        ]);
-                }
+        // if($request->file('images') != NULL) {
+            // dd('woy');
+            // $files = $request->file('images');
+            foreach($uploadedPhoto as $file) {
+                $index = 0;
+                $name = $id_kegiatan.'-'.$index.'-'.time().'.'.$file->getClientOriginalExtension();
+                // $path = $request->file('images')->store('kegiatan');
+                
+                $pathPhoto = $file->storeAs('public/img/gallery', $name);
+                // if($file->move($path, $name)) {
+                    // $images[]   =   $name;
+                $saveResult   =   FotoModel::create([
+                    'id_kegiatan' => $id_kegiatan,
+                    'alamat_foto' => $pathPhoto
+                    ]);
+                $index+=1;
+                // }
             }
 
             return back()->with("success", "File uploaded successfully");
-        }
+        // }
     
     }
 

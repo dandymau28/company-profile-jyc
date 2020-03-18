@@ -136,6 +136,11 @@ li.nav-item.active:hover {
     padding: 20px 10px;
 }
 
+#konten-berita.w-80 {
+    width: 80%;
+    margin: auto;
+}
+
 /* ====================================== */
 
 /* PROFILE PAGE */
