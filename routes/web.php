@@ -66,10 +66,10 @@ Route::prefix('admin')->group(function () {
     })->name('admin');
 
     Route::get('/login', function () {
-        return view('admin.login', ["title" => "Login"]);
+        return view('admin.auth.login', ["title" => "Login"]);
     })->name('login');
 
-    Route::post('/login', 'AuthContoller@login')->name('login-post');
+    Route::post('/login', 'authController@login')->name('login-post');
 
     Route::get('/daftar', function () {
         return view('admin.daftar', ["title" => "Daftar"]);
@@ -94,9 +94,11 @@ Route::prefix('admin')->group(function () {
         return view('admin.berita.buatBerita', ["title" => "Buat Berita"]);
     })->name('buat-berita');
 
+    Route::post('/berita/buat', 'adminController@berita')->name('berita-post');
+    
 });
 
 //Mail routes
-Route::get('send-mail', 'MailController@sendMail');
+Route::get('/send-mail', 'mailController@sendEmail');
 
 

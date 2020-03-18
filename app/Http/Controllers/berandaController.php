@@ -23,8 +23,8 @@ class berandaController extends Controller
 
         try {
             //Berita Terbaru untuk Carousel
-            $beritaCarouselTerbaru = DB::table('berita')
-                ->latest()
+            $beritaCarousel = DB::table('berita')
+                ->where('penting','1')
                 ->take(5)
                 ->get();
         }catch (Exception $e) {
@@ -33,7 +33,7 @@ class berandaController extends Controller
 
         return view('beranda', [
             'beritas' => $beritaTerbaru,
-            'beritaCarousel' => $beritaCarouselTerbaru,
+            'beritaCarousel' => $beritaCarousel,
             'title' => 'Beranda'
             ]);
     }
