@@ -17,8 +17,9 @@ class CreateVideoTable extends Migration
             $table->bigIncrements('id');
             $table->text('alamat');
             $table->unsignedBigInteger('id_user');
-            $table->timestamps();
-
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
+            $table->softDeletes();
             $table->foreign('id_user')->references('id')->on('users');
         });
     }

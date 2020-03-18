@@ -16,9 +16,9 @@ class successMail extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($request, $pdf)
     {
-        //
+        $this->pdf = $pdf;
     }
 
     /**
@@ -28,6 +28,10 @@ class successMail extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.success');
+        return $this->view('mail.success')
+                    ->with(['isi_pesan' => 'uji pdf'])
+                    ->attachData($this->pdf, 'test.pdf', [
+                        'mime' => 'application/pdf'
+                    ]);
     }
 }

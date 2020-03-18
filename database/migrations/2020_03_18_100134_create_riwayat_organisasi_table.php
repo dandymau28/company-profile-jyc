@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateKegiatanTable extends Migration
+class CreateRiwayatOrganisasiTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,17 @@ class CreateKegiatanTable extends Migration
      */
     public function up()
     {
-        Schema::create('kegiatan', function (Blueprint $table) {
+        Schema::create('riwayat_organisasi', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nama');
-            $table->enum('jenis',['lomba','latihan','oprec']);
+            $table->unsignedBigInteger('id_cab');
+            $table->text('nama_organisasi');
+            $table->string('jabatan');
+            $table->string('tahun_aktif');
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
             $table->softDeletes();
+
+            $table->foreign('id_cab')->references('id')->on('cab');
         });
     }
 
@@ -30,6 +34,6 @@ class CreateKegiatanTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kegiatan');
+        Schema::dropIfExists('riwayat_organisasi');
     }
 }

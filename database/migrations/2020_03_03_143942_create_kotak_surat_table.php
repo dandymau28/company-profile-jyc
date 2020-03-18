@@ -18,7 +18,9 @@ class CreateKotakSuratTable extends Migration
             $table->string('email');
             $table->string('nama');
             $table->text('isi_surat');
-            $table->timestamps();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
+            $table->softDeletes();
         });
     }
 

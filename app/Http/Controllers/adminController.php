@@ -9,11 +9,16 @@ class adminController extends Controller
 {
     public function berita(Request $request)
     {
-        return $request;
+        
     }
 
     public function showCAB()
     {
-        $calonAnggota = DB::table('cab')->where();
+        $calonAnggota = DB::table('cab')->get();
+
+        return view('admin.anggota.cab',[
+            'cab' => $calonAnggota,
+            'title' => 'CAB'
+        ]);
     }
 }

@@ -19,7 +19,9 @@ class CreatePrestasiTable extends Migration
             $table->string('gelar_juara');
             $table->text('lokasi');
             $table->date('tanggal_kompetisi');
-            $table->timestamps();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
+            $table->softDeletes();
         });
     }
 
