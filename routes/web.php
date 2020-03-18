@@ -100,5 +100,9 @@ Route::prefix('admin')->group(function () {
 
 //Mail routes
 Route::get('/send-mail', 'mailController@sendEmail');
+Route::get('/uji-mail', function() {
+    return view('data');
+});
+Route::post('/send-mail', 'mailController@sendEmail')->name('post-mail');
 
 
