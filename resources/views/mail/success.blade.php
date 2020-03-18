@@ -7,6 +7,8 @@
     <title>Mail Success</title>
 </head>
 <body>
-    Mail Success
+    <p><b>Mail Success</b></p>
+    <i>terima kasih telah mendaftar</i>
+    {{ $isi_pesan }}
 </body>
 </html>
