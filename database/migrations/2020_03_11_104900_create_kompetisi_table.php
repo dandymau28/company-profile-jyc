@@ -18,7 +18,11 @@ class CreateKompetisiTable extends Migration
             $table->string('nama');
             $table->string('lokasi');
             $table->date('tanggal');
-            $table->timestamps();
+            $table->enum('status',['selesai','belum_selesai'])
+                ->default('belum_selesai');
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
+            $table->softDeletes();
         });
     }
 
