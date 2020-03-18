@@ -1,16 +1,26 @@
-<!-- upload.blade.php -->
+@extends('admin.layouts.app')
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>Laravel 6 - Multiple Images Upload </title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+@section('title', 'Galeri Kegiatan')
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  </head>
-  <body>
-      <div class="container mt-5">
+@section('content')
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0 text-dark">Contoh Templating</h1>
+                </div><!-- /.col -->
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">Starter Page</li>
+                    </ol>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+    <div class="container">
         <div class="row">
             <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 col-12 m-auto">
             <form action="{{ route('upload-foto') }}" method="post" enctype="multipart/form-data">
@@ -48,10 +58,6 @@
                 </form>
             </div>
         </div>
-      </div>
+    </div>
 
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  </body>
-</html>
+@endsection

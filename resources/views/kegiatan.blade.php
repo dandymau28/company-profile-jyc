@@ -106,19 +106,21 @@
     {{-- Galeri --}}
             
     <section class="galeri container">
-        <div class="row">
-            <div class="col-12 mb-2">
+        <div class="row justify-content-between mb-2">
+            <div class="col-5">
                 <span class="display-4">Galeri</span>
             </div>
-            <div class="input-field col-sm-12 col-md-3 col-lg-3 mb-2">
+            <div class="col-5 d-flex align-items-center">
                 <select class="custom-select" name="pilih-kegiatan" id="pilih-kegiatan">
                   {{-- <option value="" disabled selected>Pilih Kegiatan</option> --}}
                   @foreach ($kegiatans as $kegiatan)
-                    <option value={{$kegiatan->id}}>{{$kegiatan->nama}}</option>   
+                    <option class=" overflow-hidden" value={{$kegiatan->id}}>{{$kegiatan->nama}}</option>   
                 @endforeach
                 </select>
                 {{-- <label>Materialize Select</label> --}}
             </div>
+        </div>
+        <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12" id="wrapper">
                 <div id="coba-carousel" data-carousel-3d> 
                     @foreach ($fotos as $foto)
@@ -186,9 +188,12 @@
             $('#coba-carousel').empty();
             fotos.forEach((foto, i) => {
                 $('#coba-carousel').append(`
-                    <img src="{{ Storage::url('/')}}${foto.alamat_foto}">
+                    <img src="storage/${foto.alamat_foto}">
                 `);
-            })
+            });
+            // $('#coba-carousel').Carousel3d();
+        }).done(res => {
+            $('[data-carousel-3d]').Carousel3d();
         })
     })
 </script>

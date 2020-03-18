@@ -61,19 +61,17 @@ class UploadFotoController extends Controller
         // if($request->file('images') != NULL) {
             // dd('woy');
             // $files = $request->file('images');
-            foreach($uploadedPhoto as $file) {
-                $index = 0;
+            foreach($uploadedPhoto as $index => $file) {
                 $name = $id_kegiatan.'-'.$index.'-'.time().'.'.$file->getClientOriginalExtension();
                 // $path = $request->file('images')->store('kegiatan');
                 
-                $pathPhoto = $file->storeAs('public/img/gallery', $name);
+                $pathPhoto = $file->storeAs('public/img/', $name);
                 // if($file->move($path, $name)) {
                     // $images[]   =   $name;
                 $saveResult   =   FotoModel::create([
                     'id_kegiatan' => $id_kegiatan,
-                    'alamat_foto' => $pathPhoto
+                    'alamat_foto' => '/img/'.$name
                     ]);
-                $index+=1;
                 // }
             }
 
