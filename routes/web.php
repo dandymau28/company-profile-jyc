@@ -69,6 +69,8 @@ Route::prefix('admin')->group(function () {
         return view('admin.login', ["title" => "Login"]);
     })->name('login');
 
+    Route::post('/login', 'AuthContoller@login')->name('login-post');
+
     Route::get('/daftar', function () {
         return view('admin.daftar', ["title" => "Daftar"]);
     })->name('daftar');
