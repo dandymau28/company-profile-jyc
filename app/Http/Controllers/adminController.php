@@ -9,7 +9,7 @@ class adminController extends Controller
 {
     public function berita(Request $request)
     {
-        return $request;
+        
     }
 
     public function showCAB()
