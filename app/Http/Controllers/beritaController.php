@@ -17,7 +17,7 @@ class beritaController extends Controller
     public function berita()
     {
         //3 Berita Terbaru
-        $beritaTerbaru = DB::table('berita')->latest()->take(3)->get();
+        $beritaTerbaru = DB::table('berita')->latest()->simplePaginate(3);
 
         //Berita berdasarkan tahun
         try {
