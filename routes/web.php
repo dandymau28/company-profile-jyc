@@ -15,6 +15,12 @@
 //     return view('beranda', ["title" => "Beranda"]);
 // })->name('beranda');
 
+// Comingsoon Page
+Route::get('/coming-soon', function () {
+    return view('comingsoon.index');
+})->name('coming-soon');
+
+
 Route::get('/', 'berandaController@beranda'
 )->name('beranda');
 
@@ -95,6 +101,10 @@ Route::prefix('admin')->group(function () {
     })->name('buat-berita');
 
     Route::post('/berita/buat', 'adminController@berita')->name('berita-post');
+
+    //Foto Kegiatan
+    Route::get('/foto', 'UploadFotoController@index');
+    Route::post('/upload-foto', 'UploadFotoController@store')->name('upload-foto');
     
 });
 

@@ -111,22 +111,24 @@
                 <span class="display-4">Galeri</span>
             </div>
             <div class="input-field col-sm-12 col-md-3 col-lg-3 mb-2">
-                <select class="custom-select">
-                  <option value="" disabled selected>Pilih Kegiatan</option>
-                  <option value="1">Option 1</option>
-                  <option value="2">Option 2</option>
-                  <option value="3">Option 3</option>
+                <select class="custom-select" name="pilih-kegiatan" id="pilih-kegiatan">
+                  {{-- <option value="" disabled selected>Pilih Kegiatan</option> --}}
+                  @foreach ($kegiatans as $kegiatan)
+                    <option value={{$kegiatan->id}}>{{$kegiatan->nama}}</option>   
+                @endforeach
                 </select>
                 {{-- <label>Materialize Select</label> --}}
             </div>
             <div class="col-sm-12 col-md-12 col-lg-12" id="wrapper">
                 <div id="coba-carousel" data-carousel-3d> 
-                    <img src="{{asset('assets/img/berita/1.png')}}">
-                    <img src="{{asset('assets/img/berita/2.png')}}" selected>
+                    @foreach ($fotos as $foto)
+                        <img src="{{Storage::url($foto->alamat_foto)}}">
+                    @endforeach
+                    {{-- <img src="{{asset('assets/img/berita/2.png')}}" selected>
                     <img src="{{asset('assets/img/berita/3.png')}}">
                     <img src="{{asset('assets/img/berita/4.png')}}">
                     <img src="{{asset('assets/img/berita/5.png')}}">
-                    <img src="{{asset('assets/img/berita/6.png')}}">
+                    <img src="{{asset('assets/img/berita/6.png')}}"> --}}
                 </div>
             </div>
             {{-- <div class="col-sm-12 col-md-12 col-lg-12">
@@ -167,17 +169,27 @@
 </body>
 @include('templates.foot')
 @include('templates.footer')
-{{-- <script src="../bower_components/jquery/jquery.js"></script>
-<script src="../bower_components/javascript-detect-element-resize/jquery.resize.js"></script>
-<script src="../bower_components/waitForImages/dist/jquery.waitforimages.js"></script>
-<script src="../bower_components/modernizr/modernizr.js"></script>
-<script src="../dist/jquery.carousel-3d.js" ></script> --}}
 <script src="{{ asset('assets/js/jquery.resize.ex.js') }}"></script>
 <script src="{{ asset('assets/js/jquery.waitforimages.js') }}"></script>
 <script src="{{ asset('assets/js/modernizr.js') }}"></script>
 <script src="{{ asset('assets/js/jquery.carousel-3d.js') }}"></script>
 <script>
-    // $('#coba-carousel').Carousel3d('prev');
-    // $('#coba-carousel').Carousel3d('next');
+    $('#pilih-kegiatan').on('change', function () {
+        let id_kegiatan = $(this).val();
+        $.ajax({
+            url: '/api/foto/' + id_kegiatan,
+            method: 'GET'
+        }).done(res => {
+            console.log(res);
+            let fotos = res.fotos;
+            console.log(fotos);
+            $('#coba-carousel').empty();
+            fotos.forEach((foto, i) => {
+                $('#coba-carousel').append(`
+                    <img src="{{ Storage::url('/')}}${foto.alamat_foto}">
+                `);
+            })
+        })
+    })
 </script>
 </html>

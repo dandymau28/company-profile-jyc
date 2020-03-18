@@ -20,6 +20,7 @@ class kegiatanController extends Controller
         ->get();
 
         try {
+            $foto = DB::table('foto')->where('id_kegiatan', '1')->get();
             $allVideo = DB::table('video')
             ->orderBy('created_at','desc')
             ->get();
@@ -33,7 +34,16 @@ class kegiatanController extends Controller
             'prestasis' => $prestasi,
             'kegiatans' => $kegiatan,
             'videos' => $allVideo,
+            'fotos' => $foto,
             'title' => 'Kegiatan'
         ]);
+    }
+
+    public function fotoKegiatan($id_kegiatan) {
+        $foto = DB::table('foto')->where('id_kegiatan', $id_kegiatan)->get();
+        return $data = [
+            'code' => 200,
+            'fotos' => $foto
+        ];
     }
 }
