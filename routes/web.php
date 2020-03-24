@@ -21,6 +21,8 @@ Route::get('/coming-soon', function () {
 })->name('coming-soon');
 
 
+
+
 Route::get('/', 'berandaController@beranda'
 )->name('beranda');
 
@@ -103,9 +105,12 @@ Route::prefix('admin')->group(function () {
     Route::post('/berita/buat', 'adminController@berita')->name('berita-post');
 
     //Foto Kegiatan
-    Route::get('/foto', 'UploadFotoController@index');
+    Route::get('/foto', 'UploadFotoController@index')->name('upload-foto-view');
     Route::post('/upload-foto', 'UploadFotoController@store')->name('upload-foto');
     
+    Route::get('/contoh', function () {
+        return view('admin.foto.contoh');
+    });
 });
 
 //Mail routes
