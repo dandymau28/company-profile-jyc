@@ -98,9 +98,7 @@ Route::prefix('admin')->group(function () {
     })->name('cab-master');
 
     //Berita
-    Route::get('/berita/buat', function () {
-        return view('admin.berita.buatBerita', ["title" => "Buat Berita"]);
-    })->name('buat-berita');
+    Route::get('/berita/buat', 'beritaController@create')->name('buat-berita');
 
     Route::post('/berita/buat', 'beritaController@store')->name('berita-post');
 

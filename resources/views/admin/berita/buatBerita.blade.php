@@ -338,6 +338,13 @@
                     <input type="text" name="judul" id="" placeholder="Input judul">
                   </div>
                   <div class="mb-3">
+                    <select name="kategori" id="">
+                      @foreach($kategoris as $category)
+                      <option value="{{ $category->nama_kategori }} ">{{ $category->nama_kategori }}</option>
+                      @endforeach
+                    </select>
+                  </div>
+                  <div class="mb-3">
                     <input type="file" name="image" id="">
                   </div>
                   <div class="mb-3">
@@ -348,7 +355,8 @@
                     Editor <a href="https://github.com/bootstrap-wysiwyg/bootstrap3-wysiwyg">Documentation and license
                       information.</a>
                   </p>
-                  <button type="submit">Post</button>
+                  <button type="submit" name="action" value="post">Post</button>
+                  <button type="submit" name="action" value="save">Save</button>
                 </form>
               </div>
             </div>

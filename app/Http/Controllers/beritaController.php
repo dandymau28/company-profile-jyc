@@ -87,31 +87,80 @@ class beritaController extends Controller
 
     public function store(Request $request)
     {
-        //slug judul
-        $slug = Str::slug($request->judul,'-');
+        switch ($request->input('action')) {
+            case 'post':
+                //slug judul
+                $slug = Str::slug($request->judul,'-');
 
-        //upload foto
-        $uploadFoto = $request->file('image');
-        $name = rand(1,999).'-'.time().'.'.$uploadFoto->getClientOriginalExtension();
-        $pathPhoto = $uploadFoto->storeAs('public/assets/img', $name);
+                //upload foto
+                if($request->file('image')){
+                    $uploadFoto = $request->file('image');
+                    $name = rand(1,999).'-'.time().'.'.$uploadFoto->getClientOriginalExtension();
+                    $pathPhoto = $uploadFoto->storeAs('public/assets/img', $name);
+                }
 
-        //simpan data
-        try {
-            $saveData = Berita::create([
-                'judul' => $request->judul,
-                'slug' => $slug,
-                'banner' => $pathPhoto,
-                'isi_berita' => $request->isi_berita,
-                'id_user' => 1,
-            ]);
+                //simpan data
+                try {
+                    $saveData = Berita::create([
+                        'judul' => $request->judul,
+                        'slug' => $slug,
+                        'banner' => $pathPhoto,
+                        'isi_berita' => $request->isi_berita,
+                        'id_user' => 1,
+                        'kategori' => $request->kategori,
+                        'status' => 'terbit',
+                    ]);
 
-            return back()->with("success", "File uploaded successfully");
-        } catch (Exception $e) {
-            return $error = [
-                'code' => $e->getCode(),
-                'message' => $e->getMessage()
-            ];
+                    return back()->with("success", "Berita berhasil di-post");
+                } catch (Exception $e) {
+                    return $error = [
+                        'code' => $e->getCode(),
+                        'message' => $e->getMessage()
+                    ];
+                }
+                break;
+
+            case 'save':
+                //slug judul
+                $slug = Str::slug($request->judul,'-');
+
+                //upload foto
+                $uploadFoto = $request->file('image');
+                $name = rand(1,999).'-'.time().'.'.$uploadFoto->getClientOriginalExtension();
+                $pathPhoto = $uploadFoto->storeAs('public/assets/img', $name);
+
+                //simpan data
+                try {
+                    $saveData = Berita::create([
+                        'judul' => $request->judul,
+                        'slug' => $slug,
+                        'banner' => $pathPhoto,
+                        'isi_berita' => $request->isi_berita,
+                        'status' => 'belum_terbit',
+                        'id_user' => 1,
+                        'kategori' => $request->kategori,
+                    ]);
+
+                    return back()->with("success", "Berita berhasil disimpan");
+                } catch (Exception $e) {
+                    return $error = [
+                        'code' => $e->getCode(),
+                        'message' => $e->getMessage()
+                    ];
+                }
+                break;
         }
-            
+    }
+
+    public function create()
+    {
+        $kategori = DB::table('kategori')
+                    ->latest()
+                    ->get();
+        
+        return view('admin.berita.buatBerita',[
+            'title' => "Buat Berita",
+            'kategoris' => $kategori
+        ]);
     }
 }
