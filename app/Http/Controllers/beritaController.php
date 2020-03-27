@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use DB;
 use App\Models\beritaModel as Berita;
 
@@ -82,5 +83,35 @@ class beritaController extends Controller
             ->get();
 
         return $berita;
+    }
+
+    public function store(Request $request)
+    {
+        //slug judul
+        $slug = Str::slug($request->judul,'-');
+
+        //upload foto
+        $uploadFoto = $request->file('image');
+        $name = rand(1,999).'-'.time().'.'.$uploadFoto->getClientOriginalExtension();
+        $pathPhoto = $uploadFoto->storeAs('public/assets/img', $name);
+
+        //simpan data
+        try {
+            $saveData = Berita::create([
+                'judul' => $request->judul,
+                'slug' => $slug,
+                'banner' => $pathPhoto,
+                'isi_berita' => $request->isi_berita,
+                'id_user' => 1,
+            ]);
+
+            return back()->with("success", "File uploaded successfully");
+        } catch (Exception $e) {
+            return $error = [
+                'code' => $e->getCode(),
+                'message' => $e->getMessage()
+            ];
+        }
+            
     }
 }

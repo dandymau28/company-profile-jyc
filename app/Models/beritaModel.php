@@ -18,6 +18,7 @@ class beritaModel extends Model
         'tgl_publish',
         'id_user',
         'isi_berita',
+        'slug',
         'banner'
     ];
 }
