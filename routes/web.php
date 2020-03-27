@@ -102,7 +102,7 @@ Route::prefix('admin')->group(function () {
         return view('admin.berita.buatBerita', ["title" => "Buat Berita"]);
     })->name('buat-berita');
 
-    Route::post('/berita/buat', 'adminController@berita')->name('berita-post');
+    Route::post('/berita/buat', 'beritaController@store')->name('berita-post');
 
     //Foto Kegiatan
     Route::get('/foto', 'UploadFotoController@index')->name('upload-foto-view');
