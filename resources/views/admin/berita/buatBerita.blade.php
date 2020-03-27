@@ -323,9 +323,23 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body pad">
-                <form action="{{route('berita-post')}}" method="post">
+                <form action="{{route('berita-post')}}" method="post" enctype="multipart/form-data">
                 @csrf
                 @method('post')
+                @if(Session::has('success'))
+                  <div class="alert alert-success">
+                    {{ Session::get('success') }}
+                    @php
+                      Session::forget('success');
+                    @endphp
+                  </div>
+                @endif
+                  <div class="mb-3">
+                    <input type="text" name="judul" id="" placeholder="Input judul">
+                  </div>
+                  <div class="mb-3">
+                    <input type="file" name="image" id="">
+                  </div>
                   <div class="mb-3">
                     <textarea class="textarea" placeholder="Place some text here"
                       style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;" name="isi_berita"></textarea>
@@ -375,8 +389,30 @@
   <script>
     $(function () {
       // Summernote
-      $('.textarea').summernote()
+      $('.textarea').summernote({
+        toolbar: [
+          ['style', ['style']],
+          ['font', ['bold', 'underline', 'clear']],
+          ['fontname', ['fontname']],
+          ['color', ['color']],
+          ['para', ['ul', 'ol', 'paragraph']],
+          ['table', ['table']],
+        ],
+      })
+
+      // $('.textarea').wysihtml5({
+      //   "font-styles": true, //Font styling, e.g. h1, h2, etc. Default true
+      //   "emphasis": true, //Italics, bold, etc. Default true
+      //   "lists": true, //(Un)ordered lists, e.g. Bullets, Numbers. Default true
+      //   "html": false, //Button which allows you to edit the generated HTML. Default false
+      //   "link": true, //Button to insert a link. Default true
+      //   "image": false, //Button to insert an image. Default true,
+      //   "color": false, //Button to change color of font  
+      //   "blockquote": true, //Blockquote  
+      //   "size": //default: none, other options are xs, sm, lg
+      // });
     })
+
 
   </script>
 </body>
