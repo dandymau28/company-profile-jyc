@@ -15,7 +15,6 @@ class CreateCabTable extends Migration
     {
         Schema::create('cab', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('id_audisi');
             $table->string('nama_lengkap');
             $table->string('nama_panggilan');
             $table->string('email');
