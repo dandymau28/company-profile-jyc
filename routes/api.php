@@ -20,3 +20,6 @@ use Illuminate\Http\Request;
 
 //API get foto by kegiatan
 Route::get('/foto/{id_kegiatan}', 'kegiatanController@fotoKegiatan');
+
+//API Search By Term
+Route::post('/berita/searchbyterm','api/apiController@searchByTerm');
