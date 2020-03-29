@@ -9,7 +9,6 @@ class beritaModel extends Model
 {
     use SoftDeletes;
     protected $table = 'berita';
-    public $timestamps = false;
     protected $fillable = [
         'id',
         'judul',
@@ -21,4 +20,6 @@ class beritaModel extends Model
         'slug',
         'banner'
     ];
+
+    protected $dates = ['deleted_at'];
 }
