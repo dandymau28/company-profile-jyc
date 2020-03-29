@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @include('templates.head')
     <link  href="{{asset('assets/css/jquery.carousel-3d.default.css')}}" rel="stylesheet">
-    <title>JYC: {{$title}}</title>
+    <title>{{$title}} - Jakarta Youth Choir</title>
 </head>
 
 <body>
@@ -176,25 +176,27 @@
 <script src="{{ asset('assets/js/modernizr.js') }}"></script>
 <script src="{{ asset('assets/js/jquery.carousel-3d.js') }}"></script>
 <script>
-    $('#pilih-kegiatan').on('change', function () {
-        let id_kegiatan = $(this).val();
-        $.ajax({
-            url: '/api/foto/' + id_kegiatan,
-            method: 'GET'
-        }).done(res => {
-            console.log(res);
-            let fotos = res.fotos;
-            console.log(fotos);
-            $('#coba-carousel').empty();
-            fotos.forEach((foto, i) => {
-                $('#coba-carousel').append(`
-                    <img src="storage/${foto.alamat_foto}">
-                `);
-            });
-            // $('#coba-carousel').Carousel3d();
-        }).done(res => {
-            $('[data-carousel-3d]').Carousel3d();
+    $(function () {
+        $('#pilih-kegiatan').on('change', function () {
+            let id_kegiatan = $(this).val();
+            $.ajax({
+                url: '/api/foto/' + id_kegiatan,
+                method: 'GET'
+            }).done(res => {
+                console.log(res);
+                let fotos = res.fotos;
+                console.log(fotos);
+                $('#coba-carousel').empty();
+                fotos.forEach((foto, i) => {
+                    $('#coba-carousel').append(`
+                        <img src="storage/${foto.alamat_foto}">
+                    `);
+                });
+                // $('#coba-carousel').Carousel3d();
+            }).done(res => {
+                $('[data-carousel-3d]').Carousel3d();
+            })
         })
-    })
+    });
 </script>
 </html>

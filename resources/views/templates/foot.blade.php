@@ -11,18 +11,26 @@
     {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/galleria.min.js"></script> --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
 <script>
-    let title = $('title').text();
-    title = title.slice(5);
-    title = title.toLowerCase();
-    // console.log(title);
-    var navigasi =  $('#nav-items').find('.nav-link');
-    // console.log(navigasi);
-    navigasi.each((i, el) => {
-        if ($(el).attr('name') == title) {
-            // console.log($(el));
-            $(el).addClass('active')
-        } else {
-            $(el).removeClass('active');
-        }
+    $(function () {
+        $(document).on("scroll", function () {
+            var $nav = $("#navbar");
+            $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+        });
+
+        let title = $('title').text();
+        let nav = $('#nav-active').text();
+        title = title.slice(5);
+        title = title.toLowerCase();
+        // console.log(title);
+        var navigasi =  $('#nav-items').find('.nav-link');
+        // console.log(navigasi);
+        navigasi.each((i, el) => {
+            if ($(el).attr('name') == nav) {
+                // console.log($(el));
+                $(el).addClass('active')
+            } else {
+                $(el).removeClass('active');
+            }
+        })
     })
 </script>

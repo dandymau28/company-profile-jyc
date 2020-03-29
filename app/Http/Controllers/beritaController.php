@@ -72,7 +72,8 @@ class beritaController extends Controller
             'beritaCarousel' => $beritaCarouselTerbaru,
             'beritaPerTahun' => $beritaPerTahun,
             'videos' => $allVideo,
-            'title' => 'Berita'
+            'title' => 'Berita',
+            'nav' => 'berita'
             ]);
     }
 

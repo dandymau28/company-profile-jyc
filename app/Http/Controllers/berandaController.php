@@ -34,7 +34,8 @@ class berandaController extends Controller
         return view('beranda', [
             'beritas' => $beritaTerbaru,
             'beritaCarousel' => $beritaCarousel,
-            'title' => 'Beranda'
+            'title' => 'Beranda',
+            'nav' => 'beranda'
             ]);
     }
 }

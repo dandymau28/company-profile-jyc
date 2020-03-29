@@ -1,4 +1,4 @@
-<footer class="page-footer bg-danger pt-3">
+<footer class="page-footer merah pt-3">
     <div class="container">
         <div class="row">
             <div class="col-md-4 text-center">
