@@ -35,7 +35,8 @@ class kegiatanController extends Controller
             'kegiatans' => $kegiatan,
             'videos' => $allVideo,
             'fotos' => $foto,
-            'title' => 'Kegiatan'
+            'title' => 'Kegiatan',
+            'nav' => 'kegiatan'
         ]);
     }
 

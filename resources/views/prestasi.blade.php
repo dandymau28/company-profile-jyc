@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @include('templates.head')
-    <title>JYC: {{$title}}</title>
+    <title>{{$title}} - Jakarta Youth Choir</title>
 </head>
 <body>
     @include('templates.navbar')

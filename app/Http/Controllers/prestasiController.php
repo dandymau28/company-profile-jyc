@@ -15,7 +15,8 @@ class prestasiController extends Controller
 
         return view('prestasi',[
             'prestasis' => $prestasi,
-            'title' => 'prestasi'
+            'title' => 'prestasi',
+            'nav' => 'prestasi'
         ]);
     }
 }

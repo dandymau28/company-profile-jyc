@@ -27,7 +27,7 @@ Route::get('/', 'berandaController@beranda'
 )->name('beranda');
 
 Route::get('/profile', function () {
-    return view('profile', ["title" => "Profile"]);
+    return view('profile', ["title" => "Profile", "nav" => "profile"]);
 })->name('profile');
 
 // Route::get('/kegiatan', function () {
@@ -49,7 +49,7 @@ Route::get('/prestasi', 'prestasiController@prestasi')->name('prestasi');
 Route::get('/berita', 'beritaController@berita')->name('berita');
 
 Route::get('/tentang-kami', function () {
-    return view('tentang-kami', ["title" => "Tentang"]);
+    return view('tentang-kami', ["title" => "Tentang", "nav" => "tentang"]);
 })->name('tentang-kami');
 
 Route::get('/pendaftaran',function () {
