@@ -83,7 +83,7 @@
         <div class="card-group ">
         @foreach ($beritas as $berita)
             <div class="card col col-sm-12 mx-2">
-                <img class="card-img-top" src="{{asset($berita->banner)}}" alt="Card image cap">
+                <img class="card-img-top" src="{{ Storage::url($berita->banner) }}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">{{ $berita->judul }}</h5>
                     <p class="card-text">{{ $berita->isi_berita }}

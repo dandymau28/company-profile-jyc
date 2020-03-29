@@ -48,7 +48,7 @@
                     <div class="row mb-4 bg-light text-dark py-3">
                         <div class="col-6 img-hover-zoom img-hover-zoom--brightness">
                             <a href="http://">
-                                <img class="img-fluid" src="{{asset($berita->banner)}}" alt="Gambar Blog">
+                                <img class="img-fluid" src="{{Storage::url($berita->banner)}}" alt="Gambar Blog">
                             </a>
                         </div>
                         <div class="col-6">
