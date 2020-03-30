@@ -18,6 +18,10 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="{{asset('assets/img/beranda/slide-1.png')}}" class="d-block w-100" alt="img">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    </div>
                 </div>
                 <div class="carousel-item">
                     <img src="{{asset('assets/img/beranda/slide-2.png')}}" class="d-block w-100" alt="img">
@@ -43,9 +47,7 @@
 
         <div class="card-group row justify-content-between px-3">
         @foreach ($beritas as $berita)
-            <div class="card col-md-3 col-lg-3 col-sm-12 mx-lg-3">
-                <img class="card-img-top" src="{{asset($berita->banner)}}" alt="Card image cap">
-            <div class="card col col-sm-12 mx-2">
+            <div class="card col-md-6 col-lg-6 col-xl-3 col-sm-12 mx-lg-3">
                 <img class="card-img-top" src="{{ Storage::url($berita->banner) }}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title"><a href="#">{{ $berita->judul }}</a></h5>

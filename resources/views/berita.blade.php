@@ -45,7 +45,7 @@
             {{-- Card Berita --}}
             <div class="col-lg-8 col-md-8 col-sm-12 mr-5">
                 @foreach( $beritas as $berita )
-                    <div class="row mb-4 bg-light text-dark py-3">
+                    <div data-aos="flip-right" class="row mb-4 bg-light text-dark py-3">
                         <div class="col-6 img-hover-zoom img-hover-zoom--brightness">
                             <a href="http://">
                                 <img class="img-fluid" src="{{Storage::url($berita->banner)}}" alt="Gambar Blog">
