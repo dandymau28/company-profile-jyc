@@ -18,7 +18,8 @@ class beritaModel extends Model
         'id_user',
         'isi_berita',
         'slug',
-        'banner'
+        'banner',
+        'tag'
     ];
 
     protected $dates = ['deleted_at'];
