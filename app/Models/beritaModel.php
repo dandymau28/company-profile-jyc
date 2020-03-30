@@ -14,13 +14,13 @@ class beritaModel extends Model
         'judul',
         'kategori',
         'status',
-        'tgl_publish',
         'id_user',
         'isi_berita',
         'slug',
         'banner',
+        'tgl_publish',
         'tag'
     ];
 
-    protected $dates = ['deleted_at'];
+    protected $dates = ['deleted_at', 'created_at', 'updated_at'];
 }
