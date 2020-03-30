@@ -20,6 +20,8 @@ class beritaController extends Controller
     {
         //3 Berita Terbaru
         $beritaTerbaru = DB::table('berita')->latest()->simplePaginate(3);
+
+        // return $beritaTerbaru;
     
         //Berita berdasarkan tahun
         try {
@@ -67,21 +69,38 @@ class beritaController extends Controller
             return false;
         }
 
+        //menghitung kategori
+        $kategori = DB::table('kategori')
+                    ->latest()->get();
+        
+        // return $kategori;
+        foreach($kategori as $index) 
+        {
+            $hitung = DB::table('berita')
+                    ->where('kategori', $index->nama_kategori)
+                    ->count();
+            
+            $koleksi[] = [
+                'kategori' => $index->nama_kategori,
+                'hasil' => $hitung
+            ];
+        }
 
         return view('berita', [
             'beritas' => $beritaTerbaru,
             'beritaCarousel' => $beritaCarouselTerbaru,
             'beritaPerTahun' => $beritaPerTahun,
             'videos' => $allVideo,
+            'koleksiKategori' => $koleksi,
             'title' => 'Berita',
             'nav' => 'berita'
             ]);
     }
 
-    public function show($id)
+    public function show($slug)
     {
         $berita = DB::table('berita')
-            ->where('id', $id)
+            ->where('slug', $slug)
             ->get();
 
         return $berita;
@@ -102,8 +121,10 @@ class beritaController extends Controller
                 }
 
                 //adding tag
-                $tags = $request->input('tag');
-                $tag = implode(',', $tags);
+                // if($request->input('tag')){
+                //     $tags = $request->input('tag');
+                //     $tag = implode(',', $tags);
+                // }
 
                 //simpan data
                 try {
@@ -115,7 +136,7 @@ class beritaController extends Controller
                         'id_user' => 1,
                         'kategori' => $request->kategori,
                         'status' => 'terbit',
-                        'tag' => $tag,
+                        // 'tag' => $tag,
                     ]);
 
                     return back()->with("success", "Berita berhasil di-post");
@@ -175,9 +196,25 @@ class beritaController extends Controller
         ]);
     }
 
-    public function uji()
+    public function countByKategori()
     {
-        $url = Storage::url('public/assets/img/6-1585298776.png');
-        echo "<img src='$url'/>";
+        
+        $kategori = DB::table('kategori')
+                    ->latest()->get();
+        
+        // return $kategori;
+        foreach($kategori as $index) 
+        {
+            $hitung = DB::table('berita')
+                    ->where('kategori', $index->nama_kategori)
+                    ->count();
+            
+            $koleksi[] = [
+                'kategori' => $index->nama_kategori,
+                'hasil' => $hitung
+            ];
+        }
+
+        return $koleksi;
     }
 }
