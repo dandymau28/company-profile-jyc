@@ -16,14 +16,10 @@
     <div class="carousel">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="{{asset('assets/img/beranda/slide-1.png')}}" class="d-block w-100" alt="img">
-                </div>
                 <div class="carousel-item">
-                    <img src="{{asset('assets/img/beranda/slide-2.png')}}" class="d-block w-100" alt="img">
-                </div>
-                <div class="carousel-item">
-                    <img src="{{asset('assets/img/beranda/slide-3.png')}}" class="d-block w-100" alt="img">
+                @foreach($beritaCarousel as $carousel)
+                    <img src="{{ Storage::url($carousel->banner) }}" class="d-block w-100" alt="img">
+                @endforeach
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -49,7 +45,7 @@
                     <h5 class="card-title">{{ $berita->judul }}</h5>
                     <p class="card-text">{{ $berita->isi_berita }}
                     </p>
-                    <p class="card-text"><small class="text-muted">{{ $berita->tgl_publish }}</small></p>
+                    <p class="card-text"><small class="text-muted">{{ \Carbon\Carbon::parse($berita->tgl_publish)->locale('id')->diffForHumans() }}</small></p>
                 </div>
             </div>
         @endforeach
