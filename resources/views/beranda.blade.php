@@ -45,6 +45,8 @@
         @foreach ($beritas as $berita)
             <div class="card col-md-3 col-lg-3 col-sm-12 mx-lg-3">
                 <img class="card-img-top" src="{{asset($berita->banner)}}" alt="Card image cap">
+            <div class="card col col-sm-12 mx-2">
+                <img class="card-img-top" src="{{ Storage::url($berita->banner) }}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title"><a href="#">{{ $berita->judul }}</a></h5>
                     <p class="card-text">{{ $berita->isi_berita }}

@@ -9,7 +9,6 @@ class cabModel extends Model
 {
     use SoftDeletes;
     protected $table = "cab";
-    public $timestamps = true;
     protected $fillable = [
         'id',
         'nama_lengkap',
@@ -26,4 +25,6 @@ class cabModel extends Model
         'domisili',
         'emergency_call'
     ];
+
+    protected $dates = ['deleted_at'];
 }

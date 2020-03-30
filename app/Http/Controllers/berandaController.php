@@ -25,6 +25,7 @@ class berandaController extends Controller
             //Berita Terbaru untuk Carousel
             $beritaCarousel = DB::table('berita')
                 ->where('penting','1')
+                ->latest()
                 ->take(5)
                 ->get();
         }catch (Exception $e) {

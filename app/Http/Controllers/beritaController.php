@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use DB;
 use App\Models\beritaModel as Berita;
+use Illuminate\Support\Facades\Storage;
 
 class beritaController extends Controller
 {
@@ -20,6 +21,8 @@ class beritaController extends Controller
         //3 Berita Terbaru
         $beritaTerbaru = DB::table('berita')->latest()->simplePaginate(3);
 
+        // return $beritaTerbaru;
+    
         //Berita berdasarkan tahun
         try {
             $berita = DB::table('berita')
@@ -66,21 +69,38 @@ class beritaController extends Controller
             return false;
         }
 
+        //menghitung kategori
+        $kategori = DB::table('kategori')
+                    ->latest()->get();
+        
+        // return $kategori;
+        foreach($kategori as $index) 
+        {
+            $hitung = DB::table('berita')
+                    ->where('kategori', $index->nama_kategori)
+                    ->count();
+            
+            $koleksi[] = [
+                'kategori' => $index->nama_kategori,
+                'hasil' => $hitung
+            ];
+        }
 
         return view('berita', [
             'beritas' => $beritaTerbaru,
             'beritaCarousel' => $beritaCarouselTerbaru,
             'beritaPerTahun' => $beritaPerTahun,
             'videos' => $allVideo,
+            'koleksiKategori' => $koleksi,
             'title' => 'Berita',
             'nav' => 'berita'
             ]);
     }
 
-    public function show($id)
+    public function show($slug)
     {
         $berita = DB::table('berita')
-            ->where('id', $id)
+            ->where('slug', $slug)
             ->get();
 
         return $berita;
@@ -100,6 +120,12 @@ class beritaController extends Controller
                     $pathPhoto = $uploadFoto->storeAs('public/assets/img', $name);
                 }
 
+                //adding tag
+                // if($request->input('tag')){
+                //     $tags = $request->input('tag');
+                //     $tag = implode(',', $tags);
+                // }
+
                 //simpan data
                 try {
                     $saveData = Berita::create([
@@ -110,6 +136,7 @@ class beritaController extends Controller
                         'id_user' => 1,
                         'kategori' => $request->kategori,
                         'status' => 'terbit',
+                        // 'tag' => $tag,
                     ]);
 
                     return back()->with("success", "Berita berhasil di-post");
@@ -129,6 +156,10 @@ class beritaController extends Controller
                 $uploadFoto = $request->file('image');
                 $name = rand(1,999).'-'.time().'.'.$uploadFoto->getClientOriginalExtension();
                 $pathPhoto = $uploadFoto->storeAs('public/assets/img', $name);
+
+                //adding tag
+                $tags = $request->input('tag');
+                $tag = implode(',', $tags);
 
                 //simpan data
                 try {
@@ -163,5 +194,27 @@ class beritaController extends Controller
             'title' => "Buat Berita",
             'kategoris' => $kategori
         ]);
+    }
+
+    public function countByKategori()
+    {
+        
+        $kategori = DB::table('kategori')
+                    ->latest()->get();
+        
+        // return $kategori;
+        foreach($kategori as $index) 
+        {
+            $hitung = DB::table('berita')
+                    ->where('kategori', $index->nama_kategori)
+                    ->count();
+            
+            $koleksi[] = [
+                'kategori' => $index->nama_kategori,
+                'hasil' => $hitung
+            ];
+        }
+
+        return $koleksi;
     }
 }
