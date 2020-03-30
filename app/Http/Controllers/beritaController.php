@@ -8,6 +8,7 @@ use Illuminate\Support\Str;
 use DB;
 use App\Models\beritaModel as Berita;
 use Illuminate\Support\Facades\Storage;
+use \Carbon\Carbon;
 
 class beritaController extends Controller
 {
@@ -118,14 +119,20 @@ class beritaController extends Controller
                     $uploadFoto = $request->file('image');
                     $name = rand(1,999).'-'.time().'.'.$uploadFoto->getClientOriginalExtension();
                     $pathPhoto = $uploadFoto->storeAs('public/assets/img', $name);
+                } else {
+                    $pathPhoto = 'public/assets/img/705-1585565895.jpg';
                 }
 
                 //adding tag
-                // if($request->input('tag')){
-                //     $tags = $request->input('tag');
-                //     $tag = implode(',', $tags);
-                // }
+                if($request->input('tag')){
+                    $tags = $request->input('tag');
+                    $tag = implode(',', $tags);
+                }
 
+                //penentuan tanggal
+                $tanggal = Carbon::now();
+                // return $tanggal;
+                // dd($tanggal);
                 //simpan data
                 try {
                     $saveData = Berita::create([
@@ -135,6 +142,7 @@ class beritaController extends Controller
                         'isi_berita' => $request->isi_berita,
                         'id_user' => 1,
                         'kategori' => $request->kategori,
+                        'tgl_publish' => $tanggal,
                         'status' => 'terbit',
                         // 'tag' => $tag,
                     ]);
@@ -153,13 +161,21 @@ class beritaController extends Controller
                 $slug = Str::slug($request->judul,'-');
 
                 //upload foto
-                $uploadFoto = $request->file('image');
-                $name = rand(1,999).'-'.time().'.'.$uploadFoto->getClientOriginalExtension();
-                $pathPhoto = $uploadFoto->storeAs('public/assets/img', $name);
+                if($request->file('image')){
+                    $uploadFoto = $request->file('image');
+                    $name = rand(1,999).'-'.time().'.'.$uploadFoto->getClientOriginalExtension();
+                    $pathPhoto = $uploadFoto->storeAs('public/assets/img', $name);
+                } else {
+                    $pathPhoto = 'public/assets/img/705-1585565895.jpg';
+                }
 
                 //adding tag
-                $tags = $request->input('tag');
-                $tag = implode(',', $tags);
+                if($request->input('tag')){
+                    $tags = $request->input('tag');
+                    $tag = implode(',', $tags);
+                } else {
+                    $tag = NULL;
+                }
 
                 //simpan data
                 try {
@@ -171,6 +187,7 @@ class beritaController extends Controller
                         'status' => 'belum_terbit',
                         'id_user' => 1,
                         'kategori' => $request->kategori,
+                        'tgl_publish' => NULL,
                     ]);
 
                     return back()->with("success", "Berita berhasil disimpan");
