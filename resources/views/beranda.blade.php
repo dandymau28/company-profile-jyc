@@ -38,15 +38,15 @@
     </div>
 
     <!-- Card Berita -->
-    <div class="berita container-fluid bg-light py-5">
-        <h3 class="mb-5">Berita</h3>
+    <div class="berita container-fluid bg-light px-5 py-5">
+        <h3 class="mb-5">Berita Terbaru</h3>
 
-        <div class="card-group ">
+        <div class="card-group row justify-content-between px-3">
         @foreach ($beritas as $berita)
-            <div class="card col col-sm-12 mx-2">
+            <div class="card col-md-3 col-lg-3 col-sm-12 mx-lg-3">
                 <img class="card-img-top" src="{{asset($berita->banner)}}" alt="Card image cap">
                 <div class="card-body">
-                    <h5 class="card-title">{{ $berita->judul }}</h5>
+                    <h5 class="card-title"><a href="#">{{ $berita->judul }}</a></h5>
                     <p class="card-text">{{ $berita->isi_berita }}
                     </p>
                     <p class="card-text"><small class="text-muted">{{ $berita->tgl_publish }}</small></p>
@@ -60,5 +60,8 @@
     @include('templates.footer')
 </body>
 @include('templates.foot')
+@push('js')
+    <script src="{{ asset('assets/js/moment.js') }}"></script>
+@endpush
 
 </html>
