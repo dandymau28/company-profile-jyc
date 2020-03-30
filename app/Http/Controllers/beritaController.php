@@ -144,6 +144,7 @@ class beritaController extends Controller
                         'kategori' => $request->kategori,
                         'tgl_publish' => $tanggal,
                         'status' => 'terbit',
+                        'penting' => $request->input('penting'),
                         // 'tag' => $tag,
                     ]);
 
@@ -188,6 +189,7 @@ class beritaController extends Controller
                         'id_user' => 1,
                         'kategori' => $request->kategori,
                         'tgl_publish' => NULL,
+                        'penting' => $request->input('penting'),
                     ]);
 
                     return back()->with("success", "Berita berhasil disimpan");
