@@ -119,4 +119,4 @@ Route::get('/uji-mail', function() {
 Route::post('/send-mail', 'mailController@sendEmail')->name('post-mail');
 
 
-Route::get('/ujigambar', 'beritaController@uji');
+Route::get('/ujigambar', 'beritaController@countByKategori');
