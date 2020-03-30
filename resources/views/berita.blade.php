@@ -53,7 +53,7 @@
                         </div>
                         <div class="col-6">
                             <div class="judul-berita display-5  mb-1">
-                                <a href="/berita/{{ $berita->id }}">{{ $berita->judul }}</a>
+                                <a href="/berita/{{ $berita->slug }}">{{ $berita->judul }}</a>
                             </div>
                             <div class="tanggal-posting text-muted my-2">
                                 <i class="far fa-clock"></i>
@@ -235,18 +235,20 @@
                         
                     </div>
                 </div>
+                @foreach($koleksiKategori as $koleksi)
                 <div class="row justify-content-between mt-3">
                     <div class="col">
                         <ul>
-                            <li>Kompetisi Nasional</li>
+                            <li>{{ $koleksi['kategori'] }}/li>
                         </ul>
                     </div>
                     <div class="col-1 mr-5">
-                        <span class="badge badge-primary badge-pill">14</span>
+                        <span class="badge badge-primary badge-pill">{{ $koleksi['hasil'] }}</span>
                     </div>
                 </div>
                 <hr class="mt-n2">
-                <div class="row justify-content-between mt-2">
+                @endforeach
+                <!-- <div class="row justify-content-between mt-2">
                     <div class="col">
                         <ul>
                             <li>Kompetisi Internasional</li>
@@ -300,7 +302,7 @@
                         <span class="badge badge-primary badge-pill">14</span>
                     </div>
                 </div>
-                <hr class="mt-n2">
+                <hr class="mt-n2"> -->
             </div>
         </div>
     </section>
