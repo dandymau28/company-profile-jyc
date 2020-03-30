@@ -16,6 +16,16 @@
     <div class="carousel">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{asset('assets/img/beranda/slide-1.png')}}" class="d-block w-100" alt="img">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{{asset('assets/img/beranda/slide-2.png')}}" class="d-block w-100" alt="img">
+                </div>
                 <div class="carousel-item">
                 @foreach($beritaCarousel as $carousel)
                     <img src="{{ Storage::url($carousel->banner) }}" class="d-block w-100" alt="img">
@@ -34,18 +44,25 @@
     </div>
 
     <!-- Card Berita -->
-    <div class="berita container-fluid bg-light py-5">
-        <h3 class="mb-5">Berita</h3>
+    <div class="berita container-fluid bg-light px-5 py-5">
+        <h3 class="mb-5">Berita Terbaru</h3>
 
-        <div class="card-group ">
+        <div class="card-group row justify-content-between px-3">
         @foreach ($beritas as $berita)
-            <div class="card col col-sm-12 mx-2">
+            <div class="card col-md-6 col-lg-6 col-xl-3 col-sm-12 mx-lg-3">
                 <img class="card-img-top" src="{{ Storage::url($berita->banner) }}" alt="Card image cap">
                 <div class="card-body">
+<<<<<<< HEAD
+                    <h5 class="card-title"><a href="#">{{ $berita->judul }}</a></h5>
+                    <p class="card-text">{{ $berita->isi_berita }}
+                    </p>
+                    <p class="card-text"><small class="text-muted">{{ $berita->tgl_publish }}</small></p>
+=======
                     <h5 class="card-title">{{ $berita->judul }}</h5>
                     <div class="card-text">{!! $berita->isi_berita !!}
                     </div>
                     <p class="card-text"><small class="text-muted">{{ \Carbon\Carbon::parse($berita->tgl_publish)->locale('id')->diffForHumans() }}</small></p>
+>>>>>>> 006f3492a27163b8a5d1db8c695bb0dddbdc85d6
                 </div>
             </div>
         @endforeach
@@ -56,5 +73,8 @@
     @include('templates.footer')
 </body>
 @include('templates.foot')
+@push('js')
+    <script src="{{ asset('assets/js/moment.js') }}"></script>
+@endpush
 
 </html>

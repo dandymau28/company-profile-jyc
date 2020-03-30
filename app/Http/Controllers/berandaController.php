@@ -16,7 +16,7 @@ class berandaController extends Controller
     {
         try {
             //3 Berita Terbaru
-            $beritaTerbaru = DB::table('berita')->latest()->take(3)->get();
+            $beritaTerbaru = DB::table('berita')->latest()->take(4)->get();
         } catch (Exception $e) {
             return $e;
         }

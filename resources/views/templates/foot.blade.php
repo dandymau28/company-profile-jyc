@@ -3,6 +3,7 @@
     <script src="{{ asset('assets/js/jquery.js') }}"></script>
     <script src="{{ asset('assets/js/popper.min.js') }}"></script>
     <script src="{{ asset('bootstrap-4.4.1-dist') }}/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     @stack('js')
     <!-- Main JS -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
@@ -12,6 +13,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
 <script>
     $(function () {
+        AOS.init();
+
         $(document).on("scroll", function () {
             var $nav = $("#navbar");
             $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
