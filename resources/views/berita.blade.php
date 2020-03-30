@@ -60,7 +60,7 @@
                                 <span>{{$berita->tgl_publish}}</span>
                             </div>
                             <div class="konten-berita text-justify">
-                                {{ $berita->isi_berita }}
+                                {!! $berita->isi_berita !!}
                             </div>
                         </div>
                     </div>

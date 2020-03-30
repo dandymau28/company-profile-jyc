@@ -43,8 +43,8 @@
                 <img class="card-img-top" src="{{ Storage::url($berita->banner) }}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">{{ $berita->judul }}</h5>
-                    <p class="card-text">{{ $berita->isi_berita }}
-                    </p>
+                    <div class="card-text">{!! $berita->isi_berita !!}
+                    </div>
                     <p class="card-text"><small class="text-muted">{{ \Carbon\Carbon::parse($berita->tgl_publish)->locale('id')->diffForHumans() }}</small></p>
                 </div>
             </div>
