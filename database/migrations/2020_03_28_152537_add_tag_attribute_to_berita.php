@@ -14,7 +14,7 @@ class AddTagAttributeToBerita extends Migration
     public function up()
     {
         Schema::table('berita', function (Blueprint $table) {
-            $table->string('tag')->after('kategori');
+            $table->string('tag')->after('kategori')->nullable();
         });
     }
 
