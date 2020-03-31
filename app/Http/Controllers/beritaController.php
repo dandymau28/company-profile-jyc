@@ -9,6 +9,8 @@ use DB;
 use App\Models\beritaModel as Berita;
 use Illuminate\Support\Facades\Storage;
 use \Carbon\Carbon;
+use App\Models\kategoriModel as Kategori;
+use App\Models\tagModel as Tag;
 
 class beritaController extends Controller
 {
@@ -191,7 +193,7 @@ class beritaController extends Controller
                         'tgl_publish' => NULL,
                         'penting' => $request->input('penting'),
                     ]);
-
+                    
                     return back()->with("success", "Berita berhasil disimpan");
                 } catch (Exception $e) {
                     return $error = [
@@ -235,5 +237,44 @@ class beritaController extends Controller
         }
 
         return $koleksi;
+    }
+
+    public function viewKategoriTag()
+    {
+        $kategori = DB::table('kategori')->oldest()->get();
+        $tag = DB::table('tag')->latest()->get();
+
+        foreach($kategori as $satuan) {
+            $jumlahBerita = DB::table('berita')
+                            ->where('kategori',$satuan->nama_kategori)
+                            ->count();
+            $koleksi[] = [
+                'nama_kategori' => $satuan->nama_kategori,
+                'jumlah_berita' => $jumlahBerita
+            ];
+        }
+
+        return view('admin.berita.tambahKategoridanTag', [
+            'kategori' => $koleksi,
+            'tag' => $tag
+        ]);
+    }
+
+    public function tambahKategori(Request $request)
+    {
+        $kategori = Kategori::create([
+            'nama_kategori' => $request->input('nama_kategori'),
+        ]);
+
+        return back()->with('success','berhasil menambahkan kategori');
+    }
+
+    public function tambahTag(Request $request)
+    {
+        $tag = Tag::create([
+            'nama_tag' => $request->input('nama_tag'),
+        ]);
+
+        return back()->with('success','berhasil menambahkan tag');
     }
 }
