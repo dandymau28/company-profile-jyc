@@ -26,11 +26,11 @@
                 <div class="carousel-item">
                     <img src="{{asset('assets/img/beranda/slide-2.png')}}" class="d-block w-100" alt="img">
                 </div>
-                @foreach($beritaCarousel as $carousel)
                 <div class="carousel-item">
+                @foreach($beritaCarousel as $carousel)
                     <img src="{{ Storage::url($carousel->banner) }}" class="d-block w-100" alt="img">
-                </div>
                 @endforeach
+                </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -50,13 +50,19 @@
         <div class="card-group row justify-content-between px-3">
         @foreach ($beritas as $berita)
             <div class="card col-md-6 col-lg-6 col-xl-3 col-sm-12 mx-lg-3">
-                <img class="card-img-top h-50 overflow-hidden" src="{{ Storage::url($berita->banner) }}" alt="Card image cap">
+                <img class="card-img-top" src="{{ Storage::url($berita->banner) }}" alt="Card image cap">
                 <div class="card-body">
-                    <h5 class="card-title text-justify font-weight-bold"><a href="{{ $berita->slug }}">{{ Str::title($berita->judul) }}</a></h5>
-                    <div class="card-text text-justify">
-                        {!! Str::limit(strip_tags($berita->isi_berita), 200) !!}
+<<<<<<< HEAD
+                    <h5 class="card-title"><a href="#">{{ $berita->judul }}</a></h5>
+                    <p class="card-text">{{ $berita->isi_berita }}
+                    </p>
+                    <p class="card-text"><small class="text-muted">{{ $berita->tgl_publish }}</small></p>
+=======
+                    <h5 class="card-title">{{ $berita->judul }}</h5>
+                    <div class="card-text">{!! $berita->isi_berita !!}
                     </div>
                     <p class="card-text"><small class="text-muted">{{ \Carbon\Carbon::parse($berita->tgl_publish)->locale('id')->diffForHumans() }}</small></p>
+>>>>>>> 006f3492a27163b8a5d1db8c695bb0dddbdc85d6
                 </div>
             </div>
         @endforeach
