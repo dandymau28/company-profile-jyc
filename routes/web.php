@@ -99,8 +99,10 @@ Route::prefix('admin')->group(function () {
 
     //Berita
     Route::get('/berita/buat', 'beritaController@create')->name('buat-berita');
-
+    Route::get('/berita/kategori-dan-tag', 'beritaController@viewKategoriTag');
     Route::post('/berita/buat', 'beritaController@store')->name('berita-post');
+    Route::post('/berita/tambah-kategori', 'beritaController@tambahKategori')->name('tambah-kategori');
+    Route::post('/berita/tambah-tag', 'beritaController@tambahTag')->name('tambah-tag');
 
     //Foto Kegiatan
     Route::get('/foto', 'UploadFotoController@index')->name('upload-foto-view');
