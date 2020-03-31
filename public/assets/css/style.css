@@ -2,6 +2,7 @@
 body {
     font-family: 'Muli', sans-serif;
     background-color: #f8f9fa;
+    overflow-x: hidden;
 }
 
 /* Template Warna*/
@@ -42,6 +43,7 @@ body {
 
 /* Mobile version */
 @media (min-width: 576px) {
+
     /* Masalah backround untuk active dan hover */
 }
 
