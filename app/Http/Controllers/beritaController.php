@@ -75,6 +75,8 @@ class beritaController extends Controller
         //menghitung kategori
         $kategori = DB::table('kategori')
                     ->latest()->get();
+
+        $koleksi = [];
         
         // return $kategori;
         foreach($kategori as $index) 
@@ -83,7 +85,7 @@ class beritaController extends Controller
                     ->where('kategori', $index->nama_kategori)
                     ->count();
             
-            $koleksi[] = [
+            $koleksi = [
                 'kategori' => $index->nama_kategori,
                 'hasil' => $hitung
             ];
