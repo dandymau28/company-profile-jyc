@@ -5,14 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class FotoModel extends Model
+class kategoriModel extends Model
 {
-    protected $table = 'foto';
-    
+    use SoftDeletes;
+    protected $table = "kategori";
     protected $fillable = [
-        'id',
-        'id_kegiatan',
-        'alamat_foto',
+        'nama_kategori',
+        'jumlah_berita'
     ];
 
     protected $dates = [
