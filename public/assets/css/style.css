@@ -42,7 +42,8 @@ body {
 
 /* Mobile version */
 @media (min-width: 576px) {
-    /* Masalah backround untuk active dan hover */
+    /* Berita */
+
 }
 
 
@@ -223,40 +224,72 @@ li.nav-item.active:hover {
     margin-bottom: 200px;
     margin-top: 100px;
 } */
-.jumbotron-berita {
-    background-image: url(../img/kegiatan/slide-1.png);
+
+#banner-berita {
+    background: url(../img/berita/6.png) no-repeat center center fixed;
+    display: table;
+    height: 40vh;
+    position: relative;
+    width: 100%;
     background-size: cover;
-    min-height: 500px;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    /* background-size: cover; */
 }
 
-.jumbotron-berita .display-judul {
-    position: absolute;
-    left: 0;
-    top: 42%;
-    width: 100%;
+.text-berita {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #f8f9fe;
+    display: table-cell;
     text-align: center;
-    color: #707070;
-    text-shadow: 0px 3px 6px #FFFFFF;
-    font-size: 80pt;
-    font-weight: bolder;
+    vertical-align: middle;
+    letter-spacing: .1rem;
 }
 
-.jumbotron-berita .display-judul-2 {
-    position: absolute;
-    left: 0;
-    bottom: 5%;
-    width: 100%;
-    text-align: center;
-    color: #FFFFFF;
-    font-size: 25pt;
-    font-weight: bolder;
+.text-berita h1 {
+    text-shadow: rgba(255, 255, 255, 0.1);
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: .5rem;
 }
+
+#konten-berita.w-80 {
+    width: 90%;
+    margin: auto;
+}
+
+@media (min-width: 992px) {
+    .judul-berita a {
+        font-size: 1.5rem;
+        color: #414141;
+        font-weight: 600;
+    }
+
+    #konten-berita.w-80 {
+        width: 85%;
+        margin: auto;
+    }
+
+    .text-berita {
+        background-color: rgba(0, 0, 0, 0.4);
+        color: #f8f9fe;
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        letter-spacing: .2rem;
+    }
+
+    .text-berita h1 {
+        text-shadow: rgba(255, 255, 255, 0.1);
+        font-size: 3.5rem;
+        font-weight: 900;
+        letter-spacing: 1rem;
+    }
+
+    #sidebar-berita {
+        border-left: 1px solid #dee2e6 !important;
+        padding-left: 3rem !important;
+    }
+
+}
+
 
 .berita h3 {
     color: #707070;
@@ -273,10 +306,6 @@ li.nav-item.active:hover {
     padding: 20px 10px;
 }
 
-#konten-berita.w-80 {
-    width: 80%;
-    margin: auto;
-}
 
 /* ====================================== */
 
