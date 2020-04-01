@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+            <div class="col-sm-6">
+=======
 @extends('admin.layouts.app')
 
 @section('title', 'Contoh Templating')
@@ -67,3 +70,4 @@
 </section>
 <!-- /.content -->
 @endsection
+>>>>>>> 2b96dccda57fedb9ed154f5fa46b7f652815018b
