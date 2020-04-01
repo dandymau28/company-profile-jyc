@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @include('templates.head')
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
     <title>{{$title}} - Jakarta Youth Choir</title>
 </head>
 <body>
@@ -24,12 +25,14 @@
         <div class="row mt-5 d-lg-none">
             <div class="col">
                 <div class="input-group custom-search-form border border-danger">
-                    <input type="text" class="border-0 form-control" placeholder="Cari berita...">
-                    <span class="input-group-btn">
-                        <button class="btn btn-default" type="button">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </span>
+                    <select class="border-0 form-control cari-berita">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </span>
+                    </select>
+                    {{-- <input type="text" class="border-0 form-control cari-berita" placeholder="Cari berita..."> --}}
                 </div>
             </div>
         </div>
@@ -73,7 +76,7 @@
                 <div class="row d-none d-lg-block">
                     <div class="col">
                         <div class="input-group custom-search-form border border-danger">
-                            <input type="text" class="border-0 form-control" placeholder="Cari berita...">
+                            <input type="text" class="border-0 form-control cari-berita" placeholder="Cari berita...">
                             <span class="input-group-btn">
                                 <button class="btn btn-default" type="button">
                                     <i class="fas fa-search"></i>
@@ -266,9 +269,11 @@
     @include('templates.footer')
 </body>
     @include('templates.foot')
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
     <script>
         $(document).ready(function(){
             $('select').formSelect();
+            $('.cari-berita').select2();
         });
     </script>
 </html>
