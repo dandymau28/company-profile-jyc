@@ -114,11 +114,41 @@ class beritaController extends Controller
             ->where('slug', $slug)
             ->simplePaginate(1);
 
+            //menghitung kategori
+        $kategori = DB::table('kategori')
+                    ->latest()->get();
+        $koleksi = [];
+        // return $kategori;
+        foreach($kategori as $index) 
+        {
+            $hitung = DB::table('berita')
+                    ->where('kategori', $index->nama_kategori)
+                    ->count();
+            
+            $koleksi[] = [
+                'kategori' => $index->nama_kategori,
+                'hasil' => $hitung
+            ];
+        }
+
+        // mengambil tag
+        $tag = explode(',', $berita->tag );
+
+        //associative array
+        foreach ($tag as $index) {
+            $tags[] = [
+                'tag' => $index
+            ];
+        }
+        
+
         return view('detailberita', [
             'nav' => 'berita',
             'title' => $berita->judul,
             'berita' => $berita,
-            'paginasi' =>$beritaPaginated
+            'paginasi' =>$beritaPaginated,
+            'koleksiKategori' => $koleksi,
+            'tags' => $tags
         ]);
     }
 
