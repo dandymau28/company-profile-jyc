@@ -76,12 +76,13 @@
                 <div class="row d-none d-lg-block">
                     <div class="col">
                         <div class="input-group custom-search-form border border-danger">
-                            <input type="text" class="border-0 form-control cari-berita" placeholder="Cari berita...">
-                            <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
-                                    <i class="fas fa-search"></i>
-                                </button>
-                            </span>
+                            <select class="border-0 form-control cari-berita">
+                                {{-- <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </span> --}}
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -196,16 +197,18 @@
                     </div>
                 </div>
                 @foreach($koleksiKategori as $koleksi)
+                <a href="/berita/kategori/{{$koleksi['kategori']}}">
                 <div class="row justify-content-between mt-3">
                     <div class="col">
                         <ul>
-                            <li><a href="/berita/kategori/{{$koleksi['kategori']}}">{{ $koleksi['kategori'] }}</a></li>
+                            <li>{{ $koleksi['kategori'] }}</li>
                         </ul>
                     </div>
                     <div class="col-1 mr-5">
-                        <span class="badge badge-primary badge-pill">{{ $koleksi['hasil'] }}</span>
+                        <span class="badge badge-pill badge-secondary">{{ $koleksi['hasil'] }}</span>
                     </div>
                 </div>
+                </a>
                 <hr class="mt-n2">
                 @endforeach
             </div>
