@@ -106,6 +106,10 @@ Route::prefix('admin')->group(function () {
     Route::post('/berita/tambah-kategori', 'adminController@tambahKategori')->name('tambah-kategori');
     Route::post('/berita/tambah-tag', 'adminController@tambahTag')->name('tambah-tag');
 
+    //Prestasi
+    Route::get('/prestasi','adminController@formPrestasi')->name('form-prestasi');
+    Route::post('/prestasi','adminController@tambahPrestasi')->name('input-prestasi');
+
     //Foto Kegiatan
     Route::get('/foto', 'UploadFotoController@index')->name('upload-foto-view');
     Route::post('/upload-foto', 'UploadFotoController@store')->name('upload-foto');
