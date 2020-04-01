@@ -415,7 +415,7 @@ body {
     flex-wrap: wrap;
 }
 #banner-profile {
-    background: url(../img/profile/profilepicture.jpg)no-repeat center center fixed;;
+    background: url(../img/profile/profilepicture.jpg)no-repeat center center fixed;
     display: table;
     height: 40vh;
     position: relative;
@@ -438,7 +438,7 @@ body {
 /* Banner Profile*/
 
 #banner-kegiatan {
-    background: url(../img/kegiatan/banner-kegiatan.png);
+    background: url(../img/kegiatan/banner-kegiatan.png)no-repeat center center fixed;
     display: table;
     height: 40vh;
     position: relative;
@@ -712,10 +712,10 @@ a.nav-link.active:hover {
     .we-sing p {
         text-align: justify;
         max-width: 1200px;
-        font-size: 100%;
-        line-height: 45px;
+        line-height: 25px;
         color: #707070;
-        padding: 30px;
+        padding: 5px;
+        font-size: 18px;
     }
 }
 
