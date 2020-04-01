@@ -36,10 +36,10 @@
     </div> -->
 
     <!-- Banner Section -->
-    <div class="jumbotron jumbotron-profile">
-        <div class="container">
-            <h1 class="display-4 d-flex align-items-center">PROFILE</h1>
-            <!-- <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
+    <div id="banner-profile">
+        <div class="container text-profile">
+            <h1 class="display-judul">PROFILE</h1>
+            <h4 class="">JAKARTA YOUTH CHOIR</h4>
         </div>
     </div>
 
@@ -49,9 +49,7 @@
         <div class="row-founder container-fluid">
             <div class="col-lg-5 card mx-md-auto mb-4">
                 <div class="row justify-content-center" >
-                    <div class="col-4">
-                        <img src="{{asset('assets/img/profile/limbong.JPG')}}" class="card-img-top card-founder rounded-circle" alt="...">
-                    </div>
+                        <img src="{{asset('assets/img/profile/limbong.JPG')}}" class="card-img-top card-founder rounded-circle img-fluid" alt="...">
                 </div>
                 <div class="card-body">
                     <h5 class="card-title text-center">Ponirin Ariadi Limbong, S.STP</h5>
@@ -68,9 +66,7 @@
             </div>
             <div class="col-lg-5 card mx-md-auto">
                 <div class="row justify-content-center" >
-                    <div class="col-4">
                         <img src="{{asset('assets/img/profile/cepo.jpeg')}}" class="card-img-top card-founder rounded-circle" alt="...">
-                    </div>
                 </div>
                 <div class="card-body">
                     <h5 class="card-title text-center">Septo Adi Kristanto Simanjuntak, S.Pd</h5>

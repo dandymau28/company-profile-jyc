@@ -337,6 +337,22 @@ li.nav-item.active:hover {
     display: flex;
     flex-wrap: wrap;
 }
+#banner-profile {
+    background: url(../img/profile/profilepicture.jpg);
+    display: table;
+    height: 40vh;
+    position: relative;
+    width: 100%;
+    background-size: cover;
+}
+    .text-profile {
+        background-color: rgba(0, 0, 0, 0.4);
+        color: #f8f9fe;
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        letter-spacing: .1rem;
+    }
 
 
 /* KEGIATAN PAGE */
