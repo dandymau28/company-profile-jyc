@@ -25,8 +25,8 @@
             {{-- Card Berita --}}
             <div class="col-lg-8 col-md-12 col-sm-12 mr-md-5">
                 {{-- Breadcrumb --}}
-                <nav aria-label="breadcrumb" class="mb-5">
-                    <ol class="breadcrumb">
+                <nav aria-label="breadcrumb" class="mb-5 d-none d-lg-block">
+                    <ol class="breadcrumb bg-light">
                         <li class="breadcrumb-item"><a href="{{ route('beranda') }}">Beranda</a></li>
                         <li class="breadcrumb-item"><a href="{{ route('berita') }}">Berita</a></li>
                         <li class="breadcrumb-item active" aria-current="page">{{ Str::title(Str::limit($berita->judul)) }}</li>
@@ -41,7 +41,7 @@
                         <i class="far fa-clock"></i>
                         <span>{{ \Carbon\Carbon::parse($berita->tgl_publish)->locale('id')->diffForHumans() }}</span>
                     </div>
-                    <div id="banner-berita" class="mt-5">
+                    <div id="banner-berita row justify-content-center" class="mt-5">
                         <img class="img-fluid" src="{{Storage::url($berita->banner)}}" alt="Gambar Blog">
                     </div>
                     <div id="isi-detail-berita" class="text-justify my-4">
@@ -82,19 +82,19 @@
                 </div>
                 <div class="row mt-2 text-center text-white mx-1">
                     <div class="col py-3">
-                        <a href="http://"><i class="fab fa-facebook-f fa-2x rounded-circle"></i></a>
+                        <a href="http://"><i id="fb" class="fab fa-facebook-f fa-2x rounded-circle"></i></a>
                     </div>
                     <div class="col py-3">
-                        <a href="http://"><i class="fab fa-twitter fa-2x"></i></a>
+                        <a href="http://"><i id="twitter" class="fab fa-twitter fa-2x"></i></a>
                     </div>
                     <div class="col py-3">
-                        <a href="http://"><i class="fab fa-youtube fa-2x"></i></a>
+                        <a href="http://"><i id="youtube" class="fab fa-youtube fa-2x"></i></a>
                     </div>
                     <div class="col py-3">
-                        <a href="http://"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="http://"><i id="ig" class="fab fa-instagram fa-2x"></i></a>
                     </div>
                     <div class="col py-3">
-                        <a href="http://"><i class="fas fa-envelope fa-2x"></i></i></a>
+                        <a href="http://"><i id="gmail" class="fas fa-envelope fa-2x"></i></i></a>
                     </div>
                 </div>
                 

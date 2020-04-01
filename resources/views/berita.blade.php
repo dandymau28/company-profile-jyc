@@ -60,7 +60,7 @@
                                 {!! Str::limit(strip_tags($berita->isi_berita), 400) !!}
                             </div>
                             <div class="float-right pt-sm-2 pt-md-1">
-                                <a type="button" href="/berita/{{ $berita->slug }}" class="btn btn-outline-secondary">Selengkapnya...</a>
+                                <a type="button" href="/berita/{{ $berita->slug }}" class="btn btn-outline-secondary stretched-link">Selengkapnya...</a>
                             </div>
                         </div>
                     </div>
@@ -97,19 +97,19 @@
                 </div>
                 <div class="row mt-2 text-center text-white mx-1">
                     <div class="col py-3">
-                        <a href="http://"><i class="fab fa-facebook-f fa-2x rounded-circle"></i></a>
+                        <a href="http://"><i id="fb" class="fab fa-facebook-f fa-2x rounded-circle"></i></a>
                     </div>
                     <div class="col py-3">
-                        <a href="http://"><i class="fab fa-twitter fa-2x"></i></a>
+                        <a href="http://"><i id="twitter" class="fab fa-twitter fa-2x"></i></a>
                     </div>
                     <div class="col py-3">
-                        <a href="http://"><i class="fab fa-youtube fa-2x"></i></a>
+                        <a href="http://"><i id="youtube" class="fab fa-youtube fa-2x"></i></a>
                     </div>
                     <div class="col py-3">
-                        <a href="http://"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="http://"><i id="ig" class="fab fa-instagram fa-2x"></i></a>
                     </div>
                     <div class="col py-3">
-                        <a href="http://"><i class="fas fa-envelope fa-2x"></i></i></a>
+                        <a href="http://"><i id="gmail" class="fas fa-envelope fa-2x"></i></i></a>
                     </div>
                 </div>
                 
