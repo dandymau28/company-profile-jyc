@@ -10,110 +10,67 @@
     {{-- Navbar --}}
     @include('templates.navbar')
 
-    <div class="jumbotron jumbotron-berita jumbotron-fluid">
-        <div class="container">
+    {{-- Banner --}}
+    <div id="banner-berita">
+        <div class="container text-berita">
             <h1 class="display-judul">BERITA</h1>
-            <h4 class="display-judul-2">JAKARTA YOUTH CHOIR</h4>
+            <h4 class="">JAKARTA YOUTH CHOIR</h4>
         </div>
     </div>
 
-    {{-- Slider Berita --}}
-    {{-- <div class="carousel">
-        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="{{asset('assets/img/kegiatan/slide-1.png')}}" class="d-block w-100" alt="img">
-                </div>
-                <div class="carousel-item">
-                    <img src="{{asset('assets/img/kegiatan/slide-2.png')}}" class="d-block w-100" alt="img">
-                </div>
-                <div class="carousel-item">
-                    <img src="{{asset('assets/img/kegiatan/slide-3.png')}}" class="d-block w-100" alt="img">
-                </div>
-            </div>
-        </div>
-    </div> --}}
-
-    {{-- <div class="mt-n5 berita-h">
-        <div class=" text-center pb-2 display-4">{{ __('Berita') }}</div>
-    </div> --}}
     <!-- Konten -->
     <section id="konten-berita" class="w-80">
         {{-- Berita --}}
+        <div class="row mt-5 d-lg-none">
+            <div class="col">
+                <div class="input-group custom-search-form border border-danger">
+                    <input type="text" class="border-0 form-control" placeholder="Cari berita...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
 
         <div class="row my-5">
             {{-- Card Berita --}}
-            <div class="col-lg-8 col-md-8 col-sm-12 mr-5">
+            <div class="col-lg-8 col-md-12 col-sm-12 mr-md-5">
                 @foreach( $beritas as $berita )
-                    <div data-aos="flip-right" class="row mb-4 bg-light text-dark py-3">
-                        <div class="col-6 img-hover-zoom img-hover-zoom--brightness">
-                            <a href="http://">
+                    <div  data-aos="zoom-in" class="row mb-4 bg-light text-dark py-3">
+                        <div class="col-12 col-md-6 img-hover-zoom img-hover-zoom--brightness">
+                            <a href="/berita/{{ $berita->slug }}">
                                 <img class="img-fluid" src="{{Storage::url($berita->banner)}}" alt="Gambar Blog">
                             </a>
                         </div>
-                        <div class="col-6">
-                            <div class="judul-berita display-5  mb-1">
-                                <a href="/berita/{{ $berita->slug }}">{{ $berita->judul }}</a>
+                        <div class="col-12 col-md-6 pt-sm-3 pt-md-0">
+                            <div class="judul-berita display-5 mb-1">
+                                <a href="/berita/{{ $berita->slug }}">{{ Str::title($berita->judul) }}</a>
+                                
                             </div>
                             <div class="tanggal-posting text-muted my-2">
                                 <i class="far fa-clock"></i>
-                                <span>{{$berita->tgl_publish}}</span>
+                                <span>{{ \Carbon\Carbon::parse($berita->tgl_publish)->locale('id')->diffForHumans() }}</span>
                             </div>
                             <div class="konten-berita text-justify">
-                                {!! $berita->isi_berita !!}
+                                {!! Str::limit(strip_tags($berita->isi_berita), 400) !!}
+                            </div>
+                            <div class="float-right pt-sm-2 pt-md-1">
+                                <a type="button" href="/berita/{{ $berita->slug }}" class="btn btn-outline-secondary">Selengkapnya...</a>
                             </div>
                         </div>
                     </div>
                 @endforeach
-                <div class="row justify-content-end ">
-                    <div class="col-4">
-                        {{$beritas->links()}}
-                    </div>
+                <div class="row justify-content-center">
+                    {{$beritas->links()}}
                 </div>
-                {{-- <div class="row mb-4">
-                    <div class="col-6">
-                        <a href="http://">
-                            <img class="img-fluid" src="{{asset('assets/img/berita/1.png')}}" alt="Gambar Blog">
-                        </a>
-                    </div>
-                    <div class="col-6">
-                        <div class="judul-berita display-5  mb-1">
-                            <a href="http://">Pagelaran Konser JYC Mengagumkan!</a>
-                        </div>
-                        <div class="tanggal-posting text-muted my-2">
-                            <i class="far fa-clock"></i>
-                            <span>29 Agustus 2019</span>
-                        </div>
-                        <div class="konten-berita text-justify">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. At ad velit harum reiciendis amet accusamus repellat, quae voluptas labore. Officiis, voluptatum quos voluptas eveniet odit tempora sapiente quaerat perspiciatis doloremque, laboriosam repellat incidunt accusamus cumque itaque. Eos, adipisci. Molestias....
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row mb-4">
-                    <div class="col-6">
-                        <a href="http://">
-                            <img class="img-fluid" src="{{asset('assets/img/berita/1.png')}}" alt="Gambar Blog">
-                        </a>
-                    </div>
-                    <div class="col-6">
-                        <div class="judul-berita display-5  mb-1">
-                            <a href="http://">Pagelaran Konser JYC Mengagumkan!</a>
-                        </div>
-                        <div class="tanggal-posting text-muted my-2">
-                            <i class="far fa-clock"></i>
-                            <span>29 Agustus 2019</span>
-                        </div>
-                        <div class="konten-berita text-justify">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. At ad velit harum reiciendis amet accusamus repellat, quae voluptas labore. Officiis, voluptatum quos voluptas eveniet odit tempora sapiente quaerat perspiciatis doloremque, laboriosam repellat incidunt accusamus cumque itaque. Eos, adipisci. Molestias....
-                        </div>
-                    </div>
-                </div> --}}
             </div>
+            <hr class="d-none d-lg-block">
 
             {{-- Sidebar --}}
-            <div class="col border-left pl-5">
-                <div class="row">
+            <div id="sidebar-berita" class="col">
+                <div class="row d-none d-lg-block">
                     <div class="col">
                         <div class="input-group custom-search-form border border-danger">
                             <input type="text" class="border-0 form-control" placeholder="Cari berita...">
@@ -235,7 +192,7 @@
                         
                     </div>
                 </div>
-                @foreach($koleksiKategori as $koleksi)
+                {{-- @foreach($koleksiKategori as $koleksi)
                 <div class="row justify-content-between mt-3">
                     <div class="col">
                         <ul>
@@ -247,17 +204,17 @@
                     </div>
                 </div>
                 <hr class="mt-n2">
-                @endforeach
-                <!-- <div class="row justify-content-between mt-2">
+                @endforeach --}}
+                <a href="#" class="row justify-content-between mt-2">
                     <div class="col">
                         <ul>
                             <li>Kompetisi Internasional</li>
                         </ul>
                     </div>
                     <div class="col-1 mr-5">
-                        <span class="badge badge-primary badge-pill">14</span>
+                        <span class="">(14)</span>
                     </div>
-                </div>
+                </a>
                 <hr class="mt-n2">
                 <div class="row justify-content-between mt-2">
                     <div class="col">
@@ -302,7 +259,7 @@
                         <span class="badge badge-primary badge-pill">14</span>
                     </div>
                 </div>
-                <hr class="mt-n2"> -->
+                <hr class="mt-n2">
             </div>
         </div>
     </section>

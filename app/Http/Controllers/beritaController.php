@@ -106,9 +106,18 @@ class beritaController extends Controller
     {
         $berita = DB::table('berita')
             ->where('slug', $slug)
-            ->get();
+            ->first();
+        
+        $beritaPaginated = DB::table('berita')
+            ->where('slug', $slug)
+            ->simplePaginate(1);
 
-        return $berita;
+        return view('detailberita', [
+            'nav' => 'berita',
+            'title' => $berita->judul,
+            'berita' => $berita,
+            'paginasi' =>$beritaPaginated
+        ]);
     }
 
     public function store(Request $request)
