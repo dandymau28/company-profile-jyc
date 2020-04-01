@@ -192,11 +192,11 @@
                         
                     </div>
                 </div>
-                {{-- @foreach($koleksiKategori as $koleksi)
+                @foreach($koleksiKategori as $koleksi)
                 <div class="row justify-content-between mt-3">
                     <div class="col">
                         <ul>
-                            <li>{{ $koleksi['kategori'] }}/li>
+                            <li><a href="/berita/kategori/{{$koleksi['kategori']}}">{{ $koleksi['kategori'] }}</a></li>
                         </ul>
                     </div>
                     <div class="col-1 mr-5">
@@ -204,62 +204,7 @@
                     </div>
                 </div>
                 <hr class="mt-n2">
-                @endforeach --}}
-                <a href="#" class="row justify-content-between mt-2">
-                    <div class="col">
-                        <ul>
-                            <li>Kompetisi Internasional</li>
-                        </ul>
-                    </div>
-                    <div class="col-1 mr-5">
-                        <span class="">(14)</span>
-                    </div>
-                </a>
-                <hr class="mt-n2">
-                <div class="row justify-content-between mt-2">
-                    <div class="col">
-                        <ul>
-                            <li>Upacara Kedinasan</li>
-                        </ul>
-                    </div>
-                    <div class="col-1 mr-5">
-                        <span class="badge badge-primary badge-pill">14</span>
-                    </div>
-                </div>
-                <hr class="mt-n2">
-                <div class="row justify-content-between mt-2">
-                    <div class="col">
-                        <ul>
-                            <li>Guest Star</li>
-                        </ul>
-                    </div>
-                    <div class="col-1 mr-5">
-                        <span class="badge badge-primary badge-pill">14</span>
-                    </div>
-                </div>
-                <hr class="mt-n2">
-                <div class="row justify-content-between mt-2">
-                    <div class="col">
-                        <ul>
-                            <li>Konser Pra-Kompetisi</li>
-                        </ul>
-                    </div>
-                    <div class="col-1 mr-5">
-                        <span class="badge badge-primary badge-pill">14</span>
-                    </div>
-                </div>
-                <hr class="mt-n2">
-                <div class="row justify-content-between mt-2">
-                    <div class="col">
-                        <ul>
-                            <li>Prestasi</li>
-                        </ul>
-                    </div>
-                    <div class="col-1 mr-5">
-                        <span class="badge badge-primary badge-pill">14</span>
-                    </div>
-                </div>
-                <hr class="mt-n2">
+                @endforeach
             </div>
         </div>
     </section>
