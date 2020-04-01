@@ -101,7 +101,7 @@ Route::prefix('admin')->group(function () {
 
     //Berita
     Route::get('/berita/buat', 'adminController@create')->name('buat-berita');
-    Route::get('/berita/kategori-dan-tag', 'adminController@viewKategoriTag');
+    Route::get('/berita/kategori-dan-tag', 'adminController@viewKategoriTag')->name('kategoriTag');
     Route::post('/berita/buat', 'adminController@store')->name('berita-post');
     Route::post('/berita/tambah-kategori', 'adminController@tambahKategori')->name('tambah-kategori');
     Route::post('/berita/tambah-tag', 'adminController@tambahTag')->name('tambah-tag');

@@ -113,11 +113,17 @@
                                     <p>Olah Berita</p>
                                 </a>
                             </li>
+                            <li class="nav-item level-2">
+                                <a href="{{route('kategoriTag')}}" class="nav-link">
+                                    <i class="nav-icon fas fa-tasks"></i>
+                                    <p>Kategori dan Tag</p>
+                                </a>
+                            </li>
                         </ul>
                     </li>
                     
                     <li class="nav-item level-1">
-                        <a href="#" class="nav-link">
+                        <a href="{{route('form-prestasi')}}" class="nav-link">
                             <i class="nav-icon fas fa-trophy"></i>
                             <p>Prestasi</p>
                         </a>

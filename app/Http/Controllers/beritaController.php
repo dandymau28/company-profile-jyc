@@ -97,7 +97,6 @@ class beritaController extends Controller
             'beritas' => $beritaTerbaru,
             'beritaCarousel' => $beritaCarouselTerbaru,
             'beritaPerTahun' => $beritaPerTahun,
-            // 'beritaPerKategori' => $beritaPerKategori,
             'videos' => $allVideo,
             'koleksiKategori' => $koleksi,
             'title' => 'Berita',
