@@ -82,14 +82,14 @@ body {
 
 
 /* NAVBAR MOBILE VERSION */
-@media (max-width: 767.98px){
+@media (max-width: 767.98px) {
     .navbar {
         background-color: #9E1212 !important;
         opacity: 100%;
         text-transform: uppercase;
         font-weight: lighter;
     }
-    
+
     .navbar-brand img {
         width: 4rem;
         background-color: #FFFFFF;
@@ -107,7 +107,7 @@ body {
         background-color: #FFFFFF !important;
         width: 55px;
     }
-    
+
     .nav-link.active,
     .nav-link:hover {
         border-bottom: 1px solid #FFFFFF !important;
@@ -119,11 +119,11 @@ body {
         background-color: #9E1212 !important;
         opacity: 100%;
     }
-    
+
     #navbar.scrolled.nav-link {
         font-weight: 700;
     }
-    
+
 }
 
 /* ====================================== */
@@ -232,7 +232,7 @@ body {
 }
 
 /* Carousel Mobile */
-@media (max-width: 767.98px){
+@media (max-width: 767.98px) {
     .carousel {
         margin-top: 60px !important;
     }
@@ -241,9 +241,9 @@ body {
 
 /* INTRO JYC */
 
-.intro-jyc{
+.intro-jyc {
     background-color: #C12821;
-    color : #FFFFFF;
+    color: #FFFFFF;
     text-align: justify;
     font-weight: lighter;
     line-height: 30px;
@@ -274,18 +274,18 @@ body {
     }
 }
 
-.intro-gambar{
+.intro-gambar {
     padding-right: 0px;
     padding-left: 0px;
 }
 
 /* Beranda Card Berita */
-.card-berita{
+.card-berita {
     padding-bottom: 50px !important;
 }
 
 @media (max-width: 767.98px) {
-    .card-berita{
+    .card-berita {
         flex: none !important;
         margin-bottom: 2rem !important;
     }
@@ -302,16 +302,16 @@ body {
 }
 
 #banner-berita {
-    background: url(../img/berita/6.png) no-repeat center center fixed;
+    background: url(../img/berita/banner.jpg) no-repeat center center fixed;
     display: table;
-    height: 40vh;
+    height: 50vh;
     position: relative;
     width: 100%;
     background-size: cover;
 }
 
 .text-berita {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.6);
     color: #f8f9fe;
     display: table-cell;
     text-align: center;
@@ -344,6 +344,61 @@ body {
     color: #707070;
 }
 
+/* Social Links */
+#fb {
+    color: #4267B2;
+    opacity: .9;
+}
+
+#fb:hover {
+    color: #4267B2;
+    opacity: 1;
+}
+
+#twitter {
+    color: #00acee;
+    opacity: .85;
+}
+
+#twitter:hover {
+    color: #00acee;
+    opacity: 1;
+}
+
+#youtube {
+    color: #ff0000;
+    opacity: .85;
+}
+
+#youtube:hover {
+    color: #ff0000;
+    opacity: 1;
+}
+
+#ig {
+    color: #bc2a8d;
+    opacity: .85;
+}
+
+#ig:hover {
+    color: #bc2a8d;
+    opacity: 1;
+}
+
+#gmail {
+    color: #B23121;
+    opacity: .85;
+}
+
+#gmail:hover {
+    color: #B23121;
+    opacity: 1;
+}
+
+li.breadcrumb-item {
+    color: #707070;
+}
+
 @media (min-width: 992px) {
     .judul-berita a {
         font-size: 1.5rem;
@@ -357,7 +412,7 @@ body {
     }
 
     .text-berita {
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color: rgba(0, 0, 0, 0.6);
         color: #f8f9fe;
         display: table-cell;
         text-align: center;
@@ -390,10 +445,10 @@ body {
     width: 287px;
 }
 
-.card {
-    /* margin: 20px 10px; */
+/* .card {
+    margin: 20px 10px;
     padding: 20px 10px;
-}
+} */
 
 
 /* ====================================== */
@@ -414,8 +469,13 @@ body {
     display: flex;
     flex-wrap: wrap;
 }
+
 #banner-profile {
     background: url(../img/profile/profilepicture.jpg)no-repeat center center fixed;
+<<<<<<< HEAD
+=======
+    ;
+>>>>>>> ca632e0fc83dba73e443a61d4188cc0ee3a48f12
     display: table;
     height: 40vh;
     position: relative;
@@ -472,25 +532,25 @@ body {
     width: 287px;
 }
 
-.latihan-rutin a{
+.latihan-rutin a {
     color: #b71c1c;
 }
 
-.latihan-rutin a:hover{
+.latihan-rutin a:hover {
     text-decoration: none;
 }
 
-.latihan-text{
+.latihan-text {
     font-size: 20px;
 }
 
 /* LATIHAN RUTIN MOBILE */
-@media (max-width: 767.98px){
-    .latihan-rutin h2{
+@media (max-width: 767.98px) {
+    .latihan-rutin h2 {
         font-size: 25px;
     }
 
-    .latihan-text{
+    .latihan-text {
         font-size: 12px;
     }
 }
@@ -511,53 +571,53 @@ body {
     width: max-content;
 }
 
-.JNCC h5{
+.JNCC h5 {
     padding-top: 2rem;
     padding-bottom: 1rem;
     font-size: 120px;
     color: #707070;
 }
 
-.JNCC i{
+.JNCC i {
     padding-top: 2rem;
     padding-bottom: 1rem;
     font-size: 150px;
     color: #707070;
 }
 
-.JNCC p{
+.JNCC p {
     font-size: 20px;
     font-weight: bolder;
 }
 
 /* JNCC MOBILE */
 @media (max-width: 767.98px) {
-    .JNCC h3{
+    .JNCC h3 {
         font-size: 20px;
     }
 
-    .JNCC h5{
+    .JNCC h5 {
         padding-top: 2rem;
         padding-bottom: 1rem;
         font-size: 100px;
         color: #707070;
     }
 
-    .JNCC i{
+    .JNCC i {
         padding-top: 2rem;
         padding-bottom: 1rem;
         font-size: 120px;
         color: #707070;
     }
 
-    .JNCC p{
+    .JNCC p {
         font-size: 15px;
         font-weight: bolder;
     }
 }
 
 @media (max-width: 575.98px) {
-    .JNCC h3{
+    .JNCC h3 {
         font-size: 15px;
     }
 }
@@ -696,7 +756,6 @@ a.nav-link.active:hover {
     color: #707070;
     text-align: center;
     padding-bottom: 20px
-    
 }
 
 .we-sing p {
@@ -754,12 +813,12 @@ a.nav-link.active:hover {
     text-shadow: 3px 3px 3px #707070;
 }
 
-@media (max-width: 576px){
-    .jumbotron-2 .display-3{
+@media (max-width: 576px) {
+    .jumbotron-2 .display-3 {
         font-size: 20pt;
     }
 
-    .jumbotron-2 .display-4{
+    .jumbotron-2 .display-4 {
         font-size: 31pt;
     }
 }
@@ -787,14 +846,15 @@ a.nav-link.active:hover {
 .form-question img {
     width: 400px;
 }
-@media (max-width: 576px){
+
+@media (max-width: 576px) {
     .form-question img {
         width: 150px;
         margin-top: -60px;
         margin-bottom: 10px;
         margin-left: 40px;
     }
-    
+
 }
 
 .form-question li {
@@ -822,14 +882,14 @@ a.nav-link.active:hover {
     border-radius: 25px;
 }
 
-@media (max-width: 576px){
+@media (max-width: 576px) {
     .form-question {
-        margin-left: -25px;        
+        margin-left: -25px;
     }
 
-    .form-question button{
-       position: absolute;
-       left: 35%;
+    .form-question button {
+        position: absolute;
+        left: 35%;
     }
 }
 
