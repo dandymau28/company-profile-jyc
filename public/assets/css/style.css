@@ -255,6 +255,19 @@ li.nav-item.active:hover {
     margin: auto;
 }
 
+#isi-detail-berita p {
+    font-size: 1.2rem;
+}
+
+#isi-detail-berita blockquote {
+    padding: 0rem 2.5rem;
+    font-size: 1.2rem;
+}
+
+#sidebar-berita a {
+    color: #0f0f0f;
+}
+
 @media (min-width: 992px) {
     .judul-berita a {
         font-size: 1.5rem;
@@ -310,9 +323,24 @@ li.nav-item.active:hover {
 /* ====================================== */
 
 /* PROFILE PAGE */
+.jumbotron-profile {
+    background-image: url(../img/profile/profilepic.jpg);
+    background-size: cover;
+    height: 40vh;
+}
+
+.card-founder{
+    width: 10rem;
+    height: 10rem;
+}
+.row-founder{
+    display: flex;
+    flex-wrap: wrap;
+}
 
 
 /* KEGIATAN PAGE */
+
 
 /* Latihan Rutin*/
 .latihan-rutin {
