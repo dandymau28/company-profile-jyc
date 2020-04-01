@@ -9,4 +9,16 @@ class prestasiModel extends Model
 {
     use SoftDeletes;
     protected $table = 'prestasi';
+    protected $fillable = [
+        'nama_kompetisi',
+        'gelar_juara',
+        'lokasi',
+        'tanggal_kompetisi'
+    ];
+
+    protected $dates = [
+        'created_at',
+        'updated_at',
+        'deleted_at'
+    ];
 }

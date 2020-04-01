@@ -30,6 +30,14 @@ Route::get('/profile', function () {
     return view('profile', ["title" => "Profile", "nav" => "profile"]);
 })->name('profile');
 
+Route::get('/profile/limbong', function(){
+    return view('founderlimbong', ["title" => "Ponirin Ariadi", "nav" => "profile"]);
+})->name('founder');
+
+Route::get('/profile/cepo', function(){
+    return view('foundercepo', ["title" => "Septo Adi", "nav" => "profile"]);
+})->name('founderrr');
+
 // Route::get('/kegiatan', function () {
 //     return view('kegiatan', ["title" => "Kegiatan"]);
 // })->name('kegiatan');
@@ -47,6 +55,8 @@ Route::get('/prestasi', 'prestasiController@prestasi')->name('prestasi');
 // })->name('berita');
 
 Route::get('/berita', 'beritaController@berita')->name('berita');
+Route::get('/berita/{berita}','beritaController@show');
+Route::get('/berita/kategori/{kategori}','beritaController@getBeritaByKategori');
 
 Route::get('/tentang-kami', function () {
     return view('tentang-kami', ["title" => "Tentang", "nav" => "tentang"]);
@@ -64,7 +74,7 @@ Seperti get berita, post pendaftaran, post kegiatan, dll.
 
 Route::get('/testing', 'beritaController@index');
 Route::post('/pendaftaran/create', 'cabController@store'); //untuk menggunakan ini gunakan =>  'method=post' dan 'action=/pendaftaran/' dan name setiap form inputnya sesuai dengan nama atribut di db ya <3
-Route::get('/berita/{berita}','beritaController@show');
+
 
 
 // Admin route
@@ -98,11 +108,15 @@ Route::prefix('admin')->group(function () {
     })->name('cab-master');
 
     //Berita
-    Route::get('/berita/buat', 'beritaController@create')->name('buat-berita');
-    Route::get('/berita/kategori-dan-tag', 'beritaController@viewKategoriTag');
-    Route::post('/berita/buat', 'beritaController@store')->name('berita-post');
-    Route::post('/berita/tambah-kategori', 'beritaController@tambahKategori')->name('tambah-kategori');
-    Route::post('/berita/tambah-tag', 'beritaController@tambahTag')->name('tambah-tag');
+    Route::get('/berita/buat', 'adminController@create')->name('buat-berita');
+    Route::get('/berita/kategori-dan-tag', 'adminController@viewKategoriTag');
+    Route::post('/berita/buat', 'adminController@store')->name('berita-post');
+    Route::post('/berita/tambah-kategori', 'adminController@tambahKategori')->name('tambah-kategori');
+    Route::post('/berita/tambah-tag', 'adminController@tambahTag')->name('tambah-tag');
+
+    //Prestasi
+    Route::get('/prestasi','adminController@formPrestasi')->name('form-prestasi');
+    Route::post('/prestasi','adminController@tambahPrestasi')->name('input-prestasi');
 
     //Foto Kegiatan
     Route::get('/foto', 'UploadFotoController@index')->name('upload-foto-view');

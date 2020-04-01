@@ -51,11 +51,15 @@ class beritaController extends Controller
             return false;
         }
 
-        try {//list berita berdasarkan tahun
-        $beritaPerTahun = DB::table('berita')
-            ->where(DB::raw('YEAR(tgl_publish)=2015'))
-            ->orderBy('tgl_publish','desc')
-            ->get();
+        //list berita berdasarkan tahun
+        
+        $tahun_sekarang = Carbon::now()->format('Y');
+
+        try {
+                $beritaPerTahun = DB::table('berita')
+                    ->where(DB::raw('YEAR(tgl_publish)=2015'))
+                    ->orderBy('tgl_publish','desc')
+                    ->get();
         } catch (Exception $e) {
             report ($e);
 
@@ -75,9 +79,7 @@ class beritaController extends Controller
         //menghitung kategori
         $kategori = DB::table('kategori')
                     ->latest()->get();
-
         $koleksi = [];
-        
         // return $kategori;
         foreach($kategori as $index) 
         {
@@ -95,6 +97,7 @@ class beritaController extends Controller
             'beritas' => $beritaTerbaru,
             'beritaCarousel' => $beritaCarouselTerbaru,
             'beritaPerTahun' => $beritaPerTahun,
+            // 'beritaPerKategori' => $beritaPerKategori,
             'videos' => $allVideo,
             'koleksiKategori' => $koleksi,
             'title' => 'Berita',
@@ -106,125 +109,31 @@ class beritaController extends Controller
     {
         $berita = DB::table('berita')
             ->where('slug', $slug)
-            ->get();
-
-        return $berita;
-    }
-
-    public function store(Request $request)
-    {
-        switch ($request->input('action')) {
-            case 'post':
-                //slug judul
-                $slug = Str::slug($request->judul,'-');
-
-                //upload foto
-                if($request->file('image')){
-                    $uploadFoto = $request->file('image');
-                    $name = rand(1,999).'-'.time().'.'.$uploadFoto->getClientOriginalExtension();
-                    $pathPhoto = $uploadFoto->storeAs('public/assets/img', $name);
-                } else {
-                    $pathPhoto = 'public/assets/img/705-1585565895.jpg';
-                }
-
-                //adding tag
-                if($request->input('tag')){
-                    $tags = $request->input('tag');
-                    $tag = implode(',', $tags);
-                }
-
-                //penentuan tanggal
-                $tanggal = Carbon::now();
-                // return $tanggal;
-                // dd($tanggal);
-                //simpan data
-                try {
-                    $saveData = Berita::create([
-                        'judul' => $request->judul,
-                        'slug' => $slug,
-                        'banner' => $pathPhoto,
-                        'isi_berita' => $request->isi_berita,
-                        'id_user' => 1,
-                        'kategori' => $request->kategori,
-                        'tgl_publish' => $tanggal,
-                        'status' => 'terbit',
-                        'penting' => $request->input('penting'),
-                        // 'tag' => $tag,
-                    ]);
-
-                    return back()->with("success", "Berita berhasil di-post");
-                } catch (Exception $e) {
-                    return $error = [
-                        'code' => $e->getCode(),
-                        'message' => $e->getMessage()
-                    ];
-                }
-                break;
-
-            case 'save':
-                //slug judul
-                $slug = Str::slug($request->judul,'-');
-
-                //upload foto
-                if($request->file('image')){
-                    $uploadFoto = $request->file('image');
-                    $name = rand(1,999).'-'.time().'.'.$uploadFoto->getClientOriginalExtension();
-                    $pathPhoto = $uploadFoto->storeAs('public/assets/img', $name);
-                } else {
-                    $pathPhoto = 'public/assets/img/705-1585565895.jpg';
-                }
-
-                //adding tag
-                if($request->input('tag')){
-                    $tags = $request->input('tag');
-                    $tag = implode(',', $tags);
-                } else {
-                    $tag = NULL;
-                }
-
-                //simpan data
-                try {
-                    $saveData = Berita::create([
-                        'judul' => $request->judul,
-                        'slug' => $slug,
-                        'banner' => $pathPhoto,
-                        'isi_berita' => $request->isi_berita,
-                        'status' => 'belum_terbit',
-                        'id_user' => 1,
-                        'kategori' => $request->kategori,
-                        'tgl_publish' => NULL,
-                        'penting' => $request->input('penting'),
-                    ]);
-                    
-                    return back()->with("success", "Berita berhasil disimpan");
-                } catch (Exception $e) {
-                    return $error = [
-                        'code' => $e->getCode(),
-                        'message' => $e->getMessage()
-                    ];
-                }
-                break;
-        }
-    }
-
-    public function create()
-    {
-        $kategori = DB::table('kategori')
-                    ->latest()
-                    ->get();
+            ->first();
         
-        return view('admin.berita.buatBerita',[
-            'title' => "Buat Berita",
-            'kategoris' => $kategori
+        $beritaPaginated = DB::table('berita')
+            ->where('slug', $slug)
+            ->simplePaginate(1);
+
+        return view('detailberita', [
+            'nav' => 'berita',
+            'title' => $berita->judul,
+            'berita' => $berita,
+            'paginasi' =>$beritaPaginated
         ]);
     }
 
-    public function countByKategori()
+    public function getBeritaByKategori($kategori)
     {
-        
+        //get berita by kategori
+        $berita = DB::table('berita')
+                ->where('kategori',$kategori)
+                ->simplePaginate(3);
+
+        //menghitung kategori
         $kategori = DB::table('kategori')
-                    ->latest()->get();
-        
+                    ->oldest()->get();
+        $koleksi = [];
         // return $kategori;
         foreach($kategori as $index) 
         {
@@ -237,6 +146,7 @@ class beritaController extends Controller
                 'hasil' => $hitung
             ];
         }
+<<<<<<< HEAD
 
         return $koleksi;
     }
@@ -275,8 +185,14 @@ class beritaController extends Controller
     {
         $tag = Tag::create([
             'nama_tag' => $request->input('nama_tag'),
+=======
+        
+        return view('berita',[
+            'beritas' => $berita,
+            'koleksiKategori' => $koleksi,
+            'title' => 'Kategori Berita',
+            'nav' => 'berita'
+>>>>>>> 2b96dccda57fedb9ed154f5fa46b7f652815018b
         ]);
-
-        return back()->with('success','berhasil menambahkan tag');
     }
 }

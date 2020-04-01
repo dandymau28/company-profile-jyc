@@ -62,8 +62,13 @@
 
         <div class="card-group row justify-content-between px-3">
         @foreach ($beritas as $berita)
+<<<<<<< HEAD
             <div class="card col-sm-12 mx-sm-1 col-md-6 mx-md-1 col-lg-6 mx-lg-3 col-xl-3 text-justify card-berita">
                 <img class="card-img-top img-fluid h-50" src="{{ Storage::url($berita->banner) }}" alt="Card image cap">
+=======
+            <div class="card col-md-6 col-lg-6 col-xl-3 col-sm-12 mx-lg-3 text-justify">
+                <img class="card-img-top img-fluid h-auto" src="{{ Storage::url($berita->banner) }}" alt="Card image cap">
+>>>>>>> 2b96dccda57fedb9ed154f5fa46b7f652815018b
                 <div class="card-body">
                     <h5 class="card-title"><a href="#">{{ Str::title($berita->judul) }}</a></h5>
                     <div class="card-text">{!! Str::limit(strip_tags($berita->isi_berita), 400) !!}
