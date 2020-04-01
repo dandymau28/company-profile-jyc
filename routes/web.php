@@ -30,6 +30,14 @@ Route::get('/profile', function () {
     return view('profile', ["title" => "Profile", "nav" => "profile"]);
 })->name('profile');
 
+Route::get('/profile/limbong', function(){
+    return view('founderlimbong', ["title" => "Ponirin Ariadi", "nav" => "profile"]);
+})->name('founder');
+
+Route::get('/profile/cepo', function(){
+    return view('foundercepo', ["title" => "Septo Adi", "nav" => "profile"]);
+})->name('founderrr');
+
 // Route::get('/kegiatan', function () {
 //     return view('kegiatan', ["title" => "Kegiatan"]);
 // })->name('kegiatan');
@@ -105,6 +113,10 @@ Route::prefix('admin')->group(function () {
     Route::post('/berita/buat', 'adminController@store')->name('berita-post');
     Route::post('/berita/tambah-kategori', 'adminController@tambahKategori')->name('tambah-kategori');
     Route::post('/berita/tambah-tag', 'adminController@tambahTag')->name('tambah-tag');
+
+    //Prestasi
+    Route::get('/prestasi','adminController@formPrestasi')->name('form-prestasi');
+    Route::post('/prestasi','adminController@tambahPrestasi')->name('input-prestasi');
 
     //Foto Kegiatan
     Route::get('/foto', 'UploadFotoController@index')->name('upload-foto-view');

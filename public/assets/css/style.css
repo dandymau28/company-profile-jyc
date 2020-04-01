@@ -1,7 +1,6 @@
 /* Font Family */
 body {
     font-family: 'Muli', sans-serif;
-    background-color: #f8f9fa;
 }
 
 /* Template Warna*/
@@ -23,32 +22,6 @@ body {
 
 
 /* ====================================== */
-
-/* DEKSTOP VERSION */
-@media (min-width: 992px) {
-
-    /* Navbar */
-    /* .nav-link:hover::after {
-    .nav-link:hover::after {
-        content: '';
-        display: block;
-        border-bottom: 1px solid #C12821;
-        padding-bottom: 5px;
-        margin-bottom: -8px;
-        color: #C12821;
-    } */
-
-}
-
-/* Mobile version */
-@media (min-width: 576px) {
-    /* Berita */
-
-}
-
-
-/* ====================================== */
-
 
 /**** NAVBAR ****/
 .navbar {
@@ -87,28 +60,17 @@ body {
 .nav-link.active,
 .nav-link:hover {
     border-bottom: 1px solid #C12821 !important;
+    width: max-content;
+    margin-bottom: -1px;
 }
 
-/* .nav-link:hover {
-    border-bottom: 1px solid #C12821 !important;
-} */
-
-/* li.nav-item.active {
-    border-bottom: 1px solid tomato;
-    text-decoration: underline;
-    text-decoration-color: whitesmoke;
-}
-
-li.nav-item.active:hover {
-    text-decoration: underline;
-    text-decoration-color: whitesmoke;
-} */
-
+/* Navbar Scrolled */
 #navbar.scrolled {
     /* background-color: rgba(183, 28, 28, 0.95) !important; */
     background-color: #fffff8 !important;
-    transition: background-color 200ms linear;
+    transition: 500ms linear;
     opacity: 100%;
+    
     /* color: #fffff6; */
 }
 
@@ -117,13 +79,64 @@ li.nav-item.active:hover {
     /* color: #fffff6; */
 }
 
+
+/* NAVBAR MOBILE VERSION */
+@media (max-width: 576px){
+    .navbar {
+        background-color: #9E1212 !important;
+        opacity: 100%;
+    }
+    
+    .navbar-brand img {
+        width: 4rem;
+        background-color: #FFFFFF;
+        border-radius: 50%;
+        width: 40px;
+    }
+
+    .nav-link {
+        margin-right: 2rem;
+        color: #FFFFFF !important;
+    }
+
+    .navbar-toggler {
+        background-color: #FFFFFF !important;
+        width: 55px;
+    }
+    
+    .nav-link.active,
+    .nav-link:hover {
+        border-bottom: 1px solid #FFFFFF !important;
+        width: max-content;
+        margin-bottom: -1px;
+    }
+
+    #navbar.scrolled {
+        background-color: #9E1212 !important;
+        opacity: 100%;
+    }
+    
+    #navbar.scrolled.nav-link {
+        font-weight: 700;
+    }
+    
+}
+
 /* ====================================== */
 
 
 /**** FOOTER****/
 .footer-copyright {
+    color: #FFFFFF;
+    text-transform: uppercase;
+    padding-top: 10px;
     background-color: #BEA6A1;
+    height: 50px;
 }
+
+
+
+
 
 /* ====================================== */
 
@@ -214,16 +227,46 @@ li.nav-item.active:hover {
     transform: scale(1.3);
 }
 
-/* 
-.carousel {
-    z-index: -1;
-} */
+/* Carousel Mobile */
+@media (max-width: 576px){
+    .carousel {
+        margin-top: 60px;
+    }
+}
 
-/* Card Berita */
-/* .berita {
-    margin-bottom: 200px;
-    margin-top: 100px;
-} */
+
+/* INTRO JYC */
+
+.intro-jyc{
+    background-color: #C12821;
+    color : #FFFFFF;
+    text-align: justify;
+    font-weight: lighter;
+    line-height: 30px;
+}
+
+.intro-text {
+    padding: 20px;
+}
+
+.intro-gambar{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+/* Beranda Card Berita */
+.card-berita{
+    padding-bottom: 50px !important;
+}
+
+
+
+/* BERITA JYC */
+.jumbotron-berita {
+    background-image: url(../img/kegiatan/slide-1.png);
+    background-size: cover;
+    min-height: 500px;
+}
 
 #banner-berita {
     background: url(../img/berita/6.png) no-repeat center center fixed;
@@ -338,6 +381,22 @@ li.nav-item.active:hover {
     display: flex;
     flex-wrap: wrap;
 }
+#banner-profile {
+    background: url(../img/profile/profilepicture.jpg);
+    display: table;
+    height: 40vh;
+    position: relative;
+    width: 100%;
+    background-size: cover;
+}
+    .text-profile {
+        background-color: rgba(0, 0, 0, 0.4);
+        color: #f8f9fe;
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        letter-spacing: .1rem;
+    }
 
 
 /* KEGIATAN PAGE */
@@ -490,9 +549,9 @@ a.nav-link.active:hover {
 }
 
 
-/* TENTANG KAMI PAGE */
+/*** TENTANG KAMI PAGE */
 
-/* Jumbotron */
+/* HEADER TENTANG KAMI*/
 .jumbotron-1 {
     background-image: url(../img/tentang-kami/paralax-1.png);
     background-size: cover;
@@ -512,10 +571,11 @@ a.nav-link.active:hover {
     top: 50%;
     width: 100%;
     text-align: center;
-    color: #707070;
-    text-shadow: 0px 3px 6px #FFFFFF;
+    color: #4B4747;
+    text-shadow: 0px 2px 3px #FFFFFF;
     font-size: 100pt;
     font-weight: bolder;
+    word-spacing: 10pt;
 }
 
 .jumbotron .display-2 {
@@ -525,7 +585,7 @@ a.nav-link.active:hover {
     width: 100%;
     text-align: center;
     color: #FFFFFF;
-    font-size: 25pt;
+    font-size: 200%;
     font-weight: bolder;
 }
 
@@ -533,27 +593,43 @@ a.nav-link.active:hover {
 
 /* Text We Sing, We Proud*/
 .we-sing {
-    min-height: 400px;
-    margin-top: 50px;
+    min-height: 500px;
+    padding-top: 3%;
+    padding-bottom: 5%;
 }
 
 .we-sing h5 {
     font-weight: bolder;
-    font-size: 20pt;
+    font-size: 180%;
     color: #707070;
     text-align: center;
-    margin-bottom: 50px;
+    padding-bottom: 20px
+    
 }
 
 .we-sing p {
     text-align: justify;
-    font-size: 15pt;
-    line-height: 35px;
+    max-width: 1200px;
+    font-size: 120%;
+    line-height: 45px;
     color: #707070;
+    padding: 30px;
 }
 
-/* Paralax - 2 */
+@media (max-width: 576px) {
+    .we-sing p {
+        text-align: justify;
+        max-width: 1200px;
+        font-size: 100%;
+        line-height: 45px;
+        color: #707070;
+        padding: 30px;
+    }
+}
 
+
+
+/* Paralax 2 - We Sing For The City */
 .jumbotron-2 {
     background-image: url(../img/tentang-kami/paralax-2.png);
     background-size: cover;
@@ -586,6 +662,86 @@ a.nav-link.active:hover {
     text-shadow: 3px 3px 3px #707070;
 }
 
+@media (max-width: 576px){
+    .jumbotron-2 .display-3{
+        font-size: 20pt;
+    }
+
+    .jumbotron-2 .display-4{
+        font-size: 31pt;
+    }
+}
+
+
+/* HAVE QUESTION */
+.question {
+    min-height: 100px;
+}
+
+.question h5 {
+    font-weight: bolder;
+    font-size: 20pt;
+    color: #707070;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.form-question {
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+.form-question img {
+    width: 400px;
+}
+@media (max-width: 576px){
+    .form-question img {
+        width: 150px;
+        margin-top: -60px;
+        margin-bottom: 10px;
+        margin-left: 40px;
+    }
+    
+}
+
+.form-question li {
+    list-style: none;
+    padding: 10px;
+}
+
+.form-question input {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    border-color: #707070 solid;
+    width: 100%;
+    height: 40px;
+}
+
+.form-question .pesan {
+    height: 200px;
+}
+
+.form-question button {
+    background-color: #BEA6A1;
+    color: #FFFFFF;
+    width: 160px;
+    height: 40px;
+    border-radius: 25px;
+}
+
+@media (max-width: 576px){
+    .form-question {
+        margin-left: -25px;        
+    }
+
+    .form-question button{
+       position: absolute;
+       left: 35%;
+    }
+}
+
+/* BERITA */
 
 .berita-h {
     display: block;

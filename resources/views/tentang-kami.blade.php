@@ -13,7 +13,7 @@
     <!-- Jumbotron -->
     <div class="jumbotron jumbotron-1 jumbotron-fluid">
         <div class="container">
-            <h1 class="display-1">JYC</h1>
+            <h1 class="display-1">J Y C</h1>
             <h4 class="display-2">JAKARTA YOUTH CHOIR</h4>
         </div>
     </div>
@@ -30,8 +30,41 @@
         </div>
     </div>
 
+    <div class="container question">
+        <h5>HAVE QUESTION ?</h5>
+    </div>
 
-    
+    <div class="container form-question">
+        <div class="row align-items-center">
+            <div class="col-md-5 text-center">
+                <img src="{{asset('assets/img/tentang-kami/contact-us.png')}}" alt="img" class="img-fluid">
+            </div>
+            <div class="col-md-7">
+                <form action="" method="post">
+                    <ul>
+                        <li>
+                            <input type="text" name="name" id="name" placeholder="   Name">
+                        </li>
+                        <li>
+                            <input type="email" name="email" id="email" placeholder="    Email">
+                        </li>
+                        <li>
+                            <input type="text" name="pesan" id="pesan" class="pesan" placeholder="   Message">
+                        </li>
+                        <li>
+                            <button type="submit">SUBMIT</button>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    @include('templates.footer')
 </body>
-    @include('templates.foot')
+@include('templates.foot')
+@push('js')
+    <script src="{{ asset('assets/js/moment.js') }}"></script>
+@endpush
+
 </html>

@@ -146,12 +146,53 @@ class beritaController extends Controller
                 'hasil' => $hitung
             ];
         }
+<<<<<<< HEAD
+
+        return $koleksi;
+    }
+
+    public function viewKategoriTag()
+    {
+        $kategori = DB::table('kategori')->oldest()->get();
+        $tag = DB::table('tag')->latest()->get();
+        $koleksi = [];
+        foreach($kategori as $satuan) {
+            $jumlahBerita = DB::table('berita')
+                            ->where('kategori',$satuan->nama_kategori)
+                            ->count();
+            $koleksi[] = [
+                'nama_kategori' => $satuan->nama_kategori,
+                'jumlah_berita' => $jumlahBerita
+            ];
+        }
+
+        return view('admin.berita.tambahKategoridanTag', [
+            'kategori' => $koleksi,
+            'tag' => $tag
+        ]);
+    }
+
+    public function tambahKategori(Request $request)
+    {
+        $kategori = Kategori::create([
+            'nama_kategori' => $request->input('nama_kategori'),
+        ]);
+
+        return back()->with('success','berhasil menambahkan kategori');
+    }
+
+    public function tambahTag(Request $request)
+    {
+        $tag = Tag::create([
+            'nama_tag' => $request->input('nama_tag'),
+=======
         
         return view('berita',[
             'beritas' => $berita,
             'koleksiKategori' => $koleksi,
             'title' => 'Kategori Berita',
             'nav' => 'berita'
+>>>>>>> 2b96dccda57fedb9ed154f5fa46b7f652815018b
         ]);
     }
 }

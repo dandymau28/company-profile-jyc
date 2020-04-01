@@ -7,6 +7,7 @@ use DB;
 use App\Models\beritaModel as Berita;
 use App\Models\kategoriModel as Kategori;
 use App\Models\tagModel as Tag;
+use App\Models\prestasiModel as Prestasi;
 use Illuminate\Support\Facades\Storage;
 use \Carbon\Carbon;
 use Illuminate\Support\Str;
@@ -196,5 +197,26 @@ class adminController extends Controller
         ]);
 
         return back()->with('success','berhasil menambahkan tag');
+    }
+
+    public function formPrestasi()
+    {
+        return view('admin.prestasi.prestasi');
+    }
+
+    public function tambahPrestasi(Request $request)
+    {
+        try {
+            $prestasi = Prestasi::create([
+                'nama_kompetisi' => $request->input('nama_kompetisi'),
+                'gelar_juara' => $request->input('gelar_juara'),
+                'lokasi' => $request->input('lokasi'),
+                'tanggal_kompetisi' => $request->input('tanggal_kompetisi')
+            ]);
+        } catch (Exception $e) {
+            return $e;
+        }
+
+        return back()->with('success','berhasil menambahkan data prestasi');
     }
 }
