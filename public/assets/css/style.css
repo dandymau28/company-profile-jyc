@@ -28,6 +28,8 @@ body {
     background-color: #fffff6;
     font-weight: normal;
     opacity: 80%;
+    text-transform: uppercase;
+    font-weight: bolder;
 }
 
 .navbar-brand img {
@@ -35,9 +37,22 @@ body {
 }
 
 .nav-link {
-    margin-right: 2rem;
+    margin-right: 1rem;
     color: #C12821 !important;
 }
+
+@media (min-width: 1200px) {
+    .navbar-brand img {
+        width: 4rem;
+        margin-left: 100px;
+    }
+
+    .nav-link {
+        margin-right: 3rem;
+        color: #C12821 !important;
+    }
+}
+
 
 .navbar-toggler {
     background-color: #C12821;
@@ -45,16 +60,6 @@ body {
 
 .navbar-toggler-icon {
     color: #707070 !important;
-}
-
-.nav-item a {
-    float: left;
-    display: block;
-    text-align: center;
-    padding: .8rem 1rem;
-    text-decoration: none;
-    font-size: 1rem;
-    border-bottom: 1px solid transparent;
 }
 
 .nav-link.active,
@@ -66,25 +71,23 @@ body {
 
 /* Navbar Scrolled */
 #navbar.scrolled {
-    /* background-color: rgba(183, 28, 28, 0.95) !important; */
     background-color: #fffff8 !important;
     transition: 500ms linear;
     opacity: 100%;
-    
-    /* color: #fffff6; */
 }
 
 #navbar.scrolled.nav-link {
     font-weight: 700;
-    /* color: #fffff6; */
 }
 
 
 /* NAVBAR MOBILE VERSION */
-@media (max-width: 576px){
+@media (max-width: 767.98px){
     .navbar {
         background-color: #9E1212 !important;
         opacity: 100%;
+        text-transform: uppercase;
+        font-weight: lighter;
     }
     
     .navbar-brand img {
@@ -92,6 +95,7 @@ body {
         background-color: #FFFFFF;
         border-radius: 50%;
         width: 40px;
+        margin-left: 0px;
     }
 
     .nav-link {
@@ -228,9 +232,9 @@ body {
 }
 
 /* Carousel Mobile */
-@media (max-width: 576px){
+@media (max-width: 767.98px){
     .carousel {
-        margin-top: 60px;
+        margin-top: 60px !important;
     }
 }
 
@@ -249,6 +253,27 @@ body {
     padding: 20px;
 }
 
+@media (max-width: 575.98px) {
+    .intro-text {
+        padding: 20px;
+        font-size: 10pt;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .intro-text {
+        padding: 20px;
+        font-size: 12pt;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .intro-text {
+        padding: 20px;
+        font-size: 10pt;
+    }
+}
+
 .intro-gambar{
     padding-right: 0px;
     padding-left: 0px;
@@ -258,6 +283,14 @@ body {
 .card-berita{
     padding-bottom: 50px !important;
 }
+
+@media (max-width: 767.98px) {
+    .card-berita{
+        flex: none !important;
+        margin-bottom: 2rem !important;
+    }
+}
+
 
 
 
@@ -388,23 +421,44 @@ body {
     width: 100%;
     background-size: cover;
 }
-    .text-profile {
-        background-color: rgba(0, 0, 0, 0.4);
-        color: #f8f9fe;
-        display: table-cell;
-        text-align: center;
-        vertical-align: middle;
-        letter-spacing: .1rem;
-    }
+
+.text-profile {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #f8f9fe;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    letter-spacing: .1rem;
+}
 
 
-/* KEGIATAN PAGE */
+/**** KEGIATAN PAGE */
 
+/* Banner Profile*/
 
-/* Latihan Rutin*/
+#banner-kegiatan {
+    background: url(../img/kegiatan/banner-kegiatan.png);
+    display: table;
+    height: 40vh;
+    position: relative;
+    width: 100%;
+    background-size: cover;
+}
+
+.text-kegiatan {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #f8f9fe;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    letter-spacing: .1rem;
+}
+
 .latihan-rutin {
-    margin-bottom: 200px;
+    margin-bottom: 150px;
     margin-top: 100px;
+    text-align: justify;
+
 }
 
 .latihan-rutin h3 {
@@ -417,46 +471,33 @@ body {
     width: 287px;
 }
 
-
-/* Kompetisi */
-.kompetisi {
-    margin-bottom: 200px;
-    margin-top: 100px;
+.latihan-rutin a{
+    color: #b71c1c;
 }
 
-.kompetisi h3 {
-    color: #707070;
-    margin-right: auto;
-    margin-left: auto;
-    padding-bottom: 22px;
-    text-align: center;
-    border-bottom: 1.5px solid #C12821;
-    width: 537px;
+.latihan-rutin a:hover{
+    text-decoration: none;
 }
 
-.card-kompetisi {
-    margin: 50px 50px 50px 100px;
+.latihan-text{
+    font-size: 20px;
 }
 
-.detail-kompetisi h4 {
-    font-weight: 100p;
-    color: #707070;
-    display: inline-block;
-    margin: 30px 50px 0px 10px;
-    height: 40px;
+/* LATIHAN RUTIN MOBILE */
+@media (max-width: 767.98px){
+    .latihan-rutin h2{
+        font-size: 25px;
+    }
+
+    .latihan-text{
+        font-size: 12px;
+    }
 }
 
-.detail-kompetisi p {
-    display: inline-block;
-    font-weight: bold;
-    margin-left: 10px;
-    margin-bottom: 100px;
-}
 
 /* JNCC */
 .JNCC {
     margin-bottom: 200px;
-    margin-top: 100px;
 }
 
 .JNCC h3 {
@@ -466,7 +507,58 @@ body {
     padding-bottom: 22px;
     text-align: center;
     border-bottom: 1.5px solid #C12821;
-    width: 697px;
+    width: max-content;
+}
+
+.JNCC h5{
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    font-size: 120px;
+    color: #707070;
+}
+
+.JNCC i{
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    font-size: 150px;
+    color: #707070;
+}
+
+.JNCC p{
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+/* JNCC MOBILE */
+@media (max-width: 767.98px) {
+    .JNCC h3{
+        font-size: 20px;
+    }
+
+    .JNCC h5{
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+        font-size: 100px;
+        color: #707070;
+    }
+
+    .JNCC i{
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+        font-size: 120px;
+        color: #707070;
+    }
+
+    .JNCC p{
+        font-size: 15px;
+        font-weight: bolder;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .JNCC h3{
+        font-size: 15px;
+    }
 }
 
 

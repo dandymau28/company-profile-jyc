@@ -13,98 +13,53 @@
     <!-- Navbar -->
     @include('templates.navbar')
 
-    <!-- Carousel -->
-    <div class="carousel">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="{{asset('assets/img/kegiatan/slide-1.png')}}" class="d-block w-100" alt="img">
-                </div>
-                <div class="carousel-item">
-                    <img src="{{asset('assets/img/kegiatan/slide-2.png')}}" class="d-block w-100" alt="img">
-                </div>
-                <div class="carousel-item">
-                    <img src="{{asset('assets/img/kegiatan/slide-3.png')}}" class="d-block w-100" alt="img">
-                </div>
-            </div>
+    <!-- Banner Kegiatan -->
+    <div id="banner-kegiatan">
+        <div class="container text-kegiatan">
+            <h1 class="display-judul">KEGIATAN</h1>
+            <h4 class="">JAKARTA YOUTH CHOIR</h4>
         </div>
     </div>
 
     <!-- Latihan Rutin -->
     <div class="latihan-rutin">
-        <h3>Latihan Rutin</h3>
-
+        <h3>LATIHAN RUTIN</h3>
         <div class="container">
-        @foreach( $kegiatans as $kegiatan )
-            <div class="row card-kompetisi">
-                <div class="col detail-kompetisi">
-                    <img src="{{asset('assets/img/kegiatan/kompetisi-1.png')}}" class="rounded float-left" alt="img">
-                    <h4>{{ $kegiatan->nama }}</h4><br>
-                    <p>{{ $kegiatan->jenis }}</p>
-                </div>
+            <h2 class="text-center pt-3">Rahasia Sukses Berprestasi : Latihan ala JYC</h2>
+            <div class="row latihan-text">
+                <div class="col-sm-6 pt-4"><b>“Practice makes perfect”</b>, pastinya kata ini tidaklah asing ditelinga banyak orang pada kehidupan sehari-hari khususnya untuk kita yang berkecimpung di dunia paduan suara. <b>Jakarta Youth Choir</b>, sama seperti paduan suara pada umumnya, bisa berprestasi dan menunjukkan kualitas dirinya saat ini tentunya tidaklah instan. <b>Jakarta Youth Choir</b> dapat cemerlang berkat proses suka duka Latihan bersama. Sebagai Paduan Suara binaan <b>Pemerintah Provinsi DKI Jakarta</b>, <b>Jakarta Youth Choir</b> biasa melakukan latihan rutin minimal satu pekan sekali, saat ini pada setiap hari Rabu berdasarkan kesepakatan anggota yang bertempat di <b>Gedung Dinas Pemuda dan Olahraga Provinsi DKI Jakarta</b>.</div>
+                <div class="col-sm-6 pt-4">Latihan rutin ini dibimbing oleh <b>The Founder & Choirmaster kebanggaan, yaitu Septo Adi Kristanto Simanjuntak, atau dikenal dengan Kak Cepo</b>, beserta Tim Kepelatihan tersayang, Hendry (Bass 2), Hana (Sopran 1), Riny (Alto 2), Rangga (Tenor 1) dan Raka (Bass 1). Latihan biasanya akan lebih intens dilakukan ketika <b>Jakarta Youth Choir</b> akan menghadapi event tertentu, seperti mengisi suatu acara, konser maupun lomba taraf nasional maupun internasional. Untuk meningkatkan semangat dalam latihan, <b>Jakarta Youth Choir</b> melakukan latihan paduan suara tidak hanya di lingkungan lndoor saja, melainkan juga Outdoor. <b> Seru pasti, ya!</b></div>
             </div>
-        @endforeach
-        </div>
-    </div>
-
-
-
-    <!-- Kompetisi -->
-    <div class="kompetisi">
-        <h3>Kompetisi yang akan diikuti</h3>
-
-        <div class="container">
-            <div class="row card-kompetisi">
-                <div class="col detail-kompetisi">
-                    <img src="{{asset('assets/img/kegiatan/kompetisi-1.png')}}" class="rounded float-left" alt="img">
-                    <h4>Nama Kompetisi</h4><br>
-                    <p>Tempat dan Waktu Kompetisi</p>
-                </div>
-            </div>
-
-            <div class="row card-kompetisi">
-                <div class="col detail-kompetisi">
-                    <img src="{{asset('assets/img/kegiatan/kompetisi-1.png')}}" class="rounded float-left" alt="img">
-                    <h4>Nama Kompetisi</h4><br>
-                    <p>Tempat dan Waktu Kompetisi</p>
-                </div>
-            </div>
-
-            <div class="row card-kompetisi">
-                <div class="col detail-kompetisi">
-                    <img src="{{asset('assets/img/kegiatan/kompetisi-1.png')}}" class="rounded float-left" alt="img">
-                    <h4>Nama Kompetisi</h4><br>
-                    <p>Tempat dan Waktu Kompetisi</p>
-                </div>
-            </div>
-
+            <br>
+            <p class="text-justify latihan-text"><b>Jakarta Youth Choir</b> juga menghadirkan berbagai Choirmaster dari berbagai latar belakang Paduan Suara di Indonesia yang terkenal dan berpengalaman sebagai pelatih tamu untuk memaksimalkan pengembangan kemampuan para Choristernya. Yuk pantau terus proses latihan kami untuk mengharumkan nama Jakarta dan Indonesia dengan follow akun resmi instagram <a href="https://www.instagram.com/jktyouthchoir"><b>@JktYouthChoir</b></a> dan media sosial lainnya</p>
         </div>
 
     </div>
-
 
     <!-- Jakarta National Choir Competition -->
     <div class="JNCC">
-        <h3>Jakarta National Choir Competition</h3>
-
-        <!-- 3 CARD -->
-        <div class="card-group">
-            @foreach( $prestasis as $prestasi)
-            <div class="card">
-                <img class="card-img-top" src="{{asset('assets/img/beranda/card-1.png')}}" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">{{ $prestasi->nama_kompetisi }}</h5>
-                    <p class="card-text">{{ $prestasi->gelar_juara }}
-                    </p>
-                    <p class="card-text"><small class="text-muted">{{ $prestasi->tanggal_kompetisi }}</small></p>
+        <h3>JAKARTA NATIONAL CHOIR COMPETITION</h3>
+        <div class="container text-center">
+            <div class="row align-content-center">
+                <div class="col-lg-4 text-center pt-3">
+                    <h5>JNCC</h5>
+                    <p>The Biggest Choir Competition <br> In Indonesia </p>
+                </div>
+                <div class="col-lg-4 text-center pt-3">
+                    <i class='fas fa-calendar-alt'></i>
+                    <p>August 4th, 2020 </p>
+                </div>
+                <div class="col-lg-4 text-center pt-3">
+                    <i class="fa fa-map-marker-alt"></i>
+                    <p>Balai Sarbini Hall Plaza Semanggi, Jakarta</p>
                 </div>
             </div>
-            @endforeach
         </div>
+
     </div>
 
-    {{-- Galeri --}}
-            
+    <!-- GALERI -->
+    {{-- Galeri --}}   
     <section class="galeri container">
         <div class="row justify-content-between mb-2">
             <div class="col-5">
@@ -149,6 +104,7 @@
     </section>
     <hr />
 
+    <!-- VIDEO -->
     {{-- Videos --}}
     <section class="videos container">
         <div class="row">

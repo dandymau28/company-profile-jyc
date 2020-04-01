@@ -1,5 +1,5 @@
 <nav id="navbar" class="navbar navbar-expand-lg navbar-light fixed-top">
-    <div class="container">
+    <div class="container-fluid">
         <a class="navbar-brand" href="{{route('beranda')}}"><img src="{{asset('assets/img/logo-jyc.png')}}" alt="img"></a>
         {{-- <a class="navbar-brand" href="{{route('beranda')}}"><img src="{{asset('assets/img/logo-jyc.png')}}" alt="img"></a> --}}
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
