@@ -30,6 +30,14 @@ Route::get('/profile', function () {
     return view('profile', ["title" => "Profile", "nav" => "profile"]);
 })->name('profile');
 
+Route::get('/profile/limbong', function(){
+    return view('founderlimbong', ["title" => "Ponirin Ariadi", "nav" => "profile"]);
+})->name('founder');
+
+Route::get('/profile/cepo', function(){
+    return view('foundercepo', ["title" => "Septo Adi", "nav" => "profile"]);
+})->name('founderrr');
+
 // Route::get('/kegiatan', function () {
 //     return view('kegiatan', ["title" => "Kegiatan"]);
 // })->name('kegiatan');
