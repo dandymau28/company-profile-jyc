@@ -23,35 +23,6 @@ body {
 
 /* ====================================== */
 
-<<<<<<< HEAD
-=======
-/* DEKSTOP VERSION */
-@media (min-width: 992px) {
-
-    /* Navbar */
-    /* .nav-link:hover::after {
-    .nav-link:hover::after {
-        content: '';
-        display: block;
-        border-bottom: 1px solid #C12821;
-        padding-bottom: 5px;
-        margin-bottom: -8px;
-        color: #C12821;
-    } */
-
-}
-
-/* Mobile version */
-@media (min-width: 576px) {
-    /* Berita */
-
-}
-
-
-/* ====================================== */
-
-
->>>>>>> 2b96dccda57fedb9ed154f5fa46b7f652815018b
 /**** NAVBAR ****/
 .navbar {
     background-color: #fffff6;
