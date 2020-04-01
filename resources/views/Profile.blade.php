@@ -51,7 +51,7 @@
                 <div class="row justify-content-center" >
                         <img src="{{asset('assets/img/profile/limbong.JPG')}}" class="card-img-top card-founder rounded-circle img-fluid" alt="...">
                 </div>
-                <div class="card-body"> ini misalkan, yang bisa di
+                <div class="card-body">
                     <h5 class="card-title text-center">Ponirin Ariadi Limbong, S.STP</h5>
                     <p class="card-text text-justify">{{ Str::limit('Diawali tahun pertama saya bertugas di Bidang kepemudaan Dinas Pemuda dan Olahraga Provinsi DKI Jakarta pada tahun 2015, dalam kegiatan Seleksi Pertukaran Pemuda Antar Negara (PPAN) 2015, kami membuat perubahan dalam metode seleksi akhir, yaitu Finalis harus mengikuti program Homestay. kami memilih Kawasan Kumuh Kalibaru, Cilincing-Jakut sebagai lokasi Homestay, dengan Pimpinan Project, Sdr. Yuvino “Vino” Tanimura (alumni PPAN Kapal ASEAN-Jepang). Finalis tinggal Di orangtua dari berbagai Profesi, yaitu Nelayan, pedagang Warteg, buruh Kerang, dsb. Semangat dalam program tersebut yang membuat mereka dapat merasakan ada hal lain di Jakarta, yang mungkin pertama kali mereka lihat ada kondisi seperti itu di Jakarta dan yang menggerakkan mereka untuk harus peduli dii kemudian hari, pada saat program, Ide-ide Pemberdayaan masyarakat muncul untuk membantu masyarakat. Dalam akhir program Homestay, Para Finalis ingin memberikan penampilan seni untuk perpisahan dengan masyarakat setempat. Septo “Cepo” Adi Simanjuntak (alumni PPAN JENESYS program) mengajarkan para Finalis untuk membuat vokal grup, dan dalam acara perpisahan tersebut, penampilan mereka membuat saya kagum. 
                             Cepo sangat berbakat untuk memoles Finalis dengan waktu yang singkat bisa menampilkan pertunjukan yang membuat masyarakat antusias. Membuat saya berpikir untuk membuat Paduan Suara yang profesional. Saya melakukan ”challenge” kepada  Vino, Cepo dan Para Finalis untuk tampil didepan Gubernur Provinsi DKI Jakarta dalam Upacara HUT kemerdekaan RI Dalam kurun waktu 1 minggu mereka menambah personil melalui undangan via social media untuk melengkapi kekurangan personil. Dan inilah adalah angkatan pertama paduan suara ini. Dalam Upacara tersebut kami belum memiliki nama, kemudian saya menamakan paduan suara ini dengan nama “Jakarta Youth Choir” sebagai identitas bahwa ini adalah Paduan Suara pemuda Jakarta yang bernyanyi untuk bangsa dan Kotanya. Pada Tanggal 17 Agustus 2015 Paduan Suara Jakarta Youth Choir bernyanyi di depan Gubernur dan Ribuan peserta Upacara,
@@ -122,8 +122,8 @@
     <div class="berita container-fluid bg-light py-5">
         <h3 class="mb-5">Visi</h3>
         <div class="row container-fluid">
-            <div class="col-lg-8 mx-auto text-center">
-                <h4>Lorem ipsum bla bla Lorem ipsum bla bla Lorem ipsum bla bla Lorem ipsum bla bla</h4>
+            <div class="col-lg-6 mx-auto text-center">
+                <h5>Jakarta Youth Choir bernyanyi untuk membanggakan dan membawa nama harum Kota Jakarta dan Negara Indonesia</h4>
             </div>
         </div>
     </div>
@@ -131,11 +131,12 @@
     <div class="berita container-fluid bg-light py-5">
         <h3 class="mb-5">Misi</h3>
         <div class="row container-fluid">
-            <div class="col-lg-8 mx-auto text-center">
+            <div class="col-lg-6 mx-auto text-center">
                 <ol>
-                    <li><h4>Lorem ipsum bla bla Lorem ipsum bla bla Lorem ipsum bla bla Lorem ipsum bla bla</h4></li>
-                    <li><h4>Lorem ipsum bla bla Lorem ipsum bla bla Lorem ipsum bla bla Lorem ipsum bla bla</h4></li>
-                    <li><h4>Lorem ipsum bla bla Lorem ipsum bla bla Lorem ipsum bla bla Lorem ipsum bla bla</h4></li>
+                    <li><p class="card-text text-justify">Menciptakan suasana organisasi yang harmonis, bersahabat dan ramah</p></li>
+                    <li><p class="card-text text-justify">Menyediakan sarana fisik dan non fisik untuk melatih baka dan talenta para anggotanya dalam suasana disiplin konstruktif dan menyenangkan</p></li>
+                    <li><p class="card-text text-justify">Aktif mengikuti kompetisi paduan suara di dalam dan di luar negeri</p></li>
+                    <li><p class="card-text text-justify">Mendukung program-program pemerintah DKI Jakarta khususnya dalam bidang kepemudaan, kesenian, dan kebudayaan.</p></li>
                 </ol>
             </div>
         </div>

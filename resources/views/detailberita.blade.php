@@ -49,8 +49,9 @@
                     </div>
                     <div id="tag-detail-berita" class="text-white">
                         <span class="text-muted pr-3"><i class="fas fa-tags fa-2x"></i></span>
-                        <div class="d-inline-flex p-2 hitam-abu border border-secondary">EVENT</div>
-                        <div class="d-inline-flex p-2 hitam-abu border border-secondary">JYC</div>
+                        @foreach($tags as $tag)
+                        <div class="d-inline-flex p-2 hitam-abu border border-secondary">{{$tag['tag']}}</div>
+                        @endforeach
                         {{-- <span class="border border-secondary">JYC</span> --}}
                     </div>
                 </div>
@@ -181,11 +182,11 @@
                         
                     </div>
                 </div>
-                {{-- @foreach($koleksiKategori as $koleksi)
+                @foreach($koleksiKategori as $koleksi)
                 <div class="row justify-content-between mt-3">
                     <div class="col">
                         <ul>
-                            <li>{{ $koleksi['kategori'] }}/li>
+                            <li>{{ $koleksi['kategori'] }}</li>
                         </ul>
                     </div>
                     <div class="col-1 mr-5">
@@ -193,62 +194,7 @@
                     </div>
                 </div>
                 <hr class="mt-n2">
-                @endforeach --}}
-                <div class="row justify-content-between mt-2">
-                    <div class="col">
-                        <ul>
-                            <li>Kompetisi Internasional</li>
-                        </ul>
-                    </div>
-                    <div class="col-1 mr-5">
-                        <span class="badge badge-primary badge-pill">14</span>
-                    </div>
-                </div>
-                <hr class="mt-n2">
-                <div class="row justify-content-between mt-2">
-                    <div class="col">
-                        <ul>
-                            <li>Upacara Kedinasan</li>
-                        </ul>
-                    </div>
-                    <div class="col-1 mr-5">
-                        <span class="badge badge-primary badge-pill">14</span>
-                    </div>
-                </div>
-                <hr class="mt-n2">
-                <div class="row justify-content-between mt-2">
-                    <div class="col">
-                        <ul>
-                            <li>Guest Star</li>
-                        </ul>
-                    </div>
-                    <div class="col-1 mr-5">
-                        <span class="badge badge-primary badge-pill">14</span>
-                    </div>
-                </div>
-                <hr class="mt-n2">
-                <div class="row justify-content-between mt-2">
-                    <div class="col">
-                        <ul>
-                            <li>Konser Pra-Kompetisi</li>
-                        </ul>
-                    </div>
-                    <div class="col-1 mr-5">
-                        <span class="badge badge-primary badge-pill">14</span>
-                    </div>
-                </div>
-                <hr class="mt-n2">
-                <div class="row justify-content-between mt-2">
-                    <div class="col">
-                        <ul>
-                            <li>Prestasi</li>
-                        </ul>
-                    </div>
-                    <div class="col-1 mr-5">
-                        <span class="badge badge-primary badge-pill">14</span>
-                    </div>
-                </div>
-                <hr class="mt-n2">
+                @endforeach
             </div>
         </div>
     </section>

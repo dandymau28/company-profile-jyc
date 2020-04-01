@@ -7,6 +7,10 @@
 <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 @stack('styles')
+
+<!-- Font Awsome 5 -->
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
 <!-- My Style -->
 <link rel="stylesheet" href="{{ asset('assets') }}/css/style.css">
 <link rel="icon" type="image/png" href="{{ asset('assets') }}/img/circle-cropped.png" />
