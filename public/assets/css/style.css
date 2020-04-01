@@ -382,7 +382,7 @@ body {
     flex-wrap: wrap;
 }
 #banner-profile {
-    background: url(../img/profile/profilepicture.jpg);
+    background: url(../img/profile/profilepicture.jpg)no-repeat center center fixed;;
     display: table;
     height: 40vh;
     position: relative;
