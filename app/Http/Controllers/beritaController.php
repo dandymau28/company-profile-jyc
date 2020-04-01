@@ -97,7 +97,6 @@ class beritaController extends Controller
             'beritas' => $beritaTerbaru,
             'beritaCarousel' => $beritaCarouselTerbaru,
             'beritaPerTahun' => $beritaPerTahun,
-            // 'beritaPerKategori' => $beritaPerKategori,
             'videos' => $allVideo,
             'koleksiKategori' => $koleksi,
             'title' => 'Berita',
@@ -115,11 +114,41 @@ class beritaController extends Controller
             ->where('slug', $slug)
             ->simplePaginate(1);
 
+            //menghitung kategori
+        $kategori = DB::table('kategori')
+                    ->latest()->get();
+        $koleksi = [];
+        // return $kategori;
+        foreach($kategori as $index) 
+        {
+            $hitung = DB::table('berita')
+                    ->where('kategori', $index->nama_kategori)
+                    ->count();
+            
+            $koleksi[] = [
+                'kategori' => $index->nama_kategori,
+                'hasil' => $hitung
+            ];
+        }
+
+        // mengambil tag
+        $tag = explode(',', $berita->tag );
+
+        //associative array
+        foreach ($tag as $index) {
+            $tags[] = [
+                'tag' => $index
+            ];
+        }
+        
+
         return view('detailberita', [
             'nav' => 'berita',
             'title' => $berita->judul,
             'berita' => $berita,
-            'paginasi' =>$beritaPaginated
+            'paginasi' =>$beritaPaginated,
+            'koleksiKategori' => $koleksi,
+            'tags' => $tags
         ]);
     }
 
@@ -146,9 +175,13 @@ class beritaController extends Controller
                 'hasil' => $hitung
             ];
         }
-<<<<<<< HEAD
-
-        return $koleksi;
+        return view('berita',[
+            'beritas' => $berita,
+            'koleksiKategori' => $koleksi,
+            'title' => 'Kategori Berita',
+            'nav' => 'berita'
+        ]);
+        // return $koleksi;
     }
 
     public function viewKategoriTag()
@@ -185,14 +218,7 @@ class beritaController extends Controller
     {
         $tag = Tag::create([
             'nama_tag' => $request->input('nama_tag'),
-=======
-        
-        return view('berita',[
-            'beritas' => $berita,
-            'koleksiKategori' => $koleksi,
-            'title' => 'Kategori Berita',
-            'nav' => 'berita'
->>>>>>> 2b96dccda57fedb9ed154f5fa46b7f652815018b
         ]);
+        
     }
 }

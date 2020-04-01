@@ -71,10 +71,11 @@
                     <textarea class="textarea" placeholder="Place some text here"
                       style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;" name="isi_berita"></textarea>
                   </div>
-                  <p class="text-sm mb-0">
-                    Editor <a href="https://github.com/bootstrap-wysiwyg/bootstrap3-wysiwyg">Documentation and license
-                      information.</a>
-                  </p>
+                  <div class="mb-3">
+                    <p>Penting?</p>
+                    <input type="radio" name="penting" id="" value="1">Penting
+                    <input type="radio" name="penting" id="" value="0">Tidak Penting
+                  </div>
                   <button type="submit" name="action" value="post">Post</button>
                   <button type="submit" name="action" value="save">Save</button>
                 </form>
@@ -86,4 +87,37 @@
         <!-- ./row -->
       </section>
       <!-- /.content -->
+
+      <!-- AdminLTE for demo purposes -->
+    <script src="/adminlte/dist/js/demo.js"></script>
+    <!-- Summernote -->
+    <script src="/adminlte/plugins/summernote/summernote-bs4.min.js"></script>
+    <script>
+        $(function () {
+            // Summernote
+            $('.textarea').summernote({
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'underline', 'clear']],
+                    ['fontname', ['fontname']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['table', ['table']],
+                ],
+            })
+
+            // $('.textarea').wysihtml5({
+            //   "font-styles": true, //Font styling, e.g. h1, h2, etc. Default true
+            //   "emphasis": true, //Italics, bold, etc. Default true
+            //   "lists": true, //(Un)ordered lists, e.g. Bullets, Numbers. Default true
+            //   "html": false, //Button which allows you to edit the generated HTML. Default false
+            //   "link": true, //Button to insert a link. Default true
+            //   "image": false, //Button to insert an image. Default true,
+            //   "color": false, //Button to change color of font  
+            //   "blockquote": true, //Blockquote  
+            //   "size": //default: none, other options are xs, sm, lg
+            // });
+        })
+
+    </script>
   @endsection

@@ -341,7 +341,7 @@ body {
 }
 
 #sidebar-berita a {
-    color: #0f0f0f;
+    color: #707070;
 }
 
 @media (min-width: 992px) {
@@ -405,16 +405,17 @@ body {
     height: 40vh;
 }
 
-.card-founder{
+.card-founder {
     width: 10rem;
     height: 10rem;
 }
-.row-founder{
+
+.row-founder {
     display: flex;
     flex-wrap: wrap;
 }
 #banner-profile {
-    background: url(../img/profile/profilepicture.jpg);
+    background: url(../img/profile/profilepicture.jpg)no-repeat center center fixed;;
     display: table;
     height: 40vh;
     position: relative;
