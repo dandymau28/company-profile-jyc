@@ -281,9 +281,24 @@ li.nav-item.active:hover {
 /* ====================================== */
 
 /* PROFILE PAGE */
+.jumbotron-profile {
+    background-image: url(../img/profile/profilepic.jpg);
+    background-size: cover;
+    height: 40vh;
+}
+
+.card-founder{
+    width: 10rem;
+    height: 10rem;
+}
+.row-founder{
+    display: flex;
+    flex-wrap: wrap;
+}
 
 
 /* KEGIATAN PAGE */
+
 
 /* Latihan Rutin*/
 .latihan-rutin {
