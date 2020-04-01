@@ -44,13 +44,25 @@
         </div>
     </div>
 
+    <!-- Pengenalan JYC -->
+    <div class="container-fluid intro-jyc">
+        <div class="row align-items-center">
+            <div class="col-md-6 intro-gambar">
+                <img src="{{asset('assets/img/beranda/intro-jyc.png')}}" alt="img" class="img-fluid">
+            </div>
+            <div class="col-md-6 intro-text">
+                <p>Jakarta Youth Choir adalah paduan suara dari DKI Jakarta dibawah Dinas Pemuda dan Olahraga. JYC telah mengukir banyak pertasi  terkemuka di tingkat Nasional ataupun Internasional. Lorem ipsum dolor sit amet, consectetuer adipiscing elit doli. Aenean commodo ligula eget dolor. Aenean massa Cumtipsu sociis natoque penatibus et magnis dis parturient montesti, nascetur ridiculus mus.</p>
+            </div>
+        </div>
+    </div>
+
     <!-- Card Berita -->
     <div class="berita container-fluid bg-light px-5 py-5">
         <h3 class="mb-5">Berita Terbaru</h3>
 
         <div class="card-group row justify-content-between px-3">
         @foreach ($beritas as $berita)
-            <div class="card col-md-6 col-lg-6 col-xl-3 col-sm-12 mx-lg-3 text-justify">
+            <div class="card col-sm-12 mx-sm-1 col-md-6 mx-md-1 col-lg-6 mx-lg-3 col-xl-3 text-justify card-berita">
                 <img class="card-img-top img-fluid h-50" src="{{ Storage::url($berita->banner) }}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title"><a href="#">{{ Str::title($berita->judul) }}</a></h5>

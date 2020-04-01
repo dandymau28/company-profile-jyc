@@ -14,7 +14,7 @@ class AddSlugAttributeToBerita extends Migration
     public function up()
     {
         Schema::table('berita', function (Blueprint $table) {
-            $table->text('slug')->after('isi_berita')->unique();
+            $table->string('slug')->after('isi_berita')->unique();
         });
     }
 

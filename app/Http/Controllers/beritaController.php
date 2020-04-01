@@ -85,7 +85,7 @@ class beritaController extends Controller
                     ->where('kategori', $index->nama_kategori)
                     ->count();
             
-            $koleksi = [
+            $koleksi[] = [
                 'kategori' => $index->nama_kategori,
                 'hasil' => $hitung
             ];
@@ -245,7 +245,7 @@ class beritaController extends Controller
     {
         $kategori = DB::table('kategori')->oldest()->get();
         $tag = DB::table('tag')->latest()->get();
-
+        $koleksi = [];
         foreach($kategori as $satuan) {
             $jumlahBerita = DB::table('berita')
                             ->where('kategori',$satuan->nama_kategori)

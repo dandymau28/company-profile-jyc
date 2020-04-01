@@ -42,7 +42,7 @@
     </div>
     <div class="footer-copyright">
         <div class="container text-center">
-            <a class="text-white" href="#!">&copy Dev: Pengembang Nusantara</a>
+            &copy 2020 - Promise Developer
         </div>
     </div>
 </footer>
