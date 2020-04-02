@@ -28,7 +28,7 @@
                         <img src="{{asset('assets/img/profile/cepo.jpeg')}}" class="card-img-top card-founder rounded-circle img-fluid" alt="...">
                 </div>
                 <div class="card-body">
-                    <h4 class="card-title text-center">Ponirin Ariadi Limbong, S.STP</h4>
+                    <h4 class="card-title text-center">Septo Adi Kristanto Simanjuntak, S.Pd</h4>
 
                     <p class="card-text text-justify">Septo Adi Kristanto Simanjuntak or warmly called Cepo, was born in Jakarta on September 17th, 1991. He is a Bachelor of Education (English Language Teaching) from Sampoerna University. He found his interest in singing since 1995, when he was in primary school. He actively sang as in the Church Choir. His potential is also well developed since his parents always supported him through all singing events and competitions that he joined. </p> 
                     <p class="card-text text-justify">He has successfully achieved a lot of achievements in choir in more than one decade. One of his great achievement happened in 2008. He was the representative from DKI Jakarta (Indonesia’s capital city) in Gita Bahana Nusantara (The Choir for Independence Day in the President Palace) in 2008. Along the way, he joined many kind of singing competitions in TV, Radio, Malls and etc. Since then, he keeps improving his skills and capability in music, especially in choral works.</p>
