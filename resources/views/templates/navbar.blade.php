@@ -1,4 +1,4 @@
-<nav id="navbar" class="navbar navbar-expand-lg navbar-light fixed-top">
+<nav id="navbar" class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{route('beranda')}}"><img src="{{asset('assets/img/logo-jyc.png')}}" alt="img"></a>
         {{-- <a class="navbar-brand" href="{{route('beranda')}}"><img src="{{asset('assets/img/logo-jyc.png')}}" alt="img"></a> --}}
