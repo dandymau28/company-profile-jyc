@@ -160,11 +160,11 @@ class beritaController extends Controller
                 ->simplePaginate(3);
 
         //menghitung kategori
-        $kategori = DB::table('kategori')
+        $kategoris = DB::table('kategori')
                     ->oldest()->get();
         $koleksi = [];
-        // return $kategori;
-        foreach($kategori as $index) 
+        // return $kategoris;
+        foreach($kategoris as $index) 
         {
             $hitung = DB::table('berita')
                     ->where('kategori', $index->nama_kategori)
