@@ -11,9 +11,13 @@ class prestasiModel extends Model
     protected $table = 'prestasi';
     protected $fillable = [
         'nama_kompetisi',
-        'gelar_juara',
-        'lokasi',
-        'tanggal_kompetisi'
+        'kota',
+        'negara',
+        'tgl_mulai',
+        'tgl_selesai',
+        'logo_kompetisi',
+        'foto_tim',
+        'foto_piala',
     ];
 
     protected $dates = [
@@ -21,4 +25,9 @@ class prestasiModel extends Model
         'updated_at',
         'deleted_at'
     ];
+
+    public function penghargaans()
+    {
+        return $this->hasMany('App\Models\penghargaanModel');
+    }
 }
