@@ -25,14 +25,14 @@
         <div class="row mt-5 d-lg-none">
             <div class="col">
                 <div class="input-group custom-search-form border border-danger">
-                    <select class="border-0 form-control cari-berita">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">
-                                <i class="fas fa-search"></i>
-                            </button>
-                        </span>
-                    </select>
-                    {{-- <input type="text" class="border-0 form-control cari-berita" placeholder="Cari berita..."> --}}
+                    {{-- <select class="border-0 form-control cari-berita">
+                    </select> --}}
+                    <input type="text" class="border-0 form-control cari-berita" placeholder="Cari berita...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </span>
                 </div>
             </div>
         </div>
@@ -60,7 +60,7 @@
                                 {!! Str::limit(strip_tags($berita->isi_berita), 400) !!}
                             </div>
                             <div class="float-right pt-sm-2 pt-md-1">
-                                <a type="button" href="/berita/{{ $berita->slug }}" class="btn btn-outline-secondary stretched-link">Selengkapnya...</a>
+                                <a type="button" href="/berita/{{ $berita->slug }}" class="btn btn-outline-secondary">Selengkapnya...</a>
                             </div>
                         </div>
                     </div>
@@ -76,13 +76,14 @@
                 <div class="row d-none d-lg-block">
                     <div class="col">
                         <div class="input-group custom-search-form border border-danger">
-                            <select class="border-0 form-control cari-berita">
-                                {{-- <span class="input-group-btn">
-                                    <button class="btn btn-default" type="button">
-                                        <i class="fas fa-search"></i>
-                                    </button>
-                                </span> --}}
-                            </select>
+                            {{-- <select class="border-0 form-control cari-berita">
+                            </select> --}}
+                            <input type="text" class="border-0 form-control cari-berita" placeholder="Cari berita...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -221,7 +222,7 @@
     <script>
         $(document).ready(function(){
             $('select').formSelect();
-            $('.cari-berita').select2();
+            // $('.cari-berita').select2();
         });
     </script>
 </html>

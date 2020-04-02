@@ -134,10 +134,14 @@ body {
     color: #FFFFFF;
     text-transform: uppercase;
     padding-top: 10px;
-    background-color: #BEA6A1;
+    /* background-color: #BEA6A1; */
     height: 50px;
 }
 
+#footer.w-80 {
+    width: 90%;
+    margin: auto;
+}
 
 
 
@@ -472,10 +476,6 @@ li.breadcrumb-item {
 
 #banner-profile {
     background: url(../img/profile/profilepicture.jpg)no-repeat center center fixed;
-<<<<<<< HEAD
-=======
-    ;
->>>>>>> ca632e0fc83dba73e443a61d4188cc0ee3a48f12
     display: table;
     height: 40vh;
     position: relative;

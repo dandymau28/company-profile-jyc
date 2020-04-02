@@ -60,7 +60,7 @@
 
     <!-- GALERI -->
     {{-- Galeri --}}   
-    <section class="galeri container">
+    <section id="galeri" class="galeri container">
         <div class="row justify-content-between mb-2">
             <div class="col-5">
                 <span class="display-4">Galeri</span>
@@ -106,7 +106,7 @@
 
     <!-- VIDEO -->
     {{-- Videos --}}
-    <section class="videos container">
+    <section id="video" class="videos container">
         <div class="row">
             <span class="display-4 pb-3">Videos</span>
         </div>
