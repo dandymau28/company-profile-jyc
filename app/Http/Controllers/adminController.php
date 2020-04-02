@@ -8,6 +8,7 @@ use App\Models\beritaModel as Berita;
 use App\Models\kategoriModel as Kategori;
 use App\Models\tagModel as Tag;
 use App\Models\prestasiModel as Prestasi;
+use App\Models\penghargaanModel as Penghargaan;
 use Illuminate\Support\Facades\Storage;
 use \Carbon\Carbon;
 use Illuminate\Support\Str;
@@ -56,6 +57,7 @@ class adminController extends Controller
                 // return $tanggal;
                 // dd($tanggal);
                 //simpan data
+
                 try {
                     $saveData = Berita::create([
                         'judul' => $request->judul,
@@ -100,6 +102,8 @@ class adminController extends Controller
                     $tag = NULL;
                 }
 
+
+                
                 //simpan data
                 try {
                     $saveData = Berita::create([
@@ -206,17 +210,71 @@ class adminController extends Controller
 
     public function tambahPrestasi(Request $request)
     {
+        $getID = DB::table('prestasi')->latest()->first();
+        if($getID) {
+            $latestID = $getID->id;
+            $idFoto = $latestID + 1;
+        } else {
+            $idFoto = 1;
+        }
+
+        //upload foto
+        if($request->file('logo_kompetisi')){
+            $uploadFoto = $request->file('logo_kompetisi');
+            $logo = $idFoto.'-logo-'.'.'.$uploadFoto->getClientOriginalExtension();
+            $pathLogo = $uploadFoto->storeAs('public/assets/img', $logo);
+        } else {
+            $pathLogo = 'public/assets/img/705-1585565895.jpg';
+        }
+
+        //upload foto
+        if($request->file('foto_tim')){
+            $uploadFoto = $request->file('foto_tim');
+            $tim = $idFoto.'-tim-'.'.'.$uploadFoto->getClientOriginalExtension();
+            $pathTim = $uploadFoto->storeAs('public/assets/img', $tim);
+        } else {
+            $pathTim = 'public/assets/img/705-1585565895.jpg';
+        }
+
+        //upload foto
+        if($request->file('foto_piala')){
+            $uploadFoto = $request->file('foto_piala');
+            $piala = $idFoto.'-piala-'.'.'.$uploadFoto->getClientOriginalExtension();
+            $pathPiala = $uploadFoto->storeAs('public/assets/img', $piala);
+        } else {
+            $pathPiala = 'public/assets/img/705-1585565895.jpg';
+        }
+
         try {
-            $prestasi = Prestasi::create([
-                'nama_kompetisi' => $request->input('nama_kompetisi'),
-                'gelar_juara' => $request->input('gelar_juara'),
-                'lokasi' => $request->input('lokasi'),
-                'tanggal_kompetisi' => $request->input('tanggal_kompetisi')
-            ]);
+            $prestasi = new Prestasi;
+            $prestasi->nama_kompetisi = $request->input('nama_kompetisi');
+            $prestasi->kota = $request->input('kota');
+            $prestasi->negara = $request->input('negara');
+            $prestasi->tgl_mulai = $request->input('tgl_mulai');
+            $prestasi->tgl_selesai = $request->input('tgl_selesai');
+            $prestasi->logo_kompetisi = $pathLogo;
+            $prestasi->foto_tim = $pathTim;
+            $prestasi->foto_piala = $pathPiala;
+            $prestasi->save();
+
+            if ($request->input('gelar')) {
+                $penghargaan = new Penghargaan;
+                $penghargaan->gelar = $request->input('gelar');
+                $prestasi->penghargaans()->save($penghargaan);
+            }
         } catch (Exception $e) {
             return $e;
         }
 
         return back()->with('success','berhasil menambahkan data prestasi');
     }
+
+    public function hapusPrestasi($id)
+    {
+        $prestasi = Prestasi::find($id);
+        $prestasi->delete();
+
+        return back()->with('success','berhasil menghapus data prestasi');
+    }
+
 }

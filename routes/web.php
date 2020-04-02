@@ -117,6 +117,7 @@ Route::prefix('admin')->group(function () {
     //Prestasi
     Route::get('/prestasi','adminController@formPrestasi')->name('form-prestasi');
     Route::post('/prestasi','adminController@tambahPrestasi')->name('input-prestasi');
+    Route::get('/prestasi/hapus/{id}','adminController@hapusPrestasi');
 
     //Foto Kegiatan
     Route::get('/foto', 'UploadFotoController@index')->name('upload-foto-view');

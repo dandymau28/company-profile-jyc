@@ -19,7 +19,8 @@ class beritaModel extends Model
         'slug',
         'banner',
         'tgl_publish',
-        'tag'
+        'tag',
+        'penting',
     ];
 
     protected $dates = ['deleted_at', 'created_at', 'updated_at'];
