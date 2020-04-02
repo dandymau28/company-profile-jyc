@@ -22,6 +22,7 @@ class UpdateAttributeToPrestasi extends Migration
             $table->string('logo_kompetisi')->nullable();
             $table->string('foto_tim')->nullable();
             $table->string('foto_piala')->nullable();
+            $table->mediumText('nama_kompetisi')->change();
         });
     }
 
@@ -40,6 +41,7 @@ class UpdateAttributeToPrestasi extends Migration
             $table->dropColumn('logo_kompetisi');
             $table->dropColumn('foto_tim');
             $table->dropColumn('foto_piala');
+            $table->string('lokasi');
         });
     }
 }
