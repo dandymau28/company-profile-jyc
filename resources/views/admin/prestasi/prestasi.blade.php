@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-            <div class="col-sm-6">
-=======
 @extends('admin.layouts.app')
 
 @section('title', 'Contoh Templating')
@@ -51,14 +48,21 @@
                             <input type="text" name="nama_kompetisi" id="" placeholder="Nama Kompetisi">
                         </div>
                         <div class="mb-3">
-                            <input type="text" name="gelar_juara" id="" placeholder="Gelar Juara">
+                            <input type="text" name="kota" id="" placeholder="Gelar Juara">
                         </div>
                         <div class="mb-3">
-                            <input type="text" name="lokasi" id="" placeholder="Lokasi Kompetisi">
+                            <input type="text" name="negara" id="" placeholder="Lokasi Kompetisi">
                         </div>
                         <div class="mb-3">
-                            <input type="date" name="tanggal_kompetisi" id="" placeholder="Tanggal Kompetisi">
+                            <input type="date" name="tgl_mulai" id="" placeholder="Tanggal Mulai">
                         </div>
+                        <div class="mb-3">
+                            <input type="date" name="tgl_selesai" id="" placeholder="Tanggal Selesai">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" name="gelar" id="" placeholder="Gelar">
+                        </div>
+
                         <button type="submit" name="action" value="post">Post</button>
                     </form>
                 </div>
@@ -70,4 +74,3 @@
 </section>
 <!-- /.content -->
 @endsection
->>>>>>> 2b96dccda57fedb9ed154f5fa46b7f652815018b

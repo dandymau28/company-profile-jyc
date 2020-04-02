@@ -22,6 +22,6 @@ class penghargaanModel extends Model
 
     public function prestasi()
     {
-        return $this->belongsTo('App\Models\prestasiModel');
+        return $this->belongsTo('App\Models\prestasiModel', 'prestasi_id');
     }
 }
