@@ -56,6 +56,7 @@ class adminController extends Controller
                 // return $tanggal;
                 // dd($tanggal);
                 //simpan data
+
                 try {
                     $saveData = Berita::create([
                         'judul' => $request->judul,
@@ -100,6 +101,8 @@ class adminController extends Controller
                     $tag = NULL;
                 }
 
+
+                
                 //simpan data
                 try {
                     $saveData = Berita::create([
