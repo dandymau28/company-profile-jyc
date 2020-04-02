@@ -201,9 +201,4 @@
     @include('templates.footer')
 </body>
     @include('templates.foot')
-    <script>
-        $(document).ready(function(){
-            $('select').formSelect();
-        });
-    </script>
 </html>
