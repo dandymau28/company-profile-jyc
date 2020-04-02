@@ -16,6 +16,7 @@ class CreatePenghargaanTable extends Migration
         Schema::create('penghargaan', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('prestasi_id');
+            $table->string('gelar');
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
             $table->softDeletes();
