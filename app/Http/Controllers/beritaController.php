@@ -178,6 +178,7 @@ class beritaController extends Controller
         return view('berita',[
             'beritas' => $berita,
             'koleksiKategori' => $koleksi,
+            'kategori' => $kategori,
             'title' => 'Kategori Berita',
             'nav' => 'berita'
         ]);
