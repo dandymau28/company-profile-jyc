@@ -210,6 +210,41 @@ class adminController extends Controller
 
     public function tambahPrestasi(Request $request)
     {
+        $getID = DB::table('prestasi')->latest()->first();
+        if($getID) {
+            $latestID = $getID->id;
+            $idFoto = $latestID + 1;
+        } else {
+            $idFoto = 1;
+        }
+
+        //upload foto
+        if($request->file('logo_kompetisi')){
+            $uploadFoto = $request->file('logo_kompetisi');
+            $logo = $idFoto.'-logo-'.'.'.$uploadFoto->getClientOriginalExtension();
+            $pathLogo = $uploadFoto->storeAs('public/assets/img', $logo);
+        } else {
+            $pathLogo = 'public/assets/img/705-1585565895.jpg';
+        }
+
+        //upload foto
+        if($request->file('foto_tim')){
+            $uploadFoto = $request->file('foto_tim');
+            $tim = $idFoto.'-tim-'.'.'.$uploadFoto->getClientOriginalExtension();
+            $pathTim = $uploadFoto->storeAs('public/assets/img', $tim);
+        } else {
+            $pathTim = 'public/assets/img/705-1585565895.jpg';
+        }
+
+        //upload foto
+        if($request->file('foto_piala')){
+            $uploadFoto = $request->file('foto_piala');
+            $piala = $idFoto.'-piala-'.'.'.$uploadFoto->getClientOriginalExtension();
+            $pathPiala = $uploadFoto->storeAs('public/assets/img', $piala);
+        } else {
+            $pathPiala = 'public/assets/img/705-1585565895.jpg';
+        }
+
         try {
             $prestasi = new Prestasi;
             $prestasi->nama_kompetisi = $request->input('nama_kompetisi');
@@ -217,16 +252,29 @@ class adminController extends Controller
             $prestasi->negara = $request->input('negara');
             $prestasi->tgl_mulai = $request->input('tgl_mulai');
             $prestasi->tgl_selesai = $request->input('tgl_selesai');
+            $prestasi->logo_kompetisi = $pathLogo;
+            $prestasi->foto_tim = $pathTim;
+            $prestasi->foto_piala = $pathPiala;
             $prestasi->save();
 
-            $penghargaan = new Penghargaan;
-            $penghargaan->gelar = $request->input('gelar');
-            $prestasi->penghargaans()->save($penghargaan);
+            if ($request->input('gelar')) {
+                $penghargaan = new Penghargaan;
+                $penghargaan->gelar = $request->input('gelar');
+                $prestasi->penghargaans()->save($penghargaan);
+            }
         } catch (Exception $e) {
             return $e;
         }
 
         return back()->with('success','berhasil menambahkan data prestasi');
+    }
+
+    public function hapusPrestasi($id)
+    {
+        $prestasi = Prestasi::find($id);
+        $prestasi->delete();
+
+        return back()->with('success','berhasil menghapus data prestasi');
     }
 
 }

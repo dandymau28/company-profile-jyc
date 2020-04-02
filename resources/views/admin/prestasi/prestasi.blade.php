@@ -60,6 +60,15 @@
                             <input type="date" name="tgl_selesai" id="" placeholder="Tanggal Selesai">
                         </div>
                         <div class="mb-3">
+                            <input type="file" name="logo_kompetisi" id="" placeholder="Logo">
+                        </div>
+                        <div class="mb-3">
+                            <input type="file" name="foto_tim" id="" placeholder="Foto Tim">
+                        </div>
+                        <div class="mb-3">
+                            <input type="file" name="foto_piala" id="" placeholder="Foto Piala">
+                        </div>
+                        <div class="mb-3">
                             <input type="text" name="gelar" id="" placeholder="Gelar">
                         </div>
 
