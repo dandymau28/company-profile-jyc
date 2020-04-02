@@ -21,7 +21,7 @@ class CreatePenghargaanTable extends Migration
             $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
             $table->softDeletes();
 
-            $table->foreign('prestasi_id')->references('id')->on('prestasi');
+            $table->foreign('prestasi_id')->references('id')->on('prestasi')->onDelete('cascade');
         });
     }
 

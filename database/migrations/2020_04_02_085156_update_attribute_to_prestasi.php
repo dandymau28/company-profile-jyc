@@ -14,6 +14,7 @@ class UpdateAttributeToPrestasi extends Migration
     public function up()
     {
         Schema::table('prestasi', function (Blueprint $table) {
+            $table->dropColumn('lokasi');
             $table->renameColumn('gelar_juara','kota');
             $table->string('negara')->after('gelar_juara');
             $table->renameColumn('tanggal_kompetisi','tgl_mulai');
