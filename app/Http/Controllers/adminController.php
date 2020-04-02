@@ -8,6 +8,7 @@ use App\Models\beritaModel as Berita;
 use App\Models\kategoriModel as Kategori;
 use App\Models\tagModel as Tag;
 use App\Models\prestasiModel as Prestasi;
+use App\Models\penghargaanModel as Penghargaan;
 use Illuminate\Support\Facades\Storage;
 use \Carbon\Carbon;
 use Illuminate\Support\Str;
@@ -210,16 +211,22 @@ class adminController extends Controller
     public function tambahPrestasi(Request $request)
     {
         try {
-            $prestasi = Prestasi::create([
-                'nama_kompetisi' => $request->input('nama_kompetisi'),
-                'gelar_juara' => $request->input('gelar_juara'),
-                'lokasi' => $request->input('lokasi'),
-                'tanggal_kompetisi' => $request->input('tanggal_kompetisi')
-            ]);
+            $prestasi = new Prestasi;
+            $prestasi->nama_kompetisi = $request->input('nama_kompetisi');
+            $prestasi->kota = $request->input('kota');
+            $prestasi->negara = $request->input('negara');
+            $prestasi->tgl_mulai = $request->input('tgl_mulai');
+            $prestasi->tgl_selesai = $request->input('tgl_selesai');
+            $prestasi->save();
+
+            $penghargaan = new Penghargaan;
+            $penghargaan->gelar = $request->input('gelar');
+            $prestasi->penghargaans()->save($penghargaan);
         } catch (Exception $e) {
             return $e;
         }
 
         return back()->with('success','berhasil menambahkan data prestasi');
     }
+
 }

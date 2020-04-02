@@ -28,6 +28,6 @@ class prestasiModel extends Model
 
     public function penghargaans()
     {
-        return $this->hasMany('App\Models\penghargaanModel');
+        return $this->hasMany('App\Models\penghargaanModel','prestasi_id','id');
     }
 }
