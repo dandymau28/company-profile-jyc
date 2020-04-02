@@ -40,6 +40,25 @@
         <div class="row my-5">
             {{-- Card Berita --}}
             <div class="col-lg-8 col-md-12 col-sm-12 mr-md-5">
+                <nav aria-label="breadcrumb" class="mb-5 d-none d-lg-block row">
+                    <ol class="breadcrumb bg-light">
+                        @empty($kategori)
+                            <li class="breadcrumb-item"><a href="{{ route('beranda') }}">Beranda</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Berita</li>
+                        @endempty
+                        
+                        @isset($kategori)
+                            <li class="breadcrumb-item"><a href="{{ route('beranda') }}">Beranda</a></li>
+                            <li class="breadcrumb-item"><a href="{{ route('berita') }}">Berita</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{{ Str::title($kategori) }}</li>
+                        @endisset
+                    </ol>
+                </nav>
+                @empty($beritas)
+                    <div class="text-center">
+                        Belum ada berita di kategori {{ $kategori }}!
+                    </div>
+                @endempty
                 @foreach( $beritas as $berita )
                     <div  data-aos="zoom-in" class="row mb-4 bg-light text-dark py-3">
                         <div class="col-12 col-md-6 img-hover-zoom img-hover-zoom--brightness">
@@ -219,10 +238,5 @@
 </body>
     @include('templates.foot')
     <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('select').formSelect();
-            // $('.cari-berita').select2();
-        });
-    </script>
+    
 </html>
