@@ -18,8 +18,8 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-12 col-md-3">
-            <div class="footer-title pb-2">Navigasi</div>
+        <div class="col-sm-12 col-md-3 mt-sm-3 mt-md-0">
+            <div class="footer-title pb-1">Navigasi</div>
             <ul class="list-unstyled">
                 <li><a class="text-white" href="{{route('berita')}}">Berita</a></li>
                 <li><a class="text-white" href="{{route('profile')}}">Profile</a></li>
@@ -30,7 +30,7 @@
             </ul>
         </div>
         <div class="col-sm-12 col-md-3 mt-sm-3 mt-md-0">
-            <div class="footer-title pb-2">Tautan Penting</div>
+            <div class="footer-title pb-1">Tautan Penting</div>
             <ul class="list-unstyled">
                 <li><a class="text-white" href="{{route('berita')}}">Jakarta National Choir Competition</a></li>
                 <li><a class="text-white" href="{{route('berita')}}/kategori/Kompetsi%20Internasional">Kompetisi International</a></li>
@@ -50,14 +50,14 @@
         </div>
     </div>
     <div id="footer-bottom" class="row justify-content-between w-90 align-items-center py-3">
-        <div class="col-12 col-md-6 text-right p-2">
+        <div class="col-12 col-lg-6 text-right p-2">
             <a class="shadow-lg" href="https://www.youtube.com/channel/UCUelE1nt2PXC_SN6aAfbs8A"><img class="social-links " src="{{asset('/assets/img/youtube-1.png')}}" alt="Youtbe"></a>
             <a class="shadow-lg" href="https://www.facebook.com/jktyouthchoir/"><img class="social-links ml-2" src="{{asset('/assets/img/facebook-1.png')}}" alt="Fb"></a>
             <a class="shadow-lg" href="https://www.instagram.com/jktyouthchoir/"><img class="social-links ml-2" src="{{asset('/assets/img/ig-1.png')}}" alt="Ig"></a>
             <a class="shadow-lg" href="https://twitter.com/JktYouthChoir"><img class="social-links ml-2" src="{{asset('/assets/img/twitter-1.png')}}" alt="Twitter"></a>
             <a class="shadow-lg" href="mailto:jakartayouthchoir@gmail.com"><img class="social-links ml-2" src="{{asset('/assets/img/email-2.png')}}" alt="Twitter"></a>
         </div>
-        <div class="col-12 col-md-6 text-right footer-title ">
+        <div class="col-12 col-lg-6 text-right footer-title ">
             &copy 2016 - {{ now()->year }}. Jakarta Youth Choir
         </div>
       </div>
