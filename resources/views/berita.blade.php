@@ -117,42 +117,55 @@
                 </div>
                 <div class="row mt-2 text-center text-white mx-1">
                     <div class="col py-3">
-                        <a href="http://"><i id="fb" class="fab fa-facebook-f fa-2x rounded-circle"></i></a>
+                        <a class="shadow-lg " href="https://www.facebook.com/jktyouthchoir/"><img class="social-links" src="{{asset('/assets/img/facebook-1.png')}}" alt="Fb"></a>
+                        {{-- <a href="http://"><i id="fb" class="fab fa-facebook-f fa-2x rounded-circle"></i></a> --}}
                     </div>
                     <div class="col py-3">
-                        <a href="http://"><i id="twitter" class="fab fa-twitter fa-2x"></i></a>
+                        <a class="shadow-lg" href="https://twitter.com/JktYouthChoir"><img class="social-links" src="{{asset('/assets/img/twitter-1.png')}}" alt="Twitter"></a>
+                        {{-- <a href="http://"><i id="twitter" class="fab fa-twitter fa-2x"></i></a> --}}
                     </div>
                     <div class="col py-3">
-                        <a href="http://"><i id="youtube" class="fab fa-youtube fa-2x"></i></a>
+                        <a class="shadow-lg" href="https://www.youtube.com/channel/UCUelE1nt2PXC_SN6aAfbs8A"><img class="social-links" src="{{asset('/assets/img/youtube-1.png')}}" alt="Youtbe"></a>
+                        {{-- <a href="http://"><i id="youtube" class="fab fa-youtube fa-2x"></i></a> --}}
                     </div>
                     <div class="col py-3">
-                        <a href="http://"><i id="ig" class="fab fa-instagram fa-2x"></i></a>
+                        <a class="shadow-lg" href="https://www.instagram.com/jktyouthchoir/"><img class="social-links" src="{{asset('/assets/img/ig-1.png')}}" alt="Ig"></a>
+                        {{-- <a href="http://"><i id="ig" class="fab fa-instagram fa-2x"></i></a> --}}
                     </div>
                     <div class="col py-3">
-                        <a href="http://"><i id="gmail" class="fas fa-envelope fa-2x"></i></i></a>
+                        <a class="shadow-lg" href="mailto:jakartayouthchoir@gmail.com"><img class="social-links" src="{{asset('/assets/img/email-2.png')}}" alt="Twitter"></a>
+                        {{-- <a href="http://"><i id="gmail" class="fas fa-envelope fa-2x"></i></i></a> --}}
                     </div>
                 </div>
                 
                 <div class="row mt-5">
                     <div class="col-5 p-2 text-center text-white merah ml-3">
-                        TAHUN
+                        TERHANGAT
                     </div>
                     <div class="col hitam-abu mr-3">
                         
                     </div>
                 </div>
-                <div class="row justify-content-between mt-3">
-                    <div class="col-4">
-                        <ul>
-                            <li>2020</li>
-                        </ul>
+                @foreach( $beritas as $berita )
+                    <div  data-aos="zoom-in" class="row mb-1 text-dark py-3">
+                        <div class="col-12 col-md-6">
+                            <a href="/berita/{{ $berita->slug }}">
+                                <img class="img-fluid" src="{{Storage::url($berita->banner)}}" alt="Gambar Blog">
+                            </a>
+                        </div>
+                        <div class="col-12 col-md-6 pt-sm-3 pt-md-0">
+                            <div class=" mb-1">
+                                <a href="/berita/{{ $berita->slug }}">{{ Str::title(Str::limit($berita->judul, 80)) }}</a>
+                                
+                            </div>
+                            <div class="tanggal-posting text-muted my-2">
+                                <small><i class="far fa-clock pr-1"></i>{{ \Carbon\Carbon::parse($berita->tgl_publish)->locale('id')->diffForHumans() }}</small>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-1 mr-5">
-                        <span class="badge badge-primary badge-pill">14</span>
-                    </div>
-                </div>
-                <hr class="mt-n2">
-                <div class="row justify-content-between mt-2">
+                    <hr class="my-n2">
+                @endforeach
+                {{-- <div class="row justify-content-between mt-2">
                     <div class="col-4">
                         <ul>
                             <li>2019</li>
@@ -206,7 +219,7 @@
                         <span class="badge badge-primary badge-pill">14</span>
                     </div>
                 </div>
-                <hr class="mt-n2">
+                <hr class="mt-n2"> --}}
 
                 <div class="row mt-5">
                     <div class="col-5 p-2 text-center text-white merah ml-3">
