@@ -86,7 +86,7 @@
                                 name="isi_berita"></textarea>
                         </div>
                         <div class="mb-3">
-                            <select id="pilih_tag" class="custom-select" name="states[]" multiple="multiple">
+                            <select id="pilih_tag" class="custom-select" name="tag[]" multiple="multiple">
                                 @foreach($tags as $tag)
                                 <option value="{{ $tag->nama_tag }} ">{{ $tag->nama_tag }}</option>
                                 @endforeach

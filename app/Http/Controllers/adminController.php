@@ -62,21 +62,23 @@ class adminController extends Controller
                 if($request->input('tag')){
                     $tags = $request->input('tag');
                     $tag = implode(',', $tags);
+                } else {
+                    $tag = NULL;
                 }
 
                 //penentuan tanggal
                 $tanggal = Carbon::now();
                 // return $tanggal;
                 // dd($tanggal);
-                //simpan data
-
+                
                 //jika berita tidak penting
                 if(!$request->input('penting')){
                     $penting = '0';
                 } else {
                     $penting = $request->input('penting');
                 }
-
+                
+                //simpan data
                 try {
                     $saveData = Berita::create([
                         'judul' => $request->judul,
@@ -88,7 +90,7 @@ class adminController extends Controller
                         'tgl_publish' => $tanggal,
                         'status' => 'terbit',
                         'penting' => $penting,
-                        // 'tag' => $tag,
+                        'tag' => $tag,
                     ]);
 
                     return back()->with("success", "Berita berhasil di-post");
@@ -149,6 +151,7 @@ class adminController extends Controller
                         'kategori' => $request->kategori,
                         'tgl_publish' => NULL,
                         'penting' => $penting,
+                        'tag' => $tag
                     ]);
                     
                     return back()->with("success", "Berita berhasil disimpan");
@@ -412,6 +415,7 @@ class adminController extends Controller
                         'kategori' => $request->kategori,
                         'penting' => $penting,
                         'tgl_publish' => $publish,
+                        'tag' => $tag,
                     ]);
                     // return $saveData;
 
