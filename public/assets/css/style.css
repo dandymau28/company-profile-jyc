@@ -361,7 +361,7 @@ body {
 #banner-berita {
     background: url(../img/berita/banner.jpg) no-repeat center center fixed;
     display: table;
-    height: 50vh;
+    height: 30vh;
     position: relative;
     width: 100%;
     background-size: cover;
@@ -456,9 +456,15 @@ li.breadcrumb-item {
     color: #707070;
 }
 
+.judul-berita a {
+    font-size: 1rem;
+    color: #414141;
+    font-weight: bold;
+}
+
 @media (min-width: 992px) {
     .judul-berita a {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         color: #414141;
         font-weight: 600;
     }
@@ -718,7 +724,7 @@ h2.center-align {
 }
 
 .social-links {
-    width: 8%;
+    width: 45px;
     height: auto;
 }
 
