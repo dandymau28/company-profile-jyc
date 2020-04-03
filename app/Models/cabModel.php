@@ -11,6 +11,7 @@ class cabModel extends Model
     protected $table = "cab";
     protected $fillable = [
         'id',
+        'id_audisi',
         'nama_lengkap',
         'umur',
         'status_nikah',
@@ -26,5 +27,30 @@ class cabModel extends Model
         'emergency_call'
     ];
 
-    protected $dates = ['deleted_at'];
+    protected $dates = ['created_at','updated_at','deleted_at'];
+
+    public function prestasiKesenian()
+    {
+        return $this->hasMany('App\Models\prestasiKesenianModel','id_cab','id');
+    }
+
+    public function prestasiNonkesenian()
+    {
+        return $this->hasMany('App\Models\prestasiNonkesenianModel','id_cab','id');
+    }
+
+    public function riwayatOrganisasi()
+    {
+        return $this->hasMany('App\Models\riwayatOrganisasiModel','id_cab','id');
+    }
+
+    public function kemampuanBermusik()
+    {
+        return $this->hasMany('App\Models\kemampuanBermusikModel','id_cab','id');
+    }
+
+    public function paduanSuara()
+    {
+        return $this->hasMany('App\Models\paduanSuaraModel','id_cab','id');
+    }
 }

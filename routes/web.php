@@ -109,10 +109,15 @@ Route::prefix('admin')->group(function () {
 
     //Berita
     Route::get('/berita/buat', 'adminController@create')->name('buat-berita');
+    Route::get('/berita', 'adminController@viewBerita')->name('olah-berita');
     Route::get('/berita/kategori-dan-tag', 'adminController@viewKategoriTag')->name('kategoriTag');
     Route::post('/berita/buat', 'adminController@store')->name('berita-post');
     Route::post('/berita/tambah-kategori', 'adminController@tambahKategori')->name('tambah-kategori');
     Route::post('/berita/tambah-tag', 'adminController@tambahTag')->name('tambah-tag');
+    Route::get('/berita/hapus/{id}','adminController@hapusBerita');
+    Route::get('/berita/edit/{id}','adminController@editBerita');
+    Route::post('/berita/edit/{id}','adminController@updateBerita')->name('edit-berita');
+
 
     //Prestasi
     Route::get('/prestasi','adminController@formPrestasi')->name('form-prestasi');
