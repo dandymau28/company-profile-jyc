@@ -57,23 +57,39 @@
     </div>
 
     <!-- Card Berita -->
-    <div class="berita container-fluid bg-light px-5 py-5">
+    <div class="berita bg-light p-5">
         <h3 class="mb-5">BERITA TERBARU</h3>
 
-        <div class="card-group row">
-        @foreach ($beritas as $berita)
-            <div class="card col-sm-12 mx-sm-1 col-md-6 mx-md-1 col-lg-6 mx-lg-3 col-xl-3 text-justify card-berita">
-                <img class="card-img-top img-fluid h-50" src="{{ Storage::url($berita->banner) }}" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title"><a href="#">{{ Str::title($berita->judul) }}</a></h5>
-                    <div class="card-text">{!! Str::limit(strip_tags($berita->isi_berita), 400) !!}
-                    </div>
-                    <p class="card-text"><small class="text-muted">{{ \Carbon\Carbon::parse($berita->tgl_publish)->locale('id')->diffForHumans() }}</small></p>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 mt-5">
+            @foreach ($beritas as $berita)
+            <div class="col mb-4 ">
+              <div class="card h-100">
+                <div class="img-hover-zoom img-hover-zoom--brightness ">
+                    <a class="h-50" href="/berita/{{ $berita->slug }}">
+                        <img src="{{Storage::url($berita->banner)}}" class="card-img-top img-fluid" alt="...">
+                    </a>
                 </div>
+                <div class="card-body">
+                    <div class="judul-berita mb-1">
+                        <a href="/berita/{{ $berita->slug }}">{{ Str::title($berita->judul) }}</a>
+                    </div>
+                    <div class="konten-berita text-justify">
+                        {!! Str::limit(strip_tags($berita->isi_berita), 400) !!}
+                    </div>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <div class="tanggal-posting text-muted my-2">
+                        <i class="far fa-clock"></i>
+                        <span>{{ \Carbon\Carbon::parse($berita->tgl_publish)->locale('id')->diffForHumans() }}</span>
+                    </div>
+                    <div class="float-right pt-sm-2 pt-md-1">
+                        <a type="button" href="/berita/{{ $berita->slug }}" class="btn btn-outline-secondary">Selengkapnya...</a>
+                    </div>
+                </div>
+              </div>
             </div>
-        @endforeach
-        </div>
-        
+            @endforeach
+          </div>
     </div>
 
     @include('templates.footer')
