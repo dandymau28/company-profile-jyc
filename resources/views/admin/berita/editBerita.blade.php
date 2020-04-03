@@ -44,7 +44,7 @@
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body pad">
-                    <form action="{{route('berita-post')}}" method="post" enctype="multipart/form-data">
+                    <form action="/admin/berita/edit/{{$berita->id}}" method="post" enctype="multipart/form-data">
                         @csrf
                         @method('post')
                         @if(Session::has('success'))
@@ -56,33 +56,50 @@
                         </div>
                         @endif
                         <div class="form-group mb-3">
-                            <input type="text" class="form-control" name="judul" id="" placeholder="Masukkan Judul...">
+                            <input type="text" class="form-control" name="judul" id="" placeholder="Masukkan Judul..." value="{{$berita->judul}}">
                         </div>
                         <div class="form-group mb-3">
                             <select name="kategori" class="custom-select" id="">
                                 <option selected disabled value="">Pilih Kategori...</option>
-                                @foreach($kategoris as $category)
-                                <option value="{{ $category->nama_kategori }} ">{{ $category->nama_kategori }}</option>
+                                @foreach($kategori as $category)
+                                    @if($category->nama_kategori == $berita->kategori)
+                                    <option selected value="{{$category->nama_kategori}}"> {{$category->nama_kategori}} </option>
+                                    @else
+                                    <option value="{{ $category->nama_kategori }} ">{{ $category->nama_kategori }}</option>
+                                    @endif
                                 @endforeach
                             </select>
                         </div>
                         <div class="custom-file mb-3">
                             <input type="file" class="custom-file-input" name="image" id="">
-                            <label class="custom-file-label" for="validatedCustomFile">Pilih Gambar...</label>
+                            <label class="custom-file-label" for="validatedCustomFile">{{$berita->banner}}</label>
                         </div>
                         <div class="mb-3">
                             <textarea class="textarea" id="isiBerita" placeholder="Place some text here"
                                 style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"
-                                name="isi_berita"></textarea>
+                                name="isi_berita">{{$berita->isi_berita}}</textarea>
                         </div>
                         <div class="mb-3">
                             <div class="custom-control custom-switch">
+                                @if($berita->penting == '1')
+                                <input type="checkbox" class="custom-control-input" name="penting" value="1" id="customSwitch1" checked>
+                                @else
                                 <input type="checkbox" class="custom-control-input" name="penting" value="1" id="customSwitch1">
+                                @endif
                                 <label class="custom-control-label" for="customSwitch1">Rekomendasi</label>
                             </div>
                         </div>
-                        <button type="submit" name="action" value="post">Post</button>
-                        <button type="submit" name="action" value="save">Save</button>
+                        <div class="mb-3">
+                            <div class="custom-control custom-switch">
+                                @if($berita->tgl_publish == NULL)
+                                <input type="checkbox" class="custom-control-input" name="publish" value="1" id="customSwitch2">
+                                @else
+                                <input type="checkbox" class="custom-control-input" name="publish" value="1" id="customSwitch2" checked>
+                                @endif
+                                <label class="custom-control-label" for="customSwitch2">Publish</label>
+                            </div>
+                        </div>
+                        <button type="submit" name="action">Save</button>
                     </form>
                 </div>
             </div>

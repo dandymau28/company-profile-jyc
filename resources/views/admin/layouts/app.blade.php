@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="/adminlte/plugins/fontawesome-free/css/all.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="/adminlte/dist/css/adminlte.min.css">
+    <!-- bootstrap style -->
+    <link rel="stylesheet" href="{{ asset('bootstrap-4.4.1-dist') }}/css/bootstrap.min.css">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     @stack('styles')

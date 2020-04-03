@@ -58,6 +58,13 @@ class adminController extends Controller
                 // dd($tanggal);
                 //simpan data
 
+                //jika berita tidak penting
+                if(!$request->input('penting')){
+                    $penting = '0';
+                } else {
+                    $penting = $request->input('penting');
+                }
+
                 try {
                     $saveData = Berita::create([
                         'judul' => $request->judul,
@@ -68,7 +75,7 @@ class adminController extends Controller
                         'kategori' => $request->kategori,
                         'tgl_publish' => $tanggal,
                         'status' => 'terbit',
-                        'penting' => $request->input('penting'),
+                        'penting' => $penting,
                         // 'tag' => $tag,
                     ]);
 
@@ -101,9 +108,14 @@ class adminController extends Controller
                 } else {
                     $tag = NULL;
                 }
-
-
                 
+                //jika berita tidak penting
+                if(!$request->input('penting')){
+                    $penting = '0';
+                } else {
+                    $penting = $request->input('penting');
+                }
+
                 //simpan data
                 try {
                     $saveData = Berita::create([
@@ -115,7 +127,7 @@ class adminController extends Controller
                         'id_user' => 1,
                         'kategori' => $request->kategori,
                         'tgl_publish' => NULL,
-                        'penting' => $request->input('penting'),
+                        'penting' => $penting,
                     ]);
                     
                     return back()->with("success", "Berita berhasil disimpan");
@@ -277,4 +289,109 @@ class adminController extends Controller
         return back()->with('success','berhasil menghapus data prestasi');
     }
 
+    public  function viewBerita()
+    {
+        $berita = DB::table('berita')->whereNull('deleted_at')->whereNotNull('tgl_publish')->latest()->get();
+
+        $beritaDraft = DB::table('berita')->whereNull('deleted_at')->whereNull('tgl_publish')->latest()->get();
+
+        $totalBerita = DB::table('berita')->whereNull('deleted_at')->latest()->count();
+
+        $totalKategori = DB::table('kategori')->count();
+
+        $rekomendasi = DB::table('berita')->where('penting', '1')->whereNull('deleted_at')->count();
+
+        $totalDraftBerita = DB::table('berita')->whereNull('tgl_publish')->whereNull('deleted_at')->count();
+
+        return view('admin.berita.berita',[
+            'berita' => $berita,
+            'totalBerita' => $totalBerita,
+            'totalKategori' => $totalKategori,
+            'rekomendasi' => $rekomendasi,
+            'totalDraftBerita' => $totalDraftBerita,
+            'beritaDraft' => $beritaDraft,
+        ]);
+    }
+
+    public function hapusBerita($id)
+    {
+        $berita = Berita::find($id);
+        $berita->delete();
+
+        return back()->with('success','Berita berhasil dihapus');
+    }
+
+    public function editBerita($id)
+    {
+        $berita = DB::table('berita')->where('id', $id)->first();
+        $kategori = DB::table('kategori')->latest()->get();
+
+        return view('admin.berita.editBerita',[
+            'berita' => $berita,
+            'kategori' => $kategori,
+        ]);
+    }
+
+    public function updateBerita(Request $request, $id)
+    {
+                //slug judul
+                $slug = Str::slug($request->judul,'-');
+
+                //upload foto
+                if($request->file('image')){
+                    $uploadFoto = $request->file('image');
+                    $name = rand(1,999).'-'.time().'.'.$uploadFoto->getClientOriginalExtension();
+                    $pathPhoto = $uploadFoto->storeAs('public/assets/img', $name);
+                } else {
+                    $pathPhoto = 'public/assets/img/705-1585565895.jpg';
+                }
+
+                //adding tag
+                if($request->input('tag')){
+                    $tags = $request->input('tag');
+                    $tag = implode(',', $tags);
+                } else {
+                    $tag = NULL;
+                }
+                
+                //jika berita tidak penting
+                if(!$request->input('penting')){
+                    $penting = '0';
+                } else {
+                    $penting = $request->input('penting');
+                }
+
+                if(!$request->input('publish')){
+                    $publish = NULL;
+                    $status = 'belum_terbit';
+                } else {
+                    $publish = Carbon::now();
+                    $status = 'terbit';
+                }
+
+                //simpan data
+                try {
+                    $saveData = DB::table('berita')->where('id', $id)
+                    ->update([
+                        'judul' => $request->judul,
+                        'slug' => $slug,
+                        'banner' => $pathPhoto,
+                        'isi_berita' => $request->isi_berita,
+                        'status' => $status,
+                        'id_user' => 1,
+                        'kategori' => $request->kategori,
+                        'penting' => $penting,
+                        'tgl_publish' => $publish,
+                    ]);
+                    // return $saveData;
+
+                    // $saveData = DB::raw("update 'berita' set 'tgl_publish' = ".$publish." where 'berita'.'id' = ".$id);
+                    return redirect()->route('olah-berita')->with('success','berita berhasil disimpan');
+                } catch (Exception $e) {
+                    return $error = [
+                        'code' => $e->getCode(),
+                        'message' => $e->getMessage()
+                    ];
+                }
+    }
 }
