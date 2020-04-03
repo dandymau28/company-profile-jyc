@@ -34,6 +34,12 @@ class adminController extends Controller
     {
         switch ($request->input('action')) {
             case 'post':
+                $validatedData = $request->validate([
+                    'judul' => 'required|unique:berita,judul',
+                    'image' => 'file|size:1024',
+                    'isi_berita' => 'required'
+                ]);
+
                 //slug judul
                 $slug = Str::slug($request->judul,'-');
 
@@ -94,6 +100,10 @@ class adminController extends Controller
                 break;
 
             case 'save':
+                $validatedData = $request->validate([
+                    'image' => 'file|size:1024'
+                ]);
+
                 //slug judul
                 $slug = Str::slug($request->judul,'-');
 
