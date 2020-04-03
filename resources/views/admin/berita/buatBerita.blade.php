@@ -2,6 +2,7 @@
 
 @push('styles')
 <link rel="stylesheet" href="/adminlte/plugins/summernote/summernote-bs4.css">
+<link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
 @endpush
 
 @section('title', 'Buat Berita')
@@ -76,6 +77,13 @@
                                 name="isi_berita"></textarea>
                         </div>
                         <div class="mb-3">
+                            <select id="pilih_tag" class="custom-select" name="states[]" multiple="multiple">
+                                @foreach($tags as $tag)
+                                <option value="{{ $tag->nama_tag }} ">{{ $tag->nama_tag }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="mb-3">
                             <div class="custom-control custom-switch">
                                 <input type="checkbox" class="custom-control-input" name="penting" value="1" id="customSwitch1">
                                 <label class="custom-control-label" for="customSwitch1">Rekomendasi</label>
@@ -99,6 +107,7 @@
 <script src="/adminlte/dist/js/demo.js"></script>
 <!-- Summernote -->
 <script src="/adminlte/plugins/summernote/summernote-bs4.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
 <script>
     $(function () {
         // Summernote
@@ -112,6 +121,10 @@
                 ['para', ['ul', 'ol', 'paragraph']],
                 ['height', ['height']]
             ]
+        });
+
+        $(document).ready(function() {
+            $('#pilih_tag').select2();
         });
 
         // $('.textarea').wysihtml5({
