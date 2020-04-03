@@ -124,9 +124,12 @@ Route::prefix('admin')->group(function () {
     Route::post('/prestasi','adminController@tambahPrestasi')->name('input-prestasi');
     Route::get('/prestasi/hapus/{id}','adminController@hapusPrestasi');
 
-    //Foto Kegiatan
-    Route::get('/foto', 'UploadFotoController@index')->name('upload-foto-view');
-    Route::post('/upload-foto', 'UploadFotoController@store')->name('upload-foto');
+    //Galeri
+    Route::get('/galeri/foto', 'galeriController@index')->name('upload-foto-view');
+    Route::post('/upload-foto', 'galeriController@store')->name('upload-foto');
+    Route::get('/galeri/video','galeriController@videoView')->name('video-view');
+    Route::post('/galeri/video','galeriController@video')->name('submit-video');
+    Route::get('/galeri','galeriController@galeriView')->name('galeri');
     
     Route::get('/contoh', function () {
         return view('admin.foto.contoh');

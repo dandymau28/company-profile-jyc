@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\FotoModel;
+use App\Models\videoModel as Video;
 use DB;
-class UploadFotoController extends Controller
+
+class galeriController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -26,16 +28,6 @@ class UploadFotoController extends Controller
             "title" => "Upload Foto",
             "kegiatans" => $kegiatans
             ]);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
     }
 
     /**
@@ -80,48 +72,45 @@ class UploadFotoController extends Controller
     
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
+    public  function videoView()
     {
-        //
+        try{
+            $kegiatans = DB::table('kegiatan')->get();
+        } catch (Exception $e) {
+            return $hasil = [
+                'code' => $e->getCode(),
+                'message' => $e->getMessage()
+            ];
+        }
+
+        return view('admin.video.video',[
+            'kegiatans' => $kegiatans
+        ]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
+    public  function video(Request $request)
     {
-        //
+        try {
+            $saveData = Video::create([
+                'alamat' => $request->input('alamat'),
+                'id_user' => 1,
+            ]);
+
+            return back()->with('success','berhasil submit');
+        } catch (Exception $e) {
+            return $e;
+        }
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+    public function galeriView()
     {
-        //
-    }
+        $foto = DB::table('foto')->latest()->get();
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        $video = DB::table('video')->latest()->get();
+
+        return view('admin.video.galeri',[
+            'foto' => $foto,
+            'video' => $video
+        ]);
     }
 }

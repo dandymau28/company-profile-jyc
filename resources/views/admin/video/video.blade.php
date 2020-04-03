@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 
-@section('title', 'Galeri Foto')
+@section('title', 'Galeri Video')
 
 @section('content')
     <!-- Content Header (Page header) -->
@@ -8,12 +8,13 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0 text-dark">Contoh Templating</h1>
+                    <h1 class="m-0 text-dark">Tambah Video</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Starter Page</li>
+                        <li class="breadcrumb-item">Galeri</li>
+                        <li class="breadcrumb-item active">Video</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -27,7 +28,7 @@
                 @csrf
                     <div class="card shadow">
                         <div class="card-header bg-success">
-                            <h5 class="text-white"> Laravel 6 Multiple Images Upload </h5>
+                            <h5 class="text-white"> YouTube Link Upload </h5>
                         </div>
                         <div class="card-body">
 
@@ -45,14 +46,13 @@
                                     <option value={{$kegiatan->id}}>{{$kegiatan->nama}}</option>   
                                 @endforeach
                             </select>
-                            <label for="images"> Images </label>
+                            <label for="images"> Link Video </label>
                                 <div class="form-group">
-                                    <input type="file" name="images[]" class="form-control" id="images" multiple/>
-                                    {!! $errors->first('images', '<small class="text-danger">:message</small>') !!}
+                                    <input type="text" name="video" class="form-control" id="video">
                                 </div>
                         </div>
                         <div class="card-footer">
-                            <button type="submit" class="btn btn-success"> Upload Images </button>
+                            <button type="submit" class="btn btn-success"> Submit </button>
                         </div>
                     </div>
                 </form>

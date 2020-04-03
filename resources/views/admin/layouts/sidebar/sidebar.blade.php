@@ -128,12 +128,6 @@
                         <p>Prestasi</p>
                     </a>
                 </li>
-                <li class="nav-item level-1">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-running"></i>
-                        <p>Kegiatan</p>
-                    </a>
-                </li>
                 <li class="nav-item has-treeview level-1">
                     <a href="#" class="nav-link ">
                         <i class="nav-icon fas fa-photo-video"></i>
@@ -144,13 +138,19 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item level-2">
+                            <a href="{{route('galeri')}}" class="nav-link">
+                                <i class="nav-icon fas fa-video"></i>
+                                <p>Galeri Master</p>
+                            </a>
+                        </li>
+                        <li class="nav-item level-2">
                             <a href="{{route('upload-foto-view')}}" class="nav-link">
                                 <i class="nav-icon far fa-image"></i>
                                 <p>Foto</p>
                             </a>
                         </li>
                         <li class="nav-item level-2">
-                            <a href="#" class="nav-link">
+                            <a href="{{route('video-view')}}" class="nav-link">
                                 <i class="nav-icon fas fa-video"></i>
                                 <p>Video</p>
                             </a>
