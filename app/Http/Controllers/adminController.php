@@ -257,6 +257,7 @@ class adminController extends Controller
             $pathPiala = 'public/assets/img/705-1585565895.jpg';
         }
 
+        $gelar = $request->input('gelar');
         try {
             $prestasi = new Prestasi;
             $prestasi->nama_kompetisi = $request->input('nama_kompetisi');
@@ -270,9 +271,11 @@ class adminController extends Controller
             $prestasi->save();
 
             if ($request->input('gelar')) {
-                $penghargaan = new Penghargaan;
-                $penghargaan->gelar = $request->input('gelar');
-                $prestasi->penghargaans()->save($penghargaan);
+                foreach($gelar as $satuan) {
+                    $penghargaan = new Penghargaan;
+                    $penghargaan->gelar = $satuan;
+                    $prestasi->penghargaans()->save($penghargaan);
+                }
             }
         } catch (Exception $e) {
             return $e;

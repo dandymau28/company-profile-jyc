@@ -33,7 +33,7 @@
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body pad">
-                    <form action="{{route('input-prestasi')}}" method="post" enctype="multipart/form-data">
+                    <form action="{{route('input-prestasi')}}" name="form-prestasi" method="post" enctype="multipart/form-data">
                         @csrf
                         @method('post')
                         @if(Session::has('success'))
@@ -68,12 +68,13 @@
                         <div class="mb-3">
                             <input type="file" name="foto_piala" id="" placeholder="Foto Piala">
                         </div>
-                        <div class="mb-3">
-                            <input type="text" name="gelar" id="" placeholder="Gelar">
+                        <div class="mb-3" id="gelar">
+                            <input type="text" name="gelar[]" id="" placeholder="Gelar">
                         </div>
 
                         <button type="submit" name="action" value="post">Post</button>
                     </form>
+                    <button onclick="tambah();">Input</button>
                 </div>
             </div>
         </div>
@@ -83,3 +84,19 @@
 </section>
 <!-- /.content -->
 @endsection
+
+@push('js')
+<script type="text/javascript">
+    function tambah()
+    {
+        var addChild = document.getElementById('gelar');
+        var tambahElemen = document.createElement('input');
+        tambahElemen.type = 'text';
+        tambahElemen.name = 'gelar[]';
+        tambahElemen.placeholder = 'Gelar';
+        addChild.appendChild(document.createElement('br'));
+        addChild.appendChild(tambahElemen);
+    }
+
+</script>
+@endpush
