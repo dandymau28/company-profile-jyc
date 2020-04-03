@@ -167,9 +167,14 @@ class adminController extends Controller
                     ->latest()
                     ->get();
         
+        $tags = DB::table('tag')
+                ->latest()
+                ->get();
+
         return view('admin.berita.buatBerita',[
             'title' => "Buat Berita",
-            'kategoris' => $kategori
+            'kategoris' => $kategori,
+            'tags' => $tag,
         ]);
     }
 
