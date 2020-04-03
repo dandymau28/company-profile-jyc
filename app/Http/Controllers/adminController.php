@@ -37,13 +37,18 @@ class adminController extends Controller
                 //slug judul
                 $slug = Str::slug($request->judul,'-');
 
+                //get ID for banner
+                $data = DB::table('berita')->whereNull('deleted_at')->whereNotNull('tgl_publish')->latest()->first();
+                $latestID = $data->id;
+                $currentID = $latestID + 1;
+
                 //upload foto
                 if($request->file('image')){
                     $uploadFoto = $request->file('image');
-                    $name = rand(1,999).'-'.time().'.'.$uploadFoto->getClientOriginalExtension();
+                    $name = 'banner'.'-'.$currentID.'.'.$uploadFoto->getClientOriginalExtension();
                     $pathPhoto = $uploadFoto->storeAs('public/assets/img', $name);
                 } else {
-                    $pathPhoto = 'public/assets/img/705-1585565895.jpg';
+                    $pathPhoto = 'public/assets/img/no-image-available.jpg';
                 }
 
                 //adding tag
@@ -92,13 +97,18 @@ class adminController extends Controller
                 //slug judul
                 $slug = Str::slug($request->judul,'-');
 
+                //get ID for banner
+                $data = DB::table('berita')->whereNull('deleted_at')->whereNotNull('tgl_publish')->latest()->first();
+                $latestID = $data->id;
+                $currentID = $latestID + 1;
+
                 //upload foto
                 if($request->file('image')){
                     $uploadFoto = $request->file('image');
-                    $name = rand(1,999).'-'.time().'.'.$uploadFoto->getClientOriginalExtension();
+                    $name = 'banner'.'-'.$currentID.'.'.$uploadFoto->getClientOriginalExtension();
                     $pathPhoto = $uploadFoto->storeAs('public/assets/img', $name);
                 } else {
-                    $pathPhoto = 'public/assets/img/705-1585565895.jpg';
+                    $pathPhoto = 'public/assets/img/no-image-available.jpg';
                 }
 
                 //adding tag
