@@ -153,10 +153,11 @@ class adminController extends Controller
                     
                     return back()->with("success", "Berita berhasil disimpan");
                 } catch (Exception $e) {
-                    return $error = [
-                        'code' => $e->getCode(),
-                        'message' => $e->getMessage()
-                    ];
+                    return back()->with("error", $e->getMessage());
+                    // return $error = [
+                    //     'code' => $e->getCode(),
+                    //     'message' => $e->getMessage()
+                    // ];
                 }
                 break;
         }
@@ -175,7 +176,7 @@ class adminController extends Controller
         return view('admin.berita.buatBerita',[
             'title' => "Buat Berita",
             'kategoris' => $kategori,
-            'tags' => $tag,
+            'tags' => $tags,
         ]);
     }
 
