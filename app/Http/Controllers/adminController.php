@@ -174,7 +174,7 @@ class adminController extends Controller
         return view('admin.berita.buatBerita',[
             'title' => "Buat Berita",
             'kategoris' => $kategori,
-            'tags' => $tag,
+            'tags' => $tags,
         ]);
     }
 
