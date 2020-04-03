@@ -23,9 +23,12 @@
         <div class="card text-center">
             <div class="card-body">
                 {{-- <h5 class="card-title">{{ $prestasi->nama_kompetisi }}</h5> --}}
-                <h5 class="card-title">1st Lanna International Choir Competition</h5>
+                <h5 class="card-title text-bold">1st Lanna International Choir Competition</h5>
+                <h5>Chiang Mai, Thailand</h5>
+                <h5>Oktober 2016</h5>
                 {{-- <p class="card-text">{{ $prestasi->gelar_juara }}</p> --}}
-                <p class="card-text">jUARA 1</p>
+                {{-- <p class="card-text">Penghargaan</p> --}}
+                <h5 class="card-text"><i class="fas fa-medal text-warning fa-2x pr-2"></i>Gold Medal Folklore Category<i class="fas fa-medal text-warning fa-2x pl-2"></i></h5>
             </div>
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
