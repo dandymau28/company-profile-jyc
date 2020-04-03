@@ -121,7 +121,12 @@
                         </li>
                     </ul>
                 </li>
-
+                <li class="nav-item level-1">
+                    <a href="{{route('kegiatan-view')}}" class="nav-link">
+                        <i class="nav-icon fas fa-running"></i>
+                        <p>Kegiatan</p>
+                    </a>
+                </li>
                 <li class="nav-item level-1">
                     <a href="{{route('form-prestasi')}}" class="nav-link">
                         <i class="nav-icon fas fa-trophy"></i>

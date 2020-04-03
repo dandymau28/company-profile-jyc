@@ -130,6 +130,9 @@ Route::prefix('admin')->group(function () {
     Route::get('/galeri/video','galeriController@videoView')->name('video-view');
     Route::post('/galeri/video','galeriController@video')->name('submit-video');
     Route::get('/galeri','galeriController@galeriView')->name('galeri');
+
+    Route::get('/kegiatan','adminController@kegiatan')->name('kegiatan-view');
+    Route::post('/kegiatan','adminController@tambahKegiatan')->name('add-kegiatan');
     
     Route::get('/contoh', function () {
         return view('admin.foto.contoh');

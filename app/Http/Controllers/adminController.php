@@ -10,6 +10,7 @@ use App\Models\tagModel as Tag;
 use App\Models\prestasiModel as Prestasi;
 use App\Models\penghargaanModel as Penghargaan;
 use Illuminate\Support\Facades\Storage;
+use App\Models\kegiatanModel as Kegiatan;
 use \Carbon\Carbon;
 use Illuminate\Support\Str;
 
@@ -421,5 +422,24 @@ class adminController extends Controller
                         'message' => $e->getMessage()
                     ];
                 }
+    }
+
+    public function kegiatan()
+    {
+        $kegiatan = DB::table('kegiatan')->latest()->get();
+
+        return view('admin.kegiatan.kegiatan',[
+            'kegiatan' => $kegiatan,
+        ]);
+    }
+
+    public function tambahKegiatan(Request $request)
+    {
+        $saveData = Kegiatan::create([
+            'nama' => $request->nama_kegiatan,
+            'jenis' => $request->jenis,
+        ]);
+
+        return back()->with('success','kegiatan berhasil ditambahkan');
     }
 }
