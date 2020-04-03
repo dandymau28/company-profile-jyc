@@ -133,10 +133,10 @@
         <div class="row container-fluid">
             <div class="col-lg-6 mx-auto text-center">
                 <ol>
-                    <li><p class="card-text text-justify">Menciptakan suasana organisasi yang harmonis, bersahabat dan ramah</p></li>
-                    <li><p class="card-text text-justify">Menyediakan sarana fisik dan non fisik untuk melatih baka dan talenta para anggotanya dalam suasana disiplin konstruktif dan menyenangkan</p></li>
-                    <li><p class="card-text text-justify">Aktif mengikuti kompetisi paduan suara di dalam dan di luar negeri</p></li>
-                    <li><p class="card-text text-justify">Mendukung program-program pemerintah DKI Jakarta khususnya dalam bidang kepemudaan, kesenian, dan kebudayaan.</p></li>
+                    <li><h5 class="card-text text-justify">Menciptakan suasana organisasi yang harmonis, bersahabat dan ramah</h5></li>
+                    <li><h5 class="card-text text-justify">Menyediakan sarana fisik dan non fisik untuk melatih baka dan talenta para anggotanya dalam suasana disiplin konstruktif dan menyenangkan</h5></li>
+                    <li><h5 class="card-text text-justify">Aktif mengikuti kompetisi paduan suara di dalam dan di luar negeri</h5></li>
+                    <li><h5 class="card-text text-justify">Mendukung program-program pemerintah DKI Jakarta khususnya dalam bidang kepemudaan, kesenian, dan kebudayaan.</h5></li>
                 </ol>
             </div>
         </div>
