@@ -11,7 +11,6 @@ class cabModel extends Model
     protected $table = "cab";
     protected $fillable = [
         'id',
-        'id_audisi',
         'nama_lengkap',
         'umur',
         'status_nikah',
