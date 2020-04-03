@@ -8,14 +8,18 @@ use DB;
 
 class apiController extends Controller
 {
-    public function searchByTerm (Request $request)
+    public function searchByTerm ($term = '')
     {
-        $data = $request->input('search');
+        $data = trim($term);
         
         try {
             $search = DB::table('berita')
-                        ->where('tag', 'like', '%'.$data.'%')
-                        ->orWhere('kategori', 'like', '%'.$data.'%')
+                        ->where('tag', 'like', "%{$data}%")
+                        ->whereNull('deleted_at')
+                        ->whereNotNull('tgl_publish')
+                        ->orWhere('kategori', 'like', "%{$data}%")
+                        ->orWhere('judul', 'like', "%{$data}%")
+                        ->limit(3)
                         ->get();
         } catch (Exception $e) {
             return response()->json([
@@ -25,14 +29,14 @@ class apiController extends Controller
         }
 
         return response()->json([
-            'code' => 200,
-            'result' => $search
+            'message' => 'success',
+            'data' => $search
         ]);
     }
 
-    public function searchTag (Request $request)
+    public function searchTag ($term = '')
     {
-        $data = $request->input('nama_tag');
+        $data = trim($term);
         // return response()->json($data);
 
         try {
@@ -47,8 +51,8 @@ class apiController extends Controller
         }
 
         return response()->json([
-            'code' => 200,
-            'result' => $tag
+            'message' => 'success',
+            'data' => $tag
         ]);
     }
 }
