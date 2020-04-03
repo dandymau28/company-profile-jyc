@@ -152,10 +152,11 @@ class adminController extends Controller
                     
                     return back()->with("success", "Berita berhasil disimpan");
                 } catch (Exception $e) {
-                    return $error = [
-                        'code' => $e->getCode(),
-                        'message' => $e->getMessage()
-                    ];
+                    return back()->with("error", $e->getMessage());
+                    // return $error = [
+                    //     'code' => $e->getCode(),
+                    //     'message' => $e->getMessage()
+                    // ];
                 }
                 break;
         }
