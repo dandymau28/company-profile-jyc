@@ -48,6 +48,15 @@
                     <form action="{{route('berita-post')}}" method="post" enctype="multipart/form-data">
                         @csrf
                         @method('post')
+                        
+                        @if(Session::has('error'))
+                        <div class="alert alert-success">
+                            {{ Session::get('error') }}
+                            @php
+                            Session::forget('error');
+                            @endphp
+                        </div>
+                        @endif
                         @if(Session::has('success'))
                         <div class="alert alert-success">
                             {{ Session::get('success') }}
@@ -124,7 +133,9 @@
         });
 
         $(document).ready(function() {
-            $('#pilih_tag').select2();
+            $('#pilih_tag').select2({
+                placeholder: 'Tambahkan tags...'
+            });
         });
 
         // $('.textarea').wysihtml5({
