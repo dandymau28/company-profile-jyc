@@ -43,7 +43,7 @@
             <div class="row align-content-center">
                 <div class="col-lg-4 text-center pt-3">
                     <h5>JNCC</h5>
-                    <p>The Biggest Choir Competition <br> In Indonesia </p>
+                    <p>Jakarta National Choir <br> Competition </p>
                 </div>
                 <div class="col-lg-4 text-center pt-3">
                     <i class='fas fa-calendar-alt'></i>
@@ -106,7 +106,7 @@
 
     <!-- VIDEO -->
     {{-- Videos --}}
-    <section id="video" class="videos container">
+    <section id="video" class="videos container mb-3">
         <div class="row">
             <span class="display-4 pb-3">Videos</span>
         </div>
