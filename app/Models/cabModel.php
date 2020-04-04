@@ -11,6 +11,7 @@ class cabModel extends Model
     protected $table = "cab";
     protected $fillable = [
         'id',
+        'id_audisi',
         'nama_lengkap',
         'umur',
         'status_nikah',
@@ -51,5 +52,15 @@ class cabModel extends Model
     public function paduanSuara()
     {
         return $this->hasMany('App\Models\paduanSuaraModel','id_cab','id');
+    }
+
+    public function kodeBayar()
+    {
+        return $this->hasOne('App\Models\kodebayarModel','id_cab','id');
+    }
+
+    public function audisi()
+    {
+        return $this->belongsTo('App\Models\jadwalaudisiModel','id_audisi');
     }
 }

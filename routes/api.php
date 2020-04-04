@@ -26,3 +26,6 @@ Route::get('/berita/searchbyterm/{term?}','api\apiController@searchByTerm');
 
 //API Search Tag
 Route::get('/berita/tag/{term?}','api\apiController@searchTag');
+
+//API Get Data CAB
+Route::get('/cab/get', 'api\apiController@jsonCAB');

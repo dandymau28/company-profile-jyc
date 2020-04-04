@@ -10,6 +10,7 @@ use App\Models\paduanSuaraModel as Padus;
 use App\Models\prestasiKesenianModel as Kesenian;
 use App\Models\prestasinonKesenianModel as Nonkesenian;
 use App\Models\riwayatOrganisasiModel as Organisasi;
+use App\Models\kode_pembayaran_cab as KodeBayar;
 use DB;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\successMail;
@@ -111,19 +112,83 @@ class cabController extends Controller
                 $i++;
             }
         } catch (Exception $e) {
-
+            return $e;
         }
 
         $year = Carbon::now()->format('Y');
+
         $pendaftar = DB::table('cab')
                     ->where(DB::raw("YEAR(created_at)=".$year))
                     ->count();
+
+        $cab = DB::table('cab')->join('kode_pembayaran_cab','cab.id','=','kode_pembayaran_cab.id_cab')
+                    ->where('cab.email',$request->input('email'))
+                    ->select('cab.*','kode_pembayaran_cab.*')
+                    ->first();
+
         if($pendaftar < 90) {
-            
+
+            $data = [
+                'status' => 'Berhasil',
+                'identitas' => $cab,
+            ];
+
+            // $pdf = PDF::loadView('mail.success',$data);
+            // $pdf = $pdf->stream();
+            Mail::to($cab->email)
+                ->send(new AfterRegister($data));
+
         } elseif ($pendaftar >= 90 && $pendaftar < 110) {
+            $data = [
+                'status' => 'Waiting List',
+                'identitas' => $cab
+            ];
 
+            Mail::to($cab->email)
+                ->send(new AfterRegister($data));
+        } else {
+            return back()->with([
+                'status' => 'Gagal',
+                'message' => 'Maaf pendaftaran sudah penuh, silakan coba tahun depan'
+                ]);
         }
+        return back()->with('status', 'sukses');
+    }
 
-        
+    public function viewBuktiBayar($kode_bayar)
+    {
+        $data = DB::table('cab')
+                ->join('kode_pembayaran_cab','cab.id','=','kode_pembayaran_cab.id_cab')
+                ->where('kode_pembayaran_cab.kode_bayar',$kode_bayar)
+                ->select('cab.*','kode_pembayaran_cab.*')
+                ->first();
+
+        return view('',[
+            'data' => $data,
+        ]);
+    }
+
+    public function terimaBuktiBayar($kode_bayar)
+    {
+        $data = DB::table('cab')
+                ->join('kode_pembayaran_cab','cab.id','=','kode_pembayaran_cab.id_cab')
+                ->where('kode_pembayaran_cab.kode_bayar',$kode_bayar)
+                ->select('cab.*','kode_pembayaran_cab.*')
+                ->first();
+                
+        $person = $data->nama;
+
+        //upload foto
+        $uploadFoto = $request->file('image');
+        $name = 'buktipembayaran'.'-'.$person.'-'.$kode_bayar.'.'.$uploadFoto->getClientOriginalExtension();
+        $fotoBukti = $uploadFoto->storeAs('public/pembayaran', $name);
+
+        $data = DB::table('kode_pembayaran_cab')
+                ->where('kode_bayar', $kode_bayar)
+                ->update([
+                    'foto_bukti' => $fotoBukti
+                ]);
+
+        return back()->with('success','Berhasil upload bukti');
     }
 }

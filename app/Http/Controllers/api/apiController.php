@@ -55,4 +55,11 @@ class apiController extends Controller
             'data' => $tag
         ]);
     }
+
+    public function jsonCAB()
+    {
+        $data = DB::table('cab')->latest()->get();
+
+        return response()->json(['code'=>200,'data' => $data]);
+    }
 }
