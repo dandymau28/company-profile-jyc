@@ -30,11 +30,11 @@ Route::get('/profile', function () {
     return view('profile', ["title" => "Profile", "nav" => "profile"]);
 })->name('profile');
 
-Route::get('/profile/limbong', function(){
+Route::get('/profile/ariadi-limbong', function(){
     return view('founderlimbong', ["title" => "Ponirin Ariadi", "nav" => "profile"]);
 })->name('founder');
 
-Route::get('/profile/cepo', function(){
+Route::get('/profile/septo-adi-kristanto', function(){
     return view('foundercepo', ["title" => "Septo Adi", "nav" => "profile"]);
 })->name('founderrr');
 
@@ -55,6 +55,7 @@ Route::get('/prestasi', 'prestasiController@prestasi')->name('prestasi');
 // })->name('berita');
 
 Route::get('/berita', 'beritaController@berita')->name('berita');
+Route::get('/berita/cari-berita','api\apiController@searchByTerm');
 Route::get('/berita/{berita}','beritaController@show');
 Route::get('/berita/kategori/{kategori}','beritaController@getBeritaByKategori');
 

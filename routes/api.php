@@ -22,7 +22,7 @@ use Illuminate\Http\Request;
 // Route::get('/foto/{id_kegiatan}', 'kegiatanController@fotoKegiatan');
 
 //API Search By Term
-Route::get('/berita/searchbyterm/{term?}','api\apiController@searchByTerm');
+// Route::get('/berita/searchbyterm/{term?}','api\apiController@searchByTerm');
 
 //API Search Tag
 Route::get('/berita/tag/{term?}','api\apiController@searchTag');
