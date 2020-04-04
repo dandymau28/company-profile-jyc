@@ -51,7 +51,7 @@
                 <img src="{{asset('assets/img/beranda/intro-jyc.png')}}" alt="img" class="img-fluid">
             </div>
             <div class="col-md-6 intro-text">
-                <p><b>Jakarta Youth Choir</b> adalah paduan suara dari DKI Jakarta dibawah Dinas Pemuda dan Olahraga. JYC telah mengukir banyak pertasi  terkemuka di tingkat Nasional ataupun Internasional. <b>Jakarta Youth Choir</b> juga menghadirkan berbagai Choirmaster dari berbagai latar belakang Paduan Suara di Indonesia yang terkenal dan berpengalaman sebagai pelatih tamu untuk memaksimalkan pengembangan kemampuan para Choristernya. Yuk pantau terus proses latihan kami untuk mengharumkan nama Jakarta dan Indonesia dengan follow akun resmi instagram <b>@JktYouthChoir</b> dan media sosial lainnya.</p>
+                <p><b>Jakarta Youth Choir</b> adalah paduan suara dari DKI Jakarta dibawah binaan Dinas Pemuda dan Olahraga. JYC telah mengukir banyak pertasi  terkemuka di tingkat Nasional ataupun Internasional. <b>Jakarta Youth Choir</b> juga menghadirkan berbagai Choirmaster dari berbagai latar belakang Paduan Suara di Indonesia yang terkenal dan berpengalaman sebagai pelatih tamu untuk memaksimalkan pengembangan kemampuan para Choristernya. Yuk pantau terus proses latihan kami untuk mengharumkan nama Jakarta dan Indonesia dengan follow akun resmi instagram <b>@JktYouthChoir</b> dan media sosial lainnya.</p>
             </div>
         </div>
     </div>
