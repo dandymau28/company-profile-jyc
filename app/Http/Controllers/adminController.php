@@ -87,7 +87,6 @@ class adminController extends Controller
                     $penting = $request->input('penting');
                 }
                 
-                return $request;
                 //simpan data
                 try {
                     $saveData = Berita::create([
