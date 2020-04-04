@@ -9,10 +9,13 @@ use App\Models\kategoriModel as Kategori;
 use App\Models\tagModel as Tag;
 use App\Models\prestasiModel as Prestasi;
 use App\Models\penghargaanModel as Penghargaan;
+use App\Models\cabModel as CAB;
 use Illuminate\Support\Facades\Storage;
 use App\Models\kegiatanModel as Kegiatan;
 use \Carbon\Carbon;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Validator;
+use DataTables;
 
 class adminController extends Controller
 {
@@ -35,11 +38,14 @@ class adminController extends Controller
     {
         switch ($request->input('action')) {
             case 'post':
-                $validatedData = $request->validate([
+                $validatedData = Validator::make($request->all(),[
                     'judul' => 'required|unique:berita,judul',
-                    'image' => 'file|size:1024',
+                    'image' => 'file|max:1024',
                     'isi_berita' => 'required'
                 ]);
+                if($validatedData->fails()){
+                    return $validatedData->errors();
+                };
 
                 //slug judul
                 $slug = Str::slug($request->judul,'-');
@@ -103,9 +109,14 @@ class adminController extends Controller
                 break;
 
             case 'save':
-                $validatedData = $request->validate([
-                    'image' => 'file|size:1024'
+                $validatedData = Validator::make($request->all(),[
+                    'judul' => 'required|unique:berita,judul',
+                    'image' => 'file|size:1024',
+                    'isi_berita' => 'required'
                 ]);
+                if($validatedData->fails()){
+                    return $validatedData->errors();
+                };
 
                 //slug judul
                 $slug = Str::slug($request->judul,'-');
@@ -446,5 +457,21 @@ class adminController extends Controller
         ]);
 
         return back()->with('success','kegiatan berhasil ditambahkan');
+    }
+
+    public function viewCAB()
+    {
+        return view('admin.anggota.cab-master');
+    }
+
+    public function editCAB($id)
+    {
+        $data = DB::table('cab')
+                ->join('kode_pembayaran_cab', 'cab.id','=','kode_pembayaran_cab.id_cab')
+                ->select('cab.*','kode_pembayaran_cab.*')
+                ->where('cab.id',$id)
+                ->first();
+
+        return view('admin.anggota.detail');
     }
 }
