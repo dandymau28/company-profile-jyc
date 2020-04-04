@@ -77,7 +77,7 @@
                         He is also got some conductor prizes such as The Best Conductor Award in The XXXIV Chorus Inside Advent 2018 in Italy, The Promising Conductor and The Best Organized Conductor Award in The XIV Varsovia Cantat 2019 in Poland. He was also one of the 10 invited participating conductors around the world to participate in The Harold Rosenbaum Choral Conducting 2019 in New York University, The United States.
                         Those experiences make him actively involved as adjudicators or trainer in choir competition or workshops in the country. Until now, he keeps on learning, developing and gaining his skills & experiences by joining workshops, seminars & competition around the world. He is also well known as the choirmaster of Jakarta Youth Choir, song arranger ( especially choral arrangements), professional singer and vocal/choir director who coaches children, youth & adult choirs.
                         !!', 500)}}</p>
-                        <a href="{{route('founderrr')}}" class="btn btn-outline-secondary mr-0">Coba baca...</a>    
+                        <a href="{{route('founderrr')}}" class="btn btn-outline-secondary mr-0">Baca penuh...</a>    
                     
                 </div>
             </div>
