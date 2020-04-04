@@ -49,14 +49,14 @@
                         @csrf
                         @method('post')
                         
-                        {{-- @if(Session::has('error'))
+                        @if(Session::has('error'))
                         <div class="alert alert-success">
                             {{ Session::get('error') }}
                             @php
                             Session::forget('error');
                             @endphp
                         </div>
-                        @endif --}}
+                        @endif
                         @if(Session::has('success'))
                         <div class="alert alert-success">
                             {{ Session::get('success') }}
