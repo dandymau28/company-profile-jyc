@@ -78,6 +78,7 @@ class adminController extends Controller
                     $penting = $request->input('penting');
                 }
                 
+                return $request;
                 //simpan data
                 try {
                     $saveData = Berita::create([
@@ -95,10 +96,11 @@ class adminController extends Controller
 
                     return back()->with("success", "Berita berhasil di-post");
                 } catch (Exception $e) {
-                    return $error = [
-                        'code' => $e->getCode(),
-                        'message' => $e->getMessage()
-                    ];
+                    return back()->with("error", $e->getMessage());
+                    // return $error = [
+                    //     'code' => $e->getCode(),
+                    //     'message' => $e->getMessage()
+                    // ];
                 }
                 break;
 
