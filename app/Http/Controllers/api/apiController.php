@@ -8,9 +8,9 @@ use DB;
 
 class apiController extends Controller
 {
-    public function searchByTerm ($term = '')
+    public function searchByTerm (Request $req)
     {
-        $data = trim($term);
+        $data = trim($req->input('term'));
         
         try {
             $search = DB::table('berita')
@@ -19,8 +19,7 @@ class apiController extends Controller
                         ->whereNotNull('tgl_publish')
                         ->orWhere('kategori', 'like', "%{$data}%")
                         ->orWhere('judul', 'like', "%{$data}%")
-                        ->limit(3)
-                        ->get();
+                        ->simplePaginate(3);
         } catch (Exception $e) {
             return response()->json([
                 'code' => $e->getCode(),
@@ -28,10 +27,43 @@ class apiController extends Controller
             ]);
         }
 
-        return response()->json([
-            'message' => 'success',
-            'data' => $search
-        ]);
+        //menghitung kategori
+        $kategoris = DB::table('kategori')
+                    ->oldest()->get();
+        $koleksi = [];
+        // return $kategoris;
+        foreach($kategoris as $index) 
+        {
+            $hitung = DB::table('berita')
+                    ->where('kategori', $index->nama_kategori)
+                    ->count();
+            
+            $koleksi[] = [
+                'kategori' => $index->nama_kategori,
+                'hasil' => $hitung
+            ];
+        }
+        if(!empty($search)) {
+            return view('berita',[
+                'beritas' => $search,
+                'koleksiKategori' => $koleksi,
+                'term' => $data,
+                'title' => 'Hasil Pencarian ' . $data . ': ',
+                'nav' => 'berita',
+                'cari' => 'Hasil Pencarian \'' . $data . '\': ',
+            ]);
+        } else {
+            return view('berita', [
+                "message" => "Berita tidak ditemukan!",
+                'cari' => 'Hasil Pencarian \'' . $data . '\': '
+            ]);
+        }
+
+
+        // return response()->json([
+        //     'message' => 'success',
+        //     'data' => $search
+        // ]);
     }
 
     public function searchTag ($term = '')
