@@ -51,10 +51,13 @@ class adminController extends Controller
                 $slug = Str::slug($request->judul,'-');
 
                 //get ID for banner
-                $data = DB::table('berita')->whereNull('deleted_at')->whereNotNull('tgl_publish')->latest()->first();
-                $latestID = $data->id;
-                $currentID = $latestID + 1;
-
+                $data = DB::table('berita')->whereNull('deleted_at')->whereNotNull('tgl_publish')->latest()->first()
+                if(!$data){
+                    $currentID = 1;
+                } else 
+                   $latestID = $data->id
+                   $currentID = $latestID +1;
+        }
                 //upload foto
                 if($request->file('image')){
                     $uploadFoto = $request->file('image');
