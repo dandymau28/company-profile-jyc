@@ -72,9 +72,8 @@ Sementara untuk testing Controller bisa gunakan Route di bawah.
 Seperti get berita, post pendaftaran, post kegiatan, dll.
 */
 
-Route::get('/testing', 'beritaController@index');
-Route::post('/pendaftaran/create', 'cabController@store'); //untuk menggunakan ini gunakan =>  'method=post' dan 'action=/pendaftaran/' dan name setiap form inputnya sesuai dengan nama atribut di db ya <3
-
+Route::get('/upload-bukti-bayar/{kode_bayar}','cabController@viewBuktiBayar');
+Route::post('/upload-bukti-bayar','cabController@terimaBuktiBayar');
 
 
 // Admin route
@@ -103,15 +102,14 @@ Route::prefix('admin')->group(function () {
     })->name('anggota-master');
 
     //Calon Anggota
-    Route::get('/cab', function () {
-        return view('admin.anggota.cab-master', ["title" => "Anggota"]);
-    })->name('cab-master');
+    Route::get('/cab', 'adminController@viewCAB')->name('cab-master');
+    Route::get('/cab/anggota/id/{id}', 'adminController@editCAB');
 
     //Berita
     Route::get('/berita/buat', 'adminController@create')->name('buat-berita');
     Route::get('/berita', 'adminController@viewBerita')->name('olah-berita');
     Route::get('/berita/kategori-dan-tag', 'adminController@viewKategoriTag')->name('kategoriTag');
-    Route::post('/berita/store', 'adminController@store')->name('berita-post');
+    Route::post('/berita/create', 'adminController@store')->name('post-berita');
     Route::post('/berita/tambah-kategori', 'adminController@tambahKategori')->name('tambah-kategori');
     Route::post('/berita/tambah-tag', 'adminController@tambahTag')->name('tambah-tag');
     Route::get('/berita/hapus/{id}','adminController@hapusBerita');

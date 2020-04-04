@@ -1,5 +1,9 @@
 @extends('admin.layouts.app')
 
+@push('styles')
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+@endpush
+
 @section('title', 'Data Master CAB')
 
 @section('content')
@@ -84,64 +88,76 @@
                 <!-- /.col -->
             </div>
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
-
-                            <p class="card-text">
-                            Some quick example text to build on the card title and make up the bulk of the card's
-                            content.
-                            </p>
-
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
-                        </div>
-                    </div>
-
-                    <div class="card card-primary card-outline">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-
-                            <p class="card-text">
-                            Some quick example text to build on the card title and make up the bulk of the card's
-                            content.
-                            </p>
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
-                        </div>
-                    </div><!-- /.card -->
-                </div>
-                <!-- /.col-md-6 -->
-                <div class="col-lg-6">
-                    <div class="card">
-                        <div class="card-header">
-                            <h5 class="m-0">Featured</h5>
-                        </div>
-                        <div class="card-body">
-                            <h6 class="card-title">Special title treatment</h6>
-
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-
-                    <div class="card card-primary card-outline">
-                        <div class="card-header">
-                            <h5 class="m-0">Featured</h5>
-                        </div>
-                        <div class="card-body">
-                            <h6 class="card-title">Special title treatment</h6>
-
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <table class="table table-bordered" id="tabelCAB">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">No</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Alamat</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Instagram</th>
+                                        <th width="100px">Action</th>
+                                    </tr>
+                                </thead>
+                            </table>
                         </div>
                     </div>
                 </div>
-                <!-- /.col-md-6 -->
+                <!-- /.col-md-12 -->
             </div>
             <!-- /.row -->
         </div><!-- /.container-fluid -->
     </div>
     <!-- /.content -->
 @endsection
+
+@push('js')
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript">
+$.ajax({
+    method: "GET",
+    url: "http://127.0.0.1:8000/api/cab/get"
+})
+    .done(function(response) {
+        if(response.code === 200) {
+            $("#tabelCAB").DataTable({
+                data: response.data,
+                columns: [
+                    {
+                        data: null,
+                        render: function(data, type, row, meta) {
+                            return meta.row + 1;
+                        }
+                    },
+                    {
+                        data: "nama_lengkap"
+                    },
+                    {
+                        data: "alamat"
+                    },
+                    {
+                        data: "email"
+                    },
+                    {
+                        data: "instagram"
+                    },
+                    {
+                        render: function(data, type, full) {
+                            return (
+                                '<a class="btn btn-primary btn-sm" href="http://127.0.0.1:8000/admin/cab/anggota/id/' + full.id +'">Detail</a>' 
+                            );
+                        }
+                    }
+                ]
+            });
+        }
+    })
+    .fail(function() {
+        console.log(error);
+    });
+</script>
+@endpush

@@ -45,7 +45,7 @@
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body pad">
-                    <form action="{{route('berita-post')}}" method="post" enctype="multipart/form-data">
+                    <form action="{{route('post-berita')}}" method="post" enctype="multipart/form-data">
                         @csrf
                         @method('post')
                         
