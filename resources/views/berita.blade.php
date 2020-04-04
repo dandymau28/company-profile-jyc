@@ -54,6 +54,12 @@
                         @endisset
                     </ol>
                 </nav>
+                @isset($cari)
+                    <h5>{{ $cari }}</h5>
+                @endisset
+                @isset($message)
+                    <h5>{{ $message }}</h5>   
+                @endisset
                 @empty($beritas)
                     <div class="text-center">
                         Belum ada berita di kategori {{ $kategori }}!
@@ -94,16 +100,20 @@
             <div id="sidebar-berita" class="col">
                 <div class="row d-none d-lg-block">
                     <div class="col">
-                        <div class="input-group custom-search-form border border-danger">
+                        <form id="cari-berita" action="/berita/cari-berita"  method="GET">
+                            <div class="input-group custom-search-form border border-danger">
                             {{-- <select class="border-0 form-control cari-berita">
                             </select> --}}
-                            <input type="text" class="border-0 form-control cari-berita" placeholder="Cari berita...">
-                            <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
-                                    <i class="fas fa-search"></i>
-                                </button>
-                            </span>
-                        </div>
+                            {{-- <select name="cari-berita" class="custom-select form-control cari-berita border-0">
+                            </select> --}}
+                                <input name="term" id="term" type="text" class="border-0 form-control" placeholder="Cari berita...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="submit">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </span>
+                            </div>
+                        </form>
                     </div>
                 </div>
 
@@ -250,6 +260,4 @@
     @include('templates.footer')
 </body>
     @include('templates.foot')
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
-    
 </html>
