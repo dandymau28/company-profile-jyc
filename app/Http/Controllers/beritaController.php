@@ -50,21 +50,6 @@ class beritaController extends Controller
 
             return false;
         }
-
-        //list berita berdasarkan tahun
-        
-        $tahun_sekarang = Carbon::now()->format('Y');
-
-        try {
-                $beritaPerTahun = DB::table('berita')
-                    ->where(DB::raw('YEAR(tgl_publish)=2015'))
-                    ->orderBy('tgl_publish','desc')
-                    ->get();
-        } catch (Exception $e) {
-            report ($e);
-
-            return false;
-        }
         
         try {
             $allVideo = DB::table('video')
@@ -93,12 +78,26 @@ class beritaController extends Controller
             ];
         }
 
+        //berita terhangat
+        try {
+            $beritaTerhangat = DB::table('berita')
+                                ->whereNull('deleted_at')
+                                ->whereNotNull('tgl_publish')
+                                ->where('penting', 1)
+                                ->latest()
+                                ->take(3)
+                                ->get();
+        } catch (Exception $e) {
+            return $e;
+        }
+
         return view('berita', [
             'beritas' => $beritaTerbaru,
             'beritaCarousel' => $beritaCarouselTerbaru,
             'beritaPerTahun' => $beritaPerTahun,
             'videos' => $allVideo,
             'koleksiKategori' => $koleksi,
+            'beritaTerhangat' => $beritaTerhangat,
             'title' => 'Berita',
             'nav' => 'berita'
             ]);
