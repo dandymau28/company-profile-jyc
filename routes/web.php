@@ -58,6 +58,8 @@ Route::get('/berita', 'beritaController@berita')->name('berita');
 Route::get('/berita/cari-berita','api\apiController@searchByTerm');
 Route::get('/berita/{berita}','beritaController@show');
 Route::get('/berita/kategori/{kategori}','beritaController@getBeritaByKategori');
+Route::get('/berita/tag/{tag}','api\apiController@searchTag');
+
 
 Route::get('/tentang-kami', function () {
     return view('tentang-kami', ["title" => "Tentang", "nav" => "tentang"]);
