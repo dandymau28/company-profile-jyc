@@ -63,9 +63,7 @@ Route::get('/tentang-kami', function () {
     return view('tentang-kami', ["title" => "Tentang", "nav" => "tentang"]);
 })->name('tentang-kami');
 
-Route::get('/pendaftaran',function () {
-    return view('pendaftaran', ['title' => 'Pendaftaran']);
-});
+Route::post('/pendaftaran','cabController@store');
 
 /*
 Route Controller
