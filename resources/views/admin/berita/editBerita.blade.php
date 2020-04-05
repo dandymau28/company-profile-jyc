@@ -2,6 +2,8 @@
 
 @push('styles')
 <link rel="stylesheet" href="/adminlte/plugins/summernote/summernote-bs4.css">
+<link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+
 @endpush
 
 @section('title', 'Buat Berita')
@@ -80,6 +82,13 @@
                                 name="isi_berita">{{$berita->isi_berita}}</textarea>
                         </div>
                         <div class="mb-3">
+                            <select id="pilih_tag" class="custom-select" name="tag[]" multiple="multiple">
+                                {{-- @foreach($tags as $tag)
+                                <option value="{{ $tag->nama_tag }} ">{{ $tag->nama_tag }}</option>
+                                @endforeach --}}
+                            </select>
+                        </div>
+                        <div class="mb-3">
                             <div class="custom-control custom-switch">
                                 @if($berita->penting == '1')
                                 <input type="checkbox" class="custom-control-input" name="penting" value="1" id="customSwitch1" checked>
@@ -116,8 +125,11 @@
 <script src="/adminlte/dist/js/demo.js"></script>
 <!-- Summernote -->
 <script src="/adminlte/plugins/summernote/summernote-bs4.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+
 <script>
     $(function () {
+        
         // Summernote
         $('#isiBerita').summernote({
             toolbar: [
@@ -131,17 +143,9 @@
             ]
         });
 
-        // $('.textarea').wysihtml5({
-        //   "font-styles": true, //Font styling, e.g. h1, h2, etc. Default true
-        //   "emphasis": true, //Italics, bold, etc. Default true
-        //   "lists": true, //(Un)ordered lists, e.g. Bullets, Numbers. Default true
-        //   "html": false, //Button which allows you to edit the generated HTML. Default false
-        //   "link": true, //Button to insert a link. Default true
-        //   "image": false, //Button to insert an image. Default true,
-        //   "color": false, //Button to change color of font  
-        //   "blockquote": true, //Blockquote  
-        //   "size": //default: none, other options are xs, sm, lg
-        // });
+        $('#pilih_tag').select2({
+            placeholder: 'Tambahkan tags...'
+        });
     });
 </script>
 @endpush
