@@ -83,7 +83,7 @@ class beritaController extends Controller
             $beritaTerhangat = DB::table('berita')
                                 ->whereNull('deleted_at')
                                 ->whereNotNull('tgl_publish')
-                                ->where('penting', 1)
+                                ->where('penting', '1')
                                 ->latest()
                                 ->take(3)
                                 ->get();
@@ -94,7 +94,7 @@ class beritaController extends Controller
         return view('berita', [
             'beritas' => $beritaTerbaru,
             'beritaCarousel' => $beritaCarouselTerbaru,
-            'beritaPerTahun' => $beritaPerTahun,
+            // 'beritaPerTahun' => $beritaPerTahun,
             'videos' => $allVideo,
             'koleksiKategori' => $koleksi,
             'beritaTerhangat' => $beritaTerhangat,
@@ -112,6 +112,19 @@ class beritaController extends Controller
         $beritaPaginated = DB::table('berita')
             ->where('slug', $slug)
             ->simplePaginate(1);
+
+        //berita terhangat
+        try {
+            $beritaTerhangat = DB::table('berita')
+                                ->whereNull('deleted_at')
+                                ->whereNotNull('tgl_publish')
+                                ->where('penting', '1')
+                                ->latest()
+                                ->take(3)
+                                ->get();
+        } catch (Exception $e) {
+            return $e;
+        }
 
             //menghitung kategori
         $kategori = DB::table('kategori')
@@ -145,6 +158,7 @@ class beritaController extends Controller
             'nav' => 'berita',
             'title' => $berita->judul,
             'berita' => $berita,
+            'beritaTerhangat' => $beritaTerhangat,
             'paginasi' =>$beritaPaginated,
             'koleksiKategori' => $koleksi,
             'tags' => $tags
@@ -157,6 +171,19 @@ class beritaController extends Controller
         $berita = DB::table('berita')
                 ->where('kategori',$kategori)
                 ->simplePaginate(3);
+        
+        //berita terhangat
+        try {
+            $beritaTerhangat = DB::table('berita')
+                                ->whereNull('deleted_at')
+                                ->whereNotNull('tgl_publish')
+                                ->where('penting', '1')
+                                ->latest()
+                                ->take(3)
+                                ->get();
+        } catch (Exception $e) {
+            return $e;
+        }
 
         //menghitung kategori
         $kategoris = DB::table('kategori')
@@ -176,6 +203,7 @@ class beritaController extends Controller
         }
         return view('berita',[
             'beritas' => $berita,
+            'beritaTerhangat' => $beritaTerhangat,
             'koleksiKategori' => $koleksi,
             'kategori' => $kategori,
             'title' => 'Kategori Berita',
