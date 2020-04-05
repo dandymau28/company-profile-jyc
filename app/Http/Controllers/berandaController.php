@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
-
 class berandaController extends Controller
 {
     /**
@@ -15,7 +14,7 @@ class berandaController extends Controller
     public function beranda()
     {
         try {
-            //3 Berita Terbaru
+            //4 Berita Terbaru
             $beritaTerbaru = DB::table('berita')->latest()->take(4)->get();
         } catch (Exception $e) {
             return $e;
