@@ -62,7 +62,7 @@ class galeriController extends Controller
                     // $images[]   =   $name;
                 $saveResult   =   FotoModel::create([
                     'id_kegiatan' => $id_kegiatan,
-                    'alamat_foto' => '/img/'.$name
+                    'alamat_foto' => 'img/'.$name
                     ]);
                 // }
             }
