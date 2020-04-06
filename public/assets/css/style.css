@@ -461,13 +461,20 @@ li.breadcrumb-item {
     color: #707070;
 }
 
+.judul-berita,
 .judul-berita a {
     font-size: 1rem;
     color: #414141;
     font-weight: bold;
 }
 
+.isi-berita {
+    font-size: .8rem;
+}
+
 @media (min-width: 992px) {
+
+    .judul-berita,
     .judul-berita a {
         font-size: 1.3rem;
         color: #414141;
@@ -486,6 +493,10 @@ li.breadcrumb-item {
         text-align: center;
         vertical-align: middle;
         letter-spacing: .2rem;
+    }
+
+    .isi-berita {
+        font-size: 1.1rem;
     }
 
     .text-berita h1 {

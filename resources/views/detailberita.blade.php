@@ -29,15 +29,15 @@
                     <ol class="breadcrumb bg-light">
                         <li class="breadcrumb-item"><a href="{{ route('beranda') }}">Beranda</a></li>
                         <li class="breadcrumb-item"><a href="{{ route('berita') }}">Berita</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">{{ Str::title(Str::limit($berita->judul)) }}</li>
+                        <li class="breadcrumb-item active text-truncate" aria-current="page">{{ Str::title($berita->judul) }}</li>
                     </ol>
                 </nav>
 
                 <div id="detail-berita">
                     <div id="judul-detail-berita" class="border-bottom border-danger">
-                        <h2 class="text-justify">{{ Str::title($berita->judul) }}</h2>
+                        <h2 class="text-justify judul-berita">{{ Str::title($berita->judul) }}</h2>
                     </div>
-                    <div class="tanggal-posting text-muted my-2">
+                    <div class="tanggal-posting text-small text-muted my-2">
                         <i class="far fa-clock"></i>
                         <span>{{ \Carbon\Carbon::parse($berita->tgl_publish)->locale('id')->diffForHumans() }}</span>
                     </div>
@@ -47,7 +47,7 @@
                     <div id="isi-detail-berita" class="text-justify my-4">
                         {!! $berita->isi_berita !!}
                     </div>
-                    <div id="tag-detail-berita" class="text-white">
+                    <div id="tag-detail-berita" class="text-white isi-berita">
                         <span class="text-muted pr-3"><i class="fas fa-tags fa-2x"></i></span>
                         @foreach($tags as $tag)
                         <div id="tag-detail-berita" class="d-inline-flex p-2 hitam-abu border border-secondary">
@@ -59,8 +59,9 @@
                 </div>
             </div>
             <hr class="d-none d-lg-block">
+            @include('templates.sidebar') 
 
-            {{-- Sidebar --}}
+            {{-- Sidebar
             <div id="sidebar-berita" class="col">
                 <div class="row d-none d-lg-block">
                     <div class="col">
@@ -154,7 +155,7 @@
                 </a>
                 <hr class="mt-n2">
                 @endforeach
-            </div>
+            </div> --}}
         </div>
     </section>
     @include('templates.footer')
