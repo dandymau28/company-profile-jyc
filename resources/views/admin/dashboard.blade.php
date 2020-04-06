@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 
-@section('title', 'Contoh Templating')
+@section('title', 'Dashboard Admin')
 
 @section('content')
     <!-- Content Header (Page header) -->
