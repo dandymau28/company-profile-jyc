@@ -162,9 +162,9 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item fixed-bottom level-1">
+                <li class="nav-item level-1">
                     <a href="#" class="nav-link">
-                        <i class="nav-icon far fa-circle text-danger"></i>
+                        <i class="fas fa-sign-out-alt"></i>
                         <p class="text">Logout</p>
                     </a>
                 </li>
