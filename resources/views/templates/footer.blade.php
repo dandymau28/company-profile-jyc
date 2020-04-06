@@ -38,7 +38,7 @@
             </ul>
         </div>
         <div class="col-sm-12 col-md-3 mt-sm-3 mt-md-0">
-            <div class="footer-title">Berlangganan surat elektronik</div>
+            <div class="footer-title mb-1">Berlangganan surat elektronik</div>
             <div class="input-group my-2">
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="inputGroupPrepend"><i class="fas fa-envelope"></i></span>
