@@ -86,7 +86,7 @@ class adminController extends Controller
                 } else {
                     $penting = $request->input('penting');
                 }
-                
+
                 //simpan data
                 try {
                     $saveData = Berita::create([
@@ -373,10 +373,18 @@ class adminController extends Controller
     {
         $berita = DB::table('berita')->where('id', $id)->first();
         $kategori = DB::table('kategori')->latest()->get();
+        $tags = DB::table('tag')->latest()->get();
 
+        $tagBerita = explode(',',$berita->tag);
+        foreach($tagBerita as $tagged ){
+            $satuanTag[] = ['tagged' => $tagged];
+        }
+        
         return view('admin.berita.editBerita',[
             'berita' => $berita,
+            'tagged' => $satuanTag,
             'kategori' => $kategori,
+            'tags' => $tags,
         ]);
     }
 
