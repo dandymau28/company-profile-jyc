@@ -66,10 +66,12 @@
                         </div>
                         @endif
                         <div class="form-group mb-3">
-                            <input type="text" class="form-control" name="judul" id="" placeholder="Masukkan Judul...">
+                            <label for="judul">Judul Berita:</label>
+                            <input type="text" class="form-control" name="judul" id="judul" placeholder="Masukkan Judul...">
                         </div>
                         <div class="form-group mb-3">
-                            <select name="kategori" class="custom-select" id="">
+                            <label for="kategori">Kategori Berita:</label>
+                            <select name="kategori" class="custom-select" id="kategori">
                                 <option selected disabled value="">Pilih Kategori...</option>
                                 @foreach($kategoris as $category)
                                 <option value="{{ $category->nama_kategori }} ">{{ $category->nama_kategori }}</option>
@@ -81,11 +83,13 @@
                             <label class="custom-file-label" for="validatedCustomFile">Pilih Gambar...</label>
                         </div>
                         <div class="mb-3">
+                            <label for="isiBerita">Isi Berita:</label>
                             <textarea class="textarea" id="isiBerita" placeholder="Place some text here"
-                                style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"
-                                name="isi_berita"></textarea>
+                            style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"
+                            name="isi_berita"></textarea>
                         </div>
                         <div class="mb-3">
+                            <label for="pilih_tag">Hashtag:</label>
                             <select id="pilih_tag" class="custom-select" name="tag[]" multiple="multiple">
                                 @foreach($tags as $tag)
                                 <option value="{{ $tag->nama_tag }} ">{{ $tag->nama_tag }}</option>
@@ -94,7 +98,7 @@
                         </div>
                         <div class="mb-3">
                             <div class="custom-control custom-switch">
-                                <input type="checkbox" class="custom-control-input" name="penting" value="1" id="customSwitch1">
+                                <input type="checkbox" class="custom-control-input" name="penting" id="customSwitch1">
                                 <label class="custom-control-label" for="customSwitch1">Rekomendasi</label>
                             </div>
                         </div>
@@ -132,23 +136,15 @@
             ]
         });
 
-        $(document).ready(function() {
-            $('#pilih_tag').select2({
-                placeholder: 'Tambahkan tags...'
-            });
+        $('#pilih_tag').select2({
+            placeholder: 'Tambahkan tags...'
         });
 
-        // $('.textarea').wysihtml5({
-        //   "font-styles": true, //Font styling, e.g. h1, h2, etc. Default true
-        //   "emphasis": true, //Italics, bold, etc. Default true
-        //   "lists": true, //(Un)ordered lists, e.g. Bullets, Numbers. Default true
-        //   "html": false, //Button which allows you to edit the generated HTML. Default false
-        //   "link": true, //Button to insert a link. Default true
-        //   "image": false, //Button to insert an image. Default true,
-        //   "color": false, //Button to change color of font  
-        //   "blockquote": true, //Blockquote  
-        //   "size": //default: none, other options are xs, sm, lg
-        // });
+        $('.custom-file-input').on('change', function() { 
+            let fileName = $(this).val().split('\\').pop(); 
+            $(this).next('.custom-file-label').addClass("selected").html(fileName); 
+        });
+ 
     });
 </script>
 @endpush
