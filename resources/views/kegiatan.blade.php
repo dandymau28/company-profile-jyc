@@ -58,68 +58,52 @@
 
     </div>
 
-    <!-- GALERI -->
     {{-- Galeri --}}   
     <section id="galeri" class="galeri container">
         <div class="row justify-content-between mb-2">
-            <div class="col-5">
-                <span class="display-4">Galeri</span>
+            <div class="col-sm-12 col-md-auto">
+                <h3 class="">Galeri Kegiatan</h3>
             </div>
-            <div class="col-5 d-flex align-items-center">
+            <div class="col-md-5 col-sm-12 d-flex align-items-center">
                 <select class="custom-select" name="pilih-kegiatan" id="pilih-kegiatan">
-                  {{-- <option value="" disabled selected>Pilih Kegiatan</option> --}}
+                  <option value="" disabled selected>Pilih Kegiatan</option>
                   @foreach ($kegiatans as $kegiatan)
                     <option class=" overflow-hidden" value={{$kegiatan->id}}>{{$kegiatan->nama}}</option>   
                 @endforeach
                 </select>
-                {{-- <label>Materialize Select</label> --}}
             </div>
         </div>
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12" id="wrapper">
-                <div id="coba-carousel" data-carousel-3d> 
+                <div class="bg-light" id="coba-carousel" data-carousel-3d style="background-color: #fffff6 !important"> 
                     @foreach ($fotos as $foto)
                         <img src="{{Storage::url($foto->alamat_foto)}}">
                     @endforeach
-                    {{-- <img src="{{asset('assets/img/berita/2.png')}}" selected>
-                    <img src="{{asset('assets/img/berita/3.png')}}">
-                    <img src="{{asset('assets/img/berita/4.png')}}">
-                    <img src="{{asset('assets/img/berita/5.png')}}">
-                    <img src="{{asset('assets/img/berita/6.png')}}"> --}}
                 </div>
             </div>
-            {{-- <div class="col-sm-12 col-md-12 col-lg-12">
+        </div>
+    </section>
+    <hr />
+
+    {{-- Videos --}}
+    <section id="video" class=" videos container mb-3">
+        <div class="row">
+            <div class="col">
+                <h3 class=" pb-3">Koleksi Video</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
                 <div class="fotorama" 
                     data-nav="thumbs"
                     data-transition="crossfade"
                     data-autoplay="true"
                     data-width="100%"
                     data-ratio="800/600">
-                    <img src="{{asset('assets/img/berita/1.png')}}">
-                    <img src="{{asset('assets/img/berita/2.png')}}">
-                    <img src="{{asset('assets/img/berita/3.png')}}">
+                    @foreach( $videos as $video )
+                    <a href="{{ $video->alamat }}"></a>
+                    @endforeach
                 </div>
-            </div> --}}
-        </div>
-    </section>
-    <hr />
-
-    <!-- VIDEO -->
-    {{-- Videos --}}
-    <section id="video" class="videos container mb-3">
-        <div class="row">
-            <span class="display-4 pb-3">Videos</span>
-        </div>
-        <div class="col col-sm-12 col-md-12 col-lg-12">
-            <div class="fotorama" 
-                data-nav="thumbs"
-                data-transition="crossfade"
-                data-autoplay="true"
-                data-width="100%"
-                data-ratio="800/600">
-                @foreach( $videos as $video )
-                <a href="{{ $video->alamat }}"></a>
-                @endforeach
             </div>
         </div>
     </section>
@@ -148,7 +132,6 @@
                         <img src="storage/${foto.alamat_foto}">
                     `);
                 });
-                // $('#coba-carousel').Carousel3d();
             }).done(res => {
                 $('[data-carousel-3d]').Carousel3d();
             })
