@@ -107,28 +107,28 @@ Route::prefix('admin')->group(function () {
     Route::get('/cab/anggota/id/{id}', 'adminController@editCAB');
 
     //Berita
-    Route::get('/berita/buat', 'adminController@create')->name('buat-berita');
-    Route::get('/berita', 'adminController@viewBerita')->name('olah-berita');
-    Route::get('/berita/kategori-dan-tag', 'adminController@viewKategoriTag')->name('kategoriTag');
-    Route::post('/berita/create', 'adminController@store')->name('post-berita');
-    Route::post('/berita/tambah-kategori', 'adminController@tambahKategori')->name('tambah-kategori');
-    Route::post('/berita/tambah-tag', 'adminController@tambahTag')->name('tambah-tag');
-    Route::get('/berita/hapus/{id}','adminController@hapusBerita');
-    Route::get('/berita/edit/{id}','adminController@editBerita');
-    Route::post('/berita/edit/{id}','adminController@updateBerita')->name('edit-berita');
+    Route::get('/berita/buat', 'admin\createBerita@create')->name('buat-berita');
+    Route::get('/berita', 'admin\viewBerita@viewBerita')->name('olah-berita');
+    Route::get('/berita/kategori-dan-tag', 'admin\viewKategoriTag@viewKategoriTag')->name('kategoriTag');
+    Route::post('/berita/create', 'admin\storeBerita@store')->name('post-berita');
+    Route::post('/berita/tambah-kategori', 'admin\tambahKategori@tambahKategori')->name('tambah-kategori');
+    Route::post('/berita/tambah-tag', 'admin\tambahTag@tambahTag')->name('tambah-tag');
+    Route::get('/berita/hapus/{id}','admin\hapusBerita@hapusBerita');
+    Route::get('/berita/edit/{id}','admin\editBerita@editBerita');
+    Route::post('/berita/edit/{id}','admin\updateBeritas@updateBerita')->name('edit-berita');
 
 
     //Prestasi
-    Route::get('/prestasi','adminController@formPrestasi')->name('form-prestasi');
-    Route::post('/prestasi','adminController@tambahPrestasi')->name('input-prestasi');
-    Route::get('/prestasi/hapus/{id}','adminController@hapusPrestasi');
+    Route::get('/prestasi','admin\adminController@formPrestasi')->name('form-prestasi');
+    Route::post('/prestasi','admin\tambahPrestasi@tambahPrestasi')->name('input-prestasi');
+    Route::get('/prestasi/hapus/{id}','admin\hapusPrestasi@hapusPrestasi');
 
     //Galeri
-    Route::get('/galeri/foto', 'galeriController@index')->name('upload-foto-view');
-    Route::post('/upload-foto', 'galeriController@store')->name('upload-foto');
-    Route::get('/galeri/video','galeriController@videoView')->name('video-view');
-    Route::post('/galeri/video','galeriController@video')->name('submit-video');
-    Route::get('/galeri','galeriController@galeriView')->name('galeri');
+    Route::get('/galeri/foto', 'admin\viewFoto@index')->name('upload-foto-view');
+    Route::post('/upload-foto', 'admin\storeFoto@store')->name('upload-foto');
+    Route::get('/galeri/video','admin\viewVideo@videoView')->name('video-view');
+    Route::post('/galeri/video','admin\storeVideo@video')->name('submit-video');
+    Route::get('/galeri','admin\indexGaleri@galeriView')->name('galeri');
 
     Route::get('/kegiatan','adminController@kegiatan')->name('kegiatan-view');
     Route::post('/kegiatan','adminController@tambahKegiatan')->name('add-kegiatan');
