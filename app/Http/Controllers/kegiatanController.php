@@ -47,4 +47,11 @@ class kegiatanController extends Controller
             'fotos' => $foto
         ];
     }
+
+    public function oprec() {
+        return view('oprec', [
+            'title' => 'Penerimaan Anggota Baru 2020',
+            'nav' => 'kegiatan'
+        ]);
+    }
 }
