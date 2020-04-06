@@ -51,7 +51,7 @@
                         <span class="text-muted pr-3"><i class="fas fa-tags fa-2x"></i></span>
                         @foreach($tags as $tag)
                         <div id="tag-detail-berita" class="d-inline-flex p-2 hitam-abu border border-secondary">
-                            <a href="/berita/tag/{{ strtolower($tag['tag']) }}">{{strtolower($tag['tag'])}}</a>
+                            <a href="/berita/tag/{{ strtolower($tag) }}">{{strtolower($tag)}}</a>
                         </div>
                         @endforeach
                         {{-- <span class="border border-secondary">JYC</span> --}}
