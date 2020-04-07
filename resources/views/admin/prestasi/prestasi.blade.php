@@ -71,7 +71,7 @@
                         <div class="mb-3" id="gelar">
                             <input type="text" name="gelar[]" id="" placeholder="Gelar">
                         </div>
-                        <button onclick="tambah();">Tambah Gelar</button>
+                        <button type="button" onclick="tambah();">Tambah Gelar</button>
 
                         <button type="submit" name="action" value="post">Post</button>
                     </form>
