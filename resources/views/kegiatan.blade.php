@@ -14,10 +14,14 @@
     @include('templates.navbar')
 
     <!-- Banner Kegiatan -->
-    <div id="banner-kegiatan">
-        <div class="container text-kegiatan">
-            <h1 class="display-judul">KEGIATAN</h1>
-            <h4 class="">JAKARTA YOUTH CHOIR</h4>
+    <div class="parallax-window text-center text-white JNCC" data-parallax="scroll" data-image-src="{{ asset('assets/img/kegiatan/banner-kegiatan.png') }}">
+        <div class="container text-center py-5">
+            <div class="row justify-content-center pt-5">
+                <div class="col text-center pt-3">
+                    <h3 class="text-bold">KEGIATAN</h3>
+                    <p>Jakarta National Choir Competition </p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -37,25 +41,16 @@
     </div>
 
     <!-- Jakarta National Choir Competition -->
-    <div class="JNCC">
-        <h3>JAKARTA NATIONAL CHOIR COMPETITION</h3>
-        <div class="container text-center">
-            <div class="row align-content-center">
-                <div class="col-lg-4 text-center pt-3">
+    <div class="parallax-window mb-5 text-center text-white JNCC" data-parallax="scroll" data-image-src="{{ asset('assets/img/kegiatan/assets_jncc.jpg') }}">
+        <div class="container text-center py-5">
+            <div class="row justify-content-center">
+                <div class="col text-center pt-3">
+                    <h3 class="text-bold">COMINGSOON</h3>
                     <h5>JNCC</h5>
-                    <p>Jakarta National Choir <br> Competition </p>
-                </div>
-                <div class="col-lg-4 text-center pt-3">
-                    <i class='fas fa-calendar-alt'></i>
-                    <p>August 4th, 2020 </p>
-                </div>
-                <div class="col-lg-4 text-center pt-3">
-                    <i class="fa fa-map-marker-alt"></i>
-                    <p>Balai Sarbini Hall Plaza Semanggi, Jakarta</p>
+                    <p>Jakarta National Choir Competition </p>
                 </div>
             </div>
         </div>
-
     </div>
 
     {{-- Galeri --}}   
@@ -115,6 +110,7 @@
 <script src="{{ asset('assets/js/jquery.waitforimages.js') }}"></script>
 <script src="{{ asset('assets/js/modernizr.js') }}"></script>
 <script src="{{ asset('assets/js/jquery.carousel-3d.js') }}"></script>
+<script src="{{ asset('assets/js/parallax.js') }}"></script>
 <script>
     $(function () {
         $('#pilih-kegiatan').on('change', function () {
