@@ -18,11 +18,11 @@ class storeBerita extends Controller
             case 'post':
                 $validatedData = Validator::make($request->all(),[
                     'judul' => 'required|unique:berita,judul',
-                    'image' => 'file|max:1024',
+                    'image' => 'file|max:1024|mimes:png,jpg,jpeg',
                     'isi_berita' => 'required'
                 ]);
                 if($validatedData->fails()){
-                    return $validatedData->errors();
+                    return back()->with('error',$validatedData->errors());
                 };
 
                 //slug judul
@@ -62,7 +62,7 @@ class storeBerita extends Controller
                 if(!$request->input('penting')){
                     $penting = '0';
                 } else {
-                    $penting = $request->input('penting');
+                    $penting = '1';
                 }
 
                 //simpan data
@@ -93,11 +93,11 @@ class storeBerita extends Controller
             case 'save':
                 $validatedData = Validator::make($request->all(),[
                     'judul' => 'required|unique:berita,judul',
-                    'image' => 'file|size:1024',
+                    'image' => 'file|size:1024|mimes:jpeg,jpg,png',
                     'isi_berita' => 'required'
                 ]);
                 if($validatedData->fails()){
-                    return $validatedData->errors();
+                    return back()->with('error',$validatedData->errors());
                 };
 
                 //slug judul
