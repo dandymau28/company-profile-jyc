@@ -33,20 +33,22 @@
             <div class="footer-title pb-1">Tautan Penting</div>
             <ul class="list-unstyled">
                 <li><a class="text-white" href="{{route('berita')}}">Jakarta National Choir Competition</a></li>
-                <li><a class="text-white" href="{{route('berita')}}/kategori/Kompetsi%20Internasional">Kompetisi International</a></li>
-                <li><a class="text-white" href="{{route('berita')}}/kategori/Kompetsi%20Nasional">Kompetisi Nasional</a></li>
+                <li><a class="text-white" href="{{route('berita')}}/kategori/Kompetisi%20Internasional">Kompetisi International</a></li>
+                <li><a class="text-white" href="{{route('berita')}}/kategori/Kompetisi%20Nasional">Kompetisi Nasional</a></li>
             </ul>
         </div>
         <div class="col-sm-12 col-md-3 mt-sm-3 mt-md-0">
             <div class="footer-title mb-1">Berlangganan surat elektronik</div>
-            <div class="input-group my-2">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="inputGroupPrepend"><i class="fas fa-envelope"></i></span>
+            <form action="">
+                <div class="input-group my-2">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroupPrepend"><i class="fas fa-envelope"></i></span>
+                    </div>
+                    <input type="text" class="form-control shadow" id="validationCustomUsername" aria-describedby="inputGroupPrepend" placeholder="Masukkan email anda">
                 </div>
-                <input type="text" class="form-control shadow" id="validationCustomUsername" aria-describedby="inputGroupPrepend" placeholder="Masukkan email anda">
-            </div>
-            <button type="button" class="btn btn-warning text-white shadow">Langganan</button>
-            <a href="#" class="shadow" id="scroll" style="display: none;"><span></span></a>
+                <button type="button" class="btn btn-warning text-white shadow">Langganan</button>
+                <a href="#" class="shadow" id="scroll" style="display: none;"><span></span></a>
+            </form>
         </div>
     </div>
     <div id="footer-bottom" class="row justify-content-between w-90 align-items-center py-3">
