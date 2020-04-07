@@ -54,10 +54,7 @@
                             <input type="text" name="negara" id="" placeholder="Negara">
                         </div>
                         <div class="mb-3">
-                            <input type="text" name="tgl_mulai" id="" placeholder="Tanggal Mulai">
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" name="tgl_selesai" id="" placeholder="Tanggal Selesai">
+                            <input type="text" name="tgl_kompetisi" id="" placeholder="Waktu Kompetisi">
                         </div>
                         <div class="mb-3">
                             <input type="file" name="logo_kompetisi" id="" placeholder="Logo">

@@ -56,8 +56,7 @@ class tambahPrestasi extends Controller
             $prestasi->nama_kompetisi = $request->input('nama_kompetisi');
             $prestasi->kota = $request->input('kota');
             $prestasi->negara = $request->input('negara');
-            $prestasi->tgl_mulai = $request->input('tgl_mulai');
-            $prestasi->tgl_selesai = $request->input('tgl_selesai');
+            $prestasi->tgl_kompetisi = $request->input('tgl_kompetisi');
             $prestasi->logo_kompetisi = $pathLogo;
             $prestasi->foto_tim = $pathTim;
             $prestasi->foto_piala = $pathPiala;
