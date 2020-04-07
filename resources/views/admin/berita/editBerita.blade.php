@@ -84,13 +84,16 @@
                         <div class="mb-3">
                             <select id="pilih_tag" class="custom-select" name="tag[]" multiple="multiple">
                                 @foreach($tags as $tag)
+                                    <div hidden>{{$i = 0}}</div>
                                     @foreach($tagged as $satuantag)
                                     @if($tag->nama_tag == $satuantag)
                                     <option selected value="{{$tag->nama_tag}}">{{$tag->nama_tag}}</option>
-                                    @else
-                                    <option value="{{ $tag->nama_tag }} ">{{ $tag->nama_tag }}</option>
+                                    <div hidden> {{$i = 1}}</div>
                                     @endif
                                     @endforeach
+                                    @if($i == 0)
+                                    <option value="{{ $tag->nama_tag }} ">{{ $tag->nama_tag }}</option>
+                                    @endif
                                 @endforeach
                             </select>
                         </div>

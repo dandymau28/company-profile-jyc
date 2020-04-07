@@ -116,7 +116,7 @@ Route::prefix('admin')->group(function () {
     Route::post('/berita/tambah-tag', 'admin\tambahTag@tambahTag')->name('tambah-tag');
     Route::get('/berita/hapus/{id}','admin\hapusBerita@hapusBerita');
     Route::get('/berita/edit/{id}','admin\editBerita@editBerita');
-    Route::post('/berita/edit/{id}','admin\updateBeritas@updateBerita')->name('edit-berita');
+    Route::post('/berita/edit/{id}','admin\updateBerita@updateBerita')->name('edit-berita');
 
 
     //Prestasi

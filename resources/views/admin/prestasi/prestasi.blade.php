@@ -48,10 +48,10 @@
                             <input type="text" name="nama_kompetisi" id="" placeholder="Nama Kompetisi">
                         </div>
                         <div class="mb-3">
-                            <input type="text" name="kota" id="" placeholder="Gelar Juara">
+                            <input type="text" name="kota" id="" placeholder="Kota">
                         </div>
                         <div class="mb-3">
-                            <input type="text" name="negara" id="" placeholder="Lokasi Kompetisi">
+                            <input type="text" name="negara" id="" placeholder="Negara">
                         </div>
                         <div class="mb-3">
                             <input type="text" name="tgl_mulai" id="" placeholder="Tanggal Mulai">

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Controllers\berita\beritaController as Berita;
 use App\Http\Controllers\admin\adminController as Admin;
+use DB;
 
 class indexBerita extends Controller
 {
