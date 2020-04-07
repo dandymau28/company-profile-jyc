@@ -19,7 +19,8 @@
     <!--Prestasi -->
     <div id="konten-prestasi" class="prestasi bg-light py-5 w-80">
         <h3 class="mb-5">Prestasi</h3>
-        <div data-aos="zoom-in" class="row justify-content-center">
+        @foreach ($prestasis as $prestasi)
+        <div data-aos="zoom-in" class="row justify-content-center my-5">
             <div class="col-sm-12 col-md-4">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
@@ -29,13 +30,16 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="{{asset('assets/img/prestasi/1.png')}}" class="d-block card-img-top" alt="...">
+                            {{-- <img src="{{asset('assets/img/prestasi/1.png')}}" class="d-block card-img-top" alt="..."> --}}
+                            <img src="{{Storage::url($prestasi->logo_kompetisi)}}" class=" img-fluid card-img-top" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="{{asset('assets/img/prestasi/2.png')}}" class="d-block card-img-top" alt="...">
+                            {{-- <img src="{{asset('assets/img/prestasi/2.png')}}" class="d-block card-img-top" alt="..."> --}}
+                            <img src="{{Storage::url($prestasi->foto_tim)}}" class="d-block card-img-top" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="{{asset('assets/img/prestasi/3.png')}}" class="d-block card-img-top" alt="...">
+                            {{-- <img src="{{asset('assets/img/prestasi/3.png')}}" class="d-block card-img-top" alt="..."> --}}
+                            <img src="{{Storage::url($prestasi->foto_piala)}}" class="d-block card-img-top" alt="...">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -48,17 +52,22 @@
                     </a>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-4">
-                <div class="card-body">
-                    <h5 class="card-title text-bold">1st Lanna International Choir Competition</h5>
-                    <h5 class="text-bold pt-2">Chiang Mai, Thailand</h5>
-                    <h5 class="text-muted">Oktober 2016</h5>
+            <div class="col-sm-12 col-md-6">
+                <div class="">
+                    {{-- <h5 class="card-title text-bold">1st Lanna International Choir Competition</h5> --}}
+                    <h5 class="card-title text-bold">{{ $prestasi->nama_kompetisi }}</h5>
+                    <h5 class="text-bold">{{ $prestasi->kota }}, {{ $prestasi->negara }}</h5>
+                    <h5 class="text-muted text-small">{{ $prestasi->tgl_kompetisi }}</h5>
                     <ul class="list-group list-group-flush bg-transparent pt-2">
-                        <li class="list-group-item bg-light text-danger"><i class="fas fa-trophy pr-2"></i>Gold Medal Folklore Category</li>
+                        @foreach ($gelars as $item)
+                        {{-- <li class="list-group-item bg-light text-danger"><i class="fas fa-trophy pr-2"></i>Gold Medal Folklore Category</li> --}}
+                        <li class="list-group-item bg-light text-danger py-1"><i class="fas fa-trophy pr-2"></i>{{ $item->gelar }}</li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
         </div>
+        @endforeach
         
         {{-- <div class="card text-center">
             <div class="card-body">
