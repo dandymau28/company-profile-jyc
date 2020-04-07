@@ -5,11 +5,16 @@ namespace App\Http\Controllers\api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use DB;
+use App\Http\Controllers\admin\adminController as Admin;
+use App\Http\Controllers\berita\beritaController as Berita;
 
 class apiController extends Controller
 {
     public function searchByTerm (Request $req)
     {
+        $beritaClass = new Berita;
+        $admin = new Admin;
+
         $data = trim($req->input('term'));
         
         try {
@@ -21,46 +26,18 @@ class apiController extends Controller
                         ->orWhere('judul', 'like', "%{$data}%")
                         ->simplePaginate(3);
         } catch (Exception $e) {
-            return response()->json([
-                'code' => $e->getCode(),
-                'message' => $e->getMessage()
+            return view('berita', [
+                "message" => "Terjadi kesalahan. Silakan hubungi melalui contact us!",
+                'beritaTerhangat' => $beritaClass->beritaHangat(),
+                'cari' => 'Hasil Pencarian \'' . $tag . '\': '
             ]);
         }
 
-        //berita terhangat
-        try {
-            $beritaTerhangat = DB::table('berita')
-                                ->whereNull('deleted_at')
-                                ->whereNotNull('tgl_publish')
-                                ->where('penting', '1')
-                                ->latest()
-                                ->take(3)
-                                ->get();
-        } catch (Exception $e) {
-            return $e;
-        }
-
-        //menghitung kategori
-        $kategoris = DB::table('kategori')
-                    ->oldest()->get();
-        $koleksi = [];
-        // return $kategoris;
-        foreach($kategoris as $index) 
-        {
-            $hitung = DB::table('berita')
-                    ->where('kategori', $index->nama_kategori)
-                    ->count();
-            
-            $koleksi[] = [
-                'kategori' => $index->nama_kategori,
-                'hasil' => $hitung
-            ];
-        }
         if(!empty($search)) {
             return view('berita',[
                 'beritas' => $search,
-                'beritaTerhangat' => $beritaTerhangat,
-                'koleksiKategori' => $koleksi,
+                'beritaTerhangat' => $beritaClass->beritaHangat(),
+                'koleksiKategori' => $admin->countKategori(),
                 'term' => $data,
                 'title' => 'Hasil Pencarian ' . $data . ': ',
                 'nav' => 'berita',
@@ -69,7 +46,7 @@ class apiController extends Controller
         } else {
             return view('berita', [
                 "message" => "Berita tidak ditemukan!",
-                'beritaTerhangat' => $beritaTerhangat,
+                'beritaTerhangat' => $beritaClass->beritaHangat(),
                 'cari' => 'Hasil Pencarian \'' . $data . '\': '
             ]);
         }
@@ -83,48 +60,41 @@ class apiController extends Controller
 
     public function searchTag ($tag)
     {
-        //get berita by kategori
-        $berita = DB::table('berita')
-            ->where('tag', 'like', "%{$tag}%")
-            ->simplePaginate(3);
-        
-        //berita terhangat
-        try {
-            $beritaTerhangat = DB::table('berita')
-                                ->whereNull('deleted_at')
-                                ->whereNotNull('tgl_publish')
-                                ->where('penting', '1')
-                                ->latest()
-                                ->take(3)
-                                ->get();
-        } catch (Exception $e) {
-            return $e;
-        }
+        $admin = new Admin;
+        $beritaClass = new Berita;
 
-        //menghitung kategori
-        $kategoris = DB::table('kategori')
-                    ->oldest()->get();
-        $koleksi = [];
-        // return $kategoris;
-        foreach($kategoris as $index) 
-        {
-            $hitung = DB::table('berita')
-                    ->where('kategori', $index->nama_kategori)
-                    ->count();
-            
-            $koleksi[] = [
-                'kategori' => $index->nama_kategori,
-                'hasil' => $hitung
-            ];
+        try {
+            //get berita by tag
+            $search = DB::table('berita')
+                ->whereNull('deleted_at')
+                ->whereNotNull('tgl_publish')
+                ->where('tag', 'like', "%{$tag}%")
+                ->simplePaginate(3);
+        } catch (Exception $e) {   
+            return view('berita', [
+                "message" => "Terjadi kesalahan. Silakan hubungi melalui contact us!",
+                'beritaTerhangat' => $beritaClass->beritaHangat(),
+                'cari' => 'Hasil Pencarian \'' . $tag . '\': '
+            ]);
         }
-        return view('berita',[
-            'beritas' => $berita,
-            'beritaTerhangat' => $beritaTerhangat,
-            'koleksiKategori' => $koleksi,
-            'kategori' => $tag,
-            'title' => 'Kategori Berita',
-            'nav' => 'berita'
-        ]);
+        
+        if(!empty($search)) {
+            return view('berita',[
+                'beritas' => $search,
+                'beritaTerhangat' => $beritaClass->beritaHangat(),
+                'koleksiKategori' => $admin->countKategori(),
+                'term' => $tag,
+                'title' => 'Hasil Pencarian ' . $tag . ': ',
+                'nav' => 'berita',
+                'cari' => 'Hasil Pencarian \'' . $tag . '\': ',
+            ]);
+        } else {
+            return view('berita', [
+                "message" => "Berita tidak ditemukan!",
+                'beritaTerhangat' => $beritaClass->beritaHangat(),
+                'cari' => 'Hasil Pencarian \'' . $tag . '\': '
+            ]);
+        }
     }
 
     public function jsonCAB()
