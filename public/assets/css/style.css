@@ -572,6 +572,11 @@ li.breadcrumb-item {
 
 /* Banner Profile*/
 
+.parallax-window {
+    min-height: 400px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
 #banner-kegiatan {
     background: url(../img/kegiatan/banner-kegiatan.png)no-repeat center center fixed;
     display: table;
@@ -581,8 +586,17 @@ li.breadcrumb-item {
     background-size: cover;
 }
 
+#banner-oprec {
+    background: url(../img/kegiatan/oprec.jpg)no-repeat center center fixed;
+    display: table;
+    height: 100vh;
+    position: relative;
+    width: 100%;
+    background-size: cover;
+}
+
 .text-kegiatan {
-    background-color: rgba(0, 0, 0, 0.4);
+    /* background-color: rgba(0, 0, 0, 0.4); */
     color: #f8f9fe;
     display: table-cell;
     text-align: center;
@@ -633,35 +647,59 @@ li.breadcrumb-item {
 
 /* JNCC */
 .JNCC {
-    margin-bottom: 200px;
+    background-color: rgba(0, 0, 0, 0.65);
 }
 
-.JNCC h3 {
-    color: #707070;
+/* .JNCC h3 {
+    color: #fffff6;
     margin-right: auto;
     margin-left: auto;
     padding-bottom: 22px;
     text-align: center;
     border-bottom: 1.5px solid #C12821;
     width: max-content;
+} */
+
+.JNCC h3 {
+    overflow: hidden;
+    text-align: center;
+}
+
+.JNCC h3:before,
+.JNCC h3:after {
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    background-color: #fffff6;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    vertical-align: middle;
+    width: 15%;
+}
+
+.JNCC h3:before {
+    right: 1em;
+    margin-left: -50%;
+}
+
+.JNCC h3:after {
+    left: 1em;
+    margin-right: -50%;
 }
 
 .JNCC h5 {
     padding-top: 2rem;
     padding-bottom: 1rem;
-    font-size: 120px;
-    color: #707070;
+    font-size: 9rem;
+    font-weight: 700;
+    color: #fffff6;
+    letter-spacing: .7rem;
+
 }
 
-.JNCC i {
-    padding-top: 2rem;
-    padding-bottom: 1rem;
-    font-size: 150px;
-    color: #707070;
-}
 
 .JNCC p {
-    font-size: 20px;
+    font-size: 1.5rem;
     font-weight: bolder;
 }
 
@@ -674,16 +712,12 @@ li.breadcrumb-item {
     .JNCC h5 {
         padding-top: 2rem;
         padding-bottom: 1rem;
-        font-size: 100px;
-        color: #707070;
+        font-size: 5.5rem;
+        font-weight: 700;
+        color: #fffff6;
+        letter-spacing: .5rem;
     }
 
-    .JNCC i {
-        padding-top: 2rem;
-        padding-bottom: 1rem;
-        font-size: 120px;
-        color: #707070;
-    }
 
     .JNCC p {
         font-size: 15px;
@@ -699,6 +733,20 @@ li.breadcrumb-item {
 
 
 /* PRESTASI PAGE */
+
+#konten-prestasi.w-80 {
+    width: 90%;
+    margin: auto;
+    background-image: url('/public/assets/img/cup.png');
+}
+
+@media (min-width: 992px) {
+    #konten-prestasi.w-80 {
+        width: 90%;
+        margin: auto;
+    }
+
+}
 
 .prestasi h3 {
     color: #707070;
