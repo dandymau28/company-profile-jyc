@@ -17,10 +17,10 @@
     </div>
 
     <!--Prestasi -->
-    <div id="konten-berita" class="prestasi bg-light py-5 w-80">
+    <div id="konten-prestasi" class="prestasi bg-light py-5 w-80">
         <h3 class="mb-5">Prestasi</h3>
-        <div data-aos="zoom-in" class="row justify-content-around">
-            <div class="col-2 col-md-4">
+        <div data-aos="zoom-in" class="row justify-content-center">
+            <div class="col-sm-12 col-md-4">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -48,15 +48,14 @@
                     </a>
                 </div>
             </div>
-            <div class="col-2 col-md-4">
+            <div class="col-sm-12 col-md-4">
                 <div class="card-body">
-                    {{-- <h5 class="card-title">{{ $prestasi->nama_kompetisi }}</h5> --}}
                     <h5 class="card-title text-bold">1st Lanna International Choir Competition</h5>
-                    <h5>Chiang Mai, Thailand</h5>
-                    <h5>Oktober 2016</h5>
-                    {{-- <p class="card-text">{{ $prestasi->gelar_juara }}</p> --}}
-                    {{-- <p class="card-text">Penghargaan</p> --}}
-                    <h5 class="card-text"><i class="fas fa-medal text-warning fa-2x pr-2"></i>Gold Medal Folklore Category<i class="fas fa-medal text-warning fa-2x pl-2"></i></h5>
+                    <h5 class="text-bold pt-2">Chiang Mai, Thailand</h5>
+                    <h5 class="text-muted">Oktober 2016</h5>
+                    <ul class="list-group list-group-flush bg-transparent pt-2">
+                        <li class="list-group-item bg-light text-danger"><i class="fas fa-trophy pr-2"></i>Gold Medal Folklore Category</li>
+                    </ul>
                 </div>
             </div>
         </div>
