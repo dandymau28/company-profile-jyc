@@ -23,8 +23,7 @@ Route::get('/coming-soon', function () {
 
 
 
-Route::get('/', 'berandaController@beranda'
-)->name('beranda');
+Route::get('/', 'beranda\berandaController@beranda')->name('beranda');
 
 Route::get('/profile', function () {
     return view('profile', ["title" => "Profile", "nav" => "profile"]);
