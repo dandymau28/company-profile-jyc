@@ -17,10 +17,13 @@ class beritabyKategori extends Controller
                 ->where('kategori',$kategori)
                 ->simplePaginate(3);
 
+        $admin = new Admin;
+        $beritaClass = new Berita;
+
         return view('berita',[
             'beritas' => $berita,
-            'beritaTerhangat' => Berita::beritaHanget(),
-            'koleksiKategori' => Admin::countKategori(),
+            'beritaTerhangat' => $beritaClass->beritaHangat(),
+            'koleksiKategori' => $admin->countKategori(),
             'kategori' => $kategori,
             'title' => 'Kategori Berita',
             'nav' => 'berita'

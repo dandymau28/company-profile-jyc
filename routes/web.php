@@ -56,8 +56,8 @@ Route::get('/prestasi', 'prestasi\prestasiController@prestasi')->name('prestasi'
 
 Route::get('/berita', 'berita\indexBerita@berita')->name('berita');
 Route::get('/berita/cari-berita','api\apiController@searchByTerm');
-Route::get('/berita/{berita}','beritaController@show');
-Route::get('/berita/kategori/{kategori}','beritaController@getBeritaByKategori');
+Route::get('/berita/{berita}','berita\showBerita@show');
+Route::get('/berita/kategori/{kategori}','berita\beritabyKategori@getBeritaByKategori');
 Route::get('/berita/tag/{tag}','api\apiController@searchTag');
 
 

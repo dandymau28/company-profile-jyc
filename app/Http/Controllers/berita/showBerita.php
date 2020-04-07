@@ -47,13 +47,16 @@ class showBerita extends Controller
         //     ];
         // }
         
+        $beritaClass = new Berita;
+        $admin = new Admin;
+
         return view('detailberita', [
             'nav' => 'berita',
             'title' => $berita->judul,
             'berita' => $berita,
-            'beritaTerhangat' => Berita::beritaHangat(),
+            'beritaTerhangat' => $beritaClass->beritaHangat(),
             'paginasi' =>$beritaPaginated,
-            'koleksiKategori' => Admin::countKategori(),
+            'koleksiKategori' => $admin->countKategori(),
             'tags' => $tag
         ]);
     }
