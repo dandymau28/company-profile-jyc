@@ -78,15 +78,15 @@
         </div>
     </div>
     @foreach($koleksiKategori as $koleksi)
-    <a href="/berita/kategori/{{$koleksi['kategori']}}">
+    <a href="/berita/kategori/{{$koleksi['nama_kategori']}}">
         <div class="row justify-content-between mt-3">
             <div class="col">
                 <ul>
-                    <li>{{ $koleksi['kategori'] }}</li>
+                    <li>{{ $koleksi['nama_kategori'] }}</li>
                 </ul>
             </div>
             <div class="col-1 mr-5">
-                <span class="badge badge-pill badge-secondary">{{ $koleksi['hasil'] }}</span>
+                <span class="badge badge-pill badge-secondary">{{ $koleksi['jumlah_berita'] }}</span>
             </div>
         </div>
     </a>

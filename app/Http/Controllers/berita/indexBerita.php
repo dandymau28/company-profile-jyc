@@ -72,13 +72,16 @@ class indexBerita extends Controller
             return $e;
         }
 
+        $admin = new Admin;
+        $berita = new Berita;
+
         return view('berita', [
             'beritas' => $beritaTerbaru,
             'beritaCarousel' => $beritaCarouselTerbaru,
             // 'beritaPerTahun' => $beritaPerTahun,
             'videos' => $allVideo,
-            'koleksiKategori' => Admin::countKategori(),
-            'beritaTerhangat' => Berita::beritaHangat(),
+            'koleksiKategori' => $admin->countKategori(),
+            'beritaTerhangat' => $berita->beritaHangat(),
             'title' => 'Berita',
             'nav' => 'berita'
             ]);

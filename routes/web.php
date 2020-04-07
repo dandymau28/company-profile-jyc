@@ -48,13 +48,13 @@ Route::get('/kegiatan/oprec', 'kegiatanController@oprec')->name('oprec');
 //     return view('prestasi', ["title" => "Prestasi"]);
 // })->name('prestasi');
 
-Route::get('/prestasi', 'prestasiController@prestasi')->name('prestasi');
+Route::get('/prestasi', 'prestasi\prestasiController@prestasi')->name('prestasi');
 
 // Route::get('/berita', function () {
 //     return view('berita', ["title" => "Berita"]);
 // })->name('berita');
 
-Route::get('/berita', 'beritaController@berita')->name('berita');
+Route::get('/berita', 'berita\indexBerita@berita')->name('berita');
 Route::get('/berita/cari-berita','api\apiController@searchByTerm');
 Route::get('/berita/{berita}','beritaController@show');
 Route::get('/berita/kategori/{kategori}','beritaController@getBeritaByKategori');
