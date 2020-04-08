@@ -10,7 +10,7 @@ use App\Models\tagModel as Tag;
 use App\Models\prestasiModel as Prestasi;
 use App\Models\penghargaanModel as Penghargaan;
 use App\Models\cabModel as CAB;
-
+use Intervention\Image\ImageManagerStatic as Image;
 class tambahPrestasi extends Controller
 {
     public function tambahPrestasi(Request $request)
@@ -37,6 +37,12 @@ class tambahPrestasi extends Controller
             $uploadFoto = $request->file('foto_tim');
             $tim = $idFoto.'-tim-'.'.'.$uploadFoto->getClientOriginalExtension();
             $pathTim = $uploadFoto->storeAs('public/assets/img', $tim);
+
+            $image = Image::make($request->file('foto_tim'));
+            $image->fit(1200, 800, function ($constraint) {
+                $constraint->upsize();
+            });
+            $image->save('assets/img/'.$tim, 80);
         } else {
             $pathTim = 'public/assets/img/705-1585565895.jpg';
         }
