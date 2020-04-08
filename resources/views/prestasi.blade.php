@@ -22,11 +22,11 @@
         @foreach ($prestasis as $prestasi)
         <div data-aos="zoom-in" class="row justify-content-center my-5">
             <div class="col-sm-12 col-md-4">
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <div id="carousel{{$prestasi->id}}" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carousel{{$prestasi->id}}" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel{{$prestasi->id}}" data-slide-to="1"></li>
+                        <li data-target="#carousel{{$prestasi->id}}" data-slide-to="2"></li>
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -42,11 +42,11 @@
                             <img src="{{Storage::url($prestasi->foto_piala)}}" class="d-block card-img-top" alt="...">
                         </div>
                     </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <a class="carousel-control-prev" href="#carousel{{$prestasi->id}}" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
                     </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <a class="carousel-control-next" href="#carousel{{$prestasi->id}}" role="button" data-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>
@@ -59,10 +59,12 @@
                     <h5 class="text-bold">{{ $prestasi->kota }}, {{ $prestasi->negara }}</h5>
                     <h5 class="text-muted text-small">{{ $prestasi->tgl_kompetisi }}</h5>
                     <ul class="list-group list-group-flush bg-transparent pt-2">
-                        @foreach ($gelars as $item)
+                    @foreach($gelars as $gelar)
+                        @if($prestasi->id == $gelar->prestasi_id)
                         {{-- <li class="list-group-item bg-light text-danger"><i class="fas fa-trophy pr-2"></i>Gold Medal Folklore Category</li> --}}
-                        <li class="list-group-item bg-light text-danger py-1"><i class="fas fa-trophy pr-2"></i>{{ $item->gelar }}</li>
-                        @endforeach
+                        <li class="list-group-item bg-light text-danger py-1"><i class="fas fa-trophy pr-2"></i>{{ $gelar->gelar }}</li>
+                        @endif
+                    @endforeach
                     </ul>
                 </div>
             </div>
