@@ -28,9 +28,4 @@ class adminController extends Controller
         }
         return $koleksi;
     }
-
-    public function formPrestasi()
-    {
-        return view('admin.prestasi.prestasi');
-    }
 }
