@@ -109,8 +109,10 @@ Route::prefix('admin')->group(function () {
     })->name('anggota-master');
 
     //Calon Anggota
-    Route::get('/cab', 'admin\adminController@viewCAB')->name('cab-master');
-    Route::get('/cab/anggota/id/{id}', 'admin\editCAB@editCAB');
+    Route::get('/cab', 'admin\viewCAB@viewCAB')->name('cab-master');
+    Route::get('/cab/id/{id}', 'admin\editCAB@editCAB');
+    Route::get('/cab/verif/{id}', 'cab\updateVerify@verify');
+    Route::get('/cab/unverif/{id}','cab\updateVerify@unverify');
 
     //Berita
     Route::get('/berita/buat', 'admin\createBerita@create')->name('buat-berita');
@@ -125,7 +127,7 @@ Route::prefix('admin')->group(function () {
 
 
     //Prestasi
-    Route::get('/prestasi','admin\adminController@formPrestasi')->name('form-prestasi');
+    Route::get('/prestasi','admin\viewPrestasi@formPrestasi')->name('form-prestasi');
     Route::post('/prestasi','admin\tambahPrestasi@tambahPrestasi')->name('input-prestasi');
     Route::get('/prestasi/hapus/{id}','admin\hapusPrestasi@hapusPrestasi');
 
