@@ -15,14 +15,9 @@ class prestasiController extends Controller
                 ->latest()
                 ->get();
 
-            $gelar = [];
-            foreach($prestasi as $item) {
-                $penghargaan = DB::table('penghargaan')
-                    ->where('prestasi_id', $item->id)
-                    ->get();
-
-                $gelar = $penghargaan;
-            }
+            $gelar = DB::table('penghargaan')
+                ->latest()
+                ->get();
         } catch (Exception $e) {
             $prestasi = $e->getMessage();
         }
