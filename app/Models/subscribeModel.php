@@ -3,10 +3,12 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class subscribeModel extends Model
 {
-    protected $table = 'subcribe';
+    use SoftDeletes;
+    protected $table = 'subscribe';
     protected $fillable = [
         'email'
     ];
