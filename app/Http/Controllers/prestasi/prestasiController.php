@@ -14,13 +14,23 @@ class prestasiController extends Controller
             $prestasi = DB::table('prestasi')
                 ->latest()
                 ->get();
+
+            $gelar = [];
+            foreach($prestasi as $item) {
+                $penghargaan = DB::table('penghargaan')
+                    ->where('prestasi_id', $item->id)
+                    ->get();
+
+                $gelar = $penghargaan;
+            }
         } catch (Exception $e) {
             $prestasi = $e->getMessage();
         }
 
         return view('prestasi',[
             'prestasis' => $prestasi,
-            'title' => 'prestasi',
+            'gelars' => $gelar,
+            'title' => 'Prestasi',
             'nav' => 'prestasi'
         ]);
     }
