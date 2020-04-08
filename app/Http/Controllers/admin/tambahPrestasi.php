@@ -76,7 +76,7 @@ class tambahPrestasi extends Controller
                 }
             }
         } catch (Exception $e) {
-            return back()->with('errors',$e->getMessage());
+            return back()->with('errors','Silakan hubungi tim pengembang. Error Code: '.$e->getCode());
         }
 
         return back()->with('success','berhasil menambahkan data prestasi');
