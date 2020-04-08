@@ -99,7 +99,10 @@ class apiController extends Controller
 
     public function jsonCAB()
     {
-        $data = DB::table('cab')->latest()->get();
+        $data = DB::table('cab')
+                    ->join('kode_pembayaran_cab','cab.id','=','kode_pembayaran_cab.id_cab')
+                    ->select('cab.id','cab.nama_lengkap','kode_pembayaran_cab.kode_bayar', 'cab.email', 'kode_pembayaran_cab.status')
+                    ->get();
 
         return response()->json(['code'=>200,'data' => $data]);
     }

@@ -16,18 +16,27 @@ class terimaBuktiBayar extends Controller
                 ->select('cab.*','kode_pembayaran_cab.*')
                 ->first();
                 
+        if ($data->isEmpty()) {
+            return back()->with('error','Data tidak ditemukan. Silakan hubungi tim kami pada Contact Us');
+        } 
+
         $person = $data->nama;
 
         //upload foto
         $uploadFoto = $request->file('image');
-        $name = 'buktipembayaran'.'-'.$person.'-'.$kode_bayar.'.'.$uploadFoto->getClientOriginalExtension();
+        $name = $kode_bayar.'.'.$uploadFoto->getClientOriginalExtension();
         $fotoBukti = $uploadFoto->storeAs('public/pembayaran', $name);
 
-        $data = DB::table('kode_pembayaran_cab')
-                ->where('kode_bayar', $kode_bayar)
-                ->update([
-                    'foto_bukti' => $fotoBukti
-                ]);
+        try {
+            $data = DB::table('kode_pembayaran_cab')
+                    ->where('kode_bayar', $kode_bayar)
+                    ->update([
+                        'foto_bukti' => $fotoBukti,
+                        'status' => 'wait_conf'
+                    ]);
+        } catch (Exception $e) {
+            return back()->with('error','Terjadi kesalahan Error Code: '.$e->getCode().'. Silakan hubungi tim kami pada Contact Us');
+        }
 
         return back()->with('success','Berhasil upload bukti');
     }

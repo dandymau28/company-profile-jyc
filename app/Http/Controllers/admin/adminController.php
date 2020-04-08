@@ -8,16 +8,6 @@ use DB;
 
 class adminController extends Controller
 {
-    public function showCAB()
-    {
-        $calonAnggota = DB::table('cab')->get();
-
-        return view('admin.anggota.cab',[
-            'cab' => $calonAnggota,
-            'title' => 'CAB'
-        ]);
-    }
-
     public function countKategori()
     {
         
@@ -42,10 +32,5 @@ class adminController extends Controller
     public function formPrestasi()
     {
         return view('admin.prestasi.prestasi');
-    }
-
-    public function viewCAB()
-    {
-        return view('admin.anggota.cab-master');
     }
 }

@@ -33,10 +33,9 @@
                     <div class="info-box">
                         <span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
                         <div class="info-box-content">
-                            <span class="info-box-text">CPU Traffic</span>
+                            <span class="info-box-text">Total Pendaftar</span>
                             <span class="info-box-number">
-                                10
-                                <small>%</small>
+                                {{$total}}
                             </span>
                         </div>
                         <!-- /.info-box-content -->
@@ -48,8 +47,8 @@
                     <div class="info-box mb-3">
                         <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
                         <div class="info-box-content">
-                            <span class="info-box-text">Likes</span>
-                            <span class="info-box-number">41,410</span>
+                            <span class="info-box-text">Belum Bayar</span>
+                            <span class="info-box-number">{{$notpaid}}</span>
                         </div>
                         <!-- /.info-box-content -->
                     </div>
@@ -62,11 +61,11 @@
     
                 <div class="col-12 col-sm-6 col-md-3">
                     <div class="info-box mb-3">
-                        <span class="info-box-icon bg-success elevation-1"><i class="fas fa-shopping-cart"></i></span>
+                        <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-shopping-cart"></i></span>
         
                         <div class="info-box-content">
-                            <span class="info-box-text">Sales</span>
-                            <span class="info-box-number">760</span>
+                            <span class="info-box-text">Belum Terverifikasi</span>
+                            <span class="info-box-number">{{$waitconf}}</span>
                         </div>
                         <!-- /.info-box-content -->
                     </div>
@@ -75,11 +74,11 @@
                 <!-- /.col -->
                 <div class="col-12 col-sm-6 col-md-3">
                     <div class="info-box mb-3">
-                        <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
+                        <span class="info-box-icon bg-success elevation-1"><i class="fas fa-users"></i></span>
         
                         <div class="info-box-content">
-                            <span class="info-box-text">New Members</span>
-                            <span class="info-box-number">2,000</span>
+                            <span class="info-box-text">Terverifikasi</span>
+                            <span class="info-box-number">{{$paid}}</span>
                         </div>
                         <!-- /.info-box-content -->
                     </div>
@@ -97,10 +96,11 @@
                                     <tr>
                                         <th scope="col">No</th>
                                         <th scope="col">Name</th>
-                                        <th scope="col">Alamat</th>
+                                        <th scope="col">Kode Bayar</th>
                                         <th scope="col">Email</th>
-                                        <th scope="col">Instagram</th>
-                                        <th width="100px">Action</th>
+                                        <th scope="col">Status Pembayaran</th>
+                                        <th scope="col">Verifikasi Pembayaran</th>
+                                        <th width="100px">Detail</th>
                                     </tr>
                                 </thead>
                             </table>
@@ -137,18 +137,45 @@ $.ajax({
                         data: "nama_lengkap"
                     },
                     {
-                        data: "alamat"
+                        data: "kode_bayar"
                     },
                     {
                         data: "email"
                     },
                     {
-                        data: "instagram"
+                        render: function(data, type, full) {
+                            if(full.status == 'not_paid') {
+                                return (
+                                    'Belum bayar' 
+                                );
+                            } else if (full.status == 'wait_conf') {
+                                return (
+                                    'Menunggu verifikasi' 
+                                );
+                            } else {
+                                return (
+                                    'Terverifikasi' 
+                                );
+                            }
+                        }
+                    },
+                    {
+                        render: function(data, type, full) {
+                            if (full.status != 'paid') {
+                                return (
+                                    '<a class="btn btn-primary btn-sm" href="http://127.0.0.1:8000/admin/cab/verif/' + full.id +'">Verifikasi</a>' 
+                                );
+                            } else {
+                                return (
+                                    '<a class="btn btn-danger btn-sm" href="http://127.0.0.1:8000/admin/cab/unverif/' + full.id +'">Batal Verifikasi</a>' 
+                                );
+                            }
+                        }
                     },
                     {
                         render: function(data, type, full) {
                             return (
-                                '<a class="btn btn-primary btn-sm" href="http://127.0.0.1:8000/admin/cab/anggota/id/' + full.id +'">Detail</a>' 
+                                '<a class="btn btn-primary btn-sm" href="http://127.0.0.1:8000/admin/cab/id/' + full.id +'">Detail</a>' 
                             );
                         }
                     }

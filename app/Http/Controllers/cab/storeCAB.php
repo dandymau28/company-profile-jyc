@@ -16,6 +16,7 @@ use DB;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\AfterRegister;
 use PDF;
+use App\Http\Controllers\cab\mailCAB as Nextprocess;
 
 class storeCAB extends Controller
 {
@@ -101,46 +102,10 @@ class storeCAB extends Controller
                 $i++;
             }
         } catch (Exception $e) {
-            return back()->with('errors',$e->getMessage());
+            return back()->with('errors','Gagal mendaftar. Error Code: '.$e->getCode().'. Silakan hubungi tim kami pada Contact Us');
         }
 
-        $year = Carbon::now()->format('Y');
-
-        $pendaftar = DB::table('cab')
-                    ->where(DB::raw("YEAR(created_at)=".$year))
-                    ->count();
-
-        $cab = DB::table('cab')->join('kode_pembayaran_cab','cab.id','=','kode_pembayaran_cab.id_cab')
-                    ->where('cab.email',$request->input('email'))
-                    ->select('cab.*','kode_pembayaran_cab.*')
-                    ->first();
-
-        if($pendaftar < 90) {
-
-            $data = [
-                'status' => 'Berhasil',
-                'identitas' => $cab,
-            ];
-
-            // $pdf = PDF::loadView('mail.success',$data);
-            // $pdf = $pdf->stream();
-            Mail::to($cab->email)
-                ->send(new AfterRegister($data));
-
-        } elseif ($pendaftar >= 90 && $pendaftar < 110) {
-            $data = [
-                'status' => 'Waiting List',
-                'identitas' => $cab
-            ];
-
-            Mail::to($cab->email)
-                ->send(new AfterRegister($data));
-        } else {
-            return back()->with([
-                'status' => 'Gagal',
-                'message' => 'Maaf pendaftaran sudah penuh, silakan coba tahun depan'
-                ]);
-        }
-        return back()->with('status', 'sukses');
+        $next = new Nextprocess;
+        $next->nextStep($cab->id);
     }
 }

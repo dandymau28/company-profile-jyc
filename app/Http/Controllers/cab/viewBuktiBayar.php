@@ -13,11 +13,17 @@ class viewBuktiBayar extends Controller
         $data = DB::table('cab')
                 ->join('kode_pembayaran_cab','cab.id','=','kode_pembayaran_cab.id_cab')
                 ->where('kode_pembayaran_cab.kode_bayar',$kode_bayar)
-                ->select('cab.*','kode_pembayaran_cab.*')
+                ->whereNull('deleted_at')
+                ->select('cab.*','kode_pembayaran_cab.kode_bayar')
                 ->first();
+        
+        if(!$data->isEmpty()) {
+            return view('',[
+                'data' => $data,
+            ]);
+        } else {
+            return '<center>Data tidak ditemukan. Silakan lakukan pendaftaran terlebih dahulu atau hubungi kami melalui <a href="127.0.0.1:8000/tentang-kami">Contact Us</a></center>';
+        }
 
-        return view('',[
-            'data' => $data,
-        ]);
     }
 }
