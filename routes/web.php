@@ -20,7 +20,9 @@ Route::get('/coming-soon', function () {
     return view('comingsoon.index');
 })->name('coming-soon');
 
-
+//Oprec
+Route::get('/pendaftaran','cab\viewForm@create');
+Route::post('/pendaftaran','cabController@store');
 
 
 Route::get('/', 'beranda\berandaController@beranda')->name('beranda');
@@ -65,7 +67,7 @@ Route::get('/tentang-kami', function () {
     return view('tentang-kami', ["title" => "Tentang", "nav" => "tentang"]);
 })->name('tentang-kami');
 
-Route::post('/pendaftaran','cabController@store');
+
 
 /*
 Route Controller
@@ -75,6 +77,10 @@ Seperti get berita, post pendaftaran, post kegiatan, dll.
 
 Route::get('/upload-bukti-bayar/{kode_bayar}','cabController@viewBuktiBayar');
 Route::post('/upload-bukti-bayar','cabController@terimaBuktiBayar');
+
+//subcscribe
+Route::post('/berlangganan','subscribe\subscribeController@store')->name('subscribe');
+Route::get('/berlangganan/{unsubscribe?}','subscribe\subscribeController@destroy');
 
 
 // Admin route
@@ -103,8 +109,8 @@ Route::prefix('admin')->group(function () {
     })->name('anggota-master');
 
     //Calon Anggota
-    Route::get('/cab', 'adminController@viewCAB')->name('cab-master');
-    Route::get('/cab/anggota/id/{id}', 'adminController@editCAB');
+    Route::get('/cab', 'admin\adminController@viewCAB')->name('cab-master');
+    Route::get('/cab/anggota/id/{id}', 'admin\editCAB@editCAB');
 
     //Berita
     Route::get('/berita/buat', 'admin\createBerita@create')->name('buat-berita');
@@ -130,8 +136,8 @@ Route::prefix('admin')->group(function () {
     Route::post('/galeri/video','admin\storeVideo@video')->name('submit-video');
     Route::get('/galeri','admin\indexGaleri@galeriView')->name('galeri');
 
-    Route::get('/kegiatan','adminController@kegiatan')->name('kegiatan-view');
-    Route::post('/kegiatan','adminController@tambahKegiatan')->name('add-kegiatan');
+    Route::get('/kegiatan','admin\viewKegiatan@kegiatan')->name('kegiatan-view');
+    Route::post('/kegiatan','admin\tambahKegiatan@tambahKegiatan')->name('add-kegiatan');
     
     Route::get('/contoh', function () {
         return view('admin.foto.contoh');
