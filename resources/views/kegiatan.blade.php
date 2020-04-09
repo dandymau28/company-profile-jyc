@@ -37,7 +37,6 @@
             <br>
             <p class="text-justify latihan-text"><b>Jakarta Youth Choir</b> juga menghadirkan berbagai Choirmaster dari berbagai latar belakang Paduan Suara di Indonesia yang terkenal dan berpengalaman sebagai pelatih tamu untuk memaksimalkan pengembangan kemampuan para Choristernya. Yuk pantau terus proses latihan kami untuk mengharumkan nama Jakarta dan Indonesia dengan follow akun resmi instagram <a href="https://www.instagram.com/jktyouthchoir"><b>@JktYouthChoir</b></a> dan media sosial lainnya</p>
         </div>
-
     </div>
 
     <!-- Jakarta National Choir Competition -->
@@ -50,6 +49,33 @@
                     <p>Jakarta National Choir Competition </p>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- Open Recruitment -->
+    <div class="latihan-rutin">
+        <h3 class="text-center">PENERIMAAN ANGGOTA BARU</h3>
+        <div class="container">
+            <h2 class="text-center pt-3">Rahasia Sukses Berprestasi : Latihan ala JYC</h2>
+            <div class="row latihan-text">
+                <div class="col-sm-6 pt-4">Eksis di dunia paduan suara, JYC tentunya juga memerlukan sebuah regenerasi seiring
+                    berjalannya waktu. Hal ini diperlukan untuk menjadikan JYC lebih besar dan lebih berkembang
+                    dari sebelumnya. Kegiatan <a href="{{ route('oprec') }}">Open Recruitment</a> merupakan salah satu aplikasi kegiatan yang
+                    dilaksanakan oleh JYC setiap tahunnya. Kegiatan ini untuk mencari dan menjaring pemuda
+                    pemudi berbakat dalam bidang seni khususnya dibidang paduan suara serta memiliki visi, misi,
+                    maupun tujuan yang sama dengan JYC.</div>
+                <div class="col-sm-6 pt-4">Dibawah naungan DISPORA DKI Jakarta, JYC merupakan wadah yang sangat tepat untuk
+                    tumbuh kembang para pemuda sekitar Ibukota untuk berkontribusi aktif mengharumkan DKI
+                    Jakarta maupun Indonesia. Setiap waktunya, kemampuan para anggota chorister JYC terus
+                    diasah dengan latihan rutin yang diorganisasikan langsung oleh Kepengurusan JYC dan dilatih
+                    oleh Choirmaster kebanggaan Septo Adi Kristanto Simanjuntak, atau biasa dipanggil Kak Cepo,
+                    beserta tim kepelatihan.</b></div>
+            </div>
+            <br>
+            <p class="text-justify latihan-text">Sejak berdiri pada tahun 2015, JYC sudah membuka pendaftaran secara resmi setiap
+                tahunnya. Pada tahun 2020, dengan bangga JYC membuka kesempatan bagi para pemuda-
+                pemudi terbaik yang minat pada dunia paduan suara untuk mengeksplorasi diri dan berprestasi
+                Bersama JYC.</p>
         </div>
     </div>
 

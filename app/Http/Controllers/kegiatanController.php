@@ -48,10 +48,4 @@ class kegiatanController extends Controller
         ];
     }
 
-    public function oprec() {
-        return view('oprec', [
-            'title' => 'Penerimaan Anggota Baru 2020',
-            'nav' => 'kegiatan'
-        ]);
-    }
 }

@@ -29,3 +29,4 @@ Route::get('/berita/tag/{term?}','api\apiController@searchTag');
 
 //API Get Data CAB
 Route::get('/cab/get', 'api\apiController@jsonCAB');
+Route::get('/cab/get/count', 'cab\cabController@countCAB');
