@@ -380,6 +380,16 @@
                     break;
                 case 'rowRiwayatOrganisasi':
                     row.last().after(rowOrganisasi);
+                    break;
+                case 'rowKesenian':
+                    row.last().after(rowKesenian);
+                    break;
+                case 'rowAlatMusik':
+                    row.last().after(rowAlatMusik);
+                    break;
+                case 'rowNonKesenian':
+                    row.last().after(rowNonKesenian);
+                    break;
             }
             $(this).siblings(`[data-for=${$(this).data('for')}]`).addClass('d-inline').removeClass('d-none');
         })
