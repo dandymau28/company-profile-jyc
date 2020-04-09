@@ -25,7 +25,7 @@ class storeCAB extends Controller
         try {
             
             $uploadFoto = $request->file('foto');
-            $name = 'foto'.'-'.$request->input('nama_panggilan').'.'.$uploadFoto->getClientOriginalExtension();
+            $name = 'foto'.'-'.trim($request->input('nama_lengkap')).'.'.$uploadFoto->getClientOriginalExtension();
             $pathPhoto = $uploadFoto->storeAs('public/assets/img', $name);
             
             //identitas cab
