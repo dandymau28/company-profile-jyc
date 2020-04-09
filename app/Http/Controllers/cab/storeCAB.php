@@ -108,11 +108,10 @@ class storeCAB extends Controller
             return back()->with('errors','Gagal mendaftar. Error Code: '.$e->getCode().'. Silakan hubungi tim kami pada <a href="/tentang-kami">Contact Us</a>');
         }
 
-        $year = Carbon::now()->format('Y');
+        // $year = Carbon::now()->format('Y');
 
         $pendaftar = DB::table('cab')
-                    ->whereRaw(DB::raw("YEAR(created_at)=2020"))
-                    // ->where(DB::raw("YEAR(created_at)",$year))
+                    ->whereRaw(DB::raw("YEAR(created_at)=YEAR(CURRENT_DATE"))
                     ->count();
 
         $waktu = Carbon::now()->format('YMd');
