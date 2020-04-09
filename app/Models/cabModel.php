@@ -12,6 +12,7 @@ class cabModel extends Model
     protected $fillable = [
         'id',
         'id_audisi',
+        'foto',
         'nama_lengkap',
         'umur',
         'status_nikah',

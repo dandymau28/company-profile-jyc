@@ -23,8 +23,14 @@ class storeCAB extends Controller
     public function store(Request $request)
     {
         try {
+            
+            $uploadFoto = $request->file('foto');
+            $name = 'foto'.'-'.$request->input('nama_panggilan').'.'.$uploadFoto->getClientOriginalExtension();
+            $pathPhoto = $uploadFoto->storeAs('public/assets/img', $name);
+            
             //identitas cab
             $cab = new CAB;
+            $cab->foto = $pathPhoto;
             $cab->nama_lengkap = $request->input('nama_lengkap');
             $cab->nama_panggilan = $request->input('nama_panggilan');
             $cab->email = $request->input('email');

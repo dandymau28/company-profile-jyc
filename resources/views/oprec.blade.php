@@ -22,7 +22,8 @@
                     <div class="row">
                         <h1 class="">PENERIMAAN CALON ANGGOTA BARU JYC 2020</h1>
                     </div>
-                    <form id="regForm" action="/pendaftaran" method="POST">
+                    <form id="regForm" action="/pendaftaran" method="POST" enctype="multipart/form-data">
+                        @csrf
                         <div class="row text-dark bg-light p-3 p-sm-4 p-md-5 text-left tab">
                             <h5>Sebelum kamu mengisi formulir pendaftaran, baca terlebih dahulu alur pendaftaran dibawah ini.</h5>
                             <h4 class="pt-2">Alur Pendaftaran:</h4>
