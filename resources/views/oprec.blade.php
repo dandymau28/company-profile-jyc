@@ -220,20 +220,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row text-dark bg-light p-3 p-sm-4 p-md-5 text-left mt-2 tab">
-                            <div class="col-12">
-                                <h4 class="pt-2">Terimakasih :)</h4>
-                                <h5>Kamu berhasil submit formulir pendaftaran calon anggota baru JYC 2020.</h5>
-                                <p class="text-justify">Silahkan cek email dalam 1 x 24 jam, admin akan mengirimkan tata cara melakukan pembayaran uang pendaftaran. Hubungi <em>Contact Person</em> yang tertera jika belum mendapatkan email balasan dalam 1 x 24 jam.</p>
-                                <p><strong>CP: +62812-8921-8785 (Febri)</strong></p>
-                            </div>
-                            <div class="col-12 pt-3">
-                                <div class="text-right">
-                                    <a href="{{ route('beranda') }}"><button type="button" class="btn btn-danger">Oke, mengerti.</button></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row text-dark bg-light pr-3 pr-sm-4 pr-md-5">
+                        <div id="tatakan_tombol" class="row text-dark bg-light pr-3 pr-sm-4 pr-md-5">
                             <div class="col-12">
                                 <div class="text-right">
                                     <button id="prevBtn" type="button" onclick="nextPrev(-1)" class="btn btn-danger">Sebelumnya</button>
@@ -246,9 +233,23 @@
                                 <span class="step active"></span>
                                 <span class="step"></span>
                                 <span class="step"></span>
-                                <span class="step"></span>
                             </div>
                         </div>
+                        @if(Session::has('success'))
+                        <div class="row text-dark bg-light p-3 p-sm-4 p-md-5 text-left mt-2">
+                            <div class="col-12">
+                                <h4 class="pt-2">Terimakasih :)</h4>
+                                <h5>Kamu berhasil submit formulir pendaftaran calon anggota baru JYC 2020.</h5>
+                                <p class="text-justify">Silahkan cek email dalam 1 x 24 jam, admin akan mengirimkan tata cara melakukan pembayaran uang pendaftaran. Hubungi <em>Contact Person</em> yang tertera jika belum mendapatkan email balasan dalam 1 x 24 jam.</p>
+                                <p><strong>CP: +62812-8921-8785 (Febri)</strong></p>
+                            </div>
+                            <div class="col-12 pt-3">
+                                <div class="text-right">
+                                    <a href="{{ route('beranda') }}"><button type="button" class="btn btn-danger">Oke, mengerti.</button></a>
+                                </div>
+                            </div>
+                        </div>
+                        @endif
                     </form>
                 </div>
             </div>
@@ -423,7 +424,9 @@ function showTab(n) {
   } else {
     document.getElementById("prevBtn").style.display = "inline";
   }
-  if (n == (x.length - 1)) {
+
+ if (n == (x.length - 1)) {
+    $('#nextBtn').attr('type', 'submit');
     document.getElementById("nextBtn").innerHTML = "Submit";
   } else {
     document.getElementById("nextBtn").innerHTML = "Selanjutnya";
