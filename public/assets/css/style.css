@@ -586,17 +586,7 @@ li.breadcrumb-item {
     background-size: cover;
 }
 
-#banner-oprec {
-    background: url(../img/kegiatan/oprec.jpg)no-repeat center center fixed;
-    display: table;
-    height: 100vh;
-    position: relative;
-    width: 100%;
-    background-size: cover;
-}
-
 .text-kegiatan {
-    /* background-color: rgba(0, 0, 0, 0.4); */
     color: #f8f9fe;
     display: table-cell;
     text-align: center;
@@ -1021,4 +1011,60 @@ a.nav-link.active:hover {
 .berita-h {
     display: block;
     z-index: 5;
+}
+
+/* Keperluan Halaman Oprec */
+#banner-oprec {
+    background: url(../img/kegiatan/banner-oprec.jpg)no-repeat center center fixed;
+    display: table;
+    height: 100vh;
+    position: relative;
+    width: 100%;
+    background-size: cover;
+}
+
+#text-oprec {
+    height: 100%;
+    width: 100%;
+    /* background-color: rgba(0, 0, 0, 0.2); */
+    color: #f8f9fe;
+    /* font-size: 13rem;
+    font-weight: 900;
+    text-shadow: rgba(255, 255, 255, 0.5); */
+    padding: 9rem 0rem;
+}
+
+#text-oprec h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    text-shadow: rgba(255, 255, 255, 0.5);
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: rgba(183, 28, 28, 0.95);
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+}
+
+.step.active {
+    opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+    background-color: rgba(183, 28, 28, 0.95);
+}
+
+input.invalid {
+    background-color: #ffdddd;
+}
+
+.tab {
+    display: none;
 }
