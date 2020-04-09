@@ -16,7 +16,7 @@ use DB;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\AfterRegister;
 use PDF;
-use Uuid;
+use Faker\Provider\Uuid;
 
 class storeCAB extends Controller
 {
@@ -111,7 +111,8 @@ class storeCAB extends Controller
         $year = Carbon::now()->format('Y');
 
         $pendaftar = DB::table('cab')
-                    ->where(DB::raw("YEAR(created_at)",$year))
+                    ->whereRaw(DB::raw("YEAR(created_at)=2020"))
+                    // ->where(DB::raw("YEAR(created_at)",$year))
                     ->count();
 
         $waktu = Carbon::now()->format('YMd');

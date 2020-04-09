@@ -13,8 +13,8 @@ class viewForm extends Controller
         $cab = new CAB;
 
         return view('oprec',[
-            'title' => 'Pendaftaran',
-            'nav' => 'oprec',
+            'title' => 'Pendaftaran Calon Anggota Baru',
+            'nav' => 'kegiatan',
             'total' => $cab->countCAB(),
             'submit' => false
         ]);
