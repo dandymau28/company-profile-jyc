@@ -232,7 +232,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row text-dark bg-light pr-3 pr-sm-4 pr-md-5">
+                        <div id="tatakan_tombol" class="row text-dark bg-light pr-3 pr-sm-4 pr-md-5">
                             <div class="col-12">
                                 <div class="text-right">
                                     <button id="prevBtn" type="button" onclick="nextPrev(-1)" class="btn btn-danger">Sebelumnya</button>
@@ -422,7 +422,11 @@ function showTab(n) {
   } else {
     document.getElementById("prevBtn").style.display = "inline";
   }
+
   if (n == (x.length - 1)) {
+      $('#tatakan_tombol').addClass('d-none');
+  }
+  else if (n == (x.length - 2)) {
     document.getElementById("nextBtn").innerHTML = "Submit";
   } else {
     document.getElementById("nextBtn").innerHTML = "Selanjutnya";
