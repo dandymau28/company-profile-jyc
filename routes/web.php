@@ -22,7 +22,7 @@ Route::get('/coming-soon', function () {
 
 //Oprec
 Route::get('/pendaftaran','cab\viewForm@create');
-Route::post('/pendaftaran','cabController@store');
+Route::post('/pendaftaran','cab\storeCAB@store');
 
 
 Route::get('/', 'beranda\berandaController@beranda')->name('beranda');
