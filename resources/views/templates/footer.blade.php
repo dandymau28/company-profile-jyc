@@ -35,6 +35,7 @@
                 <li><a class="text-white" href="{{route('berita')}}">Jakarta National Choir Competition</a></li>
                 <li><a class="text-white" href="{{route('berita')}}/kategori/Kompetisi%20Internasional">Kompetisi International</a></li>
                 <li><a class="text-white" href="{{route('berita')}}/kategori/Kompetisi%20Nasional">Kompetisi Nasional</a></li>
+                <li><a class="text-white" href="{{route('oprec')}}">Penerimaan Anggota Baru</a></li>
             </ul>
         </div>
         <div class="col-sm-12 col-md-3 mt-sm-3 mt-md-0">
