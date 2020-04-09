@@ -113,7 +113,7 @@
                                 <b> Paduan Suara yang pernah diikuti</b>
                                 <div class="form-row rowPadus">
                                     <div class="col form-group">
-                                        <input name="nama_padus[]" type="text" class="form-control" placeholder="Nama Paduan Suara">
+                                        <input name="nama_padus[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="Nama Paduan Suara">
                                     </div>
                                     <div class="col-3 form-group">
                                         <select name="ambitus[]" class="custom-select" required>
@@ -129,7 +129,7 @@
                                         </select>
                                     </div>
                                     <div class="col-3 form-group">
-                                        <input name="tahun_aktif_padus[]" type="text" class="form-control" placeholder="2009-2010">
+                                        <input name="tahun_aktif_padus[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="2009-2010">
                                     </div>
                                 </div>
                                 <button data-for="rowPadus" type="button" class="btn btn-secondary mb-2 d-none tombol-hapus">Hapus</button>
@@ -139,13 +139,13 @@
                                 <b>Riwayat Organisasi</b>
                                 <div class="form-row rowRiwayatOrganisasi">
                                     <div class="col form-group">
-                                        <input name="nama_organisasi[]" type="text" class="form-control" placeholder="Nama Organisasi">
+                                        <input name="nama_organisasi[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="Nama Organisasi">
                                     </div>
                                     <div class="col-3 form-group">
-                                        <input name="jabatan[]" type="text" class="form-control" placeholder="Jabatan">
+                                        <input name="jabatan[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="Jabatan">
                                     </div>
                                     <div class="col-3 form-group">
-                                        <input name="tahun_aktif_org[]" type="text" class="form-control" placeholder="2009-2010">
+                                        <input name="tahun_aktif_org[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="2009-2010">
                                     </div>
                                 </div>
                                 <button data-for="rowRiwayatOrganisasi" type="button" class="btn btn-secondary mb-2 d-none tombol-hapus">Hapus</button>
@@ -155,16 +155,16 @@
                                 <b>Prestasi di bidang Kesenian</b>
                                 <div class="form-row rowKesenian">
                                     <div class="col form-group">
-                                        <input name="nama_kegiatan_seni[]" type="text" class="form-control" placeholder="Nama Kegiatan">
+                                        <input name="nama_kegiatan_seni[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="Nama Kegiatan">
                                     </div>
                                     <div class="col form-group">
-                                        <input name="tempat_seni[]" type="text" class="form-control" placeholder="Tempat">
+                                        <input name="tempat_seni[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="Tempat">
                                     </div>
                                     <div class="col form-group">
-                                        <input name="tingkat_seni[]" type="text" class="form-control" placeholder="Tingkat">
+                                        <input name="tingkat_seni[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="Tingkat">
                                     </div>
                                     <div class="col form-group">
-                                        <input name="juara_seni[]" type="text" class="form-control" placeholder="Juara">
+                                        <input name="juara_seni[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="Juara">
                                     </div>
                                 </div>
                                 <button data-for="rowKesenian" type="button" class="btn btn-secondary mb-2 d-none tombol-hapus">Hapus</button>
@@ -174,16 +174,16 @@
                                 <b>Prestasi di bidang Non-Kesenian</b>
                                 <div class="form-row rowNonKesenian">
                                     <div class="col form-group">
-                                        <input name="nama_kegiatan_non[]" type="text" class="form-control" placeholder="Nama Kegiatan">
+                                        <input name="nama_kegiatan_non[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="Nama Kegiatan">
                                     </div>
                                     <div class="col form-group">
-                                        <input name="tempat_non[]" type="text" class="form-control" placeholder="Tempat">
+                                        <input name="tempat_non[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="Tempat">
                                     </div>
                                     <div class="col form-group">
-                                        <input name="tingkat_non[]" type="text" class="form-control" placeholder="Tingkat">
+                                        <input name="tingkat_non[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="Tingkat">
                                     </div>
                                     <div class="col form-group">
-                                        <input name="juara_non[]" type="text" class="form-control" placeholder="Juara">
+                                        <input name="juara_non[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="Juara">
                                     </div>
                                 </div>
                                 <button data-for="rowNonKesenian" type="button" class="btn btn-secondary mb-2 d-none tombol-hapus">Hapus</button>
@@ -193,7 +193,7 @@
                                 <b>Kemampuan Bermain Alat Musik</b>
                                 <div class="form-row rowAlatMusik">
                                     <div class="col form-group">
-                                        <input name="alat_musik[]" type="text" class="form-control" placeholder="Nama Alat Musik">
+                                        <input name="alat_musik[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="Nama Alat Musik">
                                     </div>
                                     <div class="col form-group">
                                         <select name="tingkat_kemampuan[]" class="custom-select" required>
@@ -215,7 +215,7 @@
                                 <b>Keahlian Lain yang Dimiliki</b>
                                 <div class="form-row keahlianLain">
                                     <div class="col-6 form-group">
-                                        <input name="keahlian_lain" type="text" class="form-control" placeholder="MC, Guiding, ...">
+                                        <input name="keahlian_lain" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="MC, Guiding, ...">
                                     </div>
                                 </div>
                             </div>
@@ -287,23 +287,23 @@
         let rowOrganisasi = `
             <div class="form-row rowRiwayatOrganisasi">
                 <div class="col form-group">
-                    <input name="nama_organisasi[]" type="text" class="form-control" placeholder="Nama Organisasi">
+                    <input name="nama_organisasi[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="Nama Organisasi">
                 </div>
                 <div class="col-3 form-group">
-                    <input name="jabatan[]" type="text" class="form-control" placeholder="Jabatan">
+                    <input name="jabatan[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="Jabatan">
                 </div>
                 <div class="col-3 form-group">
-                    <input id="tahun_aktif_org[]" name="nama_panggilan" type="text" class="form-control" placeholder="2009-2010">
+                    <input name="tahun_aktif_org[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="2009-2010">
                 </div>
             </div>`;
 
         let rowPadus = `
             <div class="form-row rowPadus">
                 <div class="col form-group">
-                    <input name="nama_padus[]" type="text" class="form-control" placeholder="Nama Paduan Suara">
+                    <input name="nama_padus[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="Nama Paduan Suara">
                 </div>
                 <div class="col-3 form-group">
-                    <select name="ambitus[]" class="custom-select" id="ambitus" required>
+                    <select name="ambitus[]" class="custom-select" required>
                         <option selected disabled value="">Pilih Ambitus</option>
                         <option value="Sopran 1">Sopran 1</option>
                         <option value="Sopran 2">Sopran 2</option>
@@ -316,7 +316,58 @@
                     </select>
                 </div>
                 <div class="col-3 form-group">
-                    <input name="tahun_aktif_padus[]" type="text" class="form-control" placeholder="2009-2010">
+                    <input name="tahun_aktif_padus[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="2009-2010">
+                </div>
+            </div>`;
+
+        let rowKesenian = `
+            <div class="form-row rowKesenian">
+                <div class="col form-group">
+                    <input name="nama_kegiatan_seni[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="Nama Kegiatan">
+                </div>
+                <div class="col form-group">
+                    <input name="tempat_seni[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="Tempat">
+                </div>
+                <div class="col form-group">
+                    <input name="tingkat_seni[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="Tingkat">
+                </div>
+                <div class="col form-group">
+                    <input name="juara_seni[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="Juara">
+                </div>
+            </div>`;
+        
+        let rowAlatMusik = `
+            <div class="form-row rowAlatMusik">
+                <div class="col form-group">
+                    <input name="alat_musik[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="Nama Alat Musik">
+                </div>
+                <div class="col form-group">
+                    <select name="tingkat_kemampuan[]" class="custom-select" required>
+                        <option selected disabled value="">Tingkat Penguasaan</option>
+                        <option value="Pemula">Pemula</option>
+                        <option value="Menengah - Cukup">Menengah - Cukup</option>
+                        <option value="Menengah">Menengah</option>
+                        <option value="Menengah - Mahir">Menengah - Mahir</option>
+                        <option value="Mahir">Mahir</option>
+                        <option value="Sangat Mahir">Sangat Mahir</option>
+                        <option value="Profesional">Profesional</option>
+                    </select>
+                </div>
+            </div>`;
+
+        let rowNonKesenian = `
+            <div class="form-row rowNonKesenian">
+                <div class="col form-group">
+                    <input name="nama_kegiatan_non[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="Nama Kegiatan">
+                </div>
+                <div class="col form-group">
+                    <input name="tempat_non[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="Tempat">
+                </div>
+                <div class="col form-group">
+                    <input name="tingkat_non[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="Tingkat">
+                </div>
+                <div class="col form-group">
+                    <input name="juara_non[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="Juara">
                 </div>
             </div>`;
 
@@ -330,6 +381,16 @@
                     break;
                 case 'rowRiwayatOrganisasi':
                     row.last().after(rowOrganisasi);
+                    break;
+                case 'rowKesenian':
+                    row.last().after(rowKesenian);
+                    break;
+                case 'rowAlatMusik':
+                    row.last().after(rowAlatMusik);
+                    break;
+                case 'rowNonKesenian':
+                    row.last().after(rowNonKesenian);
+                    break;
             }
             $(this).siblings(`[data-for=${$(this).data('for')}]`).addClass('d-inline').removeClass('d-none');
         })
