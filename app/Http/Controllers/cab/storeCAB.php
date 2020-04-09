@@ -16,7 +16,7 @@ use DB;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\AfterRegister;
 use PDF;
-use App\Http\Controllers\cab\mailCAB as Nextprocess;
+use Uuid;
 
 class storeCAB extends Controller
 {
@@ -48,70 +48,118 @@ class storeCAB extends Controller
             $cab->save();
 
             //bermusik
-            $perulangan = count($request->input('alat_musik'));
-            $i = 0;
+            $musik = $request->input('alat_musik');
+            $tingkatmusik = $request->input('tingkat_kemampuan');
             $bermusik = new Bermusik;
-            while($i < $perulangan) {
-                $bermusik->alat_musik = $request->input('alat_musik');
-                $bermusik->tingkat_kemampuan = $request->input('tingkat_kemampuan');
-                $cab->kemampuanBermusik()->save($bermusik);
-                $i++;
+            if($musik) {
+                foreach($musik as $key => $value) {
+                    $bermusik->alat_musik = $musik[$key];
+                    $bermusik->tingkat_kemampuan = $tingkatmusik[$key];
+                    $cab->kemampuanBermusik()->save($bermusik);
+                }
             }
 
             //paduan suara
-            $perulangan = count($request->input('nama_padus'));
-            $i = 0;
             $padus = new Padus;
-            while($i < $perulangan){
-                $padus->nama_padus = $request->input('nama_padus');
-                $padus->ambitus = $request->input('ambitus');
-                $padus->tahun_aktif = $request->input('tahun_aktif_padus');
-                $cab->paduanSuara()->save($padus);
-                $i++;
+            if ($request->input('nama_padus')){
+                foreach($request->input('nama_padus') as $key => $value) {
+                    $padus->nama_padus = $request->input('nama_padus')[$key];
+                    $padus->ambitus = $request->input('ambitus')[$key];
+                    $padus->tahun_aktif = $request->input('tahun_aktif_padus')[$key];
+                    $cab->paduanSuara()->save($padus);
+                }
             }
 
             //prestasi kesenian
-            $perulangan = count($request->input('nama_kegiatan_seni'));
-            $i = 0;
             $kesenian = new Kesenian;
-            while($i < $perulangan){
-                $kesenian->nama_kegiatan = $request->input('nama_kegiatan_seni');
-                $kesenian->tempat = $request->input('tempat_seni');
-                $kesenian->tingkat = $request->input('tingkat_seni');
-                $kesenian->juara = $request->input('juara_seni');
-                $cab->prestasiKesenian()->save($kesenian);
-                $i++;
+            if ($request->input('nama_kegiatan_seni')) {
+                foreach($request->input('nama_kegiatan_seni') as $key => $value) {
+                    $kesenian->nama_kegiatan = $request->input('nama_kegiatan_seni')[$key];
+                    $kesenian->tempat = $request->input('tempat_seni')[$key];
+                    $kesenian->tingkat = $request->input('tingkat_seni')[$key];
+                    $kesenian->juara = $request->input('juara_seni')[$key];
+                    $cab->prestasiKesenian()->save($kesenian);
+                }
             }
 
             //prestasi non kesenian
-            $perulangan = count($request->input('nama_kegiatan_non'));
-            $i = 0;
             $nonkesenian = new Nonkesenian;
-            while($i < $perulangan){
-                $nonkesenian->nama_kegiatan = $request->input('nama_kegiatan_non');
-                $nonkesenian->tempat = $request->input('tempat_non');
-                $nonkesenian->tingkat = $request->input('tingkat_non');
-                $nonkesenian->juara = $request->input('juara_non');
-                $cab->prestasiNonkesenian()->save($nonkesenian);
-                $i++;
+            if ($request->input('nama_kegiatan_non')){
+                foreach($request->input('nama_kegiatan_non') as $key => $value) {
+                    $nonkesenian->nama_kegiatan = $request->input('nama_kegiatan_non')[$key];
+                    $nonkesenian->tempat = $request->input('tempat_non')[$key];
+                    $nonkesenian->tingkat = $request->input('tingkat_non')[$key];
+                    $nonkesenian->juara = $request->input('juara_non')[$key];
+                    $cab->prestasiNonkesenian()->save($nonkesenian);
+                }
             }
 
             //riwayat organisasi
-            $perulangan = count($request->input('nama_organisasi'));
-            $i = 0;
             $organisasi = new Organisasi;
-            while($i < $perulangan) {
-                $organisasi->nama_organisasi = $request->input('nama_organisasi');
-                $organisasi->jabatan = $request->input('jabatan');
-                $organisasi->tahun_aktif = $request->input('tahun_aktif_org');
-                $cab->riwayatOrganisasi()->save($organisasi);
-                $i++;
+            if ($request->input('nama_organisasi')) {
+                foreach($request->input('nama_organisasi') as $key => $value) {
+                    $organisasi->nama_organisasi = $request->input('nama_organisasi')[$key];
+                    $organisasi->jabatan = $request->input('jabatan')[$key];
+                    $organisasi->tahun_aktif = $request->input('tahun_aktif_org')[$key];
+                    $cab->riwayatOrganisasi()->save($organisasi);
+                }
             }
         } catch (Exception $e) {
-            return back()->with('errors','Gagal mendaftar. Error Code: '.$e->getCode().'. Silakan hubungi tim kami pada Contact Us');
+            return back()->with('errors','Gagal mendaftar. Error Code: '.$e->getCode().'. Silakan hubungi tim kami pada <a href="/tentang-kami">Contact Us</a>');
         }
 
-        $next = new Nextprocess;
-        $next->nextStep($cab->id);
+        $year = Carbon::now()->format('Y');
+
+        $pendaftar = DB::table('cab')
+                    ->where(DB::raw("YEAR(created_at)",$year))
+                    ->count();
+
+        $waktu = Carbon::now()->format('YMd');
+        $id = $cab->id;
+
+        if ($pendaftar < 90) {
+            $kode_bayar = Uuid::generate()->string;
+
+            $insert = DB::table('kode_pembayaran_cab')
+                        ->insert([
+                            'id_cab' => $id,
+                            'kode_bayar' => $kode_bayar,
+                            'status' => 'not_paid'
+                        ]);
+                
+            $cab = DB::table('cab')->join('kode_pembayaran_cab','cab.id','=','kode_pembayaran_cab.id_cab')
+                        ->where('cab.id',$id)
+                        ->whereNull('cab.deleted_at')
+                        ->select('cab.*','kode_pembayaran_cab.*')
+                        ->first();
+
+            $data = [
+                'status' => 'Berhasil',
+                'identitas' => $cab,
+            ];
+
+            // $pdf = PDF::loadView('mail.success',$data);
+            // $pdf = $pdf->stream();
+            // Mail::to($cab->email)
+            //     ->send(new AfterRegister($data));
+
+        } elseif ($pendaftar >= 90 && $pendaftar < 110) {
+            $cab = DB::table('cab')
+                        ->where('id',$id)
+                        ->whereNull('deleted_at')
+                        ->first();
+            
+            $data = [
+                'status' => 'Waiting List',
+                'identitas' => $cab
+            ];
+
+            // Mail::to($cab->email)
+            //     ->send(new AfterRegister($data));
+        } else {
+            return back()->with('error', 'Maaf pendaftaran sudah penuh, silakan coba tahun depan');
+        }
+        return back()->with('success', 'Anda berhasil mendaftar, silakan cek email untuk info selanjutnya. Jika Anda belum mendapatkan email dalam 1x24 jam, silakan hubungi kami pada Contact Us');
+
     }
 }

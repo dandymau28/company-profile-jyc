@@ -12,8 +12,9 @@ class createCAB extends Controller
 {
     public function create()
     {
+        $totaldaftar = CAB::countCAB();
         return view('',[
-            'banyak_pendaftar' => CAB::countCAB(),
+            'banyak_pendaftar' => $totaldaftar,
         ]);
     }
 }
