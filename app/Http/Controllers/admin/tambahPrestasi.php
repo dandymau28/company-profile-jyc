@@ -26,8 +26,16 @@ class tambahPrestasi extends Controller
         //upload foto
         if($request->file('logo_kompetisi')){
             $uploadFoto = $request->file('logo_kompetisi');
-            $logo = $idFoto.'-logo-'.'.'.$uploadFoto->getClientOriginalExtension();
-            $pathLogo = $uploadFoto->storeAs('public/assets/img', $logo);
+            $logo = $idFoto.'-logo'.'.'.$uploadFoto->getClientOriginalExtension();
+            // $pathLogo = $uploadFoto->storeAs('public/assets/img', $logo);
+
+            $image = Image::make($request->file('logo_kompetisi'));
+            $image->fit(1200, 800, function ($constraint) {
+                $constraint->upsize();
+            });
+            $image->save('assets/img/prestasi/'.$logo, 100);
+            $pathLogo = '/assets/img/prestasi/'.$logo;
+
         } else {
             $pathLogo = 'public/assets/img/705-1585565895.jpg';
         }
@@ -35,14 +43,15 @@ class tambahPrestasi extends Controller
         //upload foto
         if($request->file('foto_tim')){
             $uploadFoto = $request->file('foto_tim');
-            $tim = $idFoto.'-tim-'.'.'.$uploadFoto->getClientOriginalExtension();
-            $pathTim = $uploadFoto->storeAs('public/assets/img', $tim);
+            $tim = $idFoto.'-tim'.'.'.$uploadFoto->getClientOriginalExtension();
+            // $pathTim = $uploadFoto->storeAs('public/assets/img', $tim);
 
             $image = Image::make($request->file('foto_tim'));
             $image->fit(1200, 800, function ($constraint) {
                 $constraint->upsize();
             });
-            $image->save('assets/img/'.$tim, 80);
+            $image->save('assets/img/prestasi/'.$tim, 100);
+            $pathTim = '/assets/img/prestasi/'.$tim;
         } else {
             $pathTim = 'public/assets/img/705-1585565895.jpg';
         }
@@ -50,8 +59,15 @@ class tambahPrestasi extends Controller
         //upload foto
         if($request->file('foto_piala')){
             $uploadFoto = $request->file('foto_piala');
-            $piala = $idFoto.'-piala-'.'.'.$uploadFoto->getClientOriginalExtension();
-            $pathPiala = $uploadFoto->storeAs('public/assets/img', $piala);
+            $piala = $idFoto.'-piala'.'.'.$uploadFoto->getClientOriginalExtension();
+            // $pathPiala = $uploadFoto->storeAs('public/assets/img', $piala);
+
+            $image = Image::make($request->file('foto_piala'));
+            $image->fit(1200, 800, function ($constraint) {
+                $constraint->upsize();
+            });
+            $image->save('assets/img/prestasi/'.$piala, 100);
+            $pathPiala = '/assets/img/prestasi/'.$piala;
         } else {
             $pathPiala = 'public/assets/img/705-1585565895.jpg';
         }

@@ -30,3 +30,6 @@ Route::get('/berita/tag/{term?}','api\apiController@searchTag');
 //API Get Data CAB
 Route::get('/cab/get', 'api\apiController@jsonCAB');
 Route::get('/cab/get/count', 'cab\cabController@countCAB');
+Route::get('/prestasi/all', 'api\apiController@getAllPrestasi');
+Route::get('/prestasi/{id}', 'api\apiController@getPrestasiByID');
+Route::get('/penghargaan/prestasi/{id_prestasi}', 'api\apiController@getPenghargaanByID');

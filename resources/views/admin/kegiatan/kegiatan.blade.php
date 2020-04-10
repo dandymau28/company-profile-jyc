@@ -27,7 +27,7 @@
             <div class="card card-outline card-info">
                 <div class="card-header">
                     <h3 class="card-title">
-                        Form Tambah Kegiatan
+                        <strong>Form Tambah Kegiatan</strong>
                     </h3>
                 </div>
                 <!-- /.card-header -->
@@ -43,13 +43,17 @@
                             @endphp
                         </div>
                         @endif
-                        <div class="mb-3">
-                            <input type="text" name="nama_kegiatan" id="" placeholder="Nama Kegiatan">
+                        <div class="form-group col-5">
+                            <label for="nama_kegiatan">Nama Kegiatan</label>
+                            <input type="text" name="nama_kegiatan" id="nama_kegiatan" class="form-control" placeholder="Nama Kegiatan" required>
                         </div>
-                        <div class="mb-3">
-                            <input type="text" name="jenis" id="" placeholder="Jenis Kegiatan">
+                        <div class="form-group col-5">
+                            <label for="jenis">Jenis Kegiatan</label>
+                            <input type="text" name="jenis" id="jenis" class="form-control" placeholder="Jenis Kegiatan" required>
                         </div>
-                        <button type="submit" name="action" value="post">Post</button>
+                        <div class="col-5 text-right">
+                            <button type="submit" name="action" value="post" class="btn btn-success">Simpan</button>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -58,7 +62,7 @@
             <div class="card card-outline card-info">
                 <div class="card-header">
                     <h3 class="card-title">
-                        Data Kegiatan
+                        <strong>Data Kegiatan</strong>
                     </h3>
                 </div>
                 <!-- /.card-header -->
