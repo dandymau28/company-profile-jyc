@@ -69,15 +69,20 @@
                     <form action="{{route('tambah-kategori')}}" method="post" enctype="multipart/form-data">
                         @csrf
                         @method('post')
-                        <div class="mb-3">
-                            <input type="text" name="nama_kategori" id="" placeholder="Kategori">
+                        <div class="form-group col-5">
+                            <label for="nama_kategori">Nama Kategori</label>
+                            <input type="text" name="nama_kategori" id="nama_kategori" class="form-control" placeholder="Konser Inagurasi CAB" required>
                         </div>
-                        <p class="text-sm mb-0">
-                            Editor <a href="https://github.com/bootstrap-wysiwyg/bootstrap3-wysiwyg">Documentation
-                                and license
-                                information.</a>
-                        </p>
-                        <button type="submit" name="action" value="post">Post</button>
+                        <div class="col-5">
+                            <button type="submit" name="action" value="post" class="btn btn-success">Tambahkan</button>
+                        </div>
+                        <div class="col text-right">
+                            <p class="text-sm mb-0">
+                                Editor <a href="https://github.com/bootstrap-wysiwyg/bootstrap3-wysiwyg">Documentation
+                                    and license
+                                    information.</a>
+                            </p>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -128,15 +133,20 @@
                             @endphp
                         </div>
                         @endif
-                        <div class="mb-3">
-                            <input type="text" name="nama_tag" id="" placeholder="Tag">
+                        <div class="form-group col-5">
+                            <label for="nama_tag">Tambahkan Tag</label>
+                            <input type="text" name="nama_tag" id="nama_tag" class="form-control" placeholder="lomba" required>
                         </div>
-                        <p class="text-sm mb-0">
-                            Editor <a href="https://github.com/bootstrap-wysiwyg/bootstrap3-wysiwyg">Documentation
-                                and license
-                                information.</a>
-                        </p>
-                        <button type="submit" name="action" value="post">Post</button>
+                        <div class="col-5">
+                            <button type="submit" name="action" value="post" class="btn btn-success">Tambahkan</button>
+                        </div>
+                        <div class="col text-right">
+                            <p class="text-sm mb-0">
+                                Editor <a href="https://github.com/bootstrap-wysiwyg/bootstrap3-wysiwyg">Documentation
+                                    and license
+                                    information.</a>
+                            </p>
+                        </div>
                     </form>
                 </div>
             </div>

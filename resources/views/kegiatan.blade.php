@@ -56,7 +56,7 @@
     <div class="latihan-rutin">
         <h3 class="text-center">PENERIMAAN ANGGOTA BARU</h3>
         <div class="container">
-            <h2 class="text-center pt-3">Rahasia Sukses Berprestasi : Latihan ala JYC</h2>
+            <h2 class="text-center pt-3"><a href="{{ route('oprec') }}">Penerimaan 2020</a></h2>
             <div class="row latihan-text">
                 <div class="col-sm-6 pt-4">Eksis di dunia paduan suara, JYC tentunya juga memerlukan sebuah regenerasi seiring
                     berjalannya waktu. Hal ini diperlukan untuk menjadikan JYC lebih besar dan lebih berkembang

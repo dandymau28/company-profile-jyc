@@ -106,4 +106,59 @@ class apiController extends Controller
 
         return response()->json(['code'=>200,'data' => $data]);
     }
+
+    public function getAllPrestasi () {
+        $prestasis = DB::table('prestasi')->where('deleted_at', null)->get();  
+
+        if(!empty($prestasis)) {
+            return response()->json([
+                "code" => 200,
+                "message" => "Data prestasi ditemukan!",
+                "result" => $prestasis
+            ]);
+        } else {
+            return response()->json([
+                "code" => 200,
+                "message" => "Belum ada data prestasi"
+            ]);
+        }
+    }
+
+    public function getPrestasiByID ($id) {
+        $prestasi = DB::table('prestasi')->where('deleted_at', null)->where('id', $id)->first();
+        $penghargaan = DB::table('penghargaan')->where('deleted_at', null)->where('prestasi_id', $id)->get();
+
+        if(!empty($prestasi)) {
+            return response()->json([
+                "code" => 200,
+                "message" => 'Data prestasi ditemukan!',
+                "result" => [
+                    "prestasi" => $prestasi,
+                    "penghargaan" => $penghargaan
+                ]
+            ]);
+        } else {
+            return response()->json([
+                "code" => 200,
+                "message" => "Data Prestasi tidak ditemukan!"
+            ]);
+        }
+    }
+
+    public function getPenghargaanByID ($id_prestasi) {
+        $penghargaan = DB::table('penghargaan')->where('deleted_at', null)->where('prestasi_id', $id_prestasi)->get();
+
+        if(!empty($penghargaan)) {
+            return response()->json([
+                "code" => 200,
+                "message" => "Data penghargaan ditemukan!",
+                "result" => $penghargaan,
+            ]);
+        } else {
+            return response()->json([
+                "code" => 200,
+                "message" => "Prestasi blm memiliki penghargaan!",
+            ]);
+        }
+    }
 }

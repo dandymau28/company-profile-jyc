@@ -53,7 +53,8 @@
                             </div>
                         </div>
                     </div>
-                    @elseif($total<'110') <form id="regForm" action="/pendaftaran" method="POST"
+                    @elseif($total<'110') 
+                    <form id="regForm" action="/pendaftaran" method="POST"
                         enctype="multipart/form-data">
                         @csrf
                         <div class="row text-dark bg-light p-3 p-sm-4 p-md-5 text-left tab">
@@ -79,13 +80,13 @@
                                         <label for="nama_lengkap">Nama Lengkap</label>
                                         <input id="nama_lengkap" name="nama_lengkap" type="text"
                                             oninput="this.className = 'form-control'" class="form-control"
-                                            placeholder="Nurul Anisa, S.Sn">
+                                            placeholder="Nurul Anisa, S.Sn" required>
                                     </div>
                                     <div class="col form-group">
                                         <label for="nama_panggilan">Nama Panggilan</label>
                                         <input id="nama_panggilan" name="nama_panggilan" type="text"
                                             oninput="this.className = 'form-control'" class="form-control"
-                                            placeholder="Nisa">
+                                            placeholder="Nisa" required>
                                     </div>
                                 </div>
                                 <div class="form-row">
@@ -93,13 +94,13 @@
                                         <label for="email">Email</label>
                                         <input id="email" name="email" type="email"
                                             oninput="this.className = 'form-control'" class="form-control"
-                                            placeholder="anisanurul69@hotmail.com">
+                                            placeholder="anisanurul69@hotmail.com" required>
                                     </div>
                                     <div class="col form-group">
                                         <label for="instagram">Instagram</label>
                                         <input id="instagram" name="instagram" type="text"
                                             oninput="this.className = 'form-control'" class="form-control"
-                                            placeholder="nisaaah69">
+                                            placeholder="nisaaah69" required>
                                     </div>
                                 </div>
                                 <div class="form-row">
@@ -107,12 +108,12 @@
                                         <label for="tempat_lahir">Tempat Lahir</label>
                                         <input id="tempat_lahir" name="tempat_lahir" type="text"
                                             oninput="this.className = 'form-control'" class="form-control"
-                                            placeholder="Jepara">
+                                            placeholder="Jepara" required>
                                     </div>
                                     <div class="col form-group">
                                         <label for="tanggal_lahir">Tanggal Lahir</label>
                                         <input id="tanggal_lahir" name="tanggal_lahir" type="date"
-                                            oninput="this.className = 'form-control'" class="form-control">
+                                            oninput="this.className = 'form-control'" class="form-control"vrequired>
                                     </div>
                                 </div>
                                 <div class="form-row">
@@ -120,25 +121,25 @@
                                         <label for="pekerjaan">Profesi / Pekerjaan</label>
                                         <input id="pekerjaan" name="pekerjaan" type="text"
                                             oninput="this.className = 'form-control'" class="form-control"
-                                            placeholder="Sekretaris">
+                                            placeholder="Sekretaris" required>
                                     </div>
                                     <div class="col form-group">
                                         <label for="institusi">Perusahaan / Institusi</label>
                                         <input id="institusi" name="institusi" type="text"
                                             oninput="this.className = 'form-control'" class="form-control"
-                                            placeholder="PT Mencari Cinta Sejati">
+                                            placeholder="PT Mencari Cinta Sejati" required>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="col form-group">
                                         <label for="agama">Agama</label>
                                         <input class="form-control" id="agama" name="agama" type="text"
-                                            oninput="this.className = 'form-control'" placeholder="Agama A">
+                                            oninput="this.className = 'form-control'" placeholder="Agama A" required>
                                     </div>
                                     <div class="col form-group">
                                         <label for="foto">Pas Foto</label>
                                         <input id="foto" name="foto" type="file"
-                                            oninput="this.className = 'form-control'" class="form-control">
+                                            oninput="this.className = 'form-control'" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -174,10 +175,10 @@
                                 <div class="form-row rowPadus">
                                     <div class="col form-group">
                                         <input name="nama_padus[]" type="text" oninput="this.className = 'form-control'"
-                                            class="form-control" placeholder="Nama Paduan Suara">
+                                            class="form-control" placeholder="Nama Paduan Suara" >
                                     </div>
                                     <div class="col-3 form-group">
-                                        <select name="ambitus[]" class="custom-select" required>
+                                        <select name="ambitus[]" class="custom-select">
                                             <option selected disabled value="">Pilih Ambitus</option>
                                             <option value="Sopran 1">Sopran 1</option>
                                             <option value="Sopran 2">Sopran 2</option>
@@ -286,7 +287,7 @@
                                             class="form-control" placeholder="Nama Alat Musik">
                                     </div>
                                     <div class="col form-group">
-                                        <select name="tingkat_kemampuan[]" class="custom-select" required>
+                                        <select name="tingkat_kemampuan[]" class="custom-select">
                                             <option selected disabled value="">Tingkat Penguasaan</option>
                                             <option value="Pemula">Pemula</option>
                                             <option value="Menengah - Cukup">Menengah - Cukup</option>
@@ -524,6 +525,7 @@
 
         if (n == (x.length - 1)) {
             $('#nextBtn').attr('type', 'submit');
+            $('#nextBtn').removeAttr('onclick');
             document.getElementById("nextBtn").innerHTML = "Submit";
         } else {
             document.getElementById("nextBtn").innerHTML = "Selanjutnya";
@@ -535,6 +537,9 @@
     function nextPrev(n) {
         // This function will figure out which tab to display
         var x = document.getElementsByClassName("tab");
+        if(n == -1) {
+            $('#nextBtn').attr("onclick", "nextPrev(1)")
+        }
         // Exit the function if any field in the current tab is invalid:
         if (n == 1 && !validateForm()) return false;
         // Hide the current tab:
@@ -544,7 +549,7 @@
         // if you have reached the end of the form...
         if (currentTab >= x.length) {
             // ... the form gets submitted:
-            document.getElementById("regForm").submit();
+            // document.getElementById("regForm").submit();
             return false;
         }
         // Otherwise, display the correct tab:

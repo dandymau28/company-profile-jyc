@@ -31,15 +31,15 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             {{-- <img src="{{asset('assets/img/prestasi/1.png')}}" class="d-block card-img-top" alt="..."> --}}
-                            <img src="{{Storage::url($prestasi->logo_kompetisi)}}" class=" img-fluid card-img-top" alt="...">
+                            <img src="{{url($prestasi->logo_kompetisi)}}" class=" img-fluid card-img-top" alt="...">
                         </div>
                         <div class="carousel-item">
                             {{-- <img src="{{asset('assets/img/prestasi/2.png')}}" class="d-block card-img-top" alt="..."> --}}
-                            <img src="{{Storage::url($prestasi->foto_tim)}}" class="d-block card-img-top" alt="...">
+                            <img src="{{url($prestasi->foto_tim)}}" class="d-block card-img-top" alt="...">
                         </div>
                         <div class="carousel-item">
                             {{-- <img src="{{asset('assets/img/prestasi/3.png')}}" class="d-block card-img-top" alt="..."> --}}
-                            <img src="{{Storage::url($prestasi->foto_piala)}}" class="d-block card-img-top" alt="...">
+                            <img src="{{url($prestasi->foto_piala)}}" class="d-block card-img-top" alt="...">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#carousel{{$prestasi->id}}" role="button" data-slide="prev">
