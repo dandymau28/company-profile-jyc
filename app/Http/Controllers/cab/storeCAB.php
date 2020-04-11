@@ -48,10 +48,10 @@ class storeCAB extends Controller
             $cab->save();
 
             //bermusik
-            $musik = $request->input('alat_musik');
-            $tingkatmusik = $request->input('tingkat_kemampuan');
-            $bermusik = new Bermusik;
-            if($musik) {
+            if($request->input('alat_musik')) {
+                $musik = $request->input('alat_musik');
+                $tingkatmusik = $request->input('tingkat_kemampuan');
+                $bermusik = new Bermusik;
                 foreach($musik as $key => $value) {
                     $bermusik->alat_musik = $musik[$key];
                     $bermusik->tingkat_kemampuan = $tingkatmusik[$key];
@@ -60,8 +60,8 @@ class storeCAB extends Controller
             }
 
             //paduan suara
-            $padus = new Padus;
             if ($request->input('nama_padus')){
+                $padus = new Padus;
                 foreach($request->input('nama_padus') as $key => $value) {
                     $padus->nama_padus = $request->input('nama_padus')[$key];
                     $padus->ambitus = $request->input('ambitus')[$key];
@@ -71,8 +71,8 @@ class storeCAB extends Controller
             }
 
             //prestasi kesenian
-            $kesenian = new Kesenian;
             if ($request->input('nama_kegiatan_seni')) {
+                $kesenian = new Kesenian;
                 foreach($request->input('nama_kegiatan_seni') as $key => $value) {
                     $kesenian->nama_kegiatan = $request->input('nama_kegiatan_seni')[$key];
                     $kesenian->tempat = $request->input('tempat_seni')[$key];
@@ -83,8 +83,8 @@ class storeCAB extends Controller
             }
 
             //prestasi non kesenian
-            $nonkesenian = new Nonkesenian;
             if ($request->input('nama_kegiatan_non')){
+                $nonkesenian = new Nonkesenian;
                 foreach($request->input('nama_kegiatan_non') as $key => $value) {
                     $nonkesenian->nama_kegiatan = $request->input('nama_kegiatan_non')[$key];
                     $nonkesenian->tempat = $request->input('tempat_non')[$key];
@@ -95,8 +95,8 @@ class storeCAB extends Controller
             }
 
             //riwayat organisasi
-            $organisasi = new Organisasi;
             if ($request->input('nama_organisasi')) {
+                $organisasi = new Organisasi;
                 foreach($request->input('nama_organisasi') as $key => $value) {
                     $organisasi->nama_organisasi = $request->input('nama_organisasi')[$key];
                     $organisasi->jabatan = $request->input('jabatan')[$key];
