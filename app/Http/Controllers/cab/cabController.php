@@ -21,11 +21,8 @@ class cabController extends Controller
 {
     public function countCAB()
     {
-        $year = Carbon::now()->format('Y');
-        // return $year;
-        // $data = DB::table('cab')->select(DB::raw('select COUNT(*) from cab where YEAR(created_at)=2020'))->get();
         $data = DB::table('cab')
-                ->whereRaw(DB::raw("YEAR(created_at)=$year"))
+                ->whereRaw(DB::raw("YEAR(created_at)=YEAR(CURRENT_DATE)"))
                 ->count();
 
         return $data;
