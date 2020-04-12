@@ -15,7 +15,7 @@
                 <img src="/assets/img/avatar.png" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">Alexander Pierce</a>
+                <a href="#" class="d-block">{{Auth::user()->username}}</a>
             </div>
         </div>
 
@@ -163,7 +163,7 @@
                     </ul>
                 </li>
                 <li class="nav-item level-1">
-                    <a href="#" class="nav-link">
+                    <a href="{{route('logout')}}" class="nav-link">
                         <i class="fas fa-sign-out-alt"></i>
                         <p class="text">Logout</p>
                     </a>

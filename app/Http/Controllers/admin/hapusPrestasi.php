@@ -12,6 +12,9 @@ class hapusPrestasi extends Controller
     {
         try {
             $prestasi = Prestasi::find($id);
+            if($prestasi->isEmpty()) {
+                return back()->with('errors','Prestasi tidak ditemukan');
+            }
             $prestasi->delete();
         } catch (Exception $e) {
             return back()->with('errors', $e->getMessage());

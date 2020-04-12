@@ -9,11 +9,15 @@ use Illuminate\Support\Facades\Validator;
 use App\Models\beritaModel as Berita;
 use \Carbon\Carbon;
 use DB;
+use App\Http\Controllers\loginSystem\statusAuth as Admin;
 
 class storeBerita extends Controller
 {
     public function store(Request $request)
     {
+        $admin = new Admin;
+        $admin = $admin->checkAuth()->id;
+
         switch ($request->input('action')) {
             case 'post':
                 $validatedData = Validator::make($request->all(),[
@@ -72,7 +76,7 @@ class storeBerita extends Controller
                         'slug' => $slug,
                         'banner' => $pathPhoto,
                         'isi_berita' => $request->isi_berita,
-                        'id_user' => 1,
+                        'id_user' => $admin,
                         'kategori' => $request->kategori,
                         'tgl_publish' => $tanggal,
                         'status' => 'terbit',
@@ -140,7 +144,7 @@ class storeBerita extends Controller
                         'banner' => $pathPhoto,
                         'isi_berita' => $request->isi_berita,
                         'status' => 'belum_terbit',
-                        'id_user' => 1,
+                        'id_user' => $admin,
                         'kategori' => $request->kategori,
                         'tgl_publish' => NULL,
                         'penting' => $penting,

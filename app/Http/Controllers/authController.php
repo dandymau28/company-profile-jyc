@@ -19,10 +19,18 @@ class authController extends Controller
         $credentials = $request->only('username', 'password');
         
         if (Auth::attempt($credentials)) {
-            return 'berhasil login';
-            // return redirect()->intended('admin');
+            return redirect()->intended('admin');
         } else {
             return 'gagal';
+        }
+    }
+
+    public function view()
+    {
+        if (!Auth::user()) {
+            return view('admin.auth.login');
+        } else {
+            return redirect()->route('admin');
         }
     }
 }

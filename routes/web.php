@@ -84,16 +84,21 @@ Route::get('/berlangganan/{unsubscribe?}','subscribe\subscribeController@destroy
 
 
 // Admin route
-Route::prefix('admin')->group(function () {
+Route::group([
+    'prefix' => 'admin'
+], function() {
+    Route::get('/login', 'authController@view')->name('login');
+    Route::post('/login', 'authController@login')->name('login-post');
+});
+
+Route::group([
+    'middleware' => 'auth',
+    'prefix' => 'admin'
+],function ($router) {
     Route::get('/', function () {
         return view('admin.dashboard', ["title" => "Admin"]);
     })->name('admin');
 
-    Route::get('/login', function () {
-        return view('admin.auth.login', ["title" => "Login"]);
-    })->name('login');
-
-    Route::post('/login', 'authController@login')->name('login-post');
 
     Route::get('/daftar', function () {
         return view('admin.daftar', ["title" => "Daftar"]);
@@ -102,6 +107,8 @@ Route::prefix('admin')->group(function () {
     Route::get('/lupa-sandi', function () {
         return view('admin.lupa-sandi', ["title" => "Lupa Sandi"]);
     })->name('lupa-sandi');
+
+    Route::get('/logout', 'loginSystem\logout@logout')->name('logout');
 
     //Anggota
     Route::get('/anggota', function () {

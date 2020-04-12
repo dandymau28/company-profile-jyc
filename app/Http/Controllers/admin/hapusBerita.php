@@ -11,6 +11,9 @@ class hapusBerita extends Controller
     public function hapusBerita($id)
     {
         $berita = Berita::find($id);
+        if($berita->isEmpty()) {
+            return back()->with('success', 'Berita tidak ditemukan');
+        }
         $berita->delete();
 
         return back()->with('success','Berita berhasil dihapus');

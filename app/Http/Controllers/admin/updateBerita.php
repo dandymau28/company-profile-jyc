@@ -7,11 +7,15 @@ use Illuminate\Http\Request;
 use \Carbon\Carbon;
 use Illuminate\Support\Str;
 use DB;
+use App\Http\Controllers\loginSystem\statusAuth as Admin;
 
 class updateBerita extends Controller
 {
     public function updateBerita(Request $request, $id)
     {
+                $admin = new Admin;
+                $admin = $admin->checkAuth()->id;
+
                 //slug judul
                 $slug = Str::slug($request->judul,'-');
 
@@ -56,7 +60,7 @@ class updateBerita extends Controller
                         'banner' => $pathPhoto,
                         'isi_berita' => $request->isi_berita,
                         'status' => $status,
-                        'id_user' => 1,
+                        'id_user' => $admin,
                         'kategori' => $request->kategori,
                         'penting' => $penting,
                         'tgl_publish' => $publish,
