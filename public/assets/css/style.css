@@ -288,12 +288,14 @@ body {
     transform: scale(1.3);
 }
 
+
+
 /* Carousel Mobile */
-@media (max-width: 767.98px) {
+/* @media (max-width: 767.98px) {
     .carousel {
-        margin-top: 60px !important;
+        margin-top: 10 !important;
     }
-}
+} */
 
 
 /* INTRO JYC */
@@ -308,33 +310,129 @@ body {
 
 .intro-text {
     padding: 20px;
+    font-size: 13pt;
 }
 
-@media (max-width: 575.98px) {
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .intro-text {
+        padding: 20px;
+        font-size: 13pt;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
     .intro-text {
         padding: 20px;
         font-size: 10pt;
     }
 }
 
-@media (max-width: 767.98px) {
+@media (min-width: 992px) and (max-width: 1199.98px) {
     .intro-text {
         padding: 20px;
         font-size: 12pt;
     }
 }
 
-@media (max-width: 991.98px) {
-    .intro-text {
-        padding: 20px;
-        font-size: 10pt;
+
+
+.intro-gambar {
+    /* background: url(../img/beranda/intro-jyc.jpg) no-repeat center center fixed; */
+    padding-right: 0px;
+    padding-left: 0px;
+
+    height: 300px;
+    /* Create the parallax scrolling effect */
+    background-image: url(../img/beranda/intro-jyc.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.intro-gambar h1 {
+    text-align: right;
+    padding-right: 30px;
+    letter-spacing: 20px;
+    font-size: 120pt;
+
+}
+
+.intro-gambar p {
+    text-align: right;
+    padding-right: 30px;
+    letter-spacing: 4px;
+    font-size: 21pt;
+    font-weight: bold;
+    padding-top: 10px;
+
+}
+
+/* Mobile */
+@media (max-width: 575.98px) {
+    .intro-gambar h1 {
+        padding-top: 40px;
+        text-align: center;
+        padding-left: 30px;
+        font-size: 100pt;
+    }
+
+    .intro-gambar p {
+        text-align: center;
+        padding-left: 30px;
+        font-size: 16pt;
     }
 }
 
-.intro-gambar {
-    padding-right: 0px;
-    padding-left: 0px;
+/* Mobile */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .intro-gambar{
+        width: none !important;
+        height: 420px;
+    }
+
+    .intro-gambar h1 {
+        padding-top: 40px;
+        text-align: center;
+        padding-left: 30px;
+    }
+
+    .intro-gambar p {
+        text-align: center;
+        padding-left: 30px;
+    }
+
 }
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991.98px){
+    .intro-gambar{
+        height: 480px;
+    }
+
+    .intro-gambar h1 {
+        padding-top: 40px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 992px) and (max-width: 1199.98px){
+    .intro-gambar {
+        height: 480px;
+    }
+    
+    .intro-gambar h1 {
+        padding-top: 50px;
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 1200px) {
+    .intro-gambar {
+        height: 400px;
+    }
+}
+
 
 /* Beranda Card Berita */
 .card-berita {
@@ -347,8 +445,6 @@ body {
         margin-bottom: 2rem !important;
     }
 }
-
-
 
 
 /* BERITA JYC */
@@ -635,7 +731,7 @@ li.breadcrumb-item {
 }
 
 
-/* JNCC */
+/* KEGIATAN - JNCC */
 .JNCC {
     background-color: rgba(0, 0, 0, 0.65);
 }
@@ -684,7 +780,10 @@ li.breadcrumb-item {
     font-weight: 700;
     color: #fffff6;
     letter-spacing: .7rem;
+}
 
+.JNCC a:hover{
+    text-decoration: none;
 }
 
 
@@ -693,7 +792,7 @@ li.breadcrumb-item {
     font-weight: bolder;
 }
 
-/* JNCC MOBILE */
+/* KEGIATAN - JNCC MOBILE */
 @media (max-width: 767.98px) {
     .JNCC h3 {
         font-size: 20px;
@@ -721,9 +820,467 @@ li.breadcrumb-item {
     }
 }
 
+/*** JNCC PAGE  ***/
+
+/* JNCC PAGE - BANNER JNCC */
+.banner-jncc {
+    background-image: url(../img/jncc/banner-jncc.png);
+    background-size: cover;
+    height: 1000px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner-jncc h1 {
+    color: #FFFFFF;
+    font-weight: lighter;
+    font-size: 130pt;
+    text-align: right;
+    margin-top: 250px; 
+}
+
+.banner-jncc p {
+    color: #FFFFFF;
+    font-weight: lighter;
+    font-size: 40pt;
+    text-align: left;
+    margin-top: 250px;
+    border-left: 5px solid #FFFFFF;
+    padding-left: 20px;
+}
+
+/* Extra Small Device */
+@media (max-width: 575.98px) {
+    .banner-jncc {
+        height: 400px;
+    }
+
+    .banner-jncc h1 {
+        font-size: 45pt;
+        margin-top: 80px;
+        padding-left: 40px; 
+    }
+
+    .banner-jncc p {
+        font-size: 12pt;
+        margin-top: 80px;
+        border-left: 3px solid #FFFFFF;
+        padding-left: 20px;
+    }
+}
+
+/* Small Device */
+@media (min-width: 576px) and (max-width: 767.98px){
+    .banner-jncc {
+        height: 600px;
+    }
+
+    .banner-jncc h1 {
+        font-size: 70pt;
+        margin-top: 150px; 
+        padding-left: 50px;
+    }
+
+    .banner-jncc p {
+        font-size: 20pt;
+        margin-top: 150px;
+        border-left: 5px solid #FFFFFF;
+        padding-left: 20px;
+    }
+}
+
+/* Medium Device */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .banner-jncc {
+        height: 800px;
+    }
+
+    .banner-jncc h1 {
+        padding-left: 50px;
+        font-size: 100pt;
+        text-align: center;
+        margin-top: 200px; 
+    }
+
+    .banner-jncc p {
+        font-size: 25pt;
+        text-align: left;
+        margin-top: 200px;
+        border-left: 5px solid #FFFFFF;
+        padding-left: 20px;
+    }
+}
+
+/* Large Device */
+@media(min-width: 992px) and (max-width: 1199.98px) {
+    .banner-jncc {
+        height: 800px;
+    }
+
+    .banner-jncc h1 {
+        font-size: 100pt;
+        text-align: center;
+        margin-top: 200px;
+        padding-left: 160px; 
+    }
+
+    .banner-jncc p {
+        font-size: 30pt;
+        text-align: left;
+        margin-top: 200px;
+        border-left: 5px solid #FFFFFF;
+        padding-left: 20px;
+    }
+}
+
+
+/* JNCC PAGE- TEXT JNCC */
+.jncc-text {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    height: 400px;
+    font-size: 14pt;
+}
+
+/* Extra Small Device */
+@media (max-width: 575.98px) {
+    .jncc-text{
+        margin: 10px;
+        margin-bottom: 300px;
+        font-size: 12pt;
+    }
+}
+
+/* Small Device */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .jncc-text{
+        margin-bottom: 400px;
+    }
+}
+
+/* Medium Device */
+@media (min-width: 768px) and (max-width: 991.98px){
+    .jncc-text{
+        margin-bottom: 200px;
+    }
+}
+
+
+/* JNCC PAGE- WAKTU JNCC */
+.waktu-jncc {
+    margin-top: 50px;
+}
+
+.waktu-jncc h3{
+    color: #707070;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1.5px solid #C12821;
+    width: 600px;
+    margin-bottom: 50px;
+}
+
+.waktu-1{
+    background-image: url(../img/jncc/waktu-1.png);
+    background-size: cover;
+    height: 400px;
+}
+
+.waktu-1 p {
+    color: #FFFFFF;
+    font-size: 30pt;
+    margin-top: 160px;
+}
+
+.waktu-2{
+    background-image: url(../img/jncc/waktu-2.png);
+    background-size: cover;
+    height: 400px;
+    border-left: 5px #FFFFFF solid;
+    border-right: 5px #FFFFFF solid;
+}
+
+.waktu-2 p {
+    color: #FFFFFF;
+    font-size: 17pt;
+    margin-top: 120px;
+}
+
+.waktu-3{
+    background-image: url(../img/jncc/waktu-3.png);
+    background-size: cover;
+    height: 400px;
+}
+
+.waktu-3 p {
+    color: #FFFFFF;
+    font-size: 30pt;
+    margin-top: 160px;
+}
+
+/* Extra Small Device */
+@media (max-width: 575.98px){
+    .waktu-jncc h3{
+        width: max-content;
+        font-size: 16pt;
+        padding-top: 130px;
+    }
+
+    .waktu-1 p{
+        font-size: 30pt;
+    }
+
+    .waktu-2 {
+        border-right: none;
+        border-left: none;
+    }
+
+    .waktu-3 p{
+        font-size: 30pt;
+    }
+}
+
+/* Small Device */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .waktu-jncc h3{
+        width: max-content;
+        font-size: 18pt;
+    }
+
+    .waktu-1 p{
+        font-size: 30pt;
+    }
+
+    .waktu-2 p{
+        font-size: 20pt;
+    }
+
+    .waktu-2 {
+        border-right: none;
+        border-left: none;
+    }
+
+    .waktu-3 p{
+        font-size: 30pt;
+    }
+}
+
+/* Medium Device */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .waktu-jncc h3{
+        width: max-content;
+        font-size: 22pt;
+    }
+    
+    .waktu-1 p {
+        font-size: 16pt;
+        margin-top: 180px;
+    }
+
+    .waktu-2 p {
+        font-size: 12pt;
+    }
+
+    .waktu-3 p {
+        font-size: 16pt;
+        margin-top: 180px;
+    }
+}
+
+/* Large Device */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .waktu-1 p {
+        margin-top: 180px;
+        font-size: 20pt;
+    }
+
+    .waktu-2 p {
+        font-size: 12pt;
+    }
+
+    .waktu-3 p {
+        margin-top: 180px;
+        font-size: 20pt;
+    }
+}
+
+
+/* JNCC PAGE - Hasil Kegiatan */
+.hasil-kegiatan {
+    margin-bottom: 100px;
+}
+
+.hasil-kegiatan-1 {
+    background-color: #707070;
+    background-size: cover;
+}
+
+.hasil-kegiatan-1 p {
+    font-size: 40pt;
+    color: #FFFFFF;
+    margin: 50px;
+    text-align: center;
+    padding-top: 15%;
+    padding-bottom: 15%;
+}
+
+.hasil-kegiatan-2 {
+    background-color: #C62828;
+    background-size: cover;
+    border-left: 5px #FFFFFF solid;
+}
+
+.hasil-kegiatan-2 p {
+    font-size: 14pt;
+    color: #FFFFFF;
+    margin: 35px;
+}
+
+/* Extra Small Device */
+@media (max-width: 575.98px) {
+    .hasil-kegiatan-1 p {
+        font-size: 25pt;
+        margin: 30px;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+
+    .hasil-kegiatan-2 {
+        border-left: none;
+    }
+
+    .hasil-kegiatan-2 p {
+        font-size: 12pt;
+        color: #FFFFFF;
+        margin: 20px;
+        text-align: justify;
+    }
+}
+
+/* Small Device */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .hasil-kegiatan-1 p {
+        font-size: 35pt;
+        margin: 30px;
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+
+    .hasil-kegiatan-2 {
+        border-left: none;
+    }
+
+    .hasil-kegiatan-2 p {
+        font-size: 12pt;
+        color: #FFFFFF;
+        margin: 20px;
+        text-align: justify;
+    }
+}
+
+
+/* Medium Device */
+@media (min-width: 768px) and (max-width: 991.98px){
+    .hasil-kegiatan-1 p {
+        font-size: 35pt;
+        margin: 20px;
+        padding-top: 50%;
+        padding-bottom: 50%;
+    }
+
+    .hasil-kegiatan-2 p {
+        font-size: 12pt;
+        margin: 20px;
+        text-align: justify;
+    }
+}
+
+/* Large Device */
+@media (min-width: 992px) and (max-width: 1199.98px){
+    .hasil-kegiatan-1 p {
+        font-size: 35pt;
+        margin: 20px;
+        padding-top: 50%;
+        padding-bottom: 50%;
+    }
+}
+
+
+/* JNCC PAGE - Daftar Peserta */
+.daftar-peserta {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.daftar-peserta h3{
+    color: #707070;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1.5px solid #C12821;
+    width: 250px;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 767.98px) {
+    .daftar-peserta h3 {
+        font-size: 16pt;
+        width: max-content;
+    }
+}
+
+/* JNCC PAGE - Daftar Pemenang */
+.daftar-pemenang h3{
+    color: #707070;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1.5px solid #C12821;
+    width: 350px;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 767.98px) {
+    .daftar-pemenang h3 {
+        font-size: 16pt;
+        width: max-content;
+    }
+}
+
+.daftar-pemenang h4{
+    font-weight: lighter;
+    color: #707070;
+}
+
+.daftar-pemenang p {
+    font-weight: bolder;
+    font-size: 20px;
+    color: #707070;
+}
+
+.tim-pemenang {
+    background-color: #C12821;
+    background-size: cover;
+    margin-top: -30px;
+}
+
+.tim-pemenang h4{
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+
 
 /* PRESTASI PAGE */
-
 #konten-prestasi.w-80 {
     width: 90%;
     margin: auto;

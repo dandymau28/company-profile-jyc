@@ -19,8 +19,8 @@
                 <div class="carousel-item active">
                     <img src="{{asset('assets/img/beranda/slide-1.png')}}" class="d-block w-100" alt="img">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <!-- <h5>First slide label</h5>
+                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> -->
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -47,11 +47,13 @@
     <!-- Pengenalan JYC -->
     <div class="container-fluid intro-jyc">
         <div class="row align-items-center">
-            <div class="col-md-6 intro-gambar">
-                <img src="{{asset('assets/img/beranda/intro-jyc.png')}}" alt="img" class="img-fluid">
+            <div class="col-md-6 intro-gambar text-center">
+                <h1>JYC</h1>
+                <p>Jakarta Youth Choir</p>
             </div>
             <div class="col-md-6 intro-text">
-                <p><b>Jakarta Youth Choir</b> adalah paduan suara dari DKI Jakarta dibawah binaan Dinas Pemuda dan Olahraga. JYC telah mengukir banyak pertasi  terkemuka di tingkat Nasional ataupun Internasional. <b>Jakarta Youth Choir</b> juga menghadirkan berbagai Choirmaster dari berbagai latar belakang Paduan Suara di Indonesia yang terkenal dan berpengalaman sebagai pelatih tamu untuk memaksimalkan pengembangan kemampuan para Choristernya. Yuk pantau terus proses latihan kami untuk mengharumkan nama Jakarta dan Indonesia dengan follow akun resmi instagram <b>@JktYouthChoir</b> dan media sosial lainnya.</p>
+                <p><b>Jakarta Youth Choir</b> adalah paduan suara dari DKI Jakarta dibawah binaan Dinas Pemuda dan Olahraga. JYC telah mengukir banyak pertasi  terkemuka di tingkat Nasional ataupun Internasional. <b>Jakarta Youth Choir</b> juga menghadirkan berbagai Choirmaster dari berbagai latar belakang Paduan Suara di Indonesia yang terkenal dan berpengalaman sebagai pelatih tamu untuk memaksimalkan pengembangan kemampuan para Choristernya.<br><br>
+                Yuk pantau terus proses latihan kami untuk mengharumkan nama Jakarta dan Indonesia dengan follow akun resmi instagram <b>@JktYouthChoir</b> dan media sosial lainnya.</p>
             </div>
         </div>
     </div>

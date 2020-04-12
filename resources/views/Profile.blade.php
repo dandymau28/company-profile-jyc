@@ -9,32 +9,7 @@
 <body>
     <!-- Navbar -->
     @include('templates.navbar')
-
-    <!-- Carousel -->
-    <!-- <div class="carousel">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="{{asset('assets/img/beranda/slide-1.png')}}" class="d-block w-100" alt="img">
-                </div>
-                <div class="carousel-item">
-                    <img src="{{asset('assets/img/beranda/slide-2.png')}}" class="d-block w-100" alt="img">
-                </div>
-                <div class="carousel-item">
-                    <img src="{{asset('assets/img/beranda/slide-3.png')}}" class="d-block w-100" alt="img">
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </div> -->
-
+    
     <!-- Banner Section -->
     <div id="banner-profile">
         <div class="container text-profile">
@@ -45,7 +20,7 @@
 
     <!-- Profile -->
     <div class="berita container-fluid bg-light py-5">
-        <h3 class="mb-5">Founders</h3>
+        <h3 class="mb-5">FOUNDERS</h3>
         <div class="row-founder container-fluid">
             <div class="col-lg-5 card mx-md-auto mb-4 bg-transparent border-0">
                 <div class="row justify-content-center" >
@@ -120,7 +95,7 @@
     </div>
 
     <div class="berita container-fluid bg-light py-5">
-        <h3 class="mb-5">Visi</h3>
+        <h3 class="mb-5">VISI</h3>
         <div class="row container-fluid">
             <div class="col-lg-6 mx-auto text-center">
                 <h5>Jakarta Youth Choir bernyanyi untuk membanggakan dan membawa nama harum Kota Jakarta dan Negara Indonesia</h4>
@@ -129,7 +104,7 @@
     </div>
 
     <div class="berita container-fluid bg-light py-5">
-        <h3 class="mb-5">Misi</h3>
+        <h3 class="mb-5">MISI</h3>
         <div class="row container-fluid">
             <div class="col-lg-6 mx-auto text-center">
                 <ol>
@@ -143,7 +118,7 @@
     </div>
 
     <div class="berita container-fluid bg-light py-5">
-        <h3 class="mb-5">Struktur Organisasi</h3>
+        <h3 class="mb-5">STRUKTUR ORAGANISASI</h3>
         <div class="row container-fluid">
             <div class="col-lg-8 mx-auto text-center">
                 <img src="{{asset('assets/img/profile/organisasi.png')}}" class="img-fluid w-100" alt="Struktur">

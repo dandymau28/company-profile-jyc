@@ -15,6 +15,11 @@
 //     return view('beranda', ["title" => "Beranda"]);
 // })->name('beranda');
 
+// JNCC Page
+Route::get('/jncc', function () {
+    return view('jncc', ["title" => "jncc", "nav" => "jncc"]);
+})->name('jncc');
+
 // Comingsoon Page
 Route::get('/coming-soon', function () {
     return view('comingsoon.index');
