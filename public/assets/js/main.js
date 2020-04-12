@@ -1,1 +1,3 @@
+// Main Javascript
+
 $('.carousel').carousel()
