@@ -118,7 +118,7 @@
     </div>
 
     <div class="berita container-fluid bg-light py-5">
-        <h3 class="mb-5">STRUKTUR ORAGANISASI</h3>
+        <h3 class="mb-5">STRUKTUR ORGANISASI</h3>
         <div class="row container-fluid" data-aos="fade-up" data-aos-duration="1500">
             <div class="col-lg-8 mx-auto text-center">
                 <img src="{{asset('assets/img/profile/organisasi.png')}}" class="img-fluid w-100" alt="Struktur">

@@ -161,4 +161,28 @@ class apiController extends Controller
             ]);
         }
     }
+    
+    public function getAllVideos () {
+        try{
+            $videos = DB::select(DB::raw("SELECT `video`.`id`, `video`.`alamat`, `users`.`username` FROM `video`, `users` WHERE `users`.`id` = video.id_user"));
+            // $videos = DB::table('video')->latest()->get();
+            if(!empty($videos)) {
+                return response()->json([
+                    "code" => 200,
+                    "message" => "Data Video ditemukan!",
+                    "result" => $videos
+                ]);
+            } else {
+                return response()->json([
+                    "code" => 404,
+                    "message" => "Prestasi blm memiliki penghargaan!",
+                ]);
+            }
+        } catch (Exception $e) {
+            return response()->json([
+                "code" => $e->getCode(),
+                "message" => $e->getMessage(),
+            ]);
+        }
+    }
 }

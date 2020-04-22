@@ -183,10 +183,8 @@
     const currentLink = [...allLinks].filter(e => {
         return e.href == url;
     });
-    console.log(currentLink[0]);
     if (currentLink[0].parentElement.classList.contains('level-2')) {
         currentLink[0].parentElement.parentElement.parentElement.classList.add('menu-open');
-        console.log(currentLink[0].parentElement);
         currentLink[0].classList.add('active')
     } else {
         currentLink[0].classList.add('active')
