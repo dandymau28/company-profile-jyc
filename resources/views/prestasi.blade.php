@@ -18,7 +18,7 @@
 
     <!--Prestasi -->
     <div id="konten-prestasi" class="prestasi bg-light py-5 w-80">
-        <h3 class="mb-5">Prestasi</h3>
+        <h3 class="mb-5">PRESTASI</h3>
         @foreach ($prestasis as $prestasi)
         <div data-aos="zoom-in" class="row justify-content-center my-5">
             <div class="col-sm-12 col-md-4">

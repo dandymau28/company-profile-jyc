@@ -41,6 +41,7 @@ body {
     color: #C12821 !important;
 }
 
+
 @media (min-width: 1200px) {
     .navbar-brand img {
         width: 4rem;
@@ -58,8 +59,8 @@ body {
     background-color: #C12821;
 }
 
-.navbar-toggler-icon {
-    color: #707070 !important;
+span.navbar-toggler-icon {
+    color: #FFFFFF !important;
 }
 
 .nav-link.active,
@@ -101,11 +102,13 @@ body {
     .nav-link {
         margin-right: 2rem;
         color: #FFFFFF !important;
+        margin-top: 5px;
     }
 
     .navbar-toggler {
         background-color: #FFFFFF !important;
-        width: 55px;
+        width: 40px;
+        padding: 3px;
     }
 
     .nav-link.active,
@@ -676,7 +679,7 @@ li.breadcrumb-item {
 #banner-kegiatan {
     background: url(../img/kegiatan/banner-kegiatan.png)no-repeat center center fixed;
     display: table;
-    height: 40vh;
+    min-height: 350px;
     position: relative;
     width: 100%;
     background-size: cover;
@@ -1028,7 +1031,7 @@ li.breadcrumb-item {
 @media (max-width: 575.98px){
     .waktu-jncc h3{
         width: max-content;
-        font-size: 16pt;
+        font-size: 20pt;
         padding-top: 130px;
     }
 
@@ -1050,7 +1053,7 @@ li.breadcrumb-item {
 @media (min-width: 576px) and (max-width: 767.98px) {
     .waktu-jncc h3{
         width: max-content;
-        font-size: 18pt;
+        font-size: 20pt;
     }
 
     .waktu-1 p{
@@ -1231,7 +1234,7 @@ li.breadcrumb-item {
 
 @media (max-width: 767.98px) {
     .daftar-peserta h3 {
-        font-size: 16pt;
+        font-size: 20pt;
         width: max-content;
     }
 }
@@ -1250,7 +1253,7 @@ li.breadcrumb-item {
 
 @media (max-width: 767.98px) {
     .daftar-pemenang h3 {
-        font-size: 16pt;
+        font-size: 20pt;
         width: max-content;
     }
 }
@@ -1551,6 +1554,12 @@ a.nav-link.active:hover {
     height: 40px;
     border-radius: 25px;
 }
+
+.form-question button:hover {
+    background-color: rgb(155, 134, 129);
+    color: #FFFFFF;
+}
+
 
 @media (max-width: 576px) {
     .form-question {

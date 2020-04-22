@@ -11,6 +11,9 @@
 <!-- Font Awsome 5 -->
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 <!-- My Style -->
 <link rel="stylesheet" href="{{ asset('assets') }}/css/style.css">
 <link rel="icon" type="image/png" href="{{ asset('assets') }}/img/circle-cropped.png" />

@@ -51,7 +51,7 @@
                 <h1>JYC</h1>
                 <p>Jakarta Youth Choir</p>
             </div>
-            <div class="col-md-6 intro-text">
+            <div class="col-md-6 intro-text" data-aos="fade-left" data-aos-duration="1500">
                 <p><b>Jakarta Youth Choir</b> adalah paduan suara dari DKI Jakarta dibawah binaan Dinas Pemuda dan Olahraga. JYC telah mengukir banyak pertasi  terkemuka di tingkat Nasional ataupun Internasional. <b>Jakarta Youth Choir</b> juga menghadirkan berbagai Choirmaster dari berbagai latar belakang Paduan Suara di Indonesia yang terkenal dan berpengalaman sebagai pelatih tamu untuk memaksimalkan pengembangan kemampuan para Choristernya.<br><br>
                 Yuk pantau terus proses latihan kami untuk mengharumkan nama Jakarta dan Indonesia dengan follow akun resmi instagram <b>@JktYouthChoir</b> dan media sosial lainnya.</p>
             </div>
@@ -65,7 +65,7 @@
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 mt-5">
             @foreach ($beritas as $berita)
             <div class="col mb-4 ">
-              <div class="card h-100">
+              <div class="card h-100" data-aos="flip-left" data-aos-duration="1500">
                 <div class="img-hover-zoom img-hover-zoom--brightness ">
                     <a class="h-50" href="/berita/{{ $berita->slug }}">
                         <img src="{{Storage::url($berita->banner)}}" class="card-img-top img-fluid" alt="...">
