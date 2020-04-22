@@ -12,11 +12,11 @@ class prestasiController extends Controller
     {
         try {
             $prestasi = DB::table('prestasi')
-                ->oldest()
+                ->latest()
                 ->get();
 
             $gelar = DB::table('penghargaan')
-                ->oldest()
+                ->latest()
                 ->get();
         } catch (Exception $e) {
             $prestasi = $e->getMessage();

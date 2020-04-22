@@ -33,8 +33,8 @@
             <div class="footer-title pb-1">Tautan Penting</div>
             <ul class="list-unstyled">
                 <li><a class="text-white" href="{{route('jncc')}}">Jakarta National Choir Competition</a></li>
-                <li><a class="text-white" href="{{route('berita')}}/kategori/Kompetisi%20Internasional">Kompetisi International</a></li>
-                <li><a class="text-white" href="{{route('berita')}}/kategori/Kompetisi%20Nasional">Kompetisi Nasional</a></li>
+                <li><a class="text-white" href="{{route('berita')}}/kategori/Kompetisi">Kompetisi</a></li>
+                <li><a class="text-white" href="{{route('berita')}}/kategori/Konser">Konser</a></li>
                 <li><a class="text-white" href="{{route('oprec')}}">Penerimaan Anggota Baru</a></li>
             </ul>
         </div>
@@ -62,7 +62,7 @@
             <a class="shadow-lg" href="mailto:jakartayouthchoir@gmail.com"><img class="social-links ml-2" src="{{asset('/assets/img/email-2.png')}}" alt="Twitter"></a>
         </div>
         <div class="col-12 col-lg-6 text-right footer-title ">
-            &copy 2016 - {{ now()->year }}. Jakarta Youth Choir
+            &copy Est. Since 2015. Jakarta Youth Choir
         </div>
       </div>
     {{-- <div id="footer" class="w-80">

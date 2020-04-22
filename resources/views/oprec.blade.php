@@ -313,6 +313,17 @@
                                             placeholder="MC, Guiding, ...">
                                     </div>
                                 </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                    <label class="custom-control-label text-justify" for="customCheck1">
+                                        Dengan ini menyatakan bahwa data yang saya isikan adalah benar dan tidak ada yang di rekayasa. Apabila di kemudian hari ditemukan ketidaksesuaian, saya siap menerima sanksi sesuai hukum yang berlaku.
+                                    </label>
+                                </div>
+                                {{-- <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                    </label>
+                                </div> --}}
                             </div>
                         </div>
                         <div id="tatakan_tombol" class="row text-dark bg-light pr-3 pr-sm-4 pr-md-5">
@@ -353,6 +364,7 @@
         </div>
     </div>
 
+
 </body>
 @include('templates.foot')
 @include('templates.footer')
@@ -361,6 +373,7 @@
 <script src="{{ asset('assets/js/modernizr.js') }}"></script>
 <script src="{{ asset('assets/js/jquery.carousel-3d.js') }}"></script>
 <script>
+    
     $(function () {
         $('#pilih-kegiatan').on('change', function () {
             let id_kegiatan = $(this).val();
@@ -512,6 +525,20 @@
     var currentTab = 0; // Current tab is set to be the first tab (0)
     showTab(currentTab); // Display the current tab
 
+    $('#customCheck1').change(function () {
+        if($(this).checked == true) {
+            document.getElementById("nextBtn").innerHTML = "Submit";
+            $('#nextBtn').removeAttr('disabled');
+            // $('#nextBtn').attr('disabled', 'false');
+            $('#nextBtn').attr('type', 'submit');
+            $('#nextBtn').removeAttr('onclick');
+        } else {
+            document.getElementById("nextBtn").innerHTML = "Submit";
+            $('#nextBtn').removeAttr('onclick');
+            $('#nextBtn').attr('disabled', 'true');
+        }
+    });
+
     function showTab(n) {
         // This function will display the specified tab of the form...
         var x = document.getElementsByClassName("tab");
@@ -524,11 +551,18 @@
         }
 
         if (n == (x.length - 1)) {
-            $('#nextBtn').attr('type', 'submit');
-            $('#nextBtn').removeAttr('onclick');
-            document.getElementById("nextBtn").innerHTML = "Submit";
+            if($('#customCheck1').checked == true) {
+                $('#nextBtn').attr('type', 'submit');
+                $('#nextBtn').removeAttr('onclick');
+                document.getElementById("nextBtn").innerHTML = "Submit";
+            } else {
+                $('#nextBtn').removeAttr('onclick');
+                document.getElementById("nextBtn").innerHTML = "Submit";
+                // $('#nextBtn').attr('disabled', 'true');
+            }
         } else {
             document.getElementById("nextBtn").innerHTML = "Selanjutnya";
+            $('#nextBtn').attr('onclick', "nextPrev(1)");
         }
         //... and run a function that will display the correct step indicator:
         fixStepIndicator(n)
