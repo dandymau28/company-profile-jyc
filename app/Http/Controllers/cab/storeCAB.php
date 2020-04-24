@@ -16,7 +16,8 @@ use DB;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\AfterRegister;
 use PDF;
-use Faker\Provider\Uuid;
+use Webpatser\Uuid\Uuid;
+
 
 class storeCAB extends Controller
 {
@@ -48,7 +49,10 @@ class storeCAB extends Controller
             $cab->save();
 
             //bermusik
-            if($request->input('alat_musik')) {
+            if(is_null($request->input('alat_musik'))) {
+                return response()->json([
+                    "data" => $request->input('alat_muasik')
+                ]);
                 $musik = $request->input('alat_musik');
                 $tingkatmusik = $request->input('tingkat_kemampuan');
                 $bermusik = new Bermusik;
@@ -60,7 +64,7 @@ class storeCAB extends Controller
             }
 
             //paduan suara
-            if ($request->input('nama_padus')){
+            if (!is_null($request->filled('nama_padus'))){
                 $padus = new Padus;
                 foreach($request->input('nama_padus') as $key => $value) {
                     $padus->nama_padus = $request->input('nama_padus')[$key];
@@ -71,7 +75,7 @@ class storeCAB extends Controller
             }
 
             //prestasi kesenian
-            if ($request->input('nama_kegiatan_seni')) {
+            if (is_null($request->filled('nama_kegiatan_seni'))) {
                 $kesenian = new Kesenian;
                 foreach($request->input('nama_kegiatan_seni') as $key => $value) {
                     $kesenian->nama_kegiatan = $request->input('nama_kegiatan_seni')[$key];
@@ -83,7 +87,7 @@ class storeCAB extends Controller
             }
 
             //prestasi non kesenian
-            if ($request->input('nama_kegiatan_non')){
+            if (is_null($request->filled('nama_kegiatan_non'))){
                 $nonkesenian = new Nonkesenian;
                 foreach($request->input('nama_kegiatan_non') as $key => $value) {
                     $nonkesenian->nama_kegiatan = $request->input('nama_kegiatan_non')[$key];
@@ -95,7 +99,7 @@ class storeCAB extends Controller
             }
 
             //riwayat organisasi
-            if ($request->input('nama_organisasi')) {
+            if (is_null($request->filled('nama_organisasi'))) {
                 $organisasi = new Organisasi;
                 foreach($request->input('nama_organisasi') as $key => $value) {
                     $organisasi->nama_organisasi = $request->input('nama_organisasi')[$key];
@@ -111,14 +115,14 @@ class storeCAB extends Controller
         // $year = Carbon::now()->format('Y');
 
         $pendaftar = DB::table('cab')
-                    ->whereRaw(DB::raw("YEAR(created_at)=YEAR(CURRENT_DATE"))
-                    ->count();
+            // ->whereRaw(DB::raw("YEAR(created_at)=YEAR(CURRENT_DATE"))
+            ->count();
 
         $waktu = Carbon::now()->format('YMd');
         $id = $cab->id;
 
         if ($pendaftar < 90) {
-            $kode_bayar = Uuid::generate()->string;
+            $kode_bayar = Uuid::generate(4);
 
             $insert = DB::table('kode_pembayaran_cab')
                         ->insert([

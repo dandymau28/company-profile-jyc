@@ -8,19 +8,20 @@ use DB;
 
 class terimaBuktiBayar extends Controller
 {
-    public function terimaBuktiBayar($kode_bayar)
+    public function terimaBuktiBayar(Request $request)
     {
+        $kode_bayar = $request->input('kode_bayar');
         $data = DB::table('cab')
                 ->join('kode_pembayaran_cab','cab.id','=','kode_pembayaran_cab.id_cab')
                 ->where('kode_pembayaran_cab.kode_bayar',$kode_bayar)
                 ->select('cab.*','kode_pembayaran_cab.*')
                 ->first();
                 
-        if ($data->isEmpty()) {
+        if (empty($data)) {
             return back()->with('error','Data tidak ditemukan. Silakan hubungi tim kami pada Contact Us');
         } 
 
-        $person = $data->nama;
+        $person = $data->nama_panggilan;
 
         //upload foto
         $uploadFoto = $request->file('image');
@@ -38,6 +39,6 @@ class terimaBuktiBayar extends Controller
             return back()->with('error','Terjadi kesalahan Error Code: '.$e->getCode().'. Silakan hubungi tim kami pada Contact Us');
         }
 
-        return back()->with('success','Berhasil upload bukti');
+        return back()->with('success','Berhasil upload bukti pembayaran');
     }
 }

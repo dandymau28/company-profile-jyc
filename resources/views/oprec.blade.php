@@ -64,6 +64,7 @@
                             <div class="col-12">
                                 <ol class="pl-2 pl-sm-3 pl-md-4 text-justify">
                                     <li>Mengisi formulir pendaftaran calon anggota baru dengan benar</li>
+                                    <li>Kolom yang memiliki tanda <span class="text-danger"><strong>*</strong></span> wajib di isi</li>
                                     <li>Kamu akan mendapatkan email konfirmasi pendaftaran</li>
                                     <li>Transfer Rp. 25.000,- ke no. rekening yang tertera pada email</li>
                                     <li>Upload bukti pembayaran melalui link yang tersedia di email, lalu pilih jadwal
@@ -77,91 +78,105 @@
                             <div class="col-12">
                                 <div class="form-row">
                                     <div class="col form-group">
-                                        <label for="nama_lengkap">Nama Lengkap</label>
+                                        <label for="nama_lengkap">Nama Lengkap <span class="text-danger"><strong>*</strong></span></label>
                                         <input id="nama_lengkap" name="nama_lengkap" type="text"
-                                            oninput="this.className = 'form-control'" class="form-control"
+                                         class="form-control"
                                             placeholder="Nurul Anisa, S.Sn" required>
                                     </div>
                                     <div class="col form-group">
-                                        <label for="nama_panggilan">Nama Panggilan</label>
+                                        <label for="nama_panggilan">Nama Panggilan <span class="text-danger"><strong>*</strong></span></label>
                                         <input id="nama_panggilan" name="nama_panggilan" type="text"
-                                            oninput="this.className = 'form-control'" class="form-control"
+                                         class="form-control"
                                             placeholder="Nisa" required>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="col form-group">
-                                        <label for="email">Email</label>
+                                        <label for="nik">NIK <span class="text-danger"><strong>*</strong></span></label>
+                                        <input id="nik" name="nik" type="text"
+                                         class="form-control"
+                                            placeholder="3271046504930002" required>
+                                    </div>
+                                    <div class="col form-group">
+                                        <label for="no_passport">No. Passport</label>
+                                        <input id="no_passport" name="no_passport" type="text"
+                                         class="form-control"
+                                            placeholder="C0043972">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col form-group">
+                                        <label for="email">Email <span class="text-danger"><strong>*</strong></span></label>
                                         <input id="email" name="email" type="email"
-                                            oninput="this.className = 'form-control'" class="form-control"
+                                         class="form-control"
                                             placeholder="anisanurul69@hotmail.com" required>
                                     </div>
                                     <div class="col form-group">
                                         <label for="instagram">Instagram</label>
                                         <input id="instagram" name="instagram" type="text"
-                                            oninput="this.className = 'form-control'" class="form-control"
-                                            placeholder="nisaaah69" required>
+                                         class="form-control"
+                                            placeholder="nisaaah69">
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="col form-group">
-                                        <label for="tempat_lahir">Tempat Lahir</label>
+                                        <label for="tempat_lahir">Tempat Lahir <span class="text-danger"><strong>*</strong></span></label>
                                         <input id="tempat_lahir" name="tempat_lahir" type="text"
-                                            oninput="this.className = 'form-control'" class="form-control"
+                                         class="form-control"
                                             placeholder="Jepara" required>
                                     </div>
                                     <div class="col form-group">
-                                        <label for="tanggal_lahir">Tanggal Lahir</label>
+                                        <label for="tanggal_lahir">Tanggal Lahir <span class="text-danger"><strong>*</strong></span></label>
                                         <input id="tanggal_lahir" name="tanggal_lahir" type="date"
-                                            oninput="this.className = 'form-control'" class="form-control"vrequired>
+                                         class="form-control"vrequired>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="col form-group">
-                                        <label for="pekerjaan">Profesi / Pekerjaan</label>
+                                        <label for="pekerjaan">Profesi / Pekerjaan <span class="text-danger"><strong>*</strong></span></label>
                                         <input id="pekerjaan" name="pekerjaan" type="text"
-                                            oninput="this.className = 'form-control'" class="form-control"
+                                         class="form-control"
                                             placeholder="Sekretaris" required>
                                     </div>
                                     <div class="col form-group">
-                                        <label for="institusi">Perusahaan / Institusi</label>
+                                        <label for="institusi">Perusahaan / Institusi <span class="text-danger"><strong>*</strong></span></label>
                                         <input id="institusi" name="institusi" type="text"
-                                            oninput="this.className = 'form-control'" class="form-control"
+                                         class="form-control"
                                             placeholder="PT Mencari Cinta Sejati" required>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="col form-group">
-                                        <label for="agama">Agama</label>
+                                        <label for="agama">Agama <span class="text-danger"><strong>*</strong></span></label>
                                         <input class="form-control" id="agama" name="agama" type="text"
-                                            oninput="this.className = 'form-control'" placeholder="Agama A" required>
+                                         placeholder="Agama A" required>
                                     </div>
                                     <div class="col form-group">
-                                        <label for="foto">Pas Foto</label>
+                                        <label for="foto">Pas Foto <span class="text-danger"><strong>* </strong></span><small>(3x4 merah)</small></label>
                                         <input id="foto" name="foto" type="file"
-                                            oninput="this.className = 'form-control'" class="form-control" required>
+                                         class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="alamat">Alamat Lengkap</label>
+                                    <label for="alamat">Alamat Lengkap <span class="text-danger"><strong>*</strong></span></label>
                                     <textarea name="alamat" id="alamat" class="form-control" rows="2"
                                         placeholder="Jalan Gang Tersempit No.69, Kel. Besar, Kec. Tegar, Kota Jepara"
                                         required></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label for="info_jyc">Dari mana Anda mengetahui tentang JYC ?</label>
+                                    <label for="info_jyc">Dari mana Anda mengetahui tentang JYC ? <span class="text-danger"><strong>*</strong></span></label>
                                     <textarea name="info_jyc" id="info_jyc" class="form-control" rows="2"
                                         placeholder="Pertama, begini begini begini, lalu begitu. Terus begini begitu dan akhirnya begono."
                                         required></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label for="tentang_jyc">Apa yang Anda ketahui tentang JYC ?</label>
+                                    <label for="tentang_jyc">Apa yang Anda ketahui tentang JYC ? <span class="text-danger"><strong>*</strong></span></label>
                                     <textarea name="tentang_jyc" id="tentang_jyc" class="form-control" rows="2"
                                         placeholder="JYC itu, begini begini begini, lalu begitu. Terus begini begitu dan akhirnya begono."
                                         required></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label for="motivasi">Motivasi mengikuti JYC ?</label>
+                                    <label for="motivasi">Motivasi mengikuti JYC ? <span class="text-danger"><strong>*</strong></span></label>
                                     <textarea name="motivasi" id="motivasi" class="form-control" rows="2"
                                         placeholder="Setelah gabung jadi anggota JYC, aku ingin begini, aku ingin begitu, ingin ini ingin itu banyak sekali."
                                         required></textarea>
@@ -174,7 +189,7 @@
                                 <b> Paduan Suara yang pernah diikuti</b>
                                 <div class="form-row rowPadus">
                                     <div class="col form-group">
-                                        <input name="nama_padus[]" type="text" oninput="this.className = 'form-control'"
+                                        <input name="nama_padus[]" type="text"
                                             class="form-control" placeholder="Nama Paduan Suara" >
                                     </div>
                                     <div class="col-3 form-group">
@@ -192,7 +207,7 @@
                                     </div>
                                     <div class="col-3 form-group">
                                         <input name="tahun_aktif_padus[]" type="text"
-                                            oninput="this.className = 'form-control'" class="form-control"
+                                         class="form-control"
                                             placeholder="2009-2010">
                                     </div>
                                 </div>
@@ -206,16 +221,16 @@
                                 <div class="form-row rowRiwayatOrganisasi">
                                     <div class="col form-group">
                                         <input name="nama_organisasi[]" type="text"
-                                            oninput="this.className = 'form-control'" class="form-control"
+                                         class="form-control"
                                             placeholder="Nama Organisasi">
                                     </div>
                                     <div class="col-3 form-group">
-                                        <input name="jabatan[]" type="text" oninput="this.className = 'form-control'"
+                                        <input name="jabatan[]" type="text"
                                             class="form-control" placeholder="Jabatan">
                                     </div>
                                     <div class="col-3 form-group">
                                         <input name="tahun_aktif_org[]" type="text"
-                                            oninput="this.className = 'form-control'" class="form-control"
+                                         class="form-control"
                                             placeholder="2009-2010">
                                     </div>
                                 </div>
@@ -229,21 +244,21 @@
                                 <div class="form-row rowKesenian">
                                     <div class="col form-group">
                                         <input name="nama_kegiatan_seni[]" type="text"
-                                            oninput="this.className = 'form-control'" class="form-control"
+                                         class="form-control"
                                             placeholder="Nama Kegiatan">
                                     </div>
                                     <div class="col form-group">
                                         <input name="tempat_seni[]" type="text"
-                                            oninput="this.className = 'form-control'" class="form-control"
+                                         class="form-control"
                                             placeholder="Tempat">
                                     </div>
                                     <div class="col form-group">
                                         <input name="tingkat_seni[]" type="text"
-                                            oninput="this.className = 'form-control'" class="form-control"
+                                         class="form-control"
                                             placeholder="Tingkat">
                                     </div>
                                     <div class="col form-group">
-                                        <input name="juara_seni[]" type="text" oninput="this.className = 'form-control'"
+                                        <input name="juara_seni[]" type="text"
                                             class="form-control" placeholder="Juara">
                                     </div>
                                 </div>
@@ -257,20 +272,20 @@
                                 <div class="form-row rowNonKesenian">
                                     <div class="col form-group">
                                         <input name="nama_kegiatan_non[]" type="text"
-                                            oninput="this.className = 'form-control'" class="form-control"
+                                         class="form-control"
                                             placeholder="Nama Kegiatan">
                                     </div>
                                     <div class="col form-group">
-                                        <input name="tempat_non[]" type="text" oninput="this.className = 'form-control'"
+                                        <input name="tempat_non[]" type="text"
                                             class="form-control" placeholder="Tempat">
                                     </div>
                                     <div class="col form-group">
                                         <input name="tingkat_non[]" type="text"
-                                            oninput="this.className = 'form-control'" class="form-control"
+                                         class="form-control"
                                             placeholder="Tingkat">
                                     </div>
                                     <div class="col form-group">
-                                        <input name="juara_non[]" type="text" oninput="this.className = 'form-control'"
+                                        <input name="juara_non[]" type="text"
                                             class="form-control" placeholder="Juara">
                                     </div>
                                 </div>
@@ -283,7 +298,7 @@
                                 <b>Kemampuan Bermain Alat Musik</b>
                                 <div class="form-row rowAlatMusik">
                                     <div class="col form-group">
-                                        <input name="alat_musik[]" type="text" oninput="this.className = 'form-control'"
+                                        <input name="alat_musik[]" type="text"
                                             class="form-control" placeholder="Nama Alat Musik">
                                     </div>
                                     <div class="col form-group">
@@ -309,7 +324,7 @@
                                 <div class="form-row keahlianLain">
                                     <div class="col-6 form-group">
                                         <input name="keahlian_lain" type="text"
-                                            oninput="this.className = 'form-control'" class="form-control"
+                                         class="form-control"
                                             placeholder="MC, Guiding, ...">
                                     </div>
                                 </div>
@@ -333,6 +348,7 @@
                                         class="btn btn-danger">Sebelumnya</button>
                                     <button id="nextBtn" type="button" onclick="nextPrev(1)" class="btn btn-danger">Oke,
                                         mengerti.</button>
+                                    <button id="submitBtn" class="btn btn-danger" type="submit" style="display:none">Submit</button>
                                 </div>
                             </div>
                         </div>
@@ -398,20 +414,20 @@
         let rowOrganisasi = `
             <div class="form-row rowRiwayatOrganisasi">
                 <div class="col form-group">
-                    <input name="nama_organisasi[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="Nama Organisasi">
+                    <input name="nama_organisasi[]" type="text" class="form-control" placeholder="Nama Organisasi">
                 </div>
                 <div class="col-3 form-group">
-                    <input name="jabatan[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="Jabatan">
+                    <input name="jabatan[]" type="text" class="form-control" placeholder="Jabatan">
                 </div>
                 <div class="col-3 form-group">
-                    <input name="tahun_aktif_org[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="2009-2010">
+                    <input name="tahun_aktif_org[]" type="text" class="form-control" placeholder="2009-2010">
                 </div>
             </div>`;
 
         let rowPadus = `
             <div class="form-row rowPadus">
                 <div class="col form-group">
-                    <input name="nama_padus[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="Nama Paduan Suara">
+                    <input name="nama_padus[]" type="text" class="form-control" placeholder="Nama Paduan Suara">
                 </div>
                 <div class="col-3 form-group">
                     <select name="ambitus[]" class="custom-select" required>
@@ -427,30 +443,30 @@
                     </select>
                 </div>
                 <div class="col-3 form-group">
-                    <input name="tahun_aktif_padus[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="2009-2010">
+                    <input name="tahun_aktif_padus[]" type="text" class="form-control" placeholder="2009-2010">
                 </div>
             </div>`;
 
         let rowKesenian = `
             <div class="form-row rowKesenian">
                 <div class="col form-group">
-                    <input name="nama_kegiatan_seni[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="Nama Kegiatan">
+                    <input name="nama_kegiatan_seni[]" type="text" class="form-control" placeholder="Nama Kegiatan">
                 </div>
                 <div class="col form-group">
-                    <input name="tempat_seni[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="Tempat">
+                    <input name="tempat_seni[]" type="text" class="form-control" placeholder="Tempat">
                 </div>
                 <div class="col form-group">
-                    <input name="tingkat_seni[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="Tingkat">
+                    <input name="tingkat_seni[]" type="text" class="form-control" placeholder="Tingkat">
                 </div>
                 <div class="col form-group">
-                    <input name="juara_seni[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="Juara">
+                    <input name="juara_seni[]" type="text" class="form-control" placeholder="Juara">
                 </div>
             </div>`;
 
         let rowAlatMusik = `
             <div class="form-row rowAlatMusik">
                 <div class="col form-group">
-                    <input name="alat_musik[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="Nama Alat Musik">
+                    <input name="alat_musik[]" type="text" class="form-control" placeholder="Nama Alat Musik">
                 </div>
                 <div class="col form-group">
                     <select name="tingkat_kemampuan[]" class="custom-select" required>
@@ -469,16 +485,16 @@
         let rowNonKesenian = `
             <div class="form-row rowNonKesenian">
                 <div class="col form-group">
-                    <input name="nama_kegiatan_non[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="Nama Kegiatan">
+                    <input name="nama_kegiatan_non[]" type="text" class="form-control" placeholder="Nama Kegiatan">
                 </div>
                 <div class="col form-group">
-                    <input name="tempat_non[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="Tempat">
+                    <input name="tempat_non[]" type="text" class="form-control" placeholder="Tempat">
                 </div>
                 <div class="col form-group">
-                    <input name="tingkat_non[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="Tingkat">
+                    <input name="tingkat_non[]" type="text" class="form-control" placeholder="Tingkat">
                 </div>
                 <div class="col form-group">
-                    <input name="juara_non[]" type="text" oninput="this.className = 'form-control'" class="form-control" placeholder="Juara">
+                    <input name="juara_non[]" type="text" class="form-control" placeholder="Juara">
                 </div>
             </div>`;
 
@@ -524,20 +540,15 @@
 
     var currentTab = 0; // Current tab is set to be the first tab (0)
     showTab(currentTab); // Display the current tab
+    var clicked = false;
 
-    $('#customCheck1').change(function () {
-        if($(this).checked == true) {
-            document.getElementById("nextBtn").innerHTML = "Submit";
-            $('#nextBtn').removeAttr('disabled');
-            // $('#nextBtn').attr('disabled', 'false');
-            $('#nextBtn').attr('type', 'submit');
-            $('#nextBtn').removeAttr('onclick');
-        } else {
-            document.getElementById("nextBtn").innerHTML = "Submit";
-            $('#nextBtn').removeAttr('onclick');
-            $('#nextBtn').attr('disabled', 'true');
-        }
-    });
+    // $('#customCheck1').change(function () {
+    //     if($(this).checked == true) {
+    //         clicked = true;
+    //     } else {
+    //         clicked = false;
+    //     }
+    // });
 
     function showTab(n) {
         // This function will display the specified tab of the form...
@@ -551,18 +562,38 @@
         }
 
         if (n == (x.length - 1)) {
-            if($('#customCheck1').checked == true) {
-                $('#nextBtn').attr('type', 'submit');
-                $('#nextBtn').removeAttr('onclick');
-                document.getElementById("nextBtn").innerHTML = "Submit";
+            document.getElementById("nextBtn").style.display = "none";
+            document.getElementById("submitBtn").style.display = "inline";
+            document.getElementById("nextBtn").innerHTML = "Submit";
+            if(clicked == true) {
+                $('#submitBtn').attr('disabled', false);
             } else {
-                $('#nextBtn').removeAttr('onclick');
-                document.getElementById("nextBtn").innerHTML = "Submit";
-                // $('#nextBtn').attr('disabled', 'true');
+                $('#submitBtn').attr('disabled', true);
             }
+            $('#customCheck1').click( function () {
+                if($(this).prop("checked") == true){
+                    clicked = true;
+                    // $('#nextBtn').attr('type', 'submit');
+                    // $('#nextBtn').removeAttr('onclick');
+                    $('#submitBtn').attr('disabled', false);
+                    document.getElementById("nextBtn").innerHTML = "Submit";
+                    console.log("Checkbox is checked.");
+                }
+                else if($(this).prop("checked") == false){
+                    clicked = false;
+                    // $('#nextBtn').removeAttr('onclick');
+                    document.getElementById("nextBtn").innerHTML = "Submit";
+                // $('#nextBtn').attr('disabled', 'true');
+                    $('#submitBtn').attr('disabled', true);
+                    console.log("Checkbox is unchecked.");
+                }
+            });
         } else {
+            document.getElementById("nextBtn").style.display = "inline";
+            document.getElementById("submitBtn").style.display = "none";
+            $('#nextBtn').attr('disabled', false);
             document.getElementById("nextBtn").innerHTML = "Selanjutnya";
-            $('#nextBtn').attr('onclick', "nextPrev(1)");
+            // $('#nextBtn').attr('onclick', "nextPrev(1)");
         }
         //... and run a function that will display the correct step indicator:
         fixStepIndicator(n)
@@ -571,21 +602,26 @@
     function nextPrev(n) {
         // This function will figure out which tab to display
         var x = document.getElementsByClassName("tab");
-        if(n == -1) {
-            $('#nextBtn').attr("onclick", "nextPrev(1)")
-        }
         // Exit the function if any field in the current tab is invalid:
-        if (n == 1 && !validateForm()) return false;
+        // if (currentTab == 1 && n == 1 && !validateForm()) return false;
         // Hide the current tab:
         x[currentTab].style.display = "none";
         // Increase or decrease the current tab by 1:
-        currentTab = currentTab + n;
         // if you have reached the end of the form...
-        if (currentTab >= x.length) {
-            // ... the form gets submitted:
-            // document.getElementById("regForm").submit();
-            return false;
-        }
+        // if (n == 1 && clicked == true && currentTab >= x.length - 1) {
+        //     // ... the form gets submitted:
+        //     document.getElementById("regForm").submit();
+        //     return false;
+        // }
+
+        // if(currentTab >= x.length -1 && n == 1) {
+        //     showTab(currentTab);
+        // } else {
+        //     currentTab = currentTab + n;
+        //     // Otherwise, display the correct tab:
+        //     showTab(currentTab);
+        // }
+        currentTab = currentTab + n;
         // Otherwise, display the correct tab:
         showTab(currentTab);
     }

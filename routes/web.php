@@ -80,8 +80,8 @@ Sementara untuk testing Controller bisa gunakan Route di bawah.
 Seperti get berita, post pendaftaran, post kegiatan, dll.
 */
 
-Route::get('/upload-bukti-bayar/{kode_bayar}','cabController@viewBuktiBayar');
-Route::post('/upload-bukti-bayar','cabController@terimaBuktiBayar');
+Route::get('/kegiatan/oprec/upload-bukti-bayar/{kode_bayar}','cab\viewBuktiBayar@viewBuktiBayar');
+Route::post('/kegiatan/oprec/upload-bukti-bayar','cab\terimaBuktiBayar@terimaBuktiBayar')->name('post-bukti-bayar');
 
 //subcscribe
 Route::post('/berlangganan','subscribe\subscribeController@store')->name('subscribe');
