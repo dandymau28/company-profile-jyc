@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\AfterRegister;
 use PDF;
 use Webpatser\Uuid\Uuid;
+use App\Jobs\sendMailCAB;
 
 
 class storeCAB extends Controller
@@ -33,6 +34,8 @@ class storeCAB extends Controller
             $cab = new CAB;
             $cab->foto = $pathPhoto;
             $cab->nama_lengkap = $request->input('nama_lengkap');
+            $cab->nik = $request->input('nik');
+            $cab->no_passport = $request->input('no_passport');
             $cab->nama_panggilan = $request->input('nama_panggilan');
             $cab->email = $request->input('email');
             $cab->instagram = $request->input('instagram');
@@ -64,7 +67,7 @@ class storeCAB extends Controller
             }
 
             //paduan suara
-            if (!is_null($request->filled('nama_padus'))){
+            if (is_null($request->filled('nama_padus'))){
                 $padus = new Padus;
                 foreach($request->input('nama_padus') as $key => $value) {
                     $padus->nama_padus = $request->input('nama_padus')[$key];
@@ -131,21 +134,24 @@ class storeCAB extends Controller
                             'status' => 'not_paid'
                         ]);
                 
-            $cab = DB::table('cab')->join('kode_pembayaran_cab','cab.id','=','kode_pembayaran_cab.id_cab')
-                        ->where('cab.id',$id)
-                        ->whereNull('cab.deleted_at')
-                        ->select('cab.*','kode_pembayaran_cab.*')
-                        ->first();
+            // $cab = DB::table('cab')->join('kode_pembayaran_cab','cab.id','=','kode_pembayaran_cab.id_cab')
+            //             ->where('cab.id',$id)
+            //             ->whereNull('cab.deleted_at')
+            //             ->select('cab.*','kode_pembayaran_cab.*')
+            //             ->first();
 
-            $data = [
+            $data = CAB::find($id)->get();
+
+            $datakirim = [
                 'status' => 'Berhasil',
                 'identitas' => $cab,
             ];
 
-            // $pdf = PDF::loadView('mail.success',$data);
+            // $pdf = PDF::loadView('mail.pdf.data-diri',$data);
             // $pdf = $pdf->stream();
-            // Mail::to($cab->email)
-            //     ->send(new AfterRegister($data));
+
+            // dispatch(new sendMailCAB($datakirim));
+            sendMailCAB::dispatch($datakirim);
 
         } elseif ($pendaftar >= 90 && $pendaftar < 110) {
             $cab = DB::table('cab')
@@ -158,8 +164,9 @@ class storeCAB extends Controller
                 'identitas' => $cab
             ];
 
-            // Mail::to($cab->email)
-            //     ->send(new AfterRegister($data));
+            $pdf = 'Waiting List';
+
+            dispatch(new sendMailCAB($data, $pdf));
         } else {
             return back()->with('error', 'Maaf pendaftaran sudah penuh, silakan coba tahun depan');
         }
