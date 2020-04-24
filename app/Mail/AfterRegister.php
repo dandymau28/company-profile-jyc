@@ -20,6 +20,7 @@ class AfterRegister extends Mailable
     {
         $this->status = $data['status'];
         $this->data = $data['identitas'];
+        // $this->pdf = $pdf;
     }
 
     /**
@@ -29,6 +30,11 @@ class AfterRegister extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.kandidat')->with(['data' => $this->data, 'status' => $this->status]);
+        return $this->view('mail.kandidat')
+                    ->subject('E-mail Pendaftaran JYC')
+                    ->with(['data' => $this->data, 'status' => $this->status]);
+                    // ->attachData($this->pdf, 'data-diri.pdf', [
+                    //     'mime' => 'application/pdf'
+                    // ]);
     }
 }
