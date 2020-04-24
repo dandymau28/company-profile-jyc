@@ -64,6 +64,7 @@
                             <div class="col-12">
                                 <ol class="pl-2 pl-sm-3 pl-md-4 text-justify">
                                     <li>Mengisi formulir pendaftaran calon anggota baru dengan benar</li>
+                                    <li>Maksimal usia yang dapat mendaftar adalah 25 tahun per tanggal Audisi</li>
                                     <li>Kolom yang memiliki tanda <span class="text-danger"><strong>*</strong></span> wajib di isi</li>
                                     <li>Kamu akan mendapatkan email konfirmasi pendaftaran</li>
                                     <li>Transfer Rp. 25.000,- ke no. rekening yang tertera pada email</li>

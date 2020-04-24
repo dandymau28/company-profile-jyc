@@ -16,8 +16,8 @@
 // })->name('beranda');
 
 // JNCC Page
-Route::get('/jncc', function () {
-    return view('jncc', ["title" => "jncc", "nav" => "jncc"]);
+Route::get('/kegiatan/jncc', function () {
+    return view('jncc', ["title" => "Jakarta National Choir Competition", "nav" => "kegiatan"]);
 })->name('jncc');
 
 // Comingsoon Page
@@ -82,6 +82,7 @@ Seperti get berita, post pendaftaran, post kegiatan, dll.
 
 Route::get('/kegiatan/oprec/upload-bukti-bayar/{kode_bayar}','cab\viewBuktiBayar@viewBuktiBayar');
 Route::post('/kegiatan/oprec/upload-bukti-bayar','cab\terimaBuktiBayar@terimaBuktiBayar')->name('post-bukti-bayar');
+Route::get('/kegiatan/oprec/form/{kode_bayar}', 'cab\cabController@exportPDF')->name('export-pdf');
 
 //subcscribe
 Route::post('/berlangganan','subscribe\subscribeController@store')->name('subscribe');
