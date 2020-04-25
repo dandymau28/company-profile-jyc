@@ -33,7 +33,7 @@ class sendMailCAB implements ShouldQueue
      */
     public function handle()
     {
-        Mail::to($this->data['identitas']['email'])
+        Mail::to($this->data['identitas']->email)
                 ->send(new AfterRegister($this->data));
     }
 }
