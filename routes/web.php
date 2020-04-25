@@ -28,6 +28,13 @@ Route::get('/coming-soon', function () {
 //Oprec
 Route::get('/pendaftaran','cab\viewForm@create');
 Route::post('/pendaftaran','cab\storeCAB@store');
+//Prorotype tampilan mail
+Route::get('/kegiatan/oprec/mail1', function () {
+    return view('mail.kandidat', ["title" => "Terimakasih telah mendaftar"]);
+});
+Route::get('/kegiatan/oprec/mail2', function () {
+    return view('mail.pdf.data-diri', ["title" => "Terimakasih telah mendaftar"]);
+});
 
 
 Route::get('/', 'beranda\berandaController@beranda')->name('beranda');

@@ -34,3 +34,4 @@ Route::get('/prestasi/all', 'api\apiController@getAllPrestasi');
 Route::get('/prestasi/{id}', 'api\apiController@getPrestasiByID');
 Route::get('/penghargaan/prestasi/{id_prestasi}', 'api\apiController@getPenghargaanByID');
 Route::get('/videos/all', 'api\apiController@getAllVideos');
+

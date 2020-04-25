@@ -365,14 +365,13 @@
                         @else
                         <div class="row text-dark bg-light p-3 p-sm-4 p-md-5 text-left mt-2">
                             <div class="col-12">
-                                <h4 class="pt-2">Mohon maaf atas ketidaknyamanannya</h4>
-                                <h5>Pendaftaran sudah penuh</h5>
-                                <p class="text-justify">Pendaftaran sudah penuh</p>
+                                <h4 class="pt-2">Mohon maaf :(</h4>
+                                <h5>Pendaftaran sudah penuh. Nantikan <em>open recruitment</em> selanjutnya yaa :)</h5>
+                                {{-- <p class="text-justify">Pendaftaran sudah penuh</p> --}}
                             </div>
                             <div class="col-12 pt-3">
                                 <div class="text-right">
-                                    <a href="{{ route('beranda') }}"><button type="button" class="btn btn-danger">Oke,
-                                            mengerti.</button></a>
+                                    <a href="{{ route('beranda') }}"><button type="button" class="btn btn-danger">Oke!</button></a>
                                 </div>
                             </div>
                         </div>
