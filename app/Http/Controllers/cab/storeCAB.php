@@ -52,10 +52,8 @@ class storeCAB extends Controller
             $cab->save();
 
             //bermusik
-            if(is_null($request->input('alat_musik'))) {
-                return response()->json([
-                    "data" => $request->input('alat_muasik')
-                ]);
+            if(!empty($request->input('alat_musik')[0])) {
+                // dd($request->input('alat_musik')[0]);
                 $musik = $request->input('alat_musik');
                 $tingkatmusik = $request->input('tingkat_kemampuan');
                 $bermusik = new Bermusik;
@@ -67,7 +65,7 @@ class storeCAB extends Controller
             }
 
             //paduan suara
-            if (is_null($request->filled('nama_padus'))){
+            if (!empty($request->input('nama_padus')[0])){
                 $padus = new Padus;
                 foreach($request->input('nama_padus') as $key => $value) {
                     $padus->nama_padus = $request->input('nama_padus')[$key];
@@ -78,7 +76,7 @@ class storeCAB extends Controller
             }
 
             //prestasi kesenian
-            if (is_null($request->filled('nama_kegiatan_seni'))) {
+            if (!empty($request->input('nama_kegiatan_seni')[0])) {
                 $kesenian = new Kesenian;
                 foreach($request->input('nama_kegiatan_seni') as $key => $value) {
                     $kesenian->nama_kegiatan = $request->input('nama_kegiatan_seni')[$key];
@@ -90,7 +88,7 @@ class storeCAB extends Controller
             }
 
             //prestasi non kesenian
-            if (is_null($request->filled('nama_kegiatan_non'))){
+            if (!empty($request->input('nama_kegiatan_non')[0])){
                 $nonkesenian = new Nonkesenian;
                 foreach($request->input('nama_kegiatan_non') as $key => $value) {
                     $nonkesenian->nama_kegiatan = $request->input('nama_kegiatan_non')[$key];
@@ -102,7 +100,7 @@ class storeCAB extends Controller
             }
 
             //riwayat organisasi
-            if (is_null($request->filled('nama_organisasi'))) {
+            if (!empty($request->input('nama_organisasi')[0])) {
                 $organisasi = new Organisasi;
                 foreach($request->input('nama_organisasi') as $key => $value) {
                     $organisasi->nama_organisasi = $request->input('nama_organisasi')[$key];
@@ -111,7 +109,6 @@ class storeCAB extends Controller
                     $cab->riwayatOrganisasi()->save($organisasi);
                 }
             }
-
             DB::commit();
         } catch (Exception $e) {
             DB::rollback();
