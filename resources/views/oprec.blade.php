@@ -149,9 +149,9 @@
                                 </div>
                                 <div class="form-row">
                                     <div class="col form-group">
-                                        <label for="agama">Agama <span class="text-danger"><strong>*</strong></span></label>
-                                        <input class="form-control" oninput="this.className='form-control'" id="agama" name="agama" type="text"
-                                         placeholder="Agama A" required>
+                                        <label for="agama">Agama</label>
+                                        <input class="form-control" id="agama" name="agama" type="text"
+                                         placeholder="Agama A">
                                     </div>
                                     <div class="col form-group">
                                         <label for="foto">Pas Foto <span class="text-danger"><strong>* </strong></span><small>(3x4 merah)</small></label>
@@ -214,9 +214,9 @@
                                     </div>
                                 </div>
                                 <button data-for="rowPadus" type="button"
-                                    class="btn btn-secondary mb-2 d-none tombol-hapus">Hapus</button>
+                                    class="btn btn-secondary mb-2 d-none tombol-hapus"><i class="fas fa-minus-circle pr-2"></i>Hapus</button>
                                 <button data-for="rowPadus" type="button"
-                                    class="btn btn-secondary mb-2 tombol-tambah">Tambahkan</button>
+                                    class="btn btn-secondary mb-2 tombol-tambah"><i class="fas fa-plus-circle pr-2"></i>Tambahkan</button>
                                 <hr>
                                 {{-- Row Riwayat Organisasi --}}
                                 <b>Riwayat Organisasi</b>
@@ -237,9 +237,9 @@
                                     </div>
                                 </div>
                                 <button data-for="rowRiwayatOrganisasi" type="button"
-                                    class="btn btn-secondary mb-2 d-none tombol-hapus">Hapus</button>
+                                    class="btn btn-secondary mb-2 d-none tombol-hapus"><i class="fas fa-minus-circle pr-2"></i>Hapus</button>
                                 <button data-for="rowRiwayatOrganisasi" type="button"
-                                    class="btn btn-secondary mb-2 tombol-tambah">Tambahkan</button>
+                                    class="btn btn-secondary mb-2 tombol-tambah"><i class="fas fa-plus-circle pr-2"></i>Tambahkan</button>
                                 <hr>
                                 {{-- Row Prestasi di bidang Kesenian --}}
                                 <b>Prestasi di bidang Kesenian</b>
@@ -265,9 +265,9 @@
                                     </div>
                                 </div>
                                 <button data-for="rowKesenian" type="button"
-                                    class="btn btn-secondary mb-2 d-none tombol-hapus">Hapus</button>
+                                    class="btn btn-secondary mb-2 d-none tombol-hapus"><i class="fas fa-minus-circle pr-2"></i>Hapus</button>
                                 <button data-for="rowKesenian" type="button"
-                                    class="btn btn-secondary mb-2 tombol-tambah">Tambahkan</button>
+                                    class="btn btn-secondary mb-2 tombol-tambah"><i class="fas fa-plus-circle pr-2"></i>Tambahkan</button>
                                 <hr>
                                 {{-- Row Prestasi di bidang non Kesenian --}}
                                 <b>Prestasi di bidang Non-Kesenian</b>
@@ -292,9 +292,9 @@
                                     </div>
                                 </div>
                                 <button data-for="rowNonKesenian" type="button"
-                                    class="btn btn-secondary mb-2 d-none tombol-hapus">Hapus</button>
+                                    class="btn btn-secondary mb-2 d-none tombol-hapus"><i class="fas fa-minus-circle pr-2"></i>Hapus</button>
                                 <button data-for="rowNonKesenian" type="button"
-                                    class="btn btn-secondary mb-2 tombol-tambah">Tambahkan</button>
+                                    class="btn btn-secondary mb-2 tombol-tambah"><i class="fas fa-plus-circle pr-2"></i>Tambahkan</button>
                                 <hr>
                                 {{-- Row Kemampuan Bermain Alat Musik --}}
                                 <b>Kemampuan Bermain Alat Musik</b>
@@ -317,9 +317,9 @@
                                     </div>
                                 </div>
                                 <button data-for="rowAlatMusik" type="button"
-                                    class="btn btn-secondary mb-2 d-none tombol-hapus">Hapus</button>
+                                    class="btn btn-secondary mb-2 d-none tombol-hapus"><i class="fas fa-minus-circle pr-2"></i>Hapus</button>
                                 <button data-for="rowAlatMusik" type="button"
-                                    class="btn btn-secondary mb-2 tombol-tambah">Tambahkan</button>
+                                    class="btn btn-secondary mb-2 tombol-tambah"><i class="fas fa-plus-circle pr-2"></i>Tambahkan</button>
                                 <hr>
                                 {{-- Row Keahlian Lain --}}
                                 <b>Keahlian Lain yang Dimiliki</b>
