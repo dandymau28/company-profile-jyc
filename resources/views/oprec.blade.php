@@ -54,7 +54,7 @@
                         </div>
                     </div>
                     @elseif($total<'110') 
-                    <form id="regForm" action="/pendaftaran" method="POST"
+                    <form class="needs-validation" id="regForm" action="/pendaftaran" method="POST"
                         enctype="multipart/form-data">
                         @csrf
                         <div class="row text-dark bg-light p-3 p-sm-4 p-md-5 text-left tab">
@@ -80,13 +80,14 @@
                                 <div class="form-row">
                                     <div class="col form-group">
                                         <label for="nama_lengkap">Nama Lengkap <span class="text-danger"><strong>*</strong></span></label>
-                                        <input id="nama_lengkap" name="nama_lengkap" type="text"
-                                         class="form-control"
-                                            placeholder="Nurul Anisa, S.Sn" required>
+                                        <input id="nama_lengkap" name="nama_lengkap" oninput="this.className='form-control'" type="text" class="form-control" placeholder="Nurul Anisa, S.Sn" required>
+                                        <div class="invalid-feedback">
+                                            Nama tidak boleh kosong.
+                                        </div>
                                     </div>
                                     <div class="col form-group">
                                         <label for="nama_panggilan">Nama Panggilan <span class="text-danger"><strong>*</strong></span></label>
-                                        <input id="nama_panggilan" name="nama_panggilan" type="text"
+                                        <input id="nama_panggilan" oninput="this.className='form-control'" name="nama_panggilan" type="text"
                                          class="form-control"
                                             placeholder="Nisa" required>
                                     </div>
@@ -94,7 +95,7 @@
                                 <div class="form-row">
                                     <div class="col form-group">
                                         <label for="nik">NIK <span class="text-danger"><strong>*</strong></span></label>
-                                        <input id="nik" name="nik" type="text"
+                                        <input id="nik" name="nik" oninput="this.className='form-control'" type="text"
                                          class="form-control"
                                             placeholder="3271046504930002" required>
                                     </div>
@@ -108,7 +109,7 @@
                                 <div class="form-row">
                                     <div class="col form-group">
                                         <label for="email">Email <span class="text-danger"><strong>*</strong></span></label>
-                                        <input id="email" name="email" type="email"
+                                        <input id="email" oninput="this.className='form-control'" name="email" type="email"
                                          class="form-control"
                                             placeholder="anisanurul69@hotmail.com" required>
                                     </div>
@@ -122,26 +123,26 @@
                                 <div class="form-row">
                                     <div class="col form-group">
                                         <label for="tempat_lahir">Tempat Lahir <span class="text-danger"><strong>*</strong></span></label>
-                                        <input id="tempat_lahir" name="tempat_lahir" type="text"
+                                        <input id="tempat_lahir" name="tempat_lahir" type="text" oninput="this.className='form-control'"
                                          class="form-control"
                                             placeholder="Jepara" required>
                                     </div>
                                     <div class="col form-group">
                                         <label for="tanggal_lahir">Tanggal Lahir <span class="text-danger"><strong>*</strong></span></label>
-                                        <input id="tanggal_lahir" name="tanggal_lahir" type="date"
-                                         class="form-control"vrequired>
+                                        <input id="tanggal_lahir" oninput="this.className='form-control'" name="tanggal_lahir" type="date"
+                                         class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="col form-group">
                                         <label for="pekerjaan">Profesi / Pekerjaan <span class="text-danger"><strong>*</strong></span></label>
-                                        <input id="pekerjaan" name="pekerjaan" type="text"
+                                        <input id="pekerjaan" oninput="this.className='form-control'" name="pekerjaan" type="text"
                                          class="form-control"
                                             placeholder="Sekretaris" required>
                                     </div>
                                     <div class="col form-group">
                                         <label for="institusi">Perusahaan / Institusi <span class="text-danger"><strong>*</strong></span></label>
-                                        <input id="institusi" name="institusi" type="text"
+                                        <input id="institusi" oninput="this.className='form-control'" name="institusi" type="text"
                                          class="form-control"
                                             placeholder="PT Mencari Cinta Sejati" required>
                                     </div>
@@ -149,36 +150,36 @@
                                 <div class="form-row">
                                     <div class="col form-group">
                                         <label for="agama">Agama <span class="text-danger"><strong>*</strong></span></label>
-                                        <input class="form-control" id="agama" name="agama" type="text"
+                                        <input class="form-control" oninput="this.className='form-control'" id="agama" name="agama" type="text"
                                          placeholder="Agama A" required>
                                     </div>
                                     <div class="col form-group">
                                         <label for="foto">Pas Foto <span class="text-danger"><strong>* </strong></span><small>(3x4 merah)</small></label>
-                                        <input id="foto" name="foto" type="file"
+                                        <input id="foto" oninput="this.className='form-control'" name="foto" type="file"
                                          class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="alamat">Alamat Lengkap <span class="text-danger"><strong>*</strong></span></label>
-                                    <textarea name="alamat" id="alamat" class="form-control" rows="2"
+                                    <textarea name="alamat" oninput="this.className='form-control'" id="alamat" class="form-control" rows="2"
                                         placeholder="Jalan Gang Tersempit No.69, Kel. Besar, Kec. Tegar, Kota Jepara"
                                         required></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="info_jyc">Dari mana Anda mengetahui tentang JYC ? <span class="text-danger"><strong>*</strong></span></label>
-                                    <textarea name="info_jyc" id="info_jyc" class="form-control" rows="2"
+                                    <textarea name="info_jyc" oninput="this.className='form-control'" id="info_jyc" class="form-control" rows="2"
                                         placeholder="Pertama, begini begini begini, lalu begitu. Terus begini begitu dan akhirnya begono."
                                         required></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="tentang_jyc">Apa yang Anda ketahui tentang JYC ? <span class="text-danger"><strong>*</strong></span></label>
-                                    <textarea name="tentang_jyc" id="tentang_jyc" class="form-control" rows="2"
+                                    <textarea name="tentang_jyc" oninput="this.className='form-control'" id="tentang_jyc" class="form-control" rows="2"
                                         placeholder="JYC itu, begini begini begini, lalu begitu. Terus begini begitu dan akhirnya begono."
                                         required></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="motivasi">Motivasi mengikuti JYC ? <span class="text-danger"><strong>*</strong></span></label>
-                                    <textarea name="motivasi" id="motivasi" class="form-control" rows="2"
+                                    <textarea name="motivasi" oninput="this.className='form-control'" id="motivasi" class="form-control" rows="2"
                                         placeholder="Setelah gabung jadi anggota JYC, aku ingin begini, aku ingin begitu, ingin ini ingin itu banyak sekali."
                                         required></textarea>
                                 </div>
@@ -604,7 +605,7 @@
         // This function will figure out which tab to display
         var x = document.getElementsByClassName("tab");
         // Exit the function if any field in the current tab is invalid:
-        // if (currentTab == 1 && n == 1 && !validateForm()) return false;
+        if (currentTab == 1 && n == 1 && !validateForm()) return false;
         // Hide the current tab:
         x[currentTab].style.display = "none";
         // Increase or decrease the current tab by 1:
@@ -631,7 +632,8 @@
         // This function deals with validation of the form fields
         var x, y, i, valid = true;
         x = document.getElementsByClassName("tab");
-        y = x[currentTab].getElementsByTagName("input");
+        y = $('#regForm').find('[required]');
+        // y = x[currentTab].getElementsByTagName("input");
         // A loop that checks every input field in the current tab:
         for (i = 0; i < y.length; i++) {
             // If a field is empty...
