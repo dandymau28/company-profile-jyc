@@ -14,12 +14,22 @@ class viewBuktiBayar extends Controller
                 ->join('kode_pembayaran_cab','cab.id','=','kode_pembayaran_cab.id_cab')
                 ->where('kode_pembayaran_cab.kode_bayar',$kode_bayar)
                 // ->whereNull('deleted_at')
-                ->select('cab.*','kode_pembayaran_cab.kode_bayar')
+                ->select('cab.*','kode_pembayaran_cab.kode_bayar','kode_pembayaran_cab.foto_bukti')
                 ->first();
-        $jadwal = DB::table('jadwal_audisi')
-            ->where('jumlah_pendaftar', '<', 30)
+
+        $data_jadwal = DB::table('jadwal_audisi')
+            ->whereNull('deleted_at')
+            ->whereRaw(DB::raw('year(created_at) = year(CURRENT_DATE)'))
             ->get();
         
+        $jadwal = [];
+
+        foreach($data_jadwal as $item) {
+            if($item->jumlah_pendaftar < $item->kuota ) {
+                $jadwal[] = $item;
+            }
+        }
+
         if($data) {
             return view('uploadbuktibayar',[
                 'title' => 'Upload Bukti Bayar',

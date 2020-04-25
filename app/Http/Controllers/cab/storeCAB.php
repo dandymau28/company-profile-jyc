@@ -25,7 +25,7 @@ class storeCAB extends Controller
     public function store(Request $request)
     {
         try {
-            
+            DB::beginTransaction();
             $uploadFoto = $request->file('foto');
             $name = 'foto'.'-'.trim($request->input('nama_lengkap')).'.'.$uploadFoto->getClientOriginalExtension();
             $pathPhoto = $uploadFoto->storeAs('public/assets/img', $name);
@@ -111,7 +111,10 @@ class storeCAB extends Controller
                     $cab->riwayatOrganisasi()->save($organisasi);
                 }
             }
+
+            DB::commit();
         } catch (Exception $e) {
+            DB::rollback();
             return back()->with('errors','Gagal mendaftar. Error Code: '.$e->getCode().'. Silakan hubungi tim kami pada <a href="/tentang-kami">Contact Us</a>');
         }
 
@@ -134,11 +137,11 @@ class storeCAB extends Controller
                             'status' => 'not_paid'
                         ]);
                 
-            // $cab = DB::table('cab')->join('kode_pembayaran_cab','cab.id','=','kode_pembayaran_cab.id_cab')
-            //             ->where('cab.id',$id)
-            //             ->whereNull('cab.deleted_at')
-            //             ->select('cab.*','kode_pembayaran_cab.*')
-            //             ->first();
+            $cab = DB::table('cab')->join('kode_pembayaran_cab','cab.id','=','kode_pembayaran_cab.id_cab')
+                        ->where('cab.id',$id)
+                        ->whereNull('cab.deleted_at')
+                        ->select('cab.*','kode_pembayaran_cab.*')
+                        ->first();
 
             // $data = CAB::find($id)->get();
 
@@ -163,10 +166,8 @@ class storeCAB extends Controller
                 'status' => 'Waiting List',
                 'identitas' => $cab
             ];
-
-            $pdf = 'Waiting List';
-
-            dispatch(new sendMailCAB($data, $pdf));
+            
+            dispatch(new sendMailCAB($data));
         } else {
             return back()->with('error', 'Maaf pendaftaran sudah penuh, silakan coba tahun depan');
         }
