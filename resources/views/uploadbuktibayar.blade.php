@@ -37,7 +37,25 @@
                             </div>
                         </div>
                     </div>
-                    @endif
+                    @elseif($data->foto_bukti)
+                    <div class="row">
+                        <h1 class="">Hai, {{ Str::title($data->nama_panggilan) }}!</h1>
+                    </div>
+                    <div class="row text-dark bg-light p-3 p-sm-4 p-md-5 text-left mt-2">
+                        <div class="col-12">
+                            <h4 class="pt-2">Konfirmasi</h4>
+                            <h5>Kamu telah mengunggah bukti pembayaran calon anggota baru JYC 2020.</h5>
+                            <p class="text-justify">Segera lakukan konfirmasi pembayaran ke panitia melalui CP dibawah. Setelah itu silahkan cek email dalam 1 x 24 jam, panitia akan mengirimkan link grup untuk audisi serta borang untuk dibawa saat audisi. Jika ada pertanyaan, silahkan hubungi panitia melalui CP. Sampai bertemu di hari Audisi :)</p>
+                            <p><strong>CP: +62812-8921-8785 (Febri)</strong></p>
+                        </div>
+                        <div class="col-12 pt-3">
+                            <div class="text-right">
+                                <a href="{{ route('beranda') }}"><button type="button" class="btn btn-danger">Oke,
+                                        mengerti.</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    @else
                     <div class="row">
                         <h1 class="">UNGGAH BUKTI PEMBAYARAN</h1>
                     </div>
@@ -72,7 +90,7 @@
                                         : {{ $data->email }}
                                     </div>
                                 </div>
-                                <select class="custom-select my-2">
+                                <select name="tanggal_audisi" class="custom-select my-2">
                                     <option selected disabled>Pilih jadwal audisi</option>
                                     @foreach ($jadwal as $item)   
                                     <option value={{ $item->id }}>{{ $item->tanggal }}</option>
@@ -94,6 +112,7 @@
                             </div>
                         </div>
                     </form>
+                    @endif
                 </div>
             </div>
         </div>
