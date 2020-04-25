@@ -16,7 +16,7 @@ use DB;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\AfterRegister;
 use PDF;
-use Webpatser\Uuid\Uuid;
+use Illuminate\Support\Str;
 use App\Jobs\sendMailCAB;
 
 
@@ -125,7 +125,7 @@ class storeCAB extends Controller
         $id = $cab->id;
 
         if ($pendaftar < 90) {
-            $kode_bayar = Uuid::generate(4);
+            $kode_bayar = Str::uuid();
 
             $insert = DB::table('kode_pembayaran_cab')
                         ->insert([
@@ -140,9 +140,9 @@ class storeCAB extends Controller
             //             ->select('cab.*','kode_pembayaran_cab.*')
             //             ->first();
 
-            $data = CAB::find($id)->get();
+            // $data = CAB::find($id)->get();
 
-            $datakirim = [
+            $data = [
                 'status' => 'Berhasil',
                 'identitas' => $cab,
             ];
@@ -150,8 +150,8 @@ class storeCAB extends Controller
             // $pdf = PDF::loadView('mail.pdf.data-diri',$data);
             // $pdf = $pdf->stream();
 
-            // dispatch(new sendMailCAB($datakirim));
-            sendMailCAB::dispatch($datakirim);
+            // dispatch(new sendMailCAB($data));
+            sendMailCAB::dispatch($data);
 
         } elseif ($pendaftar >= 90 && $pendaftar < 110) {
             $cab = DB::table('cab')
