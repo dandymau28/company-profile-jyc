@@ -15,7 +15,8 @@ class viewForm extends Controller
         return view('oprec',[
             'title' => 'Pendaftaran Calon Anggota Baru',
             'nav' => 'kegiatan',
-            'total' => $cab->countCAB()
+            'total' => $cab->countCAB(),
+            'oprec' => $cab->configOprec()
         ]);
     }
 }

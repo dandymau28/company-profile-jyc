@@ -53,7 +53,7 @@
                             </div>
                         </div>
                     </div>
-                    @elseif($total<'110') 
+                    @elseif($total<$oprec->batas_pendaftar) 
                     <form class="needs-validation" id="regForm" action="/pendaftaran" method="POST"
                         enctype="multipart/form-data">
                         @csrf

@@ -21,8 +21,10 @@ class cabController extends Controller
 {
     public function countCAB()
     {
+        $oprec = DB::table('info_oprec')->whereNull('deleted_at')->latest()->first();
+
         $data = DB::table('cab')
-                ->whereRaw(DB::raw("YEAR(created_at)=YEAR(CURRENT_DATE)"))
+                ->where('batch', $oprec->batch)
                 ->count();
 
         return $data;
