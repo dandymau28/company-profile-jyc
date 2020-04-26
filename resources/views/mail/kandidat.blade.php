@@ -39,11 +39,11 @@
             <h4 class="text-center py-3">Dear, {{$data->nama_panggilan}}</h4>
             <h5 class="pt-2">Terima kasih,</h5>
             <h5>telah mendaftar sebagai calon anggota baru JYC 2020.</h5>
-            @if($status == 'Berhasil')
+            @if($data->status_cab == 'kandidat')
             <p>Berikut pembayaran yang harus diselesaikan.</p>
             <div class="row font-weight-bold">
                 <div class="col-3">Biaya pendaftaran</div>
-                <div class="col">: Rp. 25.0000,-</div>
+                <div class="col">: Rp. 25.000,-</div>
             </div>
             <div class="row font-weight-bold">
                 <div class="col-3">No. Rekening</div>

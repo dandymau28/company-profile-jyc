@@ -106,6 +106,22 @@
                             </table>
                         </div>
                     </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <table class="table table-bordered" id="tabelWLCAB">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">No</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Instagram</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
                 </div>
                 <!-- /.col-md-12 -->
             </div>
@@ -176,6 +192,45 @@ $.ajax({
                         render: function(data, type, full) {
                             return (
                                 '<a class="btn btn-primary btn-sm" href="http://127.0.0.1:8000/admin/cab/id/' + full.id +'">Detail</a>' 
+                            );
+                        }
+                    }
+                ]
+            });
+        }
+    })
+    .fail(function() {
+        console.log(error);
+    });
+
+    $.ajax({
+    method: "GET",
+    url: "http://127.0.0.1:8000/api/cab/getWL"
+})
+    .done(function(response) {
+        if(response.code === 200) {
+            $("#tabelWLCAB").DataTable({
+                data: response.data,
+                columns: [
+                    {
+                        data: null,
+                        render: function(data, type, row, meta) {
+                            return meta.row + 1;
+                        }
+                    },
+                    {
+                        data: "nama_lengkap"
+                    },
+                    {
+                        data: "email"
+                    },
+                    {
+                        data: "instagram"
+                    },
+                    {
+                        render: function(data, type, full) {
+                            return (
+                                '<a class="btn btn-primary btn-sm" href="http://127.0.0.1:8000/admin/cab/change/' + full.id +'">Ubah Jadi Kandidat</a>' 
                             );
                         }
                     }

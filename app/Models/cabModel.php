@@ -14,6 +14,8 @@ class cabModel extends Model
         'id_audisi',
         'foto',
         'nik',
+        'status_cab',
+        'batch',
         'no_passport',
         'nama_lengkap',
         'umur',

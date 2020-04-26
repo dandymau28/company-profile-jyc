@@ -23,7 +23,6 @@ class sendMailCAB implements ShouldQueue
     public function __construct($data)
     {
         $this->data = $data;
-        // $this->pdf = $pdf;
     }
 
     /**
@@ -33,7 +32,7 @@ class sendMailCAB implements ShouldQueue
      */
     public function handle()
     {
-        Mail::to($this->data['identitas']->email)
+        Mail::to($this->data->email)
                 ->send(new AfterRegister($this->data));
     }
 }

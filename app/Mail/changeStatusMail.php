@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class AfterRegister extends Mailable
+class changeStatusMail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -16,9 +16,9 @@ class AfterRegister extends Mailable
      *
      * @return void
      */
-    public function __construct($data)
+    public function __construct()
     {
-        $this->data = $data;
+        //
     }
 
     /**
@@ -31,8 +31,5 @@ class AfterRegister extends Mailable
         return $this->view('mail.kandidat')
                     ->subject('E-mail Pendaftaran JYC')
                     ->with(['data' => $this->data]);
-                    // ->attachData($this->pdf, 'data-diri.pdf', [
-                    //     'mime' => 'application/pdf'
-                    // ]);
     }
 }

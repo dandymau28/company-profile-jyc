@@ -101,7 +101,18 @@ class apiController extends Controller
     {
         $data = DB::table('cab')
                     ->join('kode_pembayaran_cab','cab.id','=','kode_pembayaran_cab.id_cab')
+                    ->where('cab.status_cab','kandidat')
                     ->select('cab.id','cab.nama_lengkap','kode_pembayaran_cab.kode_bayar', 'cab.email', 'kode_pembayaran_cab.status')
+                    ->get();
+
+        return response()->json(['code'=>200,'data' => $data]);
+    }
+
+    public function jsonWLCAB()
+    {
+        $data = DB::table('cab')
+                    ->where('cab.status_cab','waiting_list')
+                    ->latest()
                     ->get();
 
         return response()->json(['code'=>200,'data' => $data]);

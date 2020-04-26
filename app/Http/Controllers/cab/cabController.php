@@ -65,4 +65,11 @@ class cabController extends Controller
 
         return $pdf->stream($filename . '.pdf');
     }
+
+    public function configOprec()
+    {
+        $data = DB::table('info_oprec')->whereNull('deleted_at')->latest()->first();
+
+        return $data;
+    }
 }
