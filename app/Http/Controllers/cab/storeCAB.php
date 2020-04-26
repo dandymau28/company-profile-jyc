@@ -35,7 +35,7 @@ class storeCAB extends Controller
                     ->where('nik', $request->input('nik'))
                     ->orWhere('no_passport', $request->input('no_passport'))
                     ->first();
-                    
+
             if(!empty($data)) {
                 if($data->nik == $request->input('nik') || $data->no_passport == $request->input('no_passport')) {
                     return back()->with('error','NIK/No. Passport sudah pernah digunakan');
@@ -148,7 +148,7 @@ class storeCAB extends Controller
         $waktu = Carbon::now()->format('YMd');
         $id = $cab->id;
 
-        if ($pendaftar < 90) {
+        if ($pendaftar < $oprec->batas_kandidat) {
             $kode_bayar = Str::uuid();
 
             DB::table('cab')->where('id', $id)->update([
@@ -171,7 +171,7 @@ class storeCAB extends Controller
 
             sendMailCAB::dispatch($data);
 
-        } elseif ($pendaftar >= 90 && $pendaftar < 110) {
+        } elseif ($pendaftar >= $batas_kandidat && $pendaftar < $batas_pendaftar) {
             DB::table('cab')->where('id', $id)->update([
                 'status_cab' => 'waiting_list'
             ]);
