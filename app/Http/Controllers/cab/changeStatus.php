@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 use DB;
+use Illuminate\Support\Str;
 
 class changeStatus extends Controller
 {
