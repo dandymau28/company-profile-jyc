@@ -133,6 +133,7 @@ Route::group([
     Route::get('/cab/id/{id}', 'admin\editCAB@editCAB');
     Route::get('/cab/verif/{id}', 'cab\updateVerify@verify');
     Route::get('/cab/unverif/{id}','cab\updateVerify@unverify');
+    Route::get('/cab/change/{id}', 'cab\changeStatus@change');
 
     //Berita
     Route::get('/berita/buat', 'admin\createBerita@create')->name('buat-berita');
@@ -160,6 +161,8 @@ Route::group([
 
     Route::get('/kegiatan','admin\viewKegiatan@kegiatan')->name('kegiatan-view');
     Route::post('/kegiatan','admin\tambahKegiatan@tambahKegiatan')->name('add-kegiatan');
+    Route::get('/kegiatan/oprec','admin\viewOprec@view')->name('oprec-view');
+    Route::post('/kegiatan/oprec','admin\storeOprec@store')->name('add-oprec');
     
     Route::get('/contoh', function () {
         return view('admin.foto.contoh');

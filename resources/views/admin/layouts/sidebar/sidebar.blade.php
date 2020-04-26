@@ -28,7 +28,7 @@
                         <p>Dashboard</p>
                     </a>
                 </li>
-                <li class="nav-item has-treeview level-1">
+                {{-- <li class="nav-item has-treeview level-1">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-users"></i>
                         <p>
@@ -62,7 +62,7 @@
                             </a>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
                 <li class="nav-item has-treeview level-1">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-users-cog"></i>
@@ -125,6 +125,12 @@
                     <a href="{{route('kegiatan-view')}}" class="nav-link">
                         <i class="nav-icon fas fa-running"></i>
                         <p>Kegiatan</p>
+                    </a>
+                </li>
+                <li class="nav-item level-1">
+                    <a href="{{route('oprec-view')}}" class="nav-link">
+                        <i class="nav-icon fab fa-steam-symbol"></i>
+                        <p>Oprec</p>
                     </a>
                 </li>
                 <li class="nav-item level-1">
