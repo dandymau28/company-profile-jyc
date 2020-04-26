@@ -30,6 +30,22 @@ class storeCAB extends Controller
         $oprec = $oprec->configOprec();
 
         try {
+            $data = DB::table('cab')
+                    ->where('batch', $oprec->batch)
+                    ->where('nik', $request->input('nik'))
+                    ->orWhere('no_passport', $request->input('no_passport'))
+                    ->first();
+                    
+            if(!empty($data)) {
+                if($data->nik == $request->input('nik') || $data->no_passport == $request->input('no_passport')) {
+                    return back()->with('error','NIK/No. Passport sudah pernah digunakan');
+                }
+            }
+        } catch (Exception $e) {
+            return back()->with('error','Gagal cek data. Error message= '.$e->getMessage());
+        }
+
+        try {
             DB::beginTransaction();
             $uploadFoto = $request->file('foto');
             $name = 'foto'.'-'.trim($request->input('nama_lengkap')).'.'.$uploadFoto->getClientOriginalExtension();
