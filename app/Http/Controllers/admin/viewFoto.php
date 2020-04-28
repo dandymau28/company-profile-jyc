@@ -16,7 +16,7 @@ class viewFoto extends Controller
     public function index()
     {   
         try{
-            $kegiatans = DB::table('kegiatan')->get();
+            $kategori = DB::table('kategori')->get();
         } catch (Exception $e) {
             return $hasil = [
                 'code' => $e->getCode(),
@@ -25,7 +25,7 @@ class viewFoto extends Controller
         }
         return view('admin.foto.index', [
             "title" => "Upload Foto",
-            "kegiatans" => $kegiatans
+            "kategori" => $kategori
             ]);
     }
 }
