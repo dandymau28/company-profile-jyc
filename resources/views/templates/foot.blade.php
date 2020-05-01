@@ -13,8 +13,35 @@
 
     {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/galleria.min.js"></script> --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     
 <script>
+    //toastrjs for Subscribe Email
+
+    $('#subscribe').submit(function (e) {
+        e.preventDefault();
+        let form = $(this);
+        let data = form.serialize();
+
+        $.ajax({
+            method: 'POST',
+            url: 'http://127.0.0.1:8000/api/subscribe',
+            data,
+        })
+        .done(function (response) {
+            toastr.options.progressBar = true;
+            toastr.success('Terima kasih, Anda telah berlangganan berita kami!', 'Sukses Berlangganan!');
+            document.getElementById('emailSubscribe').value = "";
+        })
+        .fail(function (error) {
+            toastr.options.progressBar = true;
+            toastr.error('Gagal berlangganan. Silakan hubungi kami melalui Contact Us', 'Gagal!');
+            document.getElementById('emailSubscribe').value = "";
+        })
+    })
+
+    //End of toastrjs
+
     $(function () {
         AOS.init();
 

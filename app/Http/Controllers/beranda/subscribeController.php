@@ -17,16 +17,21 @@ class subscribeController extends Controller
             $data = Subscribe::create([
                 'email' => $request->input('email')
             ]);
+
+            return response()->json([
+                'code' => 200,
+                'message' => $data
+            ]);
         } catch (Exception $e) {
             return response()->json([
                 "code" => 500,
-                "message" => "failed. Cannot do request"
+                "message" => "failed.".$e->getMessage()
             ]);
         }
 
         return response()->json([
             "code" => 200,
-            "message" => "success"
+            "message" => $data
         ]);
     }
 
@@ -36,6 +41,7 @@ class subscribeController extends Controller
             $data = Subscribe::find($email);
             if(!$data->isEmpty()){
                 Mail::to($data->email)
+                    ->subject('Berhenti berlangganan berita')
                     ->send(new unsubscribeMail);
             } else {
                 return response()->json([
@@ -44,7 +50,10 @@ class subscribeController extends Controller
                 ]);
             }
         } catch (Exception $e) {
-            
+            return response()->json([
+                "code" => 500,
+                "message" => $e->getMessage()
+            ]);
         }
         
         $data->delete();

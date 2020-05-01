@@ -40,13 +40,13 @@
         </div>
         <div class="col-sm-12 col-md-3 mt-sm-3 mt-md-0">
             <div class="footer-title mb-1">Berlangganan surat elektronik</div>
-            <form action="{{route('subscribe')}}" method="post">
+            <form id="subscribe" method="post">
                 @csrf
                 <div class="input-group my-2">
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="inputGroupPrepend"><i class="fas fa-envelope"></i></span>
                     </div>
-                    <input type="text" name="email" class="form-control shadow" id="validationCustomUsername" aria-describedby="inputGroupPrepend" placeholder="Masukkan email anda">
+                    <input type="text" name="email" class="form-control shadow" id="emailSubscribe" aria-describedby="inputGroupPrepend" placeholder="Masukkan email anda">
                 </div>
                 <button type="submit" class="btn btn-warning text-white shadow">Langganan</button>
                 <a href="#" class="shadow" id="scroll" style="display: none;"><span></span></a>
