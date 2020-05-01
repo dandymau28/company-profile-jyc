@@ -162,7 +162,8 @@ Route::group([
     Route::get('/kegiatan','admin\viewKegiatan@kegiatan')->name('kegiatan-view');
     Route::post('/kegiatan','admin\tambahKegiatan@tambahKegiatan')->name('add-kegiatan');
     Route::get('/kegiatan/oprec','admin\viewOprec@view')->name('oprec-view');
-    Route::post('/kegiatan/oprec','admin\storeOprec@store')->name('add-oprec');
+    Route::post('/kegiatan/oprec/add-oprec','admin\storeOprec@store')->name('add-oprec');
+    Route::post('/kegiatan/oprec/add-jadwal','admin\storeJadwal@store')->name('add-jadwal');
     
     Route::get('/contoh', function () {
         return view('admin.foto.contoh');
