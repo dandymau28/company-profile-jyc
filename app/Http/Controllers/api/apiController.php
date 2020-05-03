@@ -196,4 +196,28 @@ class apiController extends Controller
             ]);
         }
     }
+
+    public function getAllFoto () {
+        try{
+            $videos = DB::table('foto')->whereNull('deleted_at')->latest()->get();
+            // $videos = DB::table('video')->latest()->get();
+            if(!empty($videos)) {
+                return response()->json([
+                    "code" => 200,
+                    "message" => "Data Video ditemukan!",
+                    "result" => $videos
+                ]);
+            } else {
+                return response()->json([
+                    "code" => 404,
+                    "message" => "Prestasi blm memiliki penghargaan!",
+                ]);
+            }
+        } catch (Exception $e) {
+            return response()->json([
+                "code" => $e->getCode(),
+                "message" => $e->getMessage(),
+            ]);
+        }
+    }
 }

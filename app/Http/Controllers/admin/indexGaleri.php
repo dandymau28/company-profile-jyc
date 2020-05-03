@@ -16,22 +16,18 @@ class indexGaleri extends Controller
             $foto = $e->getMessage();
         }
 
-        try{
-            $kegiatans = DB::table('kegiatan')->latest()->get();
-        } catch (Exception $e) {
-            $kegiatans = $e->getMessage();
-        }
-
         try {
             $video = DB::table('video')->latest()->get();
         } catch (Exception $e) {
             $video = $e->getMessage();
         }
 
+        $kategori = DB::table('kategori')->latest()->get();
+
         return view('admin.video.galeri',[
             'foto' => $foto,
             'video' => $video,
-            'kegiatans' => $kegiatans
+            'kategori' => $kategori
         ]);
     }
 }

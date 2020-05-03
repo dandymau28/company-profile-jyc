@@ -17,11 +17,22 @@ class subscribeController extends Controller
             $data = Subscribe::create([
                 'email' => $request->input('email')
             ]);
+
+            return response()->json([
+                'code' => 200,
+                'message' => $data
+            ]);
         } catch (Exception $e) {
-            return back()->with('errors',$e->getMessage());
+            return response()->json([
+                "code" => 500,
+                "message" => "failed.".$e->getMessage()
+            ]);
         }
 
-        return back()->with('success','Terima kasih telah berlangganan');
+        return response()->json([
+            "code" => 200,
+            "message" => $data
+        ]);
     }
 
     public function unsubscribe ($email)
@@ -30,13 +41,25 @@ class subscribeController extends Controller
             $data = Subscribe::find($email);
             if(!$data->isEmpty()){
                 Mail::to($data->email)
+                    ->subject('Berhenti berlangganan berita')
                     ->send(new unsubscribeMail);
+            } else {
+                return response()->json([
+                    "code" => 404,
+                    "message" => "failed. Cannot find data"
+                ]);
             }
         } catch (Exception $e) {
-            
+            return response()->json([
+                "code" => 500,
+                "message" => $e->getMessage()
+            ]);
         }
         
         $data->delete();
-        return back();
+        return response()->json([
+            "code" => 200,
+            "message" => "success"
+        ]);
     }
 }

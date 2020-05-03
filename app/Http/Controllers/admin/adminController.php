@@ -21,10 +21,13 @@ class adminController extends Controller
                     ->where('kategori', $index->nama_kategori)
                     ->count();
             
-            $koleksi[] = [
-                'nama_kategori' => $index->nama_kategori,
-                'jumlah_berita' => $hitung
-            ];
+            if($hitung != '0') {
+                $koleksi[] = [
+                    'nama_kategori' => $index->nama_kategori,
+                    'jumlah_berita' => $hitung
+                ];
+            }
+
         }
         return $koleksi;
     }
