@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 use DB;
 use Illuminate\Support\Str;
+use App\Jobs\sendMailCAB;
 
 class changeStatus extends Controller
 {

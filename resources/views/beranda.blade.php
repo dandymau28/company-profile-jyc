@@ -52,8 +52,23 @@
                 <p>Jakarta Youth Choir</p>
             </div>
             <div class="col-md-6 intro-text" data-aos="fade-left" data-aos-duration="1500">
-                <p><b>Jakarta Youth Choir</b> adalah paduan suara dari DKI Jakarta dibawah binaan Dinas Pemuda dan Olahraga. JYC telah mengukir banyak pertasi  terkemuka di tingkat Nasional ataupun Internasional. <b>Jakarta Youth Choir</b> juga menghadirkan berbagai Choirmaster dari berbagai latar belakang Paduan Suara di Indonesia yang terkenal dan berpengalaman sebagai pelatih tamu untuk memaksimalkan pengembangan kemampuan para Choristernya.<br><br>
-                Yuk pantau terus proses latihan kami untuk mengharumkan nama Jakarta dan Indonesia dengan follow akun resmi instagram <b>@JktYouthChoir</b> dan media sosial lainnya.</p>
+                <p><b>Jakarta Youth Choir (JYC) adalah organisasi kepemudaan bidang paduan suara binaan Dinas
+                    Pemuda dan Olahraga Provinsi DKI Jakarta yang berdiri pada tahun 2015 oleh para pendiri,
+                    Septo Adi Kristanto Simanjuntak dan P. Ariadi Limbong.</p>
+                <p>Dari tahun ke tahun, keberadaan JYC di dunia paduan suara semakin diperhitungkan. JYC telah
+                    menggelar pertunjukkan konser paduan suara secara berkala. JYC dipilih dan dipercaya sebagai
+                    penampil dan bagian dari acara-acara hebat nan besar, yang dihadiri orang-orang hebat yang
+                    inspiratif. Selain itu, JYC telah berkontribusi mengukir berbagai prestasi terkemuka di tingkat
+                    Nasional maupun Internasional, dibuktikan oleh pencapaian JYC sebagai Grand Prix Winner of
+                    The Year dengan mendapatkan nilai sempurna yang menjadi kali pertama dari 34
+                    penyelenggaraan Festival Internazionale Chorus Inside Advent di Roma, Italia pada tahun 2018.
+                    </p>
+                <p>
+                    Dengan bimbingan Choirmaster penuh cinta, Septo Adi Kristanto Simanjuntak, saat ini JYC
+                    membina lebih dari 100 anggota aktif, yang berasal dari berbagai macam latarbelakang dan
+                    bertempat tinggal di DKI Jakarta dan sekitarnya, untuk mengharumkan nama Jakarta dan
+                    Indonesia, khususnya di dunia paduan suara. “We Sing for the City and the Country.”
+                </p>
             </div>
         </div>
     </div>
