@@ -1,0 +1,268 @@
+/* BERANDA PAGE */
+
+/* Carousel */
+.carousel-fade .carousel-inner .carousel-item {
+    opacity: 0;
+    transition-property: opacity;
+    overflow: hidden;
+}
+
+.carousel-item.active img {
+    transition: transform 5000ms linear 0s;
+    /* This should be based on your carousel setting. For bs, it should be 5second*/
+    transform: scale(1.05, 1.05);
+}
+
+.carousel-fade .carousel-inner .active {
+    opacity: 1;
+}
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+}
+
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+    opacity: 1;
+}
+
+.carousel-fade .carousel-control {
+    z-index: 2;
+}
+
+/*
+  WHAT IS NEW IN 3.3: "Added transforms to improve carousel performance in modern browsers."
+  now override the 3.3 new styles for modern browsers & apply opacity
+  */
+@media all and (transform-3d),
+(-webkit-transform-3d) {
+
+    .carousel-fade .carousel-inner>.carousel-item.next,
+    .carousel-fade .carousel-inner>.carousel-item.active.right {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    .carousel-fade .carousel-inner>.carousel-item.prev,
+    .carousel-fade .carousel-inner>.carousel-item.active.left {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    .carousel-fade .carousel-inner>.carousel-item.next.left,
+    .carousel-fade .carousel-inner>.carousel-item.prev.right,
+    .carousel-fade .carousel-inner>.carousel-item.active {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* Brightness-zoom Container */
+.img-hover-zoom {
+    /* height: 300px; */
+    /* [1.1] Set it as per your need */
+    overflow: hidden;
+    /* [1.2] Hide the overflowing of child elements */
+}
+
+/* Brightness-zoom Container */
+.img-hover-zoom--brightness img {
+    transition: transform 1.5s, filter 1.5s ease-in-out;
+    transform-origin: center center;
+    filter: brightness(50%);
+}
+
+/* The Transformation */
+.img-hover-zoom--brightness:hover img {
+    filter: brightness(100%);
+    transform: scale(1.3);
+}
+
+/* Carousel Mobile */
+/* @media (max-width: 767.98px) {
+    .carousel {
+        margin-top: 10 !important;
+    }
+} */
+
+/* Pengenalan Gambar */
+.intro-gambar {
+    /* background: url(../img/beranda/intro-jyc.jpg) no-repeat center center fixed; */
+    padding-right: 0px;
+    padding-left: 0px;
+
+    height: 300px;
+    /* Create the parallax scrolling effect */
+    background-image: url(../img/beranda/intro-jyc.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.intro-gambar h1 {
+    text-align: right;
+    padding-right: 30px;
+    padding-top: 100px;
+    letter-spacing: 20px;
+    font-size: 120pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.intro-gambar p {
+    text-align: right;
+    padding-right: 30px;
+    letter-spacing: 4px;
+    font-size: 21pt;
+    font-weight: bold;
+    padding-top: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+/* Small Device */
+@media (max-width: 575.98px) {
+    .intro-gambar h1 {
+        padding-top: 60px;
+        text-align: center;
+        padding-left: 50px;
+        font-size: 100pt;
+    }
+
+    .intro-gambar p {
+        text-align: center;
+        padding-left: 30px;
+        font-size: 16pt;
+    }
+
+    .intro-gambar{
+        height: 400px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 991.98px) {
+    .intro-gambar{
+        width: none !important;
+        height: 420px;
+    }
+
+    .intro-gambar h1 {
+        padding-top: 40px;
+        text-align: center;
+        padding-left: 30px;
+    }
+
+    .intro-gambar p {
+        text-align: center;
+        padding-left: 30px;
+    }
+
+}
+
+/* Tablet */
+/* @media (min-width: 768px) and (max-width: 991.98px){
+    .intro-gambar{
+        height: 850px;
+    }
+
+    .intro-gambar h1 {
+        padding-top: 300px;
+        
+    }
+} */
+
+/* Desktop */
+@media (min-width: 992px) and (max-width: 1199.98px){
+    .intro-gambar {
+        height: 800px;
+    }
+    
+    .intro-gambar h1 {
+        padding-top: 300px;
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 1200px) {
+    .intro-gambar {
+        height: 800px;
+    }
+
+    .intro-gambar h1 {
+        padding-top: 250px;
+    }
+}
+
+@media (min-width: 1500px) {
+    .intro-gambar {
+        height: 600px;
+    }
+
+    .intro-gambar h1 {
+        padding-top: 150px;
+    }
+}
+
+@media (min-width: 1700px) {
+    .intro-gambar {
+        height: 500px;
+    }
+
+    .intro-gambar h1 {
+        padding-top: 100px;
+    }
+}
+
+
+/* Pengenalan Text */
+.intro-jyc {
+    background-color: #C12821;
+    color: #FFFFFF;
+    text-align: justify;
+    font-weight: lighter;
+    line-height: 30px;
+}
+
+.intro-text {
+    padding: 20px;
+    font-size: 13pt;
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .intro-text p {
+        font-size: 12pt;
+        padding: 10px;
+    }
+}
+
+/* @media (min-width: 768px) and (max-width: 991.98px) {
+    .intro-text {
+        font-size: 10pt;
+    }
+} */
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .intro-text {
+        font-size: 12pt;
+    }
+}
+
+/* Beranda Card Berita */
+.card-berita {
+    padding-bottom: 50px !important;
+}
+
+@media (max-width: 767.98px) {
+    .card-berita {
+        flex: none !important;
+        margin-bottom: 2rem !important;
+    }
+}

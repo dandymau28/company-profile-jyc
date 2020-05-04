@@ -40,21 +40,22 @@
                 <img src="{{asset('assets/img/tentang-kami/contact-us.png')}}" alt="img" class="img-fluid">
             </div>
             <div class="col-md-7">
-                <form action="" method="post">
-                    <ul>
-                        <li>
-                            <input type="text" name="name" id="name" placeholder="   Name">
-                        </li>
-                        <li>
-                            <input type="email" name="email" id="email" placeholder="    Email">
-                        </li>
-                        <li>
-                            <input type="text" name="pesan" id="pesan" class="pesan" placeholder="   Message">
-                        </li>
-                        <li>
-                            <button type="submit">SUBMIT</button>
-                        </li>
-                    </ul>
+                <form>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Nama</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nama">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Email address</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="email@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Pesan</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <div class="button">
+                        <button>KIRIM</button>
+                    </div>
                 </form>
             </div>
         </div>

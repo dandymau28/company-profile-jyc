@@ -1,0 +1,159 @@
+/* KEGIATAN PAGE */
+
+/* Banner Profile*/
+.parallax-window {
+    min-height: 400px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#banner-kegiatan {
+    background: url(../img/kegiatan/banner-kegiatan.png)no-repeat center center fixed;
+    display: table;
+    min-height: 350px;
+    position: relative;
+    width: 100%;
+    background-size: cover;
+}
+
+.text-kegiatan {
+    color: #f8f9fe;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    letter-spacing: .1rem;
+}
+
+.latihan-rutin {
+    margin-bottom: 150px;
+    margin-top: 100px;
+    text-align: justify;
+
+}
+
+.latihan-rutin h3 {
+    color: #707070;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 22px;
+    text-align: center;
+    border-bottom: 1.5px solid #C12821;
+    width: 287px;
+}
+
+.latihan-rutin a {
+    color: #b71c1c;
+}
+
+.latihan-rutin a:hover {
+    text-decoration: none;
+}
+
+.latihan-text {
+    font-size: 20px;
+}
+
+/* Medium devices (tablets, 768px and up) */
+
+@media (max-width: 1199.98px) {
+    .latihan-text {
+        font-size: 18px;
+        padding : 20px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .latihan-text {
+        font-size: 20px;
+    }
+}
+
+
+/* KEGIATAN - JNCC */
+.JNCC {
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+/* .JNCC h3 {
+    color: #fffff6;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 22px;
+    text-align: center;
+    border-bottom: 1.5px solid #C12821;
+    width: max-content;
+} */
+
+.JNCC h3 {
+    overflow: hidden;
+    text-align: center;
+}
+
+.JNCC h3:before,
+.JNCC h3:after {
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    background-color: #fffff6;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    vertical-align: middle;
+    width: 15%;
+}
+
+.JNCC h3:before {
+    right: 1em;
+    margin-left: -50%;
+}
+
+.JNCC h3:after {
+    left: 1em;
+    margin-right: -50%;
+}
+
+.JNCC h5 {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    font-size: 9rem;
+    font-weight: 700;
+    color: #fffff6;
+    letter-spacing: .7rem;
+}
+
+.JNCC a:hover{
+    text-decoration: none;
+}
+
+
+.JNCC p {
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+/* KEGIATAN - JNCC MOBILE */
+@media (max-width: 767.98px) {
+    .JNCC h3 {
+        font-size: 20px;
+    }
+
+    .JNCC h5 {
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+        font-size: 5.5rem;
+        font-weight: 700;
+        color: #fffff6;
+        letter-spacing: .5rem;
+    }
+
+
+    .JNCC p {
+        font-size: 15px;
+        font-weight: bolder;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .JNCC h3 {
+        font-size: 15px;
+    }
+}
