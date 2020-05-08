@@ -71,7 +71,16 @@ class cabController extends Controller
             "riwayat_organisasi" => $riwayat_organisasi,
             "padus" => $padus])->setPaper('a4', 'portrait');
         $filename = $cab->nama_panggilan . '-' . $kode_bayar;
-
+        
+        // return view('mail.pdf.data-diri', [
+        //     "cab" => $cab,
+        //     "jadwal" => $jadwal,
+        //     "kemampuan_bermusik" => $kemampuan_musik,
+        //     "prestasi_seni" => $prestasi_seni,
+        //     "prestasi_non_seni" => $prestasi_non_seni,
+        //     "riwayat_organisasi" => $riwayat_organisasi,
+        //     "padus" => $padus
+        // ]);
         return $pdf->stream($filename . '.pdf');
     }
 

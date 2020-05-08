@@ -9,11 +9,11 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div id="nav-items" class="navbar-nav ml-auto">
                 <a class="nav-item nav-link" name="beranda" href="{{route('beranda')}}"><i class="fas fa-home"></i> Beranda</a>
-                <a class="nav-item nav-link" name="profile" href="{{route('profile')}}"><i class="fas fa-user-circle"></i> Profile</a>
                 <a class="nav-item nav-link" name="kegiatan" href="{{route('kegiatan')}}"><i class="fas fa-music"></i> Kegiatan</a>
                 <a class="nav-item nav-link" name="prestasi" href="{{route('prestasi')}}"><i class="fas fa-trophy"></i> Prestasi</a>
                 <a class="nav-item nav-link" name="berita" href="{{route('berita')}}"><i class="fas fa-envelope"></i> Berita</a>
-                <a class="nav-item nav-link" name="tentang" href="{{route('tentang-kami')}}"><i class="fas fa-users"></i> Tentang Kami</a>
+                <a class="nav-item nav-link" name="profile" href="{{route('profile')}}"><i class="fas fa-user-circle"></i> Tentang Kami</a>
+                {{-- <a class="nav-item nav-link" name="tentang" href="{{route('tentang-kami')}}"><i class="fas fa-users"></i> Tentang Kami</a> --}}
             </div>
         </div>
     </div>

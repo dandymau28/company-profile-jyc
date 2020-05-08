@@ -30,12 +30,38 @@
                 <div class="card-body">
                     <h4 class="card-title text-center">Septo Adi Kristanto Simanjuntak, S.Pd</h4>
 
-                    <p class="card-text text-justify">Septo Adi Kristanto Simanjuntak or warmly called Cepo, was born in Jakarta on September 17th, 1991. He is a Bachelor of Education (English Language Teaching) from Sampoerna University. He found his interest in singing since 1995, when he was in primary school. He actively sang as in the Church Choir. His potential is also well developed since his parents always supported him through all singing events and competitions that he joined. </p> 
-                    <p class="card-text text-justify">He has successfully achieved a lot of achievements in choir in more than one decade. One of his great achievement happened in 2008. He was the representative from DKI Jakarta (Indonesia’s capital city) in Gita Bahana Nusantara (The Choir for Independence Day in the President Palace) in 2008. Along the way, he joined many kind of singing competitions in TV, Radio, Malls and etc. Since then, he keeps improving his skills and capability in music, especially in choral works.</p>
-                    <p class="card-text text-justify">In 2015, Cepo with his supervisor in Youth and Sport Department (Mr. Ponirin Ariadi Limbong) and his senior colleague from The Indonesia Youth Exchange Program (Yuvino Tanimura) initiated to establish a choir. It is open for all youth who have interest in singing, especially for those who have some limitation in terms of singing techniques & experiences. After long discussion, it was named as Jakarta Youth Choir (JYC).</p>
-                    <p class="card-text text-justify">Since 2015, Cepo & JYC have been achieving a lot of achievements and awards in many International events such as competition and festival in Indonesia, Thailand, China, Singapore, Italy, Poland and Lithuania. They have collected more than 15 gold medals & some Grand Prix trophy for Indonesia. </p>
-                    <p class="card-text text-justify">He's also got some conductor prizes such as The Best Conductor Award in The XXXIV Chorus Inside Advent 2018 in Italy, The Promising Conductor and The Best Organized Conductor Award in The XIV Varsovia Cantat 2019 in Poland. He was also one of the 10 invited participating conductors around the world to participate in The Harold Rosenbaum Choral Conducting 2019 in New York University, The United States.</p>
-                    <p class="card-text text-justify">Those experiences make him actively involved as adjudicators or trainer in choir competition or workshops in the country. Until now, he keeps on learning, developing and gaining his skills & experiences by joining workshops, seminars & competition around the world. He is also well known as the choirmaster of Jakarta Youth Choir, song arranger ( especially choral arrangements), professional singer and vocal/choir director who coaches children, youth & adult choirs.</p>
+                    <p class="card-text text-justify">Septo Adi Kristanto Simanjuntak atau akrab dipanggil Cepo, lahir di Jakarta pada 17 September
+                        1991. Cepo adalah Sarjana Pendidikan Bahasa Inggris dari Universitas Sampoerna. Cepo
+                        menemukan minatnya dalam bernyanyi sejak 1995, ketika masih di Sekolah Dasar. Potensinya
+                        juga berkembang dengan baik karena orangtuanya selalu mendukungnya melalui semua acara
+                        bernyanyi dan kompetisi yang diikuti.</p> 
+                    <p class="card-text text-justify">Cepo telah berhasil mencapai banyak prestasi di paduan suara dalam lebih dari satu dekade.
+                        Salah satu prestasinya yang luar biasa terjadi pada tahun 2008. Cepo adalah perwakilan dari DKI
+                        Jakarta di Gita Bahana Nusantara (Paduan Suara untuk Hari Kemerdekaan di Istana Presiden)
+                        pada tahun 2008. Sepanjang perjalanan, Cepo bergabung dengan berbagai jenis kompetisi
+                        menyanyi di TV, Radio, Mal, dan lain-lain. Sejak itu, Cepo terus meningkatkan keterampilan dan
+                        kemampuannya dalam musik, terutama dalam karya paduan suara.</p>
+                    <p class="card-text text-justify">Pada 2015, Cepo bersama pembinanya di Dinas Pemuda dan Olahraga DKI Jakarta (Bpk.
+                        Ponirin Ariadi Limbong) dan kolega seniornya dari Program Pertukaran Pemuda Indonesia
+                        (Yuvino Tanimura) berinisiatif mendirikan paduan suara yang terbuka untuk semua pemuda
+                        yang memiliki minat dalam bernyanyi, terutama bagi mereka yang memiliki keterbatasan dalam
+                        hal teknik dan pengalaman menyanyi. Sampai akhirnya, paduan suara itu diberi nama Jakarta
+                        Youth Choir (JYC).</p>
+                    <p class="card-text text-justify">Sejak 2015, Cepo dan JYC telah mencapai banyak prestasi dan penghargaan di berbagai acara
+                        Internasional seperti kompetisi dan festival di Indonesia, Thailand, Cina, Singapura, Italia,
+                        Polandia dan Lituania. Cepo bersama JYC telah mengumpulkan lebih dari 15 medali emas dan
+                        beberapa trofi Grand Prix untuk Indonesia.</p>
+                    <p class="card-text text-justify">Cepo juga mendapat beberapa hadiah konduktor seperti The Best Conductor Award di The
+                        XXXIV Chorus Inside Advent 2018 di Italia, The Promising Conductor dan The Best Conductor
+                        Award di The XIV Varsovia Cantat 2019 di Polandia. Cepo juga menjadi salah satu dari 10
+                        konduktor yang diundang dari seluruh dunia untuk berpartisipasi dalam Choral Conducting
+                        Institute oleh Harold Rosenbaum pada tahun 2019 di New York University, Amerika Serikat.</p>
+                    <p class="card-text text-justify">Pengalaman dan prestasi musiknya membuat Cepo terlibat aktif sebagai ajudikator atau pelatih
+                        dalam kompetisi paduan suara dan berbagai workshop di negara ini. Hingga saat ini, Cepo terus
+                        belajar mengembangkan kemampuannya dan menambah pengalaman dalam bidang paduan suara
+                        dengan bergabung dalam workshop, seminar dan kompetisi di seluruh dunia. Cepo juga dikenal
+                        sebagai choirmaster dari Jakarta Youth Choir, penggubah lagu (terutama paduan suara),
+                        penyanyi profesional, pengaba dan pelatih paduan suara anak, pemuda, dan dewasa di Indonesia.</p>
                 </div>
             </div>
 
