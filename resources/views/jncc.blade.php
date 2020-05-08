@@ -39,16 +39,16 @@
     <div class="container-fluid waktu-jncc">
         <h3>WAKTU DAN TEMPAT</h3>
         <div class="row align-content-center">
-            <div class="col-md-4 text-center waktu-1" data-aos="fade-right" data-aos-duration="1500">
+            <div class="col-md-4 text-center waktu-1" data-aos="fade-up" data-aos-duration="1500">
                 <p>Sabtu, 27 April 2019</p>
             </div>
-            <div class="col-md-4 text-center waktu-2" data-aos="fade-left" data-aos-duration="1500">
+            <div class="col-md-4 text-center waktu-2" data-aos="fade-up" data-aos-duration="1500">
                 <p>Dinas Pendidikan DKI Jakarta<br>
                 Jalan Jenderal Gatot Subroto No.Kav. 40-41, RT.8 / RW.3<br>
                 Kuningan, East Kuningan, Setia Budi, South Jakarta City, Jakarta 12950
                 </p>
             </div>
-            <div class="col-md-4 text-center waktu-3" data-aos="fade-left" data-aos-duration="1500">
+            <div class="col-md-4 text-center waktu-3" data-aos="fade-up" data-aos-duration="1500">
                 <p> 10.00 – 18.00 WIB.</p>
             </div>
         </div>
@@ -57,10 +57,10 @@
     <!-- Hasil Kegiatan -->
     <div class="container-fluid hasil-kegiatan">
         <div class="row">
-            <div class="col-md-4 hasil-kegiatan-1" data-aos="fade-right" data-aos-duration="1500">
+            <div class="col-md-4 hasil-kegiatan-1" data-aos="fade-up" data-aos-duration="1500">
                 <p>HASIL<br>KEGIATAN</p>
             </div>
-            <div class="col-md-8 hasil-kegiatan-2 text-justify" data-aos="fade-left" data-aos-duration="1500">
+            <div class="col-md-8 hasil-kegiatan-2 text-justify" data-aos="fade-up" data-aos-duration="1500">
                 <p>
                 Kegiatan The 1st Jakarta National Choir Competition diselenggarakan pada tanggal 27 April 2019. Acara diikuti oleh 17 peserta yang berasal dari SMA di Jakarta dan sekitarnya. Acara dimulai pada pukul 08.00 yaitu resgistrasi peserta. Opening ceremony oleh MC yaitu pukul 09.00 dan memulai penampilan peserta pertama pada pukul 09.45. Peserta terakhir tampil pada pukul 16.00. Pengumuman pemenang yaitu pada pukul 17.15 yang diumumkan oleh salah satu juri kami Septo Adi Kristanto Simanjuntak. Pada acara kali ini, kami menghadirkan tiga dewan juri yaitu Septo Adi Kristanto Simanjuntak sebagai Juri 1, Budi Susanto Yohanes sebagai Juri 2, dan Ken Steven sebagai Juri 3. Acara ditutup oleh penampilan peraih juara 1.<br><br>
 	            Acara The 1st Jakarta Choir Competition ini di sponsori oleh Bank DKI sebagai sponsor utama, Rave habbit, Dana, Le minerale, Marina, Heavenly Blush, LSPR, Sampoerna University McD, Domino’s Pizza, Pandawa, jajan jamur, dan mostbreinner. Media partner pada acara ini yaitu Kampus Update, Jakartaku, Campus Event.
@@ -69,6 +69,72 @@
             </div>
         </div>
     </div>
+
+    <!-- Daftar Pemenang -->
+    <div class="container daftar-pemenang">
+            <h3>DAFTAR PEMENANG</h3>
+            
+            <div class="row my-5 text-center">
+                <div class="col-lg-3 my-3" data-aos="flip-left" data-aos-duration="1500">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Konduktor terbaik</h4>
+                            <p class="card-text">SMAN 47 Jakarta</p>
+                        </div>
+                            <img class="card-img img-fluid" src="{{asset('assets/img/jncc/pemenang.png')}}" alt="img">
+                        <div class="card-body tim-pemenang">
+                            <h4>FABAVOSSA YOUTH CHOIR</h4>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-3 my-3" data-aos="flip-left" data-aos-duration="1500">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Koreografi terbaik</h4>
+                            <p class="card-text">SMAN 71 JAKARTA</p>
+                        </div>
+                            <img class="card-img img-fluid" src="{{asset('assets/img/jncc/pemenang.png')}}" alt="img">
+                        <div class="card-body tim-pemenang">
+                            <h4>GITA PATRIA SAPTA EKA</h4>
+                        </div>
+                    </div>
+                    
+
+                </div>
+                <div class="col-lg-3 my-3" data-aos="flip-left" data-aos-duration="1500">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Kostum terbaik</h4>
+                            <p class="card-text">SMAN 68 JAKARTA</p>
+                        </div>
+                            <img class="card-img img-fluid" src="{{asset('assets/img/jncc/pemenang.png')}}" alt="img">
+                        <div class="card-body tim-pemenang">
+                            <h4>TOSLA 68</h4>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-3 my-3" data-aos="flip-left" data-aos-duration="1500">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Favorit Sosial Media</h4>
+                            <p class="card-text">SMKN 38 JAKARTA</p>
+                        </div>
+                            <img class="card-img img-fluid" src="{{asset('assets/img/jncc/pemenang.png')}}" alt="img">
+                        <div class="card-body tim-pemenang">
+                            <h4>RESTYER VOICE</h4>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
 
     <!-- Daftar Peserta -->
     <div class="container daftar-peserta">
@@ -91,72 +157,92 @@
             </tr>
             <tr>
                 <td>2</td>
-                <td>SMAN 72 Jakarta</td>
-                <td>SMAN 72 JAKARTA</td>
+                <td>SMKN 26 Jakarta</td>
+                <td>SMKN 26 Jakarta</td>
             </tr>
             <tr>
                 <td>3</td>
-                <td>SMAN 73 Jakarta</td>
-                <td>SMAN 73 JAKARTA</td>
+                <td>SMKN 16 Jakarta</td>
+                <td>SMKN 16 Jakarta</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>SMAN 3 Depok</td>
+                <td>SMAN 3 Depok</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>SMAN 76 Jakarta</td>
+                <td>SMAN 76 Jakarta</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>SMAN 13 Jakarta</td>
+                <td>SMAN 13 Jakarta</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>SMAN 68 Jakarta</td>
+                <td>SMAN 68 Jakarta</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>SMAN 2 Tangsel</td>
+                <td>SMAN 2 Tangsel</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>SMAN 61 Jakarta</td>
+                <td>SMAN 61 Jakarta</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>SMAN 47 Jakarta</td>
+                <td>SMAN 47 Jakarta</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>SMAN 1 Karawang</td>
+                <td>SMAN 1 Karawang</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>SMAN 96 Jakarta</td>
+                <td>SMAN 96 Jakarta</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>SMA Tugu Ibu</td>
+                <td>SMA Tugu Ibu</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>SMAN 7 Tangsel</td>
+                <td>SMAN 7 Tangsel</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>SMAN 1 Garut</td>
+                <td>SMAN 1 Garut</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>SMAN 48 Jakarta</td>
+                <td>SMAN 48 Jakarta</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>SMAN 38 Jakarta</td>
+                <td>SMAN 38 Jakarta</td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>SMAN 81 Jakarta</td>
+                <td></td>
             </tr>
             </tbody>
         </table>
     </div>
-
-    <!-- Daftar Pemenang -->
-    <div class="container daftar-pemenang">
-        <h3>DAFTAR PEMENANG</h3>
-        
-        <div class="row my-5 text-center">
-            <div class="col-md-4 my-3" data-aos="flip-left" data-aos-duration="1500">
-
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Juara 1</h4>
-                        <p class="card-text">SMAN 47 Jakarta</p>
-                    </div>
-                        <img class="card-img img-fluid" src="{{asset('assets/img/jncc/pemenang.png')}}" alt="img">
-                    <div class="card-body tim-pemenang">
-                        <h4>FABAVOSSA YOUTH CHOIR</h4>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-md-4 my-3" data-aos="flip-left" data-aos-duration="1500">
-
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Juara 2</h4>
-                        <p class="card-text">SMAN 47 Jakarta</p>
-                    </div>
-                        <img class="card-img img-fluid" src="{{asset('assets/img/jncc/pemenang.png')}}" alt="img">
-                    <div class="card-body tim-pemenang">
-                        <h4>FABAVOSSA YOUTH CHOIR</h4>
-                    </div>
-                </div>
-                
-
-            </div>
-            <div class="col-md-4 my-3" data-aos="flip-left" data-aos-duration="1500">
-
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Juara 3</h4>
-                        <p class="card-text">SMAN 47 Jakarta</p>
-                    </div>
-                        <img class="card-img img-fluid" src="{{asset('assets/img/jncc/pemenang.png')}}" alt="img">
-                    <div class="card-body tim-pemenang">
-                        <h4>FABAVOSSA YOUTH CHOIR</h4>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-
-    </div>
-
-
 
     @include('templates.footer')
 </body>

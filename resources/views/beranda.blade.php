@@ -47,11 +47,11 @@
     <!-- Pengenalan JYC -->
     <div class="container-fluid intro-jyc">
         <div class="row align-items-center">
-            <div class="col-md-6 intro-gambar text-center">
+            <div class="col-lg-6 intro-gambar text-center">
                 <h1>JYC</h1>
                 <p>Jakarta Youth Choir</p>
             </div>
-            <div class="col-md-6 intro-text" data-aos="fade-left" data-aos-duration="1500">
+            <div class="col-lg-6 intro-text" data-aos="fade-up" data-aos-duration="1500">
                 <p><b>Jakarta Youth Choir (JYC) adalah organisasi kepemudaan bidang paduan suara binaan Dinas
                     Pemuda dan Olahraga Provinsi DKI Jakarta yang berdiri pada tahun 2015 oleh para pendiri,
                     Septo Adi Kristanto Simanjuntak dan P. Ariadi Limbong.</p>

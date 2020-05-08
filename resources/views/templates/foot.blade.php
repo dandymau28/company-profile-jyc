@@ -25,7 +25,7 @@
 
         $.ajax({
             method: 'POST',
-            url: 'http://127.0.0.1:8000/api/subscribe',
+            url: '/api/subscribe',
             data,
         })
         .done(function (response) {

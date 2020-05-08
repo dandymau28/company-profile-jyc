@@ -1,0 +1,192 @@
+/*** TENTANG KAMI PAGE */
+
+/* HEADER TENTANG KAMI*/
+.jumbotron-1 {
+    background-image: url(../img/tentang-kami/paralax-1.png);
+    background-size: cover;
+    min-height: 1000px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.jumbotron .display-1 {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #4B4747;
+    text-shadow: 0px 2px 3px #FFFFFF;
+    font-size: 100pt;
+    font-weight: bolder;
+    word-spacing: 10pt;
+}
+
+.jumbotron .display-2 {
+    position: absolute;
+    left: 0;
+    bottom: 5%;
+    width: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 200%;
+    font-weight: bolder;
+}
+
+
+
+/* Text We Sing, We Proud*/
+.we-sing {
+    min-height: 500px;
+    padding-top: 3%;
+    padding-bottom: 5%;
+}
+
+.we-sing h5 {
+    font-weight: bolder;
+    font-size: 180%;
+    color: #707070;
+    text-align: center;
+    padding-bottom: 20px
+}
+
+.we-sing p {
+    text-align: justify;
+    max-width: 1200px;
+    font-size: 120%;
+    line-height: 45px;
+    color: #707070;
+    padding: 30px;
+}
+
+@media (max-width: 576px) {
+    .we-sing p {
+        text-align: justify;
+        max-width: 1200px;
+        line-height: 25px;
+        color: #707070;
+        padding: 5px;
+        font-size: 18px;
+    }
+}
+
+
+
+/* Paralax 2 - We Sing For The City */
+.jumbotron-2 {
+    background-image: url(../img/tentang-kami/paralax-2.png);
+    background-size: cover;
+    min-height: 400px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.jumbotron-2 .display-3 {
+    margin-top: 200px;
+    color: #FFFFFF;
+    width: 100%;
+    text-align: end;
+    font-size: 26pt;
+    font-weight: bolder;
+    text-shadow: 3px 3px 3px #707070;
+}
+
+.jumbotron-2 .display-4 {
+    color: #FFFFFF;
+    width: 100%;
+    text-align: end;
+    font-size: 40pt;
+    font-weight: bolder;
+    text-shadow: 3px 3px 3px #707070;
+}
+
+@media (max-width: 576px) {
+    .jumbotron-2 .display-3 {
+        font-size: 20pt;
+    }
+
+    .jumbotron-2 .display-4 {
+        font-size: 31pt;
+    }
+}
+
+
+/* HAVE QUESTION */
+.question {
+    min-height: 100px;
+}
+
+.question h5 {
+    font-weight: bolder;
+    font-size: 20pt;
+    color: #707070;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.form-question {
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+.form-question img {
+    width: 400px;
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .form-question img {
+        width: 200px;
+        margin-top: -60px;
+        margin-bottom: 10px;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .form-question img {
+        width: 300px;
+        margin-top: -60px;
+        margin-bottom: 10px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .form-question img {
+        width: 400px;
+        margin-top: -60px;
+        margin-bottom: 10px;
+    }
+}
+
+.form-question button {
+    background-color: #BEA6A1;
+    color: #FFFFFF;
+    width: 160px;
+    height: 40px;
+    border-radius: 25px;
+}
+
+.form-question button:hover {
+    background-color: rgb(155, 134, 129);
+    color: #FFFFFF;
+}
+
+@media (max-width: 767.98px) {
+    .button{
+        /* display: inline-block; */
+        text-align: center !important;
+    }
+}

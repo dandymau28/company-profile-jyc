@@ -121,9 +121,22 @@
         <h3 class="mb-5">STRUKTUR ORGANISASI</h3>
         <div class="row container-fluid" data-aos="fade-up" data-aos-duration="1500">
             <div class="col-lg-8 mx-auto text-center">
-                <img src="{{asset('assets/img/profile/organisasi.png')}}" class="img-fluid w-100" alt="Struktur">
+                <img id="myImg" src="{{asset('assets/img/profile/organisasi.png')}}" class="img-fluid w-100" alt="Struktur">
             </div>
         </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+    <!-- The Close Button -->
+    <span class="close">&times;</span>
+
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img01">
+
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption"></div>
     </div>
     
     @include('templates.footer')
