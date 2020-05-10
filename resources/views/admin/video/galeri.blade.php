@@ -41,8 +41,8 @@
                     <table id="table_prestasi" class="table table-bordered">
                         <thead>
                             <tr class="text-center">
-                                <th scope="col">Foto kegiatan</th>
-                                <th scope="col">Kegiatan</th>
+                                <th scope="col">Foto</th>
+                                <th scope="col">Kategori</th>
                                 <th scope="col">Aksi</th>
                             </tr>
                         </thead>
@@ -103,7 +103,8 @@
                                     </div>
                                 @endif
                                 <select class="w-100 custom-select" name="pilih-kegiatan" id="pilih-kegiatan">
-                                    @foreach ($kegiatans as $kegiatan)
+                                        <option value="" selected disabled>Pilih Kategori</option>
+                                    @foreach ($kategori as $kegiatan)
                                         <option value={{$kegiatan->id}}>{{$kegiatan->nama}}</option>   
                                     @endforeach
                                 </select>

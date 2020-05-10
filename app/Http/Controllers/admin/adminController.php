@@ -27,7 +27,6 @@ class adminController extends Controller
                     'jumlah_berita' => $hitung
                 ];
             }
-
         }
         return $koleksi;
     }

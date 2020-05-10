@@ -22,7 +22,7 @@ class indexGaleri extends Controller
             $video = $e->getMessage();
         }
 
-        $kategori = DB::table('kategori')->latest()->get();
+        $kategori = DB::table('kategori_foto')->latest()->get();
 
         return view('admin.video.galeri',[
             'foto' => $foto,
