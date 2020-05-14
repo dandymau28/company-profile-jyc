@@ -102,17 +102,21 @@
                                         @endphp
                                     </div>
                                 @endif
-                                <select class="w-100 custom-select" name="pilih-kegiatan" id="pilih-kegiatan">
-                                        <option value="" selected disabled>Pilih Kategori</option>
+                                <select class="w-100 custom-select" name="kategori" id="pilih-kegiatan">
+                                    <option value="" selected disabled>Pilih Kategori</option>
                                     @foreach ($kategori as $kegiatan)
-                                        <option value={{$kegiatan->id}}>{{$kegiatan->nama}}</option>   
+                                    <option value={{$kegiatan->id}}>{{$kegiatan->nama}}</option>   
                                     @endforeach
                                 </select>
+                                <label for="deskripsi"> Deskripsi </label>
+                                <div class="form-group">
+                                    <input type="text" name="deskripsi" class="form-control">
+                                </div>
                                 <label for="images"> Images </label>
-                                    <div class="form-group">
-                                        <input type="file" name="images[]" class="form-control" id="images" multiple/>
-                                        {!! $errors->first('images', '<small class="text-danger">:message</small>') !!}
-                                    </div>
+                                <div class="form-group">
+                                    <input type="file" name="images[]" class="form-control" id="images" multiple/>
+                                    {!! $errors->first('images', '<small class="text-danger">:message</small>') !!}
+                                </div>
                             </div>
                             <div class="card-footer">
                                 <button type="submit" class="btn btn-success"> Upload Images </button>

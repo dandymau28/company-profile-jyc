@@ -124,7 +124,7 @@
                 <li class="nav-item level-1">
                     <a href="{{route('kegiatan-view')}}" class="nav-link">
                         <i class="nav-icon fas fa-running"></i>
-                        <p>Kegiatan</p>
+                        <p>Kategori Foto</p>
                     </a>
                 </li>
                 <li class="nav-item level-1">

@@ -10,7 +10,7 @@ class viewKegiatan extends Controller
 {
     public function kegiatan()
     {
-        $kegiatan = DB::table('kegiatan')->latest()->get();
+        $kegiatan = DB::table('kategori_foto')->latest()->get();
 
         return view('admin.kegiatan.kegiatan',[
             'kegiatan' => $kegiatan,

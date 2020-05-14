@@ -16,11 +16,11 @@ class kegiatanController extends Controller
             ->get();
 
 
-        $kegiatan = DB::table('kegiatan')
+        $kegiatan = DB::table('kategori_foto')
         ->get();
 
         try {
-            $foto = DB::table('foto')->where('id_kegiatan', '1')->get();
+            $foto = DB::table('foto')->where('kategori', '1')->get();
             $allVideo = DB::table('video')
             ->orderBy('created_at','desc')
             ->get();

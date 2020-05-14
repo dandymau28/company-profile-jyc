@@ -43,14 +43,22 @@
                             @endphp
                         </div>
                         @endif
-                        <div class="form-group col-5">
-                            <label for="nama_kegiatan">Nama Kegiatan</label>
-                            <input type="text" name="nama_kegiatan" id="nama_kegiatan" class="form-control" placeholder="Nama Kegiatan" required>
+                        @if(Session::has('error'))
+                        <div class="alert alert-danger">
+                            {{ Session::get('error') }}
+                            @php
+                            Session::forget('error');
+                            @endphp
                         </div>
+                        @endif
                         <div class="form-group col-5">
+                            <label for="nama_kegiatan">Nama Kategori</label>
+                            <input type="text" name="nama" id="nama" class="form-control" placeholder="Kompetisi" required>
+                        </div>
+                        {{-- <div class="form-group col-5">
                             <label for="jenis">Jenis Kegiatan</label>
                             <input type="text" name="jenis" id="jenis" class="form-control" placeholder="Jenis Kegiatan" required>
-                        </div>
+                        </div> --}}
                         <div class="col-5 text-right">
                             <button type="submit" name="action" value="post" class="btn btn-success">Simpan</button>
                         </div>
@@ -71,8 +79,8 @@
                         <thead class="thead-dark">
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">Kegiatan</th>
-                                <th scope="col">Jenis</th>
+                                <th scope="col">Kategori Foto</th>
+                                {{-- <th scope="col">Jenis</th> --}}
                             </tr>
                         </thead>
                         <tbody>
@@ -81,7 +89,7 @@
                             <tr>
                                 <th scope="row">{{ $i++ }}</th>
                                 <td>{{$satuan->nama}}</td>
-                                <td>{{$satuan->jenis}}</td>
+                                {{-- <td>{{$satuan->jenis}}</td> --}}
                             </tr>
                             @endforeach
                         </tbody>

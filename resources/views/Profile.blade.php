@@ -118,12 +118,41 @@
     </div>
 
     <div class="berita container-fluid bg-light py-5">
-        <h3 class="mb-5">STRUKTUR ORGANISASI</h3>
-        <div class="row container-fluid" data-aos="fade-up" data-aos-duration="1500">
+        <h3 class="mb-4">STRUKTUR ORGANISASI</h3>
+        <div class="row justify-content-center mb-4">
+            <div class="col-5">
+                <nav>
+                    <div class="nav nav-tabs row justify-content-between text-center" id="nav-tab" role="tablist">
+                      <a class="nav-item nav-link col m-0" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">2016 - 2017</a>
+                      <a class="nav-item nav-link col m-0" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">2018 - 2019</a>
+                      <a class="nav-item nav-link active col m-0" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">2020 - 2021</a>
+                    </div>
+                  </nav>
+                </div>
+            </div>
+            <div class="tab-content" id="nav-tabContent">
+            {{-- <div class="row container-fluid" data-aos="fade-up" data-aos-duration="1500">
+                <div class="col-lg-8 mx-auto text-center">
+                    <img id="myImg" src="{{asset('assets/img/profile/organisasi.png')}}" class="img-fluid w-100" alt="Struktur">
+                </div>
+            </div> --}}
+                <div class="tab-pane fade " data-aos="fade-up" data-aos-duration="1500" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                    1
+                    <img id="myImg" src="{{asset('assets/img/profile/organisasi.png')}}" class="img-fluid w-100" alt="Struktur">
+                </div>
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    2
+                    <img id="myImg" src="{{asset('assets/img/profile/organisasi2.png')}}" class="img-fluid w-100" alt="Struktur">
+                </div>
+                <div class="tab-pane fade show active" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                    <img id="myImg" src="{{asset('assets/img/profile/organisasi3.png')}}" class="img-fluid w-100" alt="Struktur">
+                </div>
+            </div> 
+        {{-- <div class="row container-fluid" data-aos="fade-up" data-aos-duration="1500">
             <div class="col-lg-8 mx-auto text-center">
                 <img id="myImg" src="{{asset('assets/img/profile/organisasi.png')}}" class="img-fluid w-100" alt="Struktur">
             </div>
-        </div>
+        </div> --}}
     </div>
 
     <!-- The Modal -->

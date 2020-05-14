@@ -26,6 +26,7 @@ class storeFoto extends Controller
             $uploadedPhoto = $request->file('images');        
             
             $kategori = $request->input('kategori');
+            // return $kategori;
             $deskripsi = $request->input('deskripsi');
             // {{ Storage::url($foto->alamat_foto) }}
             // return $id_kegiatan;
