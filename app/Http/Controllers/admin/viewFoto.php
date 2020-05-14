@@ -16,7 +16,7 @@ class viewFoto extends Controller
     public function index()
     {   
         try{
-            $kategori = DB::table('kategori')->get();
+            $kategori = DB::table('kategori_foto')->get();
         } catch (Exception $e) {
             return $hasil = [
                 'code' => $e->getCode(),
