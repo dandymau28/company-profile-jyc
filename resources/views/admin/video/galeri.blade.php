@@ -105,7 +105,7 @@
                                 <select class="w-100 custom-select" name="kategori" id="pilih-kegiatan">
                                     <option value="" selected disabled>Pilih Kategori</option>
                                     @foreach ($kategori as $kegiatan)
-                                    <option value={{$kegiatan->id}}>{{$kegiatan->nama}}</option>   
+                                    <option value={{$kegiatan->nama}}>{{$kegiatan->nama}}</option>   
                                     @endforeach
                                 </select>
                                 <label for="deskripsi"> Deskripsi </label>
