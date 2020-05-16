@@ -9,12 +9,37 @@
 <body>
     <!-- Navbar -->
     @include('templates.navbar')
-    
+
     <!-- Banner Section -->
     <div id="banner-profile">
         <div class="container text-profile">
-            <h1 class="display-judul">PROFILE</h1>
+            <h1 class="display-judul">TENTANG KAMI</h1>
             <h4 class="">JAKARTA YOUTH CHOIR</h4>
+        </div>
+    </div>
+
+    <!-- Sejarah JYC -->
+    <div class="berita container-fluid bg-light py-5">
+        <h3 class="mb-4">SEJARAH JYC</h3>
+        <div class="row container-fluid" data-aos="fade-up" data-aos-duration="1500">
+            <div class="col-lg-6 mx-auto text-justify sejarah-text">
+            <p>
+            Jakarta Youth Choir (JYC) bermula pada 25 Juli 2015 saat para Finalis DKI Jakarta tampil pada Program Pertukaran Pemuda Antarnegara sedang live-in di Kalibaru, Cilincing, Jakarta Utara. Mereka diminta untuk bernyanyi di sebuah acara masyarakat setempat. Hanya dengan persiapan yang singkat, oleh para finalis dan Choirmaster Septo Adi Kristanto Simanjuntak (Cepo), membuat penampilan perdana ini sukses dan berkesan.
+            </p>
+            <p>
+            Menindaklanjuti penampilan yang berkesan oleh para finalis PPAN 2015 di Cilincing tersebut, Cepo dan P. Ariadi Limbong (Kepala Seksi Kepemudaan Dinas Pemuda dan Olahraga Provinsi DKI Jakarta) mendapatkan inspirasi untuk membuat paduan suara ini berkelanjutan. Sampai pada akhirnya dinamakan Jakarta Youth Choir (JYC). JYC diresmikan pada 30 Agustus 2015 di Auditorium Sertifikasi Guru Universitas Negeri Jakarta oleh Kepala Badan Kesatuan Bangsa dan Politik DKI Jakarta Drs. H. Ratiyono, MMSI.
+            </p>
+            <p>
+            Saat ini, JYC membina lebih dari 100 choristers aktif yang berasal dari berbagai macam latar belakang pendidikan dan pekerjaan maupun pelatih penuh waktu untuk kelompok paduan suara ternama yang berkedudukan di DKI Jakarta dan sekitarnya. 
+            JYC telah menggelar beberapa konser paduan suara secara berkala. JYC dipilih dan dipercaya sebagai penampil dan bagian dari acara-acara hebat nan besar, yang dihadiri orang-orang hebat yang inspiratif. Bahkan, JYC telah berkontribusi mengukir berbagai prestasi terkemuka di tingkat Nasional maupun Internasional, dibuktikan oleh pencapaian JYC sebagai Grand Prix Winner of The Year dengan mendapatkan nilai sempurna yang menjadi kali pertama dari 34 penyelenggaraan Festival Internazionale Chorus Inside Advent di Roma, Italia pada tahun 2018.
+            </p>
+            <p>
+            Pada tahun 2019, JYC berhasil mengukir prestasi kembali dengan meraih 2nd Prize in Mixed Choir Category, 3rd  Prize in Male & Female Choir, Romuald Twardowski Prize – for the best performance of Romuald Twardowski composition by foreign choir, The Promising Conductor dan The Best Organized Conductor pada XIV Varsovia Cantat International Warsaw Choir Festival. Tidak hanya itu, pada kompetisi 27th Cantate Domino International Choir Festival and Competition of Sacred Music, JYC berhasil meraih The Winner of Mixed Category, The Winner of Chamber Category, The 1st Cup Grand Prix Winner for Mixed Category, The 2nd Cup Grand Prix Winner for Chamber Category, Special Jury Award for The Best Interpretation of Vytautas Miskinis "Cantate Domino" Piece dan Special Jury Award for The Most Expressive Choir.
+            </p>
+            <p>
+            JYC berkomitmen untuk meningkatkan prestasi sebagai salah satu paduan suara terbaik di Indonesia. JYC bertahan dan semangat untuk menyebarluaskan cinta terhadap budaya bangsa juga mengharumkan nama DKI Jakarta dan Indonesia, khususnya di dunia Paduan Suara. “We Sing for the City and the Country.” 
+            </p>
+            </div>
         </div>
     </div>
 
@@ -96,9 +121,9 @@
 
     <div class="berita container-fluid bg-light py-5">
         <h3 class="mb-5">VISI</h3>
-        <div class="row container-fluid" data-aos="fade-up" data-aos-duration="1500">
-            <div class="col-lg-6 mx-auto text-center">
-                <h5>Jakarta Youth Choir bernyanyi untuk membanggakan dan membawa nama harum Kota Jakarta dan Negara Indonesia</h4>
+        <div class="row" data-aos="fade-up" data-aos-duration="1500">
+            <div class="col-lg-8 mx-auto text-center">
+                <h5>Jakarta Youth Choir bernyanyi untuk membanggakan dan membawa nama harum Kota Jakarta dan Negara Indonesia</h5>
             </div>
         </div>
     </div>
@@ -106,13 +131,13 @@
     <div class="berita container-fluid bg-light py-5">
         <h3 class="mb-5">MISI</h3>
         <div class="row container-fluid" data-aos="fade-up" data-aos-duration="1500">
-            <div class="col-lg-6 mx-auto text-center">
-                <ol>
+            <div class="col-lg-8 mx-auto text-center">
+                <ul>
                     <li><h5 class="card-text text-justify">Menciptakan suasana organisasi yang harmonis, bersahabat dan ramah</h5></li>
                     <li><h5 class="card-text text-justify">Menyediakan sarana fisik dan non fisik untuk melatih baka dan talenta para anggotanya dalam suasana disiplin konstruktif dan menyenangkan</h5></li>
                     <li><h5 class="card-text text-justify">Aktif mengikuti kompetisi paduan suara di dalam dan di luar negeri</h5></li>
                     <li><h5 class="card-text text-justify">Mendukung program-program pemerintah DKI Jakarta khususnya dalam bidang kepemudaan, kesenian, dan kebudayaan.</h5></li>
-                </ol>
+                </ul>
             </div>
         </div>
     </div>
@@ -120,39 +145,30 @@
     <div class="berita container-fluid bg-light py-5">
         <h3 class="mb-4">STRUKTUR ORGANISASI</h3>
         <div class="row justify-content-center mb-4">
-            <div class="col-5">
-                <nav>
+            <div class="col-sm-8">
+                <nav class="tab-struktur">
                     <div class="nav nav-tabs row justify-content-between text-center" id="nav-tab" role="tablist">
-                      <a class="nav-item nav-link col m-0" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">2016 - 2017</a>
-                      <a class="nav-item nav-link col m-0" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">2018 - 2019</a>
-                      <a class="nav-item nav-link active col m-0" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">2020 - 2021</a>
+                        <a class="struktur-items col m-0" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">2016 - 2017</a>
+                        <a class="struktur-items col m-0" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">2018 - 2019</a>
+                        <a class="struktur-items active col m-0" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">2020 - 2021</a>
                     </div>
-                  </nav>
-                </div>
+                </nav>
             </div>
-            <div class="tab-content" id="nav-tabContent">
-            {{-- <div class="row container-fluid" data-aos="fade-up" data-aos-duration="1500">
-                <div class="col-lg-8 mx-auto text-center">
-                    <img id="myImg" src="{{asset('assets/img/profile/organisasi.png')}}" class="img-fluid w-100" alt="Struktur">
-                </div>
-            </div> --}}
-                <div class="tab-pane fade " data-aos="fade-up" data-aos-duration="1500" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                    1
-                    <img id="myImg" src="{{asset('assets/img/profile/organisasi.png')}}" class="img-fluid w-100" alt="Struktur">
-                </div>
-                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                    2
-                    <img id="myImg" src="{{asset('assets/img/profile/organisasi2.png')}}" class="img-fluid w-100" alt="Struktur">
-                </div>
-                <div class="tab-pane fade show active" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                    <img id="myImg" src="{{asset('assets/img/profile/organisasi3.png')}}" class="img-fluid w-100" alt="Struktur">
-                </div>
-            </div> 
-        {{-- <div class="row container-fluid" data-aos="fade-up" data-aos-duration="1500">
-            <div class="col-lg-8 mx-auto text-center">
-                <img id="myImg" src="{{asset('assets/img/profile/organisasi.png')}}" class="img-fluid w-100" alt="Struktur">
+        </div> 
+
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade " data-aos="fade-up" data-aos-duration="1500" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <img id="myImg" src="{{asset('assets/img/profile/struktur-2016-2017.png')}}" class="img-fluid w-100" alt="Struktur">
             </div>
-        </div> --}}
+
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <img id="myImg" src="{{asset('assets/img/profile/struktur-2018-2019.png')}}" class="img-fluid w-100" alt="Struktur">
+            </div>
+
+            <div class="tab-pane fade show active" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                <img id="myImg" src="{{asset('assets/img/profile/struktur-2020-2021.png')}}" class="img-fluid w-100" alt="Struktur">
+            </div>
+        </div> 
     </div>
 
     <!-- The Modal -->

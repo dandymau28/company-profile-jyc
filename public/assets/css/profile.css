@@ -16,22 +16,69 @@
 }
 
 #banner-profile {
-    background: url(../img/profile/profilepicture.jpg)no-repeat center center fixed;
+  background: url(../img/banner-page/profil.JPG) no-repeat center center fixed;
+  display: table;
+  height: 30vh;
+  position: relative;
+  width: 100%;
+  background-size: cover;
+  background-position-y: -700px;
+}
+
+@media (max-width: 1500px) {
+  #banner-profile {
+    background: url(../img/banner-page/profil.JPG) no-repeat center center fixed;
     display: table;
-    height: 40vh;
+    height: 30vh;
     position: relative;
     width: 100%;
     background-size: cover;
+    background-position-y: -300px;
+  }
 }
 
 .text-profile {
-    background-color: rgba(0, 0, 0, 0.4);
-    color: #f8f9fe;
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-    letter-spacing: .1rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #f8f9fe;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  letter-spacing: .1rem;
 }
+
+.text-profile h1 {
+  text-shadow: rgba(255, 255, 255, 0.1);
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: .5rem;
+}
+
+
+/* SEJARAH */
+@media (max-width: 991.98px) {
+  .sejarah-text {
+    margin-right: -15px !important;
+  }
+}
+
+
+/* TAB STRUKTUR */
+.tab-struktur {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.struktur-items {
+  color: #b71c1cf2;
+  text-decoration: none;
+  border: 1px rgb(33, 33, 33) solid;
+}
+
+.struktur-items:hover {
+  color: #FFFFFF;
+  background-color: #b71c1cf2;
+  text-decoration: none;
+}
+
 
 /* MODAL IMAGE */
 /* Style the Image Used to Trigger the Modal */

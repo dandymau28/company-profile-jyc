@@ -36,7 +36,7 @@
     </div>
     
     <!-- Waktu Pelaksanaan JNCC -->
-    <div class="container-fluid waktu-jncc">
+    <div class="container-fluid waktu-jncc mt-5">
         <h3>WAKTU DAN TEMPAT</h3>
         <div class="row align-content-center">
             <div class="col-md-4 text-center waktu-1" data-aos="fade-up" data-aos-duration="1500">

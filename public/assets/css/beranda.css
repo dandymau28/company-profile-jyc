@@ -130,16 +130,16 @@
 /* Small Device */
 @media (max-width: 575.98px) {
     .intro-gambar h1 {
-        padding-top: 60px;
+        padding-top: 80px !important;
         text-align: center;
         padding-left: 50px;
-        font-size: 100pt;
+        font-size: 100pt !important;
     }
 
     .intro-gambar p {
         text-align: center;
         padding-left: 30px;
-        font-size: 16pt;
+        font-size: 16pt !important;
     }
 
     .intro-gambar{
@@ -147,80 +147,120 @@
     }
 }
 
-/* Mobile */
-@media (max-width: 991.98px) {
-    .intro-gambar{
-        width: none !important;
-        height: 420px;
-    }
-
+@media (max-width: 767.98px) {
     .intro-gambar h1 {
-        padding-top: 40px;
+        padding-top: 50px;
         text-align: center;
-        padding-left: 30px;
+        padding-left: 50px;
+        font-size: 130pt;
     }
 
     .intro-gambar p {
         text-align: center;
         padding-left: 30px;
+        font-size: 20pt;
     }
 
-}
-
-/* Tablet */
-/* @media (min-width: 768px) and (max-width: 991.98px){
     .intro-gambar{
-        height: 850px;
-    }
-
-    .intro-gambar h1 {
-        padding-top: 300px;
-        
-    }
-} */
-
-/* Desktop */
-@media (min-width: 992px) and (max-width: 1199.98px){
-    .intro-gambar {
-        height: 800px;
-    }
-    
-    .intro-gambar h1 {
-        padding-top: 300px;
+        height: 400px;
     }
 }
 
-/* Large Desktop */
+@media (max-width: 991.98px) {
+    .intro-gambar h1 {
+        padding-top: 50px;
+        text-align: center;
+        padding-left: 50px;
+        font-size: 130pt;
+    }
+
+    .intro-gambar p {
+        text-align: center;
+        padding-left: 30px;
+        font-size: 20pt;
+    }
+
+    .intro-gambar{
+        height: 400px;
+    }
+}
+
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .intro-gambar h1 {
+        padding-top: 400px;
+        text-align: center;
+        padding-left: 50px;
+        font-size: 130pt;
+    }
+
+    .intro-gambar p {
+        text-align: center;
+        padding-left: 30px;
+        font-size: 20pt;
+    }
+
+    .intro-gambar{
+        height: 1000px;
+    }
+}
+
 @media (min-width: 1200px) {
-    .intro-gambar {
-        height: 800px;
+    .intro-gambar h1 {
+        padding-top: 230px;
+        text-align: center;
+        padding-left: 50px;
+        font-size: 150pt;
     }
 
-    .intro-gambar h1 {
-        padding-top: 250px;
+    .intro-gambar p {
+        text-align: center;
+        padding-left: 30px;
+        font-size: 25pt;
+    }
+
+    .intro-gambar{
+        height: 900px;
     }
 }
 
-@media (min-width: 1500px) {
-    .intro-gambar {
-        height: 600px;
-    }
-
+@media (min-width: 1600px) {
     .intro-gambar h1 {
         padding-top: 150px;
+        text-align: center;
+        padding-left: 50px;
+        font-size: 150pt;
+    }
+
+    .intro-gambar p {
+        text-align: center;
+        padding-left: 30px;
+        font-size: 25pt;
+    }
+
+    .intro-gambar{
+        height: 700px;
     }
 }
 
-@media (min-width: 1700px) {
-    .intro-gambar {
-        height: 500px;
-    }
-
+@media (min-width: 1800px) {
     .intro-gambar h1 {
-        padding-top: 100px;
+        padding-top: 150px;
+        text-align: center;
+        padding-left: 50px;
+        font-size: 150pt;
+    }
+
+    .intro-gambar p {
+        text-align: center;
+        padding-left: 30px;
+        font-size: 25pt;
+    }
+
+    .intro-gambar{
+        height: 650px;
     }
 }
-
 
 /* Pengenalan Text */
 .intro-jyc {

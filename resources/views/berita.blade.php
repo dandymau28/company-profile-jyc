@@ -15,7 +15,7 @@
     <div id="banner-berita">
         <div class="container text-berita">
             <h1 class="display-judul">BERITA</h1>
-            <h4 class="">JAKARTA YOUTH CHOIR</h4>
+            <h4 class="display-judul">JAKARTA YOUTH CHOIR</h4>
         </div>
     </div>
 
