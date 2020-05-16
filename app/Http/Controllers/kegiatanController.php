@@ -20,7 +20,7 @@ class kegiatanController extends Controller
         ->get();
 
         try {
-            $foto = DB::table('foto')->where('kategori', '1')->get();
+            $foto = DB::table('foto')->where('kategori', 'Kompetisi')->get();
             $allVideo = DB::table('video')
             ->orderBy('created_at','desc')
             ->get();
@@ -41,11 +41,21 @@ class kegiatanController extends Controller
     }
 
     public function fotoKegiatan($id_kegiatan) {
-        $foto = DB::table('foto')->where('id_kegiatan', $id_kegiatan)->get();
-        return $data = [
-            'code' => 200,
-            'fotos' => $foto
-        ];
+        $kegiatan = DB::table('kategori_foto')->where('id', $id_kegiatan)->first();
+        $foto = DB::table('foto')->where('kategori', $kegiatan->nama)->get();
+
+        if($foto->isEmpty()) {
+            return $data = [
+                'code' => 404,
+                'message' => 'Kegiatan tidak ada Foto!'
+            ];
+        } else {
+            return $data = [
+                'code' => 200,
+                'message' => 'Foto kegiatan ditemukan!',
+                'fotos' => $foto
+            ];
+        }
     }
 
 }
