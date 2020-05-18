@@ -7,11 +7,20 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class FotoModel extends Model
 {
+    use SoftDeletes;
     protected $table = 'foto';
-    public $timestamps = true;
+    
     protected $fillable = [
         'id',
-        'id_kegiatan',
+        'deskripsi',
         'alamat_foto',
+        'kategori'
+    ];
+
+    protected $dates =
+    [
+        'created_at',
+        'updated_at',
+        'deleted_at'
     ];
 }
