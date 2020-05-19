@@ -25,7 +25,7 @@ class storeFoto extends Controller
             // ]);
             $uploadedPhoto = $request->file('images');        
             
-            $kategori = trim($request->input('kategori'));
+            $kategori = $request->input('kategori');
             // return $kategori;
             $deskripsi = $request->input('deskripsi');
             // {{ Storage::url($foto->alamat_foto) }}
@@ -44,7 +44,7 @@ class storeFoto extends Controller
                 // if($file->move($path, $name)) {
                     // $images[]   =   $name;
                 $saveResult   =   FotoModel::create([
-                    'kategori' => $kategori,
+                    'id_kategori' => $kategori,
                     'deskripsi' => $deskripsi,
                     'alamat_foto' => '/img/'.$name
                     ]);

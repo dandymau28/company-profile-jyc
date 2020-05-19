@@ -14,7 +14,7 @@ class fotoModel extends Model
         'id',
         'deskripsi',
         'alamat_foto',
-        'kategori'
+        'id_kategori'
     ];
 
     protected $dates =
