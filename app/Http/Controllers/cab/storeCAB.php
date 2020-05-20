@@ -50,10 +50,10 @@ class storeCAB extends Controller
             $uploadFoto = $request->file('foto');
             $name = 'foto'.'-'.trim($request->input('nama_lengkap')).'.'.$uploadFoto->getClientOriginalExtension();
             $pathPhoto = $uploadFoto->storeAs('public/assets/img', $name);
-            
+        
             //identitas cab
             $cab = new CAB;
-            $cab->foto = $pathPhoto;
+            $cab->foto = '/img/'.$name;
             $cab->nama_lengkap = $request->input('nama_lengkap');
             $cab->nik = $request->input('nik');
             $cab->no_passport = $request->input('no_passport');

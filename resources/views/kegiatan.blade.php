@@ -99,7 +99,7 @@
             </div>
             <div id="lightgallery">
                 @foreach ($fotos as $foto)
-                <a href="" data-responsive="{{Storage::url($foto->alamat_foto)}}" data-src="{{Storage::url($foto->alamat_foto)}}" data-sub-html="<h4>{{ $foto->kategori }}</h4><p>{{ $foto->deskripsi }}</p>">
+                <a href="" data-responsive="{{Storage::url($foto->alamat_foto)}}" data-src="{{Storage::url($foto->alamat_foto)}}" data-sub-html="<h4>{{ $foto->nama_kategori }}</h4><p>{{ $foto->deskripsi }}</p>">
                     <img class="img-responsive" src="{{Storage::url($foto->alamat_foto)}}" width="350px" height="235px">
                 </a>
                 @endforeach

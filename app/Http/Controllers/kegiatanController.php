@@ -20,7 +20,10 @@ class kegiatanController extends Controller
         ->get();
 
         try {
-            $foto = DB::table('foto')->where('kategori', 'Kompetisi')->get();
+            $foto = DB::table('foto')
+                    ->leftJoin('kategori_foto', 'kategori_foto.id', '=', 'foto.id_kategori')
+                    ->select('foto.alamat_foto', 'kategori_foto.nama as nama_kategori', 'foto.deskripsi')
+                    ->get();
             $allVideo = DB::table('video')
             ->orderBy('created_at','desc')
             ->get();
