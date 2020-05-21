@@ -40,13 +40,13 @@ class storeFoto extends Controller
                 $name = $kategori.'-'.$index.'-'.time().'.'.$file->getClientOriginalExtension();
                 // $path = $request->file('images')->store('kegiatan');
                 
-                $pathPhoto = $file->storeAs('public/img/', $name);
+                $pathPhoto = $file->storeAs('public/galeri', $name);
                 // if($file->move($path, $name)) {
                     // $images[]   =   $name;
                 $saveResult   =   FotoModel::create([
                     'id_kategori' => $kategori,
                     'deskripsi' => $deskripsi,
-                    'alamat_foto' => '/img/'.$name
+                    'alamat_foto' => 'galeri/'.$name
                     ]);
                 // }
             }
