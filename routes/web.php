@@ -156,7 +156,7 @@ Route::group([
     //Galeri
     Route::get('/galeri/foto', 'admin\viewFoto@index')->name('upload-foto-view');
     Route::post('/upload-foto', 'admin\storeFoto@store')->name('upload-foto');
-    Route::get('/galeri/video','admin\viewVideo@videoView')->name('video-view');
+    // Route::get('/galeri/video','admin\viewVideo@videoView')->name('video-view');
     Route::post('/galeri/video','admin\storeVideo@video')->name('submit-video');
     Route::get('/galeri','admin\indexGaleri@galeriView')->name('galeri');
 
@@ -180,3 +180,6 @@ Route::post('/send-mail', 'mailController@sendEmail')->name('post-mail');
 
 
 Route::get('/ujigambar', 'beritaController@countByKategori');
+
+Route::get('/mailable/afterregister', 'PreviewEmailController@emailAR');
+Route::get('/mailable/verif', 'PreviewEmailController@emailVerif');

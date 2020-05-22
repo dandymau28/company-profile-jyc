@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Error Mail</title>
+    <title>Verification Mail</title>
 </head>
 <body>
     <h3>Silakan cetak form data diri Anda untuk dibawa saat audisi</h3>
