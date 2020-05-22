@@ -23,7 +23,7 @@ class kegiatanController extends Controller
             $foto = DB::table('foto')
                     ->leftJoin('kategori_foto', 'kategori_foto.id', '=', 'foto.id_kategori')
                     ->select('foto.alamat_foto', 'kategori_foto.nama as nama_kategori', 'foto.deskripsi')
-                    ->get();
+                    ->simplePaginate(9);
             $allVideo = DB::table('video')
             ->orderBy('created_at','desc')
             ->get();
@@ -45,7 +45,7 @@ class kegiatanController extends Controller
 
     public function fotoKegiatan($id_kegiatan) {
         $kegiatan = DB::table('kategori_foto')->where('id', $id_kegiatan)->first();
-        $foto = DB::table('foto')->where('kategori', $kegiatan->nama)->get();
+        $foto = DB::table('foto')->where('id_kategori', $id_kegiatan)->get();
 
         if($foto->isEmpty()) {
             return $data = [

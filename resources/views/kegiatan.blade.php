@@ -88,16 +88,16 @@
                 <div class="col-sm-12 col-md-auto">
                     <h3 class="">Galeri Kegiatan</h3>
                 </div>
-                <div class="col-md-4 col-sm-6 col-12 d-flex align-items-center">
+                {{-- <div class="col-md-4 col-sm-6 col-12 d-flex align-items-center">
                     <select class="custom-select" name="pilih-kegiatan" id="pilih-kegiatan">
                     <option value="" disabled selected>Pilih Kegiatan</option>
                     @foreach ($kegiatans as $kegiatan)
                         <option class=" overflow-hidden" value={{$kegiatan->id}}>{{$kegiatan->nama}}</option>   
                     @endforeach
                     </select>
-                </div>
+                </div> --}}
             </div>
-            <div id="lightgallery">
+            <div id="lightgallery" class="my-3">
                 @foreach ($fotos as $foto)
                 <a href="" data-responsive="{{Storage::url($foto->alamat_foto)}}" data-src="{{Storage::url($foto->alamat_foto)}}" data-sub-html="<h4>{{ $foto->nama_kategori }}</h4><p>{{ $foto->deskripsi }}</p>">
                     <img class="img-responsive" src="{{Storage::url($foto->alamat_foto)}}" width="350px" height="235px">
@@ -115,6 +115,9 @@
                 <a href="" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/4-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/4-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
                     <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-4.jpg">
                 </a> --}}
+            </div>
+            <div class="row justify-content-center">
+                {{$fotos->links()}}
             </div>
             {{--<ul id="lightgallery" class="list-unstyled row">
                 <a href="" class="col-md-4 col-sm-6 col-12" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/1-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/1-1600.jpg" data-sub-html="<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>">
@@ -288,7 +291,7 @@
 <script src="{{ asset('assets/js/parallax.js') }}"></script>
 <script>
     $(function () {
-        $('#lightgallery').lightGallery({
+        let galeri = $('#lightgallery').lightGallery({
             thumbnail:true,
             fullscreen:true
         });
@@ -298,18 +301,31 @@
                 url: '/api/foto/' + id_kegiatan,
                 method: 'GET'
             }).done(res => {
-                console.log(res);
+                // console.log(res);
                 let fotos = res.fotos;
-                console.log(fotos);
+                // console.log(fotos);
                 $('#lightgallery').empty();
                 if(res.code==200) {
                     fotos.forEach((foto, i) => {
                         $('#lightgallery').append(`
-                            <a href="" data-responsive="storage/${foto.alamat_foto}" data-src="storage/${foto.alamat_foto}" data-sub-html="<h4>${foto.kategori}</h4><p>${foto.deskripsi}</p>">
-                                <img class="img-responsive" src="storage/${foto.alamat_foto}" width="350px" height="235px">
+                            <a href="" data-responsive="/storage/${foto.alamat_foto}" data-src="/storage/${foto.alamat_foto}" data-sub-html="<h4>${foto.kategori}</h4><p>${foto.deskripsi}</p>">
+                                <img class="img-responsive" src="/storage/${foto.alamat_foto}" width="350px" height="235px">
                             </a>
                         `);
                     });
+                    let lg = $('#lightgallery');
+                    if (lg.data('lightGallery')) {
+                        console.log('Berhasil destroy');
+                        lg.data('lightGallery').destroy(true);
+                        galeri = $("#lightGallery").lightGallery({
+                            thumbnail:true,
+                            fullscreen:true
+                        }); //re-initiate gallery
+                        console.log('berhasil re-inisialisasi');
+                    } else {
+                        console.log('Bukan lightGallery');
+                    }
+                    // $('#lightgallery').lightGallery().destroy(true); // destroy gallery
                 } else {
                     $('#lightgallery').append(`
                         Belum ada foto untuk kegiatan ini!
