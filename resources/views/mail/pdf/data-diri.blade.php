@@ -12,7 +12,8 @@
             margin: 0cm 0cm;
         }
         body {
-            margin-top: 3cm;
+            font-size: 14px;
+            margin-top: 2.5cm;
             margin-left: 20px;
             margin-right: 20px;
             margin-bottom: 1cm;
@@ -39,14 +40,14 @@
         }
 
         .container-kecil .item.gambar {
-            width: 30%;
+            width: 100%;
+            margin-left: 28px;
         }
         .container-kecil .satu {
-            width: 70%;
+            width: 100%;
         }
 
         .item {
-            font-size: 14px;
             border: 0.3px solid black;
             margin: 10px 0px;
             padding: 3px 7px;
@@ -60,9 +61,27 @@
             display: flex;
         }
 
-        main {
-            margin-top: 20px;
+        .item-banyak {
+            border: 0.3px solid black;
+            padding: 3px 7px;
         }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .table-banyak {
+            border: 0.3px solid black; 
+            width:100%;
+            margin: 10px 0px;
+        }
+        /* main {
+            margin-top: 10px;
+        } */
+
+        /* table, td {
+            border: 1px solid black;
+        } */
     </style>
 </head>
 <body>
@@ -70,69 +89,167 @@
         <img src="assets/img/header.png" alt="img" width="100%" height="100%">
     </header>
     <main>
-        <table>
-            <tr style="border: 0.3px solid black;">
-                <td>Nama Lengkap </td>
-                <td> : </td>
-                <td>{{$cab->nama_lengkap}}</td>
-                <td rowspan="5">
-                    <img src="{{Storage::url($cab->foto)}}" alt="Foto CAB" width="3cm" height="4cm">
-                </td>
-            </tr>
-            <tr>
-                <td>Nama Panggilan </td>
-                <td> : </td>
-                <td>{{$cab->nama_panggilan}}</td>
-            </tr>
-            <tr>
-                <td>Email </td>
-                <td> : </td>
-                <td>{{$cab->email}}</td>
-            </tr>
-            <tr>
-                <td>Instagram </td>
-                <td> : </td>
-                <td>{{$cab->instagram}}</td>
-            </tr>
-            <tr>
-                <td>Tempat & Tanggal Lahir </td>
-                <td> : </td>
-                <td>{{$cab->tempat_lahir}}, {{Carbon\Carbon::parse($cab->tanggal_lahir)->locale('id')->format('d M Y')}}</td>
-            </tr>
-        </table>
-
         <div class="container-besar">
             <div class="container-kecil no-border">
-                <div class="satu">
-                    <div class="item">
-                        Nama Lengkap : 
-                    </div>
-                    <div class="item">
-                        Nama Panggilan : 
-                    </div>
-                    <div class="item">
-                        Email : 
-                    </div>
-                    <div class="item">
-                        Instagram : 
-                    </div>
-                    <div class="item">
-                        Tempat & Tanggal Lahir : 
-                    </div>
-                </div>
-                <div class="item gambar">
-                    <img src="{{Storage::url($cab->foto)}}" alt="Foto CAB" width="3cm" height="4cm">
-                </div>
+                <table style="width: 100%; margin-bottom: -10px;">
+                    <tr>
+                        <td style="width: 75%">
+                            <div class="satu">
+                                <div class="item">
+                                    Nama Lengkap : {{$cab->nama_lengkap}}
+                                </div>
+                                <div class="item">
+                                    Nama Panggilan : {{$cab->nama_panggilan}}
+                                </div>
+                                <div class="item">
+                                    NIK : {{$cab->nik}}
+                                </div>
+                                <div class="item"> 
+                                    No. Passport : {{$cab->no_passport}}
+                                </div>
+                                <div class="item"> 
+                                    Email : {{$cab->email}}
+                                </div>
+                                
+                            </div>
+                        </td>
+                        <td style="width: 25%">
+                            <div class="item gambar" style="height: 175px">
+                                <img src="{{'storage/' . $cab->foto}}" alt="Foto CAB" width="140px" height="175px">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="item">
+                Instagram : {{$cab->instagram}}
+            </div>
+            <div class="item">
+                Tempat & Tanggal Lahir : {{$cab->tempat_lahir}}, {{Carbon\Carbon::parse($cab->tanggal_lahir)->locale('id')->format('d M Y')}}
             </div>
             <div class="item">
                 Alamat : {{$cab->alamat}}
             </div>
             <div class="item">
-                Pekerjaan
+                Pekerjaan : {{ $cab->pekerjaan }}
             </div>
             <div class="item">
-                Nama Institusi
+                Nama Institusi : {{ $cab->institusi }}
             </div>
+            <div class="item">
+                Agama : {{ $cab->agama }}
+            </div>
+            <div class="item">
+                <?php
+                    $date = $jadwal->tanggal;
+                    $d    = new DateTime($date);
+                    $hari = $d->format('l');
+                    switch ($hari) {
+                        case 'Sunday':
+                            $hari = 'Minggu';
+                            break;
+                        case 'Monday':
+                            $hari = 'Senin';
+                            break;
+                        case 'Tuesday':
+                            $hari = 'Selasa';
+                            break;
+                        case 'Wednesday':
+                            $hari = 'Rabu';
+                            break;
+                        case 'Thursday':
+                            $hari = 'Kamis';
+                            break;
+                        case 'Friday':
+                            $hari = "Jum'at";
+                            break;
+                        case 'Saturday':
+                            $hari = "Sabtu";
+                            break;
+                    }
+                ?>
+                Jadwal Audisi : {{ $hari }}, {{Carbon\Carbon::parse($jadwal->tanggal)->locale('id')->format('d M Y') }}
+            </div>
+            <div class="item">
+                Dari mana Anda tahu tentang JYC : {{ $cab->info_jyc }}
+            </div>
+            <div class="item">
+                Apa yang Anda ketahui tentang JYC : {{ $cab->tentang_jyc }}
+            </div>
+            <div class="item">
+                Motivasi mengikuti JYC : {{ $cab->motivasi }}
+            </div>
+            <table class="table-banyak">
+                <tr>
+                    <td colspan="3" style="padding: 3px 7px;">
+                        Kelompok Paduan Suara yang pernah diikuti
+                    </td>
+                </tr>
+                @foreach ($padus as $item)
+                <tr>
+                    <td class="item-banyak" style="width: 60%;">{{ $item->nama_padus }}</td>
+                    <td class="item-banyak text-center" style="width: 20%;">{{ $item->ambitus }}</td>
+                    <td class="item-banyak text-center" style="width: 20%;">{{ $item->tahun_aktif }}</td>
+                </tr>
+                @endforeach
+            </table>
+            <table class="table-banyak">
+                <tr>
+                    <td colspan="3" style="padding: 3px 7px;">
+                        Riwayat Organisasi
+                    </td>
+                </tr>
+                @foreach ($riwayat_organisasi as $item)
+                <tr>
+                    <td class="item-banyak" style="width: 60%;">{{ $item->nama_organisasi }}</td>
+                    <td class="item-banyak text-center" style="width: 20%;">{{ $item->jabatan }}</td>
+                    <td class="item-banyak text-center" style="width: 20%;">{{ $item->tahun_aktif }}</td>
+                </tr>
+                @endforeach
+            </table>
+            <table class="table-banyak">
+                <tr>
+                    <td colspan="4" style="padding: 3px 7px;">
+                        Prestasi di Bidang Kesenian
+                    </td>
+                </tr>
+                @foreach ($prestasi_seni as $item)
+                <tr>
+                    <td class="item-banyak" style="width: 40%;">{{ $item->nama_kegiatan }}</td>
+                    <td class="item-banyak text-center" style="width: 20%;">{{ $item->tempat }}</td>
+                    <td class="item-banyak text-center" style="width: 20%;">{{ $item->tingkat }}</td>
+                    <td class="item-banyak text-center" style="width: 20%;">{{ $item->juara }}</td>
+                </tr>
+                @endforeach
+            </table>
+            <table class="table-banyak">
+                <tr>
+                    <td colspan="4" style="padding: 3px 7px;">
+                        Prestasi di Bidang non Kesenian
+                    </td>
+                </tr>
+                @foreach ($prestasi_non_seni as $item)
+                <tr>
+                    <td class="item-banyak" style="width: 40%;">{{ $item->nama_kegiatan }}</td>
+                    <td class="item-banyak text-center" style="width: 20%;">{{ $item->tempat }}</td>
+                    <td class="item-banyak text-center" style="width: 20%;">{{ $item->tingkat }}</td>
+                    <td class="item-banyak text-center" style="width: 20%;">{{ $item->juara }}</td>
+                </tr>
+                @endforeach
+            </table>
+            <table class="table-banyak">
+                <tr>
+                    <td colspan="2" style="padding: 3px 7px;">
+                        Kemampuan Bermain Alat Musik
+                    </td>
+                </tr>
+                @foreach ($kemampuan_bermusik as $item)
+                <tr>
+                    <td class="item-banyak" style="width: 60%;">{{ $item->alat_musik }}</td>
+                    <td class="item-banyak text-center" style="width: 40%;">{{ $item->tingkat_kemampuan }}</td>
+                </tr>
+                @endforeach
+            </table>
         </div>
     </main>
     {{-- <div class="container-fluid">
@@ -151,15 +268,14 @@
             </div>
         </div>
     </div> --}}
-    <ol>
+    {{-- <ol>
         <li>NamaLengkap=</li>
         <li>Tempat & Tanggal Lahir={{$cab->tempat_lahir}},{{Carbon\Carbon::parse($cab->tanggal_lahir)->locale('id')->format('d M Y')}}</li>
         <li>alamat={{$cab->alamat}}</li>
         <li>pekerjaan={{$cab->pekerjaan}}</li>
         <li>agama={{$cab->agama}}</li>
         <li>motivasi={{$cab->motivasi}}</li>
-    </ol>
-    <span>jadwal, kemampuan_bermusik, prestasi_seni, prestasi_non_seni, riwayat_organisasi, padus</span>
+    </ol> --}}
 </body>
 {{-- <script src="{{ asset('assets/js/jquery.js') }}"></script>
 <script src="{{ asset('assets/js/popper.min.js') }}"></script>

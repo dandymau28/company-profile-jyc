@@ -20,7 +20,7 @@
 
     <!-- Sejarah JYC -->
     <div class="berita container-fluid bg-light py-5">
-        <h3 class="mb-4">SEJARAH JYC</h3>
+        <h3 class="mb-4">TENTANG JYC</h3>
         <div class="row container-fluid" data-aos="fade-up" data-aos-duration="1500">
             <div class="col-lg-6 mx-auto text-justify sejarah-text">
             <p>

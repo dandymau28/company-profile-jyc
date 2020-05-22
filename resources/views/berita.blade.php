@@ -100,7 +100,7 @@
                         </div>
                     </div>
                 @endforeach
-                <div class="row justify-content-center">
+                <div class="row justify-content-center font-weight-bold">
                     {{$beritas->links()}}
                 </div>
             </div>

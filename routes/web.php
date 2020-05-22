@@ -56,6 +56,7 @@ Route::get('/profile/septo-adi-kristanto', function(){
 // })->name('kegiatan');
 
 Route::get('/kegiatan', 'kegiatanController@kegiatan')->name('kegiatan');
+Route::get('/kegiatan/{id_kegiatan}', 'kegiatanController@kegiatanByKategori');
 Route::get('/kegiatan/oprec', 'cab\viewForm@create')->name('oprec');
 
 // Route::get('/prestasi', function () {

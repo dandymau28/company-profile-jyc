@@ -48,12 +48,12 @@ class storeCAB extends Controller
         try {
             DB::beginTransaction();
             $uploadFoto = $request->file('foto');
-            $name = 'foto'.'-'.trim($request->input('nama_lengkap')).'.'.$uploadFoto->getClientOriginalExtension();
-            $pathPhoto = $uploadFoto->storeAs('public/assets/img', $name);
+            $name = 'foto'.'-'.trim($request->input('nama_panggilan')).'.'.$uploadFoto->getClientOriginalExtension();
+            $pathPhoto = $uploadFoto->storeAs('public/assets/cab', $name);
         
             //identitas cab
             $cab = new CAB;
-            $cab->foto = '/img/'.$name;
+            $cab->foto = 'cab/'.$name;
             $cab->nama_lengkap = $request->input('nama_lengkap');
             $cab->nik = $request->input('nik');
             $cab->no_passport = $request->input('no_passport');
