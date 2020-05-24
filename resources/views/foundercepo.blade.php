@@ -25,7 +25,7 @@
         <div class="row-founder container-fluid">
             <div class="col-lg-8 card mx-md-auto mb-4 bg-transparent border-0">
                 <div class="row justify-content-center" >
-                        <img src="{{asset('assets/img/profile/cepo.jpeg')}}" class="card-img-top card-founder rounded-circle img-fluid" alt="...">
+                        <img src="{{asset('assets/img/profile/profileCepo.jpg')}}" class="card-img-top card-founder rounded-circle img-fluid" alt="...">
                 </div>
                 <div class="card-body">
                     <h4 class="card-title text-center">Septo Adi Kristanto Simanjuntak, S.Pd</h4>

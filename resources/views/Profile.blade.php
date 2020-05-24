@@ -59,7 +59,7 @@
             </div>
             <div class="col-lg-5 card mx-md-auto bg-transparent border-0">
                 <div class="row justify-content-center" data-aos="fade-up" data-aos-duration="1500">
-                        <img src="{{asset('assets/img/profile/cepo.jpeg')}}" class="card-img-top card-founder rounded-circle" alt="...">
+                        <img src="{{asset('assets/img/profile/profileCepo.jpg')}}" class="card-img-top card-founder rounded-circle" alt="...">
                 </div>
                 <div class="card-body" data-aos="fade-up" data-aos-duration="1500">
                     <h5 class="card-title text-center">Septo Adi Kristanto Simanjuntak, S.Pd</h5>

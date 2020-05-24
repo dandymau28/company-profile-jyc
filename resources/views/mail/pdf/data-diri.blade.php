@@ -28,7 +28,7 @@
             height: 3cm;
         }
         .container-besar {
-            margin-top: 30px;
+            /* margin-top: 30px; */
             /* display: flex;
             flex-direction: row; */
             width: 100%;
@@ -88,7 +88,7 @@
     <header>
         <img src="assets/img/header.png" alt="img" width="100%" height="100%">
     </header>
-    <main>
+    <main style="margin-top: 20px">
         <div class="container-besar">
             <div class="container-kecil no-border">
                 <table style="width: 100%; margin-bottom: -10px;">
@@ -105,7 +105,7 @@
                                     NIK : {{$cab->nik}}
                                 </div>
                                 <div class="item"> 
-                                    No. Passport : {{$cab->no_passport}}
+                                    No. Passport : {{$cab->no_passport ? $cab->no_passport : "-"}}
                                 </div>
                                 <div class="item"> 
                                     Email : {{$cab->email}}
@@ -122,7 +122,7 @@
                 </table>
             </div>
             <div class="item">
-                Instagram : {{$cab->instagram}}
+                Instagram : {{$cab->instagram ? $cab->instagram : "-"}}
             </div>
             <div class="item">
                 Tempat & Tanggal Lahir : {{$cab->tempat_lahir}}, {{Carbon\Carbon::parse($cab->tanggal_lahir)->locale('id')->format('d M Y')}}
@@ -137,7 +137,7 @@
                 Nama Institusi : {{ $cab->institusi }}
             </div>
             <div class="item">
-                Agama : {{ $cab->agama }}
+                Agama : {{ $cab->agama ? $cab->agama : "-" }}
             </div>
             <div class="item">
                 <?php
@@ -181,9 +181,15 @@
             </div>
             <table class="table-banyak">
                 <tr>
+                    @if($padus->count() == 0)
+                    <td style="padding: 3px 7px;">Kelompok Paduan Suara yang pernah diikuti</td>
+                    <td> : </td>
+                    <td> - </td>
+                    @else
                     <td colspan="3" style="padding: 3px 7px;">
                         Kelompok Paduan Suara yang pernah diikuti
                     </td>
+                    @endif
                 </tr>
                 @foreach ($padus as $item)
                 <tr>

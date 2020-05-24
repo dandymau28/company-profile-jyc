@@ -22,11 +22,11 @@
             <div class="footer-title pb-1">Navigasi</div>
             <ul class="list-unstyled">
                 <li><a class="text-white" href="{{route('berita')}}">Berita</a></li>
-                <li><a class="text-white" href="{{route('profile')}}">Profile</a></li>
+                {{-- <li><a class="text-white" href="{{route('profile')}}">Profile</a></li> --}}
                 <li><a class="text-white" href="{{route('prestasi')}}">Prestasi</a></li>
                 <li><a class="text-white" href="{{route('beranda')}}">Beranda</a></li>
                 <li><a class="text-white" href="{{route('kegiatan')}}">Kegiatan</a></li>
-                <li><a class="text-white" href="{{route('tentang-kami')}}">Tentang Kami</a></li>
+                <li><a class="text-white" href="{{route('profile')}}">Tentang Kami</a></li>
             </ul>
         </div>
         <div class="col-sm-12 col-md-3 mt-sm-3 mt-md-0">
