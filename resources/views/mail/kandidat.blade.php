@@ -93,12 +93,12 @@
                 <tr>
                     <td>No. Rekening</td>
                     <td style="padding: 0px 10px"> : </td>
-                    <td> 0470162261</td>
+                    <td> 6340263861</td>
                 </tr>
                 <tr>
                     <td>Bank / A.n</td>
                     <td style="padding: 0px 10px"> : </td>
-                    <td> BNI / Swardiantara Silalahi</td>
+                    <td> BCA / Boudowin Samuelle</td>
                 </tr>
             </table>
             <p>Setelah melakukan pembayaran, silahkan upload bukti pembayaran melalui link berikut ini:</p>
