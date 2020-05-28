@@ -169,6 +169,9 @@ Route::group([
     Route::get('/contoh', function () {
         return view('admin.foto.contoh');
     });
+
+    Route::get('/oprec/open/{id}', 'admin\updateOprec@openOprec');
+    Route::get('/oprec/close/{id}','admin\updateOprec@closeOprec');
 });
 
 //Mail routes

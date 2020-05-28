@@ -12,7 +12,8 @@ class oprecModel extends Model
     protected $fillable = [
         'batas_pendaftar',
         'batas_kandidat',
-        'batch'
+        'batch',
+        'status'
     ];
 
     protected $dates = [
