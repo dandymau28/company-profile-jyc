@@ -59,6 +59,13 @@
                             <input type="number" name="batas_kandidat" id="batas_kandidat" class="form-control"
                                 placeholder="Batas Kandidat" required>
                         </div>
+                        <div class="form-group col-5">
+                            <label for="status">Status Pendaftaran</label>
+                            <select class="form-control" name="status" id="">
+                                <option value="buka">Buka</option>
+                                <option value="tutup">Tutup</option>
+                            </select>
+                        </div>
                         <div class="col-5 text-right">
                             <button type="submit" name="action" value="post" class="btn btn-success">Simpan</button>
                         </div>
@@ -81,6 +88,7 @@
                                 <th scope="col">Batch</th>
                                 <th scope="col">Batas Pendaftar</th>
                                 <th scope="col">Batas Kandidat</th>
+                                <th>Status</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -89,6 +97,13 @@
                                 <th scope="row">{{ $satuan->batch }}</th>
                                 <td>{{$satuan->batas_pendaftar}}</td>
                                 <td>{{$satuan->batas_kandidat}}</td>
+                                <td>
+                                    @if($satuan->status == 'buka')
+                                        <a href="/admin/oprec/close/{{$satuan->id}}" class="btn btn-success">Buka</a>
+                                    @else
+                                        <a href="/admin/oprec/open/{{$satuan->id}}" class="btn btn-warning">Tutup</a>
+                                    @endif
+                                </td>
                             </tr>
                             @endforeach
                         </tbody>

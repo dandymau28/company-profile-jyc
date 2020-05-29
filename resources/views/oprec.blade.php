@@ -22,7 +22,23 @@
                     <div class="row">
                         <h1 class="">PENERIMAAN CALON ANGGOTA BARU JYC 2020</h1>
                     </div>
-                    @if(Session::has('success'))
+                    @if($oprec->status == 'tutup')
+                    <div class="row text-dark bg-light p-3 p-sm-4 p-md-5 text-left mt-2">
+                        <div class="col-12">
+                            <h4 class="pt-2">Mohon maaf</h4>
+                            <h5>Pendaftaran belum dibuka</h5>
+                            <p class="text-justify">Mohon maaf, Jakarta Youth Choir tidak sedang menerima anggota baru,
+                            pantau terus sosial media Jakarta Youth Choir agar tidak ketinggalan informasi Oprec :)</p>
+                            <!-- <p><strong>CP: +62812-8921-8785 (Febri)</strong></p> -->
+                        </div>
+                        <div class="col-12 pt-3">
+                            <div class="text-right">
+                                <a href="{{ route('beranda') }}"><button type="button" class="btn btn-danger">Oke,
+                                        mengerti.</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    @elseif(Session::has('success'))
                     <div class="row text-dark bg-light p-3 p-sm-4 p-md-5 text-left mt-2">
                         <div class="col-12">
                             <h4 class="pt-2">Terimakasih :)</h4>
@@ -53,7 +69,7 @@
                             </div>
                         </div>
                     </div>
-                    @elseif($total<$oprec->batas_pendaftar) 
+                    @elseif($total < $oprec->batas_pendaftar) 
                     <form class="needs-validation" id="regForm" action="/pendaftaran" method="POST"
                         enctype="multipart/form-data">
                         @csrf
