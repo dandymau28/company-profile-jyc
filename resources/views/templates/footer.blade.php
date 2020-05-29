@@ -62,7 +62,7 @@
             <a class="shadow-lg" href="mailto:jakartayouthchoir@gmail.com"><img class="social-links ml-2" src="{{asset('/assets/img/email-2.png')}}" alt="Twitter"></a>
         </div>
         <div class="col-12 col-lg-6 text-right footer-title ">
-            &copy Est. Since 2015. Jakarta Youth Choir
+            &copy Est. since 2015. Jakarta Youth Choir
         </div>
       </div>
 </footer>
