@@ -10,7 +10,7 @@
                 </div>
                 <div class="text-white">
                     <div>
-                        <i class="fab fa-whatsapp pr-md-2"></i>+62 812-8725-2339
+                        <i class="fab fa-whatsapp pr-md-2"></i>+62813-7777-2303
                     </div>
                     <div>
                         <i class="far fa-envelope pr-md-2"></i></i>jakartayouthchoir@gmail.com

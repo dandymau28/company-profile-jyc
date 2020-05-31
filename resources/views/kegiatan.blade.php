@@ -292,14 +292,14 @@
 <script src="{{ asset('assets/js/parallax.js') }}"></script>
 <script>
     $(function () {
-        let baseURL = 'http://localhost:8000';
+        let baseURL = 'localhost';
         let galeri = $('#lightgallery').lightGallery({
             thumbnail:true,
             fullscreen:true
         });
         $('#pilih-kegiatan').on('change', function () {
             let id_kegiatan = $(this).val();
-            window.location = baseURL + '/kegiatan/galeri/' + id_kegiatan;
+            window.location = '/kegiatan/galeri/' + id_kegiatan + "#galeri";
             // $.ajax({
             //     url: '/api/foto/' + id_kegiatan,
             //     method: 'GET'

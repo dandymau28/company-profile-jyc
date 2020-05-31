@@ -17,6 +17,6 @@
 
 <!-- My Style -->
 <link rel="stylesheet" href="{{ asset('assets') }}/css/style.css">
-<link rel="icon" type="image/png" href="{{ asset('assets') }}/img/circle-cropped.png" />
+<link rel="icon" type="image/png" href="{{ asset('assets') }}/img/logo-jyc-bulat.png" />
 <span class="d-none" id="nav-active">{{$nav}}</span>
 
