@@ -84,38 +84,40 @@
     {{-- Galeri Coba --}}
     <div class="container mt-5">
         <div class="demo-gallery">
-            <div class="row justify-content-between mb-2">
-                <div class="col-sm-12 col-md-auto">
-                    <h3 class="">Galeri Kegiatan</h3>
+            <section id="galeri">
+                <div class="row justify-content-between mb-2">
+                    <div class="col-sm-12 col-md-auto">
+                        <h3 class="">Galeri Kegiatan</h3>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-12 d-flex align-items-center">
+                        <select class="custom-select" name="pilih-kegiatan" id="pilih-kegiatan">
+                        <option value="" disabled selected>Pilih Kegiatan</option>
+                        @foreach ($kegiatans as $kegiatan)
+                            <option class=" overflow-hidden" value={{$kegiatan->id}}>{{$kegiatan->nama}}</option>   
+                        @endforeach
+                        </select>
+                    </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-12 d-flex align-items-center">
-                    <select class="custom-select" name="pilih-kegiatan" id="pilih-kegiatan">
-                    <option value="" disabled selected>Pilih Kegiatan</option>
-                    @foreach ($kegiatans as $kegiatan)
-                        <option class=" overflow-hidden" value={{$kegiatan->id}}>{{$kegiatan->nama}}</option>   
+                <div id="lightgallery" class="my-3">
+                    @foreach ($fotos as $foto)
+                    <a href="" data-responsive="{{Storage::url($foto->alamat_foto)}}" data-src="{{Storage::url($foto->alamat_foto)}}" data-sub-html="<h4>{{ $foto->nama_kategori }}</h4><p>{{ $foto->deskripsi }}</p>">
+                        <img class="img-responsive" src="{{Storage::url($foto->alamat_foto)}}" width="350px" height="235px">
+                    </a>
                     @endforeach
-                    </select>
+                    {{-- <a href="" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/1-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/1-1600.jpg" data-sub-html="<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>">
+                        <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-1.jpg">
+                    </a>
+                    <a href="" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/2-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/2-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
+                        <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-2.jpg">
+                    </a>
+                    <a href="" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/13-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/13-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
+                        <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-13.jpg">
+                    </a>
+                    <a href="" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/4-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/4-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
+                        <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-4.jpg">
+                    </a> --}}
                 </div>
-            </div>
-            <div id="lightgallery" class="my-3">
-                @foreach ($fotos as $foto)
-                <a href="" data-responsive="{{Storage::url($foto->alamat_foto)}}" data-src="{{Storage::url($foto->alamat_foto)}}" data-sub-html="<h4>{{ $foto->nama_kategori }}</h4><p>{{ $foto->deskripsi }}</p>">
-                    <img class="img-responsive" src="{{Storage::url($foto->alamat_foto)}}" width="350px" height="235px">
-                </a>
-                @endforeach
-                {{-- <a href="" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/1-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/1-1600.jpg" data-sub-html="<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>">
-                    <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-1.jpg">
-                </a>
-                <a href="" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/2-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/2-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
-                    <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-2.jpg">
-                </a>
-                <a href="" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/13-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/13-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
-                    <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-13.jpg">
-                </a>
-                <a href="" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/4-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/4-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
-                    <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-4.jpg">
-                </a> --}}
-            </div>
+            </section>
             <p> <span class="text-danger font-weight-bold">*</span> Klik foto untuk melihat detail gambar</p>
             {{-- <div class="row justify-content-center font-weight-bold">
                 {{$fotos->links()}}
@@ -342,5 +344,7 @@
             // })
         });
     });
+
+    
 </script>
 </html>
