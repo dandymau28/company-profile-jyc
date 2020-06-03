@@ -37,6 +37,6 @@ Route::get('/penghargaan/prestasi/{id_prestasi}', 'api\apiController@getPengharg
 Route::get('/videos/all', 'api\apiController@getAllVideos');
 Route::get('/foto/all', 'api\apiController@getAllFoto');
 
-Route::post('/subscribe','beranda\subscribeController@subscribe');
-Route::put('/subscribe/{email}','beranda\subscribeController@unsubscribe');
+// Route::post('/subscribe','beranda\subscribeController@subscribe');
+// Route::put('/subscribe/{email}','beranda\subscribeController@unsubscribe');
 

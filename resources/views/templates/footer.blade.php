@@ -4,7 +4,7 @@
             <img id="footer-logo" class="bg-light rounded-circle my-2 shadow" src="{{asset('assets/img/logo-jyc.png')}}" alt="img">
             <div class="text-white">We Sing for The City And The Country</div>
 
-            <div class="mt-3">
+            <!-- <div class="mt-3">
                 <div class="footer-title">
                     Hubungi Kami
                 </div>
@@ -16,7 +16,7 @@
                         <i class="far fa-envelope pr-2"></i>jakartayouthchoir@gmail.com
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
         <div class="col-sm-12 col-md-3 mt-sm-3 mt-md-0">
             <div class="footer-title pb-1">Navigasi</div>
@@ -39,6 +39,19 @@
             </ul>
         </div>
         <div class="col-sm-12 col-md-3 mt-sm-3 mt-md-0">
+                <div class="footer-title">
+                    Hubungi Kami
+                </div>
+                <div class="text-white">
+                    <div>
+                        <i class="fab fa-whatsapp pr-md-2"></i>+62813-7777-2303
+                    </div>
+                    <div>
+                        <i class="far fa-envelope pr-md-2"></i></i>jakartayouthchoir@gmail.com
+                    </div>
+                </div>
+            </div>
+        <!-- <div class="col-sm-12 col-md-3 mt-sm-3 mt-md-0">
             <div class="footer-title mb-1">Berlangganan surat elektronik</div>
             <form id="subscribe" method="post">
                 @csrf
@@ -51,7 +64,7 @@
                 <button type="submit" class="btn btn-warning text-white shadow">Langganan</button>
                 <a href="#" class="shadow" id="scroll" style="display: none;"><span></span></a>
             </form>
-        </div>
+        </div> -->
     </div>
     <div id="footer-bottom" class="row justify-content-between w-90 align-items-center py-3">
         <div class="col-12 col-lg-6 text-right p-2">
