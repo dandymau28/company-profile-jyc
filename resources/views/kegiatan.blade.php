@@ -74,10 +74,7 @@
                     oleh Choirmaster kebanggaan Septo Adi Kristanto Simanjuntak, atau biasa dipanggil Kak Cepo,
                     beserta tim kepelatihan.</b></div>
             </div>
-            <p class="text-justify latihan-text pt-3" data-aos="fade-up" data-aos-duration="1500">Sejak berdiri pada tahun 2015, JYC sudah membuka pendaftaran secara resmi setiap
-                tahunnya. Pada tahun 2020, dengan bangga JYC membuka kesempatan bagi para pemuda-
-                pemudi terbaik yang minat pada dunia paduan suara untuk mengeksplorasi diri dan berprestasi
-                Bersama JYC.</p>
+            <p class="text-justify latihan-text pt-3" data-aos="fade-up" data-aos-duration="1500">Sejak berdiri pada tahun 2015, JYC sudah membuka pendaftaran secara resmi setiap tahunnya. Pada tahun 2020, dengan bangga JYC kembali membuka kesempatan bagi para pemuda-pemudi terbaik yang memiliki minat di dunia paduan suara untuk mengeksplorasi diri dan berprestasi bersama JYC.</p>
         </div>
     </div>
 

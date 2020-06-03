@@ -144,7 +144,7 @@
                                             placeholder="Jepara" required>
                                     </div>
                                     <div class="col form-group">
-                                        <label for="tanggal_lahir">Tanggal Lahir <span class="text-danger"><strong>*</strong></span></label>
+                                        <label for="tanggal_lahir">Tanggal Lahir <span class="text-danger"><strong>*</strong></span><small> (max 25 tahun)</small></label>
                                         <input id="tanggal_lahir" oninput="this.className='form-control'" name="tanggal_lahir" type="date"
                                          class="form-control" required>
                                     </div>
@@ -170,7 +170,7 @@
                                          placeholder="Agama A">
                                     </div>
                                     <div class="col form-group">
-                                        <label for="foto">Pas Foto <span class="text-danger"><strong>* </strong></span><small>(3x4 merah)</small></label>
+                                        <label for="foto">Pas Foto <span class="text-danger"><strong>* </strong></span><small>(3x4)</small></label>
                                         <input id="foto" oninput="this.className='form-control'" name="foto" type="file"
                                          class="form-control" required>
                                     </div>
