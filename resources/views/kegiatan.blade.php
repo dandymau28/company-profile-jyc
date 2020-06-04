@@ -91,10 +91,20 @@
                     </div>
                     <div class="col-md-4 col-sm-6 col-12 d-flex align-items-center">
                         <select class="custom-select" name="pilih-kegiatan" id="pilih-kegiatan">
-                        <option value="" disabled selected>Pilih Kegiatan</option>
-                        @foreach ($kegiatans as $kegiatan)
-                            <option class=" overflow-hidden" value={{$kegiatan->id}}>{{$kegiatan->nama}}</option>   
-                        @endforeach
+                        @isset($id_kegiatan)
+                            @foreach ($kegiatans as $kegiatan)
+                                @if ($kegiatan->id == $id_kegiatan)
+                                    <option class=" overflow-hidden" value="{{$kegiatan->id}}" selected>{{$kegiatan->nama}}</option>
+                                @else
+                                    <option class=" overflow-hidden" value="{{$kegiatan->id}}">{{$kegiatan->nama}}</option>  
+                                @endif
+                            @endforeach
+                        @else
+                            <option value="" disabled selected>Pilih Kegiatan</option>
+                            @foreach ($kegiatans as $kegiatan)
+                                <option class=" overflow-hidden" value={{$kegiatan->id}}>{{$kegiatan->nama}}</option>   
+                            @endforeach
+                        @endisset
                         </select>
                     </div>
                 </div>
