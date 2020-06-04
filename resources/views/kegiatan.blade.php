@@ -28,10 +28,10 @@
         <div class="container">
             <h2 class="text-center pt-3">Rahasia Sukses Berprestasi : Latihan ala JYC</h2>
             <div class="row latihan-text">
-                <div class="col-md-6 pt-4" data-aos="fade-up" data-aos-duration="1500"><b>“Practice makes perfect”</b>, pastinya kata ini tidaklah asing ditelinga banyak orang pada kehidupan sehari-hari khususnya untuk kita yang berkecimpung di dunia paduan suara. <b>Jakarta Youth Choir</b>, sama seperti paduan suara pada umumnya, bisa berprestasi dan menunjukkan kualitas dirinya saat ini tentunya tidaklah instan. <b>Jakarta Youth Choir</b> dapat cemerlang berkat proses suka duka Latihan bersama. <b>Jakarta Youth Choir</b> biasa melakukan latihan rutin minimal satu pekan sekali, saat ini pada setiap hari Rabu berdasarkan kesepakatan anggota yang bertempat di <b>Gedung Dinas Pemuda dan Olahraga Provinsi DKI Jakarta</b>.</div>
-                <div class="col-md-6 pt-4" data-aos="fade-up" data-aos-duration="1500">Latihan rutin ini dibimbing oleh <b>Founder & Choirmaster Jakarta Youth Choir</b>, yaitu Septo Adi Kristanto Simanjuntak, atau dikenal dengan Kak Cepo, beserta Tim Kepelatihan. Latihan biasanya akan lebih intens dilakukan ketika <b>Jakarta Youth Choir</b> mengisi acara tertentu, mengadakan konser, serta mengikuti lomba bertaraf nasional maupun internasional. Untuk meningkatkan semangat dalam latihan, <b>Jakarta Youth Choir</b> melakukan latihan paduan suara tidak hanya di lingkungan <em>indoor</em> saja, melainkan juga <em>outdoor</em>. Seru pasti, ya!</div>
+                <div class="col-md-6 pt-4" data-aos="fade-up" data-aos-duration="1500"> <strong><em>“Practice makes perfect”</em></strong> , pastinya kata ini tidaklah asing ditelinga banyak orang pada kehidupan sehari-hari khususnya untuk kita yang berkecimpung di dunia paduan suara. <b>Jakarta Youth Choir</b>, sama seperti paduan suara pada umumnya, bisa berprestasi dan menunjukkan kualitas dirinya saat ini tentunya tidaklah instan. <b>Jakarta Youth Choir</b> dapat cemerlang berkat proses suka duka Latihan bersama. <b>Jakarta Youth Choir</b> biasa melakukan latihan rutin minimal satu pekan sekali, saat ini pada setiap hari Rabu berdasarkan kesepakatan anggota yang bertempat di <b>Gedung Dinas Pemuda dan Olahraga Provinsi DKI Jakarta</b>.</div>
+                <div class="col-md-6 pt-4" data-aos="fade-up" data-aos-duration="1500">Latihan rutin ini dibimbing oleh <strong> <em>Founder & Choirmaster</em> Jakarta Youth Choir</strong>, yaitu Septo Adi Kristanto Simanjuntak, atau dikenal dengan Kak Cepo, beserta Tim Kepelatihan. Latihan biasanya akan lebih intens dilakukan ketika <b>Jakarta Youth Choir</b> mengisi acara tertentu, mengadakan konser, serta mengikuti lomba bertaraf nasional maupun internasional. Untuk meningkatkan semangat dalam latihan, <b>Jakarta Youth Choir</b> melakukan latihan paduan suara tidak hanya di lingkungan <em>indoor</em> saja, melainkan juga <em>outdoor</em>.</div>
             </div>
-            <p class="text-justify latihan-text pt-3" data-aos="fade-up" data-aos-duration="1500"><b>Jakarta Youth Choir</b> juga menghadirkan berbagai Choirmaster dari berbagai latar belakang Paduan Suara di Indonesia yang terkenal dan berpengalaman sebagai pelatih tamu untuk memaksimalkan pengembangan kemampuan para Choristernya. Yuk pantau terus proses latihan kami untuk mengharumkan nama Jakarta dan Indonesia dengan mengikuti akun resmi instagram <a href="https://www.instagram.com/jktyouthchoir"><b>@JktYouthChoir</b></a> dan media sosial lainnya.</p>
+            <p class="text-justify latihan-text pt-3" data-aos="fade-up" data-aos-duration="1500"><b>Jakarta Youth Choir</b> juga menghadirkan berbagai <em>choirmaster</em> dari berbagai latar belakang Paduan Suara di Indonesia yang terkenal dan berpengalaman sebagai pelatih tamu untuk memaksimalkan pengembangan kemampuan para <em>chorister</em>nya. Yuk pantau terus proses latihan kami untuk mengharumkan nama Jakarta dan Indonesia dengan mengikuti akun resmi instagram <a href="https://www.instagram.com/jktyouthchoir"><b>@JktYouthChoir</b></a> dan media sosial lainnya.</p>
         </div>
     </div>
 
@@ -61,18 +61,22 @@
         <div class="container">
             <h2 class="text-center pt-3"><a href="{{ route('oprec') }}">Penerimaan 2020</a></h2>
             <div class="row latihan-text mt-4">
-                <div class="col-md-6" data-aos="fade-up" data-aos-duration="1500">Eksis di dunia paduan suara, JYC tentunya juga memerlukan sebuah regenerasi seiring
+                {{-- <div class="col-md-6" data-aos="fade-up" data-aos-duration="1500">Eksis di dunia paduan suara, JYC tentunya juga memerlukan sebuah regenerasi seiring
                     berjalannya waktu. Hal ini diperlukan untuk menjadikan JYC lebih besar dan lebih berkembang
-                    dari sebelumnya. Kegiatan <a href="{{ route('oprec') }}">Open Recruitment</a> merupakan salah satu aplikasi kegiatan yang
+                    dari sebelumnya. Kegiatan <a href="{{ route('oprec') }}"><em>Open Recruitment</em></a> merupakan salah satu aplikasi kegiatan yang
                     dilaksanakan oleh JYC setiap tahunnya. Kegiatan ini untuk mencari dan menjaring pemuda
                     pemudi berbakat dalam bidang seni khususnya dibidang paduan suara serta memiliki visi, misi,
-                    maupun tujuan yang sama dengan JYC.</div>
+                    maupun tujuan yang sama dengan JYC.
+                </div> --}}
+                <div class="col-md-6" data-aos="fade-up" data-aos-duration="1500">Eksis di dunia paduan suara, Jakarta Youth Choir (JYC) memerlukan sebuah regenerasi seiring berjalannya waktu. Hal ini diperlukan untuk menjadikan JYC lebih besar dan lebih berkembang dari sebelumnya. Kegiatan <a href="{{ route('oprec') }}"><em>Open Recruitment</em></a> merupakan salah satu aplikasi kegiatan yang dilaksanakan oleh JYC setiap tahunnya. Kegiatan ini untuk mencari dan menjaring pemuda pemudi berbakat dalam bidang seni khususnya dibidang paduan suara serta memiliki visi, misi, maupun tujuan yang sama dengan JYC.
+                </div>
                 <div class="col-md-6" data-aos="fade-up" data-aos-duration="1500">Dibawah naungan DISPORA DKI Jakarta, JYC merupakan wadah yang sangat tepat untuk
                     tumbuh kembang para pemuda sekitar Ibukota untuk berkontribusi aktif mengharumkan DKI
-                    Jakarta maupun Indonesia. Setiap waktunya, kemampuan para anggota chorister JYC terus
+                    Jakarta maupun Indonesia. Setiap waktunya, kemampuan para <em>chorister</em> JYC terus
                     diasah dengan latihan rutin yang diorganisasikan langsung oleh Kepengurusan JYC dan dilatih
-                    oleh Choirmaster kebanggaan Septo Adi Kristanto Simanjuntak, atau biasa dipanggil Kak Cepo,
-                    beserta tim kepelatihan.</b></div>
+                    oleh <em>choirmaster</em> kebanggaan Septo Adi Kristanto Simanjuntak, atau biasa dipanggil Kak Cepo,
+                    beserta tim kepelatihan.</b>
+                </div>
             </div>
             <p class="text-justify latihan-text pt-3" data-aos="fade-up" data-aos-duration="1500">Sejak berdiri pada tahun 2015, JYC sudah membuka pendaftaran secara resmi setiap tahunnya. Pada tahun 2020, dengan bangga JYC kembali membuka kesempatan bagi para pemuda-pemudi terbaik yang memiliki minat di dunia paduan suara untuk mengeksplorasi diri dan berprestasi bersama JYC.</p>
         </div>
@@ -97,7 +101,7 @@
                                 @endif
                             @endforeach
                         @else
-                            <option value="" disabled selected>Pilih Kegiatan</option>
+                            {{-- <option value="" disabled selected>Pilih Kegiatan</option> --}}
                             @foreach ($kegiatans as $kegiatan)
                                 <option class=" overflow-hidden" value={{$kegiatan->id}}>{{$kegiatan->nama}}</option>   
                             @endforeach
@@ -105,132 +109,15 @@
                         </select>
                     </div>
                 </div>
-                <div id="lightgallery" class="my-3">
+                <div id="lightgallery" class="my-3 row">
                     @foreach ($fotos as $foto)
-                    <a href="" data-responsive="{{Storage::url($foto->alamat_foto)}}" data-src="{{Storage::url($foto->alamat_foto)}}" data-sub-html="<h4>{{ $foto->nama_kategori }}</h4><p>{{ $foto->deskripsi }}</p>">
-                        <img class="img-responsive" src="{{Storage::url($foto->alamat_foto)}}" width="350px" height="235px">
+                    <a class="col-12 col-sm-6 col-md-4" href="" data-responsive="{{Storage::url($foto->alamat_foto)}}" data-src="{{Storage::url($foto->alamat_foto)}}" data-sub-html="<h4>{{ $foto->nama_kategori }}</h4><p>{{ $foto->deskripsi }}</p>">
+                        <img class="img-responsive img-fluid" src="{{Storage::url($foto->alamat_foto)}}">
                     </a>
                     @endforeach
-                    {{-- <a href="" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/1-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/1-1600.jpg" data-sub-html="<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>">
-                        <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-1.jpg">
-                    </a>
-                    <a href="" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/2-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/2-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
-                        <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-2.jpg">
-                    </a>
-                    <a href="" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/13-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/13-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
-                        <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-13.jpg">
-                    </a>
-                    <a href="" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/4-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/4-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
-                        <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-4.jpg">
-                    </a> --}}
                 </div>
             </section>
             <p> <span class="text-danger font-weight-bold">*</span> Klik foto untuk melihat detail gambar</p>
-            {{-- <div class="row justify-content-center font-weight-bold">
-                {{$fotos->links()}}
-            </div> --}}
-            {{--<ul id="lightgallery" class="list-unstyled row">
-                <a href="" class="col-md-4 col-sm-6 col-12" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/1-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/1-1600.jpg" data-sub-html="<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>">
-                    <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-1.jpg">
-                </a>
-                <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/1-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/1-1600.jpg" data-sub-html="<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>">
-                </li>
-                <a href="" class="col-md-4 col-sm-6 col-12" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/2-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/2-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
-                    <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-2.jpg">
-                </a>
-                <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/2-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/2-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
-                </li>
-                <a href="" class="col-md-4 col-sm-6 col-12" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/13-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/13-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
-                    <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-13.jpg">
-                </a>
-                <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/13-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/13-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
-                </li>
-                <a href="" class="col-md-4 col-sm-6 col-12" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/4-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/4-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
-                    <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-4.jpg">
-                </a>
-                <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/4-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/4-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
-                </li>
-                <a href="" class="col-md-4 col-sm-6 col-12" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/1-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/1-1600.jpg" data-sub-html="<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>">
-                    <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-1.jpg">
-                </a>
-                <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/1-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/1-1600.jpg" data-sub-html="<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>">
-                </li>
-                <a href="" class="col-md-4 col-sm-6 col-12" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/2-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/2-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
-                    <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-2.jpg">
-                </a>
-                <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/2-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/2-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
-                </li>
-                <a href="" class="col-md-4 col-sm-6 col-12" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/13-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/13-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
-                    <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-13.jpg">
-                </a>
-                 <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/13-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/13-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
-                </li> --}}
-                {{-- <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/4-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/4-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
-                    <a href="">
-                        <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-4.jpg">
-                    </a>
-                </li>
-                <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/2-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/2-1600.jpg" data-sub-html="<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>">
-                    <a href="">
-                        <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-2.jpg">
-                    </a>
-                </li>
-                <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/1-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/1-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
-                    <a href="">
-                        <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-1.jpg">
-                    </a>
-                </li>
-                <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/2-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/2-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
-                    <a href="">
-                        <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-2.jpg">
-                    </a>
-                </li>
-                <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/13-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/13-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
-                    <a href="">
-                        <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-13.jpg">
-                    </a>
-                </li>
-                <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/4-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/4-1600.jpg" data-sub-html="<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>">
-                    <a href="">
-                        <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-4.jpg">
-                    </a>
-                </li>
-                <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/1-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/1-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
-                    <a href="">
-                        <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-1.jpg">
-                    </a>
-                </li>
-                <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/2-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/2-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
-                    <a href="">
-                        <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-2.jpg">
-                    </a>
-                </li>
-                <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/13-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/13-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
-                    <a href="">
-                        <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-13.jpg">
-                    </a>
-                </li>
-                <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/4-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/4-1600.jpg" data-sub-html="<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>">
-                    <a href="">
-                        <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-4.jpg">
-                    </a>
-                </li>
-                <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/1-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/1-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
-                    <a href="">
-                        <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-1.jpg">
-                    </a>
-                </li>
-                <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/2-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/2-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
-                    <a href="">
-                        <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-2.jpg"> 
-                    </a>
-                </li>
-                <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/13-1600.jpg" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/13-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
-                    <a href="">
-                        <img class="img-responsive" src="https://sachinchoolur.github.io/lightgallery.js/static/img/thumb-13.jpg">
-                    </a>
-                </li> 
-            </ul>--}}
         </div>
     </div>
 
@@ -282,7 +169,7 @@
                 </div>
             </div>
         </div>
-        <p>See more videos on our <a href="https://www.youtube.com/channel/UCUelE1nt2PXC_SN6aAfbs8A"><strong>"Youtube Channel"</strong></a></p>
+        <p>See more videos on our <a class="text-dark" href="https://www.youtube.com/channel/UCUelE1nt2PXC_SN6aAfbs8A"><strong>"Youtube Channel"</strong></a></p>
     </section>
 
 </body>

@@ -84,7 +84,7 @@
                         </div>
                         <div class="col-12 col-md-6 pt-sm-3 pt-md-0">
                             <div class="judul-berita mb-1">
-                                <a href="/berita/{{ $berita->slug }}">{{ Str::title($berita->judul) }}</a>
+                                <a href="/berita/{{ $berita->slug }}">{{ $berita->judul }}</a>
                                 
                             </div>
                             <div class="tanggal-posting text-muted my-2">

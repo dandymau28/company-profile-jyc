@@ -58,7 +58,7 @@
             </div>
             <div class="col-12 col-md-6 pt-sm-3 pt-md-0">
                 <div class=" mb-1 text-justify">
-                    <a href="/berita/{{ $berita->slug }}">{{ Str::title(Str::limit($berita->judul, 80)) }}</a>
+                    <a href="/berita/{{ $berita->slug }}">{{ Str::limit($berita->judul, 80) }}</a>
                     
                 </div>
                 <div class="tanggal-posting text-muted my-2">
