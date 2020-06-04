@@ -47,7 +47,7 @@
         <div class="container text-center py-5">
             <div class="row justify-content-center">
                 <div class="col text-center pt-3">
-                    <h3 class="text-bold">COMINGSOON</h3>
+                    <h3 class="text-bold">COMING SOON</h3>
                     <a href="{{route('jncc')}}"><h5>JNCC</h5></a>
                     <p>Jakarta National Choir Competition </p>
                 </div>
