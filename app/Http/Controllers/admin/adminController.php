@@ -18,6 +18,7 @@ class adminController extends Controller
         foreach($kategori as $index) 
         {
             $hitung = DB::table('berita')
+                    ->whereNull('deleted_at')
                     ->where('kategori', $index->nama_kategori)
                     ->count();
             

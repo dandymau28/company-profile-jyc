@@ -17,7 +17,7 @@ class berandaController extends Controller
     {
         try {
             //4 Berita Terbaru
-            $beritaTerbaru = DB::table('berita')->latest()->take(4)->get();
+            $beritaTerbaru = DB::table('berita')->latest()->whereNull('deleted_at')->take(4)->get();
         } catch (Exception $e) {
             return $e;
         }
@@ -30,6 +30,7 @@ class berandaController extends Controller
             //Berita Terbaru untuk Carousel
             $beritaCarousel = DB::table('berita')
                 ->where('penting','1')
+                ->whereNull('deleted_at')
                 ->latest()
                 ->take(5)
                 ->get();
