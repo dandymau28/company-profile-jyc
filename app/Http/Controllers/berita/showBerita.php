@@ -13,6 +13,7 @@ class showBerita extends Controller
     public function show($slug)
     {
         $berita = DB::table('berita')
+            ->whereNull('deleted_at')
             ->where('slug', $slug)
             ->first();
         

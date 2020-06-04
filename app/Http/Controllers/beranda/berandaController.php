@@ -30,6 +30,7 @@ class berandaController extends Controller
             //Berita Terbaru untuk Carousel
             $beritaCarousel = DB::table('berita')
                 ->where('penting','1')
+                ->whereNull('deleted_at')
                 ->latest()
                 ->take(5)
                 ->get();

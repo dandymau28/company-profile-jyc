@@ -14,6 +14,7 @@ class beritabyKategori extends Controller
     {
         //get berita by kategori
         $berita = DB::table('berita')
+                ->whereNull('deleted_at')
                 ->where('kategori',$kategori)
                 ->simplePaginate(3);
 

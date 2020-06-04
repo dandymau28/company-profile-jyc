@@ -18,7 +18,7 @@ class indexBerita extends Controller
     public function berita()
     {
         //3 Berita Terbaru
-        $beritaTerbaru = DB::table('berita')->latest()->simplePaginate(3);
+        $beritaTerbaru = DB::table('berita')->whereNull('deleted_at')->latest()->simplePaginate(3);
 
         // return $beritaTerbaru;
 
@@ -26,6 +26,7 @@ class indexBerita extends Controller
             //Berita Terbaru untuk Carousel
             $beritaCarouselTerbaru = DB::table('berita')
             ->latest()
+            ->whereNull('deleted_at')
             ->take(5)
             ->get();
         } catch (Exception $e) {
@@ -44,12 +45,14 @@ class indexBerita extends Controller
 
         //menghitung kategori
         $kategori = DB::table('kategori')
+                    ->whereNull('deleted_at')
                     ->latest()->get();
         $koleksi = [];
         // return $kategori;
         foreach($kategori as $index) 
         {
             $hitung = DB::table('berita')
+                    ->whereNull('deleted_at')
                     ->where('kategori', $index->nama_kategori)
                     ->count();
             
