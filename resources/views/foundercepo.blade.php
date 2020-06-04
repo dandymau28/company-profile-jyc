@@ -50,17 +50,17 @@
                     <p class="card-text text-justify">Sejak 2015, Cepo dan JYC telah mencapai banyak prestasi dan penghargaan di berbagai acara
                         Internasional seperti kompetisi dan festival di Indonesia, Thailand, Cina, Singapura, Italia,
                         Polandia dan Lituania. Cepo bersama JYC telah mengumpulkan lebih dari 15 medali emas dan
-                        beberapa trofi Grand Prix untuk Indonesia.</p>
-                    <p class="card-text text-justify">Cepo juga mendapat beberapa hadiah konduktor seperti The Best Conductor Award di The
-                        XXXIV Chorus Inside Advent 2018 di Italia, The Promising Conductor dan The Best Conductor
-                        Award di The XIV Varsovia Cantat 2019 di Polandia. Cepo juga menjadi salah satu dari 10
-                        konduktor yang diundang dari seluruh dunia untuk berpartisipasi dalam Choral Conducting
-                        Institute oleh Harold Rosenbaum pada tahun 2019 di New York University, Amerika Serikat.</p>
+                        beberapa trofi <em>Grand Prix</em> untuk Indonesia.</p>
+                    <p class="card-text text-justify">Cepo juga mendapat beberapa hadiah konduktor seperti <em>The Best Conductor Award</em> di The
+                        XXXIV Chorus Inside Advent 2018 di Italia, <em>The Promising Conductor</em> dan <em>The Best Conductor
+                        Award</em> di The XIV Varsovia Cantat 2019 di Polandia. Cepo juga menjadi salah satu dari 10
+                        konduktor yang diundang dari seluruh dunia untuk berpartisipasi dalam <em>Choral Conducting
+                        Institute</em> oleh Harold Rosenbaum pada tahun 2019 di New York University, Amerika Serikat.</p>
                     <p class="card-text text-justify">Pengalaman dan prestasi musiknya membuat Cepo terlibat aktif sebagai ajudikator atau pelatih
-                        dalam kompetisi paduan suara dan berbagai workshop di negara ini. Hingga saat ini, Cepo terus
+                        dalam kompetisi paduan suara dan berbagai <em>workshop</em> di negara ini. Hingga saat ini, Cepo terus
                         belajar mengembangkan kemampuannya dan menambah pengalaman dalam bidang paduan suara
-                        dengan bergabung dalam workshop, seminar dan kompetisi di seluruh dunia. Cepo juga dikenal
-                        sebagai choirmaster dari Jakarta Youth Choir, penggubah lagu (terutama paduan suara),
+                        dengan bergabung dalam <em>workshop</em>, seminar dan kompetisi di seluruh dunia. Cepo juga dikenal
+                        sebagai <em>choirmaster</em> dari Jakarta Youth Choir, penggubah lagu (terutama paduan suara),
                         penyanyi profesional, pengaba dan pelatih paduan suara anak, pemuda, dan dewasa di Indonesia.</p>
                 </div>
             </div>

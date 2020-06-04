@@ -38,7 +38,7 @@
 
                     <p class="card-text text-justify">Jasanya besar bagi Jakarta Youth Choir (JYC) yaitu sebagai Founder dan Pembina (2015-sekarang). Selain itu Limbong juga aktif menjadi Wakil Manager bidang Umum Kontingen DKI Jakarta POMNAS 2015, Manager Tim Bola Basket DKI Jakarta POPNAS 2017 dan Wakil Ketua Bidang Humas BAPOMI DKI Jakarta (2018). Limbong berprestasi pada Young Diplomat JENESYS Japan (2016), Best Performance Beijing Joy Dancing 2017 (2017), mendapatkan Medali Emas Basket POPNAS Jawa Tengah (2017) dan sebagai PNS terbaik Dispora 2019.</p>
 
-                    <p class="card-text text-justify">Kesuksesan Limbong dalam kehidupan, pendidikan, dan karir tidak lepas dari motto hidup yang dipegang yaitu “Keep the Faith”, setiap dalam aspek kehidupan bahkan masa depan harus mempunyai kepercayaan atau mengimani yang diyakini akan berhasil atau terwujud.</p>
+                    <p class="card-text text-justify">Kesuksesan Limbong dalam kehidupan, pendidikan, dan karir tidak lepas dari motto hidup yang dipegang yaitu <em>“Keep the Faith”</em>, setiap dalam aspek kehidupan bahkan masa depan harus mempunyai kepercayaan atau mengimani yang diyakini akan berhasil atau terwujud.</p>
                 </div>
             </div>
 

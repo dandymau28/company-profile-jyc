@@ -10,10 +10,10 @@
                 </div>
                 <div class="text-white">
                     <div>
-                        <i class="fab fa-whatsapp pr-md-2"></i>+62813-7777-2303
+                        <i class="fab fa-whatsapp pr-2"></i>+62 813-7777-2303
                     </div>
                     <div>
-                        <i class="far fa-envelope pr-md-2"></i></i>jakartayouthchoir@gmail.com
+                        <i class="far fa-envelope pr-2"></i>jakartayouthchoir@gmail.com
                     </div>
                 </div>
             </div> -->
@@ -39,32 +39,32 @@
             </ul>
         </div>
         <div class="col-sm-12 col-md-3 mt-sm-3 mt-md-0">
-                <div class="footer-title">
-                    Hubungi Kami
+            <div class="footer-title">
+                Hubungi Kami
+            </div>
+            <div class="text-white">
+                <div>
+                    <i class="fab fa-whatsapp pr-2"></i>+62813-7777-2303
                 </div>
-                <div class="text-white">
-                    <div>
-                        <i class="fab fa-whatsapp pr-md-2"></i>+62813-7777-2303
-                    </div>
-                    <div>
-                        <i class="far fa-envelope pr-md-2"></i></i>jakartayouthchoir@gmail.com
-                    </div>
+                <div>
+                    <i class="far fa-envelope pr-2"></i>jakartayouthchoir@gmail.com
                 </div>
             </div>
-        <!-- <div class="col-sm-12 col-md-3 mt-sm-3 mt-md-0">
-            <div class="footer-title mb-1">Berlangganan surat elektronik</div>
-            <form id="subscribe" method="post">
-                @csrf
-                <div class="input-group my-2">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" id="inputGroupPrepend"><i class="fas fa-envelope"></i></span>
+        </div>
+        <div class="col-sm-12 col-md-3 mt-sm-3 mt-md-0">
+            <!--<div class="footer-title mb-1">Berlangganan surat elektronik</div>
+                <form id="subscribe" method="post">
+                    <div class="input-group my-2">
+                        <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupPrepend"><i class="fas fa-envelope"></i></span>
+                        </div>
+                        <input type="text" name="email" class="form-control shadow" id="emailSubscribe" aria-describedby="inputGroupPrepend" placeholder="Masukkan email anda">
                     </div>
-                    <input type="text" name="email" class="form-control shadow" id="emailSubscribe" aria-describedby="inputGroupPrepend" placeholder="Masukkan email anda">
-                </div>
-                <button type="submit" class="btn btn-warning text-white shadow">Langganan</button>
-                <a href="#" class="shadow" id="scroll" style="display: none;"><span></span></a>
-            </form>
-        </div> -->
+                    <button type="submit" class="btn btn-warning text-white shadow">Langganan</button>
+                </form>
+            </div> -->
+            <a href="#" class="shadow" id="scroll" style="display: none;"><span></span></a>
+        </div>
     </div>
     <div id="footer-bottom" class="row justify-content-between w-90 align-items-center py-3">
         <div class="col-12 col-lg-6 text-right p-2">
@@ -77,5 +77,5 @@
         <div class="col-12 col-lg-6 text-right footer-title ">
             &copy Est. since 2015. Jakarta Youth Choir
         </div>
-      </div>
+    </div>
 </footer>

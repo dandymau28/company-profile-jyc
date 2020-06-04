@@ -24,20 +24,20 @@
         <div class="row container-fluid" data-aos="fade-up" data-aos-duration="1500">
             <div class="col-lg-6 mx-auto text-justify sejarah-text">
             <p>
-            Jakarta Youth Choir (JYC) bermula pada 25 Juli 2015 saat para Finalis DKI Jakarta tampil pada Program Pertukaran Pemuda Antarnegara sedang live-in di Kalibaru, Cilincing, Jakarta Utara. Mereka diminta untuk bernyanyi di sebuah acara masyarakat setempat. Hanya dengan persiapan yang singkat, oleh para finalis dan Choirmaster Septo Adi Kristanto Simanjuntak (Cepo), membuat penampilan perdana ini sukses dan berkesan.
+            Jakarta Youth Choir (JYC) bermula pada 25 Juli 2015 saat para Finalis DKI Jakarta tampil pada Program Pertukaran Pemuda Antarnegara sedang <em>live-in</em> di Kalibaru, Cilincing, Jakarta Utara. Mereka diminta untuk bernyanyi di sebuah acara masyarakat setempat. Hanya dengan persiapan yang singkat, oleh para finalis dan <em>choirmaster</em> Septo Adi Kristanto Simanjuntak (Cepo), membuat penampilan perdana ini sukses dan berkesan.
             </p>
             <p>
-            Menindaklanjuti penampilan yang berkesan oleh para finalis PPAN 2015 di Cilincing tersebut, Cepo dan P. Ariadi Limbong (Kepala Seksi Kepemudaan Dinas Pemuda dan Olahraga Provinsi DKI Jakarta) mendapatkan inspirasi untuk membuat paduan suara ini berkelanjutan. Sampai pada akhirnya dinamakan Jakarta Youth Choir (JYC). JYC diresmikan pada 30 Agustus 2015 di Auditorium Sertifikasi Guru Universitas Negeri Jakarta oleh Kepala Badan Kesatuan Bangsa dan Politik DKI Jakarta Drs. H. Ratiyono, MMSI.
+            Menindaklanjuti penampilan yang berkesan oleh para finalis PPAN 2015 di Cilincing tersebut, Cepo dan P. Ariadi Limbong (Kepala Seksi Kepemudaan Dinas Pemuda dan Olahraga Provinsi DKI Jakarta) mendapatkan inspirasi untuk membuat paduan suara ini berkelanjutan. Sampai pada akhirnya dinamakan Jakarta Youth Choir. JYC diresmikan pada 30 Agustus 2015 di Auditorium Sertifikasi Guru Universitas Negeri Jakarta oleh Kepala Badan Kesatuan Bangsa dan Politik DKI Jakarta Drs. H. Ratiyono, MMSI.
             </p>
             <p>
-            Saat ini, JYC membina lebih dari 100 choristers aktif yang berasal dari berbagai macam latar belakang pendidikan dan pekerjaan maupun pelatih penuh waktu untuk kelompok paduan suara ternama yang berkedudukan di DKI Jakarta dan sekitarnya. 
-            JYC telah menggelar beberapa konser paduan suara secara berkala. JYC dipilih dan dipercaya sebagai penampil dan bagian dari acara-acara hebat nan besar, yang dihadiri orang-orang hebat yang inspiratif. Bahkan, JYC telah berkontribusi mengukir berbagai prestasi terkemuka di tingkat Nasional maupun Internasional, dibuktikan oleh pencapaian JYC sebagai Grand Prix Winner of The Year dengan mendapatkan nilai sempurna yang menjadi kali pertama dari 34 penyelenggaraan Festival Internazionale Chorus Inside Advent di Roma, Italia pada tahun 2018.
+            Saat ini, JYC membina lebih dari 100 <em>choristers</em> aktif yang berasal dari berbagai macam latar belakang pendidikan dan pekerjaan maupun pelatih penuh waktu untuk kelompok paduan suara ternama yang berkedudukan di DKI Jakarta dan sekitarnya. 
+            JYC telah menggelar beberapa konser paduan suara secara berkala. JYC dipilih dan dipercaya sebagai penampil dan bagian dari acara-acara hebat nan besar, yang dihadiri orang-orang hebat yang inspiratif. Bahkan, JYC telah berkontribusi mengukir berbagai prestasi terkemuka di tingkat Nasional maupun Internasional, dibuktikan oleh pencapaian JYC sebagai <em>Grand Prix Winner of The Year</em> dengan mendapatkan nilai sempurna yang menjadi kali pertama dari 34 penyelenggaraan Festival Internazionale Chorus Inside Advent di Roma, Italia pada tahun 2018.
             </p>
             <p>
-            Pada tahun 2019, JYC berhasil mengukir prestasi kembali dengan meraih 2nd Prize in Mixed Choir Category, 3rd  Prize in Male & Female Choir, Romuald Twardowski Prize – for the best performance of Romuald Twardowski composition by foreign choir, The Promising Conductor dan The Best Organized Conductor pada XIV Varsovia Cantat International Warsaw Choir Festival. Tidak hanya itu, pada kompetisi 27th Cantate Domino International Choir Festival and Competition of Sacred Music, JYC berhasil meraih The Winner of Mixed Category, The Winner of Chamber Category, The 1st Cup Grand Prix Winner for Mixed Category, The 2nd Cup Grand Prix Winner for Chamber Category, Special Jury Award for The Best Interpretation of Vytautas Miskinis "Cantate Domino" Piece dan Special Jury Award for The Most Expressive Choir.
+            Pada tahun 2019, JYC berhasil mengukir prestasi kembali dengan meraih <em>2nd Prize in Mixed Choir Category, 3rd  Prize in Male & Female Choir, Romuald Twardowski Prize – for the best performance of Romuald Twardowski composition by foreign choir, The Promising Conductor dan The Best Organized Conductor</em> pada XIV Varsovia Cantat International Warsaw Choir Festival. Tidak hanya itu, pada kompetisi 27th Cantate Domino International Choir Festival and Competition of Sacred Music, JYC berhasil meraih <em>The Winner of Mixed Category, The Winner of Chamber Category, The 1st Cup Grand Prix Winner for Mixed Category, The 2nd Cup Grand Prix Winner for Chamber Category, Special Jury Award for The Best Interpretation of Vytautas Miskinis "Cantate Domino" Piece dan Special Jury Award for The Most Expressive Choir.</em>
             </p>
             <p>
-            JYC berkomitmen untuk meningkatkan prestasi sebagai salah satu paduan suara terbaik di Indonesia. JYC bertahan dan semangat untuk menyebarluaskan cinta terhadap budaya bangsa juga mengharumkan nama DKI Jakarta dan Indonesia, khususnya di dunia Paduan Suara. “We Sing for the City and the Country.” 
+            JYC berkomitmen untuk meningkatkan prestasi sebagai salah satu paduan suara terbaik di Indonesia. JYC bertahan dan semangat untuk menyebarluaskan cinta terhadap budaya bangsa juga mengharumkan nama DKI Jakarta dan Indonesia, khususnya di dunia Paduan Suara. <em>“We Sing for the City and the Country.”</em> 
             </p>
             </div>
         </div>
@@ -132,7 +132,7 @@
                     <li><h5 class="card-text text-justify">Menciptakan suasana organisasi yang harmonis, bersahabat dan ramah</h5></li>
                     <li><h5 class="card-text text-justify">Menyediakan sarana fisik dan non fisik untuk melatih baka dan talenta para anggotanya dalam suasana disiplin konstruktif dan menyenangkan</h5></li>
                     <li><h5 class="card-text text-justify">Aktif mengikuti kompetisi paduan suara di dalam dan di luar negeri</h5></li>
-                    <li><h5 class="card-text text-justify">Mendukung program-program pemerintah DKI Jakarta khususnya dalam bidang kepemudaan, kesenian, dan kebudayaan.</h5></li>
+                    <li><h5 class="card-text text-justify">Mendukung program-program pemerintah DKI Jakarta khususnya dalam bidang kepemudaan, kesenian, dan kebudayaan</h5></li>
                 </ul>
             </div>
         </div>

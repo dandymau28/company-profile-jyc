@@ -17,20 +17,29 @@
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="{{asset('assets/img/beranda/slide-1.png')}}" class="d-block w-100" alt="img">
-                    <div class="carousel-caption d-none d-md-block">
+                    <img src="{{asset('assets/img/beranda/1.png')}}" class="d-block w-100" alt="img">
+                    {{-- <div class="carousel-caption d-none d-md-block">
                         <!-- <h5>First slide label</h5>
                         <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> -->
-                    </div>
+                    </div> --}}
                 </div>
                 <div class="carousel-item">
-                    <img src="{{asset('assets/img/beranda/slide-2.png')}}" class="d-block w-100" alt="img">
+                    <img src="{{asset('assets/img/beranda/2.png')}}" class="d-block w-100" alt="img">
                 </div>
                 <div class="carousel-item">
                     {{-- @foreach($beritaCarousel as $carousel) --}}
-                    <img src="{{asset('assets/img/beranda/slide-3.png')}}" class="d-block w-100" alt="img">
+                    <img src="{{asset('assets/img/beranda/3.png')}}" class="d-block w-100" alt="img">
                     {{-- <img src="{{ Storage::url($carousel->banner) }}" class="d-block w-100" alt="img"> --}}
-                {{-- @endforeach --}}
+                    {{-- @endforeach --}}
+                </div>
+                <div class="carousel-item">
+                    <img src="{{asset('assets/img/beranda/4.png')}}" class="d-block w-100" alt="img">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{asset('assets/img/beranda/5.png')}}" class="d-block w-100" alt="img">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{asset('assets/img/beranda/6.png')}}" class="d-block w-100" alt="img">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -54,8 +63,8 @@
             <div class="col-lg-6 intro-text" data-aos="fade-up" data-aos-duration="1500">
                 <p>Jakarta Youth Choir (JYC) adalah paduan suara pemuda/i DKI Jakarta yang berdiri sejak 30 Agustus 2015 dan didirikan oleh Ponirin Ariadi Limbong selaku pembina JYC & Septo Adi Kristanto Simanjuntak yang juga menjadi Pelatih dan Pengaba JYC. Sejak awal mula berdiri hingga saat ini, JYC merupakan salah satu organisasi kepemudaan yang dibina oleh Dinas Pemuda dan Olahraga Provinsi DKI Jakarta.</p>
                 <p>Semakin hari, keberadaan JYC di dunia paduan suara semakin diperhitungkan. JYC berhasil menyelenggarakan konser perdananya dengan tajuk <em> “Don’t Stop Believing” </em> pada tanggal 23 September 2017. Hal ini merupakan awal mula JYC menggelar konser paduan suara secara berkala.</p>
-                <p>JYC dipilih dan dipercaya sebagai penampil dan bagian dari acara-acara hebat nan besar, yang dihadiri orang-orang hebat yang inspiratif. Selain itu, JYC telah berkontribusi mengukir berbagai prestasi di banyak kompetisi paduan suara bergengsi di tingkat nasional maupun internasional. Salah satu pencapaian JYC yang luar biasa adalah sebagai Grand Prix Winner of The Year dengan mendapatkan nilai sempurna yang menjadi kali pertama di kompetisi “The 34th Internazionale Chorus Inside Advent” di Roma, Italia pada tahun 2018.</p>
-                <p>Dengan bimbingan Choirmaster penuh cinta, Septo Adi Kristanto Simanjuntak, saat ini JYC membina lebih dari 100 anggota aktif, yang berasal dari berbagai macam latarbelakang dan bertempat tinggal di DKI Jakarta dan sekitarnya, untuk mengharumkan nama Jakarta dan Indonesia, khususnya di dunia paduan suara. “We Sing for the City and the Country.”</p>
+                <p>JYC dipilih dan dipercaya sebagai penampil dan bagian dari acara-acara hebat nan besar, yang dihadiri orang-orang hebat yang inspiratif. Selain itu, JYC telah berkontribusi mengukir berbagai prestasi di banyak kompetisi paduan suara bergengsi di tingkat nasional maupun internasional. Salah satu pencapaian JYC yang luar biasa adalah sebagai <em>Grand Prix Winner of The Year</em> dengan mendapatkan nilai sempurna yang menjadi kali pertama di kompetisi <em>“The 34th Internazionale Chorus Inside Advent” </em> di Roma, Italia pada tahun 2018.</p>
+                <p>Dengan bimbingan choirmaster penuh cinta, Septo Adi Kristanto Simanjuntak, saat ini JYC membina lebih dari 100 anggota aktif, yang berasal dari berbagai macam latar belakang dan bertempat tinggal di DKI Jakarta dan sekitarnya, untuk mengharumkan nama Jakarta dan Indonesia, khususnya di dunia paduan suara. <em>“We Sing for the City and the Country.”</em></p>
             </div>
         </div>
     </div>
@@ -75,7 +84,7 @@
                 </div>
                 <div class="card-body">
                     <div class="judul-berita mb-1">
-                        <a href="/berita/{{ $berita->slug }}">{{ Str::title($berita->judul) }}</a>
+                        <a href="/berita/{{ $berita->slug }}">{{ $berita->judul }}</a>
                     </div>
                     <div class="konten-berita text-justify">
                         {!! Str::limit(strip_tags($berita->isi_berita), 400) !!}
