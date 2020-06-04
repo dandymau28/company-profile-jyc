@@ -169,7 +169,7 @@
                 </div>
             </div>
         </div>
-        <p>See more videos on our <a href="https://www.youtube.com/channel/UCUelE1nt2PXC_SN6aAfbs8A"><strong>"Youtube Channel"</strong></a></p>
+        <p>See more videos on our <a class="text-dark" href="https://www.youtube.com/channel/UCUelE1nt2PXC_SN6aAfbs8A"><strong>"Youtube Channel"</strong></a></p>
     </section>
 
 </body>
