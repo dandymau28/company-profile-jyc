@@ -29,13 +29,13 @@
                     <ol class="breadcrumb bg-light">
                         <li class="breadcrumb-item"><a href="{{ route('beranda') }}">Beranda</a></li>
                         <li class="breadcrumb-item"><a href="{{ route('berita') }}">Berita</a></li>
-                        <li class="breadcrumb-item active text-truncate" aria-current="page">{{ Str::title($berita->judul) }}</li>
+                        <li class="breadcrumb-item active text-truncate" aria-current="page">{{ $berita->judul }}</li>
                     </ol>
                 </nav>
 
                 <div id="detail-berita">
                     <div id="judul-detail-berita" class="border-bottom border-danger">
-                        <h2 class="text-justify judul-berita">{{ Str::title($berita->judul) }}</h2>
+                        <h2 class="text-justify judul-berita">{{ $berita->judul }}</h2>
                     </div>
                     <div class="tanggal-posting text-small text-muted my-2">
                         <i class="far fa-clock"></i>
