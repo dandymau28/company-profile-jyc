@@ -2,7 +2,7 @@
     <div id="footer-top" class="row pb-3 pt-4 w-90">
         <div class="col-sm-12 col-md-3">
             <img id="footer-logo" class="bg-light rounded-circle my-2 shadow" src="{{asset('assets/img/logo-jyc.png')}}" alt="img">
-            <div class="text-white">We Sing for The City And The Country</div>
+            <div class="text-white">We Sing for The City <br> And The Country</div>
 
             <!-- <div class="mt-3">
                 <div class="footer-title">
