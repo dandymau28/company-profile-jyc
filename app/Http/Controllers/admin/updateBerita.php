@@ -34,6 +34,8 @@ class updateBerita extends Controller
                     $oldName = explode('.',$request->input('pathPhoto'));
                     $name = $oldName[0]. '.' .$uploadFoto->getClientOriginalExtension();
                     $pathPhoto = $uploadFoto->storeAs($name, "");
+                } else {
+                    $pathPhoto = $request->input('pathPhoto');
                 }
 
                 //adding tag
