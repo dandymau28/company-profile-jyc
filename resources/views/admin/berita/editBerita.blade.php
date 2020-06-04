@@ -76,6 +76,7 @@
                             <input type="file" class="custom-file-input" name="image" id="">
                             <label class="custom-file-label" for="validatedCustomFile">{{$berita->banner}}</label>
                         </div>
+                        <input type="text" class="custom-file-input" name="pathPhoto" value="{{$berita->banner}}" id="" hidden>
                         <div class="mb-3">
                             <textarea class="textarea" id="isiBerita" placeholder="Place some text here"
                                 style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"

@@ -31,10 +31,9 @@ class updateBerita extends Controller
                 //upload foto
                 if($request->file('image')){
                     $uploadFoto = $request->file('image');
-                    $name = 'banner'.'-'.$id.'.'.$uploadFoto->getClientOriginalExtension();
-                    $pathPhoto = $uploadFoto->storeAs('public/assets/img', $name);
-                } else {
-                    $pathPhoto = 'public/assets/img/no-image-available.jpg';
+                    $oldName = explode('.',$request->input('pathPhoto'));
+                    $name = $oldName[0]. '.' .$uploadFoto->getClientOriginalExtension();
+                    $pathPhoto = $uploadFoto->storeAs($name, "");
                 }
 
                 //adding tag
