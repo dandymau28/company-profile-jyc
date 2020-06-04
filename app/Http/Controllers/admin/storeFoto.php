@@ -50,7 +50,7 @@ class storeFoto extends Controller
                     ]);
                 // }
             }
-            DB ::commit();
+            DB::commit();
         } catch (Exception $e) {
             DB::rollback();
             return back()->with('error','Gagal upload file. Error Message= '.$e->getMessage());
