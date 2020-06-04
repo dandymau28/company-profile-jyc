@@ -29,9 +29,9 @@
     <!-- Text JNCC -->
     <div class="container">
         <div class="jncc-text text-justify" data-aos="fade-up" data-aos-duration="1500">
-            <p>The 1st Jakarta National Choir Competition merupakan sebuah acara Lomba Paduan Suara khusus pelajar SMA/SMA/MA/sederajat se-Indonesia yang diselanggarakan pertama kalinya oleh Jakarta Youth Choir dengan mengusung tema Embodiment of the Indonesian Youth Spirit sebagai bentuk perwujudan sebuah semangat kepemudaan Indonesia yang terdapat dalam setiap individu, di bidang paduan suara.<br><br>
+            <p> <em>The 1st Jakarta National Choir Competition</em> merupakan sebuah acara Lomba Paduan Suara khusus pelajar SMA/SMA/MA/sederajat se-Indonesia yang diselanggarakan pertama kalinya oleh Jakarta Youth Choir dengan mengusung tema Embodiment of the Indonesian Youth Spirit sebagai bentuk perwujudan sebuah semangat kepemudaan Indonesia yang terdapat dalam setiap individu, di bidang paduan suara.<br><br>
             Acara ini akan dilaksanakan di Dinas Pendidikan DKI Jakarta yang berada di kawasan Jakarta Selatan dan dalam semarak merayakan hari Pendidikan Nasional . Sehingga mendapatkan momentum yang tepat dengan konsep “pemuda unjuk budaya”. Pelajar akan mendapatkan pengalaman seru, baru, namun bersejarah dengan penggagasan ide seni, semangat juang kepemudaan, nasionalitas, dan sejarah secara komplit.br<br><br>
-            Kompetisi ini akan menghadirkan 20 tim terbaik paduan suara yang akan dinilai oleh juri-juri yang berkompeten di bidangnya. Setiap tim akan mengirimkan 20-30 chorister penyanyi, 1 conductor dan 2 ofﬁcial. Penilaian akan berlangsung selama 1 hari tersebut dengan perolehan juara I, II, & III yang masing-masing akan mendapatkan uang, trophy, dan sertiﬁkat.</p>
+            Kompetisi ini akan menghadirkan 20 tim terbaik paduan suara yang akan dinilai oleh juri-juri yang berkompeten di bidangnya. Setiap tim akan mengirimkan 20-30 chorister penyanyi, 1 conductor dan 2 ofﬁcial. Penilaian akan berlangsung selama 1 hari tersebut dengan perolehan juara I, II, & III yang masing-masing akan mendapatkan uang, piala, dan sertiﬁkat.</p>
         </div>
     </div>
     
@@ -62,9 +62,9 @@
             </div>
             <div class="col-md-8 hasil-kegiatan-2 text-justify" data-aos="fade-up" data-aos-duration="1500">
                 <p>
-                Kegiatan The 1st Jakarta National Choir Competition diselenggarakan pada tanggal 27 April 2019. Acara diikuti oleh 17 peserta yang berasal dari SMA di Jakarta dan sekitarnya. Acara dimulai pada pukul 08.00 yaitu resgistrasi peserta. Opening ceremony oleh MC yaitu pukul 09.00 dan memulai penampilan peserta pertama pada pukul 09.45. Peserta terakhir tampil pada pukul 16.00. Pengumuman pemenang yaitu pada pukul 17.15 yang diumumkan oleh salah satu juri kami Septo Adi Kristanto Simanjuntak. Pada acara kali ini, kami menghadirkan tiga dewan juri yaitu Septo Adi Kristanto Simanjuntak sebagai Juri 1, Budi Susanto Yohanes sebagai Juri 2, dan Ken Steven sebagai Juri 3. Acara ditutup oleh penampilan peraih juara 1.<br><br>
-	            Acara The 1st Jakarta Choir Competition ini di sponsori oleh Bank DKI sebagai sponsor utama, Rave habbit, Dana, Le minerale, Marina, Heavenly Blush, LSPR, Sampoerna University McD, Domino’s Pizza, Pandawa, jajan jamur, dan mostbreinner. Media partner pada acara ini yaitu Kampus Update, Jakartaku, Campus Event.
-	            Selain itu pada acara ini ada beberapa tenant yang ikut memeriahkan yaitu domino’s pizza, This.Yours, heavenly blush, hop hop, jajan jamur, mostbreinner, tobey kitchen dan rave habbit.
+                Kegiatan <em>The 1st Jakarta National Choir Competition</em> diselenggarakan pada tanggal 27 April 2019. Acara diikuti oleh 17 peserta yang berasal dari SMA di Jakarta dan sekitarnya. Acara dimulai pada pukul 08.00 WIB yaitu resgistrasi peserta. <em>Opening ceremony</em> oleh pembawa acara yaitu pukul 09.00 WIB dan memulai penampilan peserta pertama pada pukul 09.45 WIB. Peserta terakhir tampil pada pukul 16.00 WIB. Pengumuman pemenang yaitu pada pukul 17.15 WIB yang diumumkan oleh salah satu juri kami Septo Adi Kristanto Simanjuntak. Pada acara kali ini, kami menghadirkan tiga dewan juri yaitu Septo Adi Kristanto Simanjuntak sebagai Juri 1, Budi Susanto Yohanes sebagai Juri 2, dan Ken Steven sebagai Juri 3. Acara ditutup oleh penampilan peraih juara 1.<br><br>
+	            Acara <em>The 1st Jakarta Choir Competition</em> ini di sponsori oleh Bank DKI sebagai sponsor utama, Rave habbit, Dana, Le minerale, Marina, Heavenly Blush, LSPR, Sampoerna University, McD, Domino’s Pizza, Pandawa, Jajan Jamur, dan Mostbreinner. <em>Media partner</em> pada acara ini yaitu Kampus Update, Jakartaku, Campus Event.
+	            Selain itu pada acara ini ada beberapa <em>tenant</em> yang ikut memeriahkan yaitu domino’s pizza, This.Yours, heavenly blush, hop hop, Jajan Jamur, Mostbreinner, Tobey Kitchen dan Rave Habbit.
                 </p>
             </div>
         </div>
@@ -79,7 +79,7 @@
 
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Konduktor terbaik</h4>
+                            <h4 class="card-title">Konduktor Terbaik</h4>
                             <p class="card-text">SMAN 47 Jakarta</p>
                         </div>
                             <img class="card-img img-fluid" src="{{asset('assets/img/jncc/pemenang.png')}}" alt="img">
@@ -93,7 +93,7 @@
 
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Koreografi terbaik</h4>
+                            <h4 class="card-title">Koreografi Terbaik</h4>
                             <p class="card-text">SMAN 71 JAKARTA</p>
                         </div>
                             <img class="card-img img-fluid" src="{{asset('assets/img/jncc/pemenang.png')}}" alt="img">
@@ -108,7 +108,7 @@
 
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Kostum terbaik</h4>
+                            <h4 class="card-title">Kostum Terbaik</h4>
                             <p class="card-text">SMAN 68 JAKARTA</p>
                         </div>
                             <img class="card-img img-fluid" src="{{asset('assets/img/jncc/pemenang.png')}}" alt="img">
