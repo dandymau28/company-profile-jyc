@@ -20,12 +20,21 @@ class updateBerita extends Controller
                 $slug = Str::slug($request->judul,'-');
 
                 //upload foto
+                // if($request->file('image')){
+                //     $uploadFoto = $request->file('image');
+                //     $name = rand(1,999).'-'.time().'.'.$uploadFoto->getClientOriginalExtension();
+                //     $pathPhoto = $uploadFoto->storeAs('public/assets/img', $name);
+                // } else {
+                //     $pathPhoto = 'public/assets/img/705-1585565895.jpg';
+                // }
+
+                //upload foto
                 if($request->file('image')){
                     $uploadFoto = $request->file('image');
-                    $name = rand(1,999).'-'.time().'.'.$uploadFoto->getClientOriginalExtension();
+                    $name = 'banner'.'-'.$id.'.'.$uploadFoto->getClientOriginalExtension();
                     $pathPhoto = $uploadFoto->storeAs('public/assets/img', $name);
                 } else {
-                    $pathPhoto = 'public/assets/img/705-1585565895.jpg';
+                    $pathPhoto = 'public/assets/img/no-image-available.jpg';
                 }
 
                 //adding tag
