@@ -35,7 +35,7 @@ class terimaBuktiBayar extends Controller
 
         try {
             DB::beginTransaction();
-            $jadwal = DB::table('cab')->where('id', $data->id_cab)->update([
+            DB::table('cab')->where('id', $data->id_cab)->update([
                 'id_audisi' => $jadwal,
             ]);
         } catch (Exception $e) {

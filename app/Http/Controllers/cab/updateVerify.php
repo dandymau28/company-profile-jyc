@@ -33,13 +33,13 @@ class updateVerify extends Controller
         $data = DB::table('cab')->where('id',$id)->first();
 
         $kode_bayar = $cab->kode_bayar;
-
+        $nama = $data->nama_panggilan;
         //tambah dispatch untuk mengirim verifikasi email
         // VerifMail::dispatch($data->email, $pdf);
 
         //send email
         Mail::to($data->email)
-            ->queue(new verifMail($kode_bayar));
+            ->queue(new verifMail($kode_bayar, $nama));
 
         return back()->with('success','berhasil verifikasi');
     }
