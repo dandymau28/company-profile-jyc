@@ -52,7 +52,7 @@
     </div>
     <div class="container">
         <div class="container-2">
-            <h4 class="text-center">Dear, Swardi</h4>
+            <h4 class="text-center">Dear, {{ $nama }}</h4>
             <h5>Pembayaranmu telah berhasil!</h5>
             <h5>Selanjutnya, silahkan cetak form dibawah ini. Form <b>WAJIB</b> dibawa saat audisi.</h5>
         </div>

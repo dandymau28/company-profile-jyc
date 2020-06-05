@@ -140,35 +140,7 @@
                 Agama : {{ $cab->agama ? $cab->agama : "-" }}
             </div>
             <div class="item">
-                <?php
-                    $date = $jadwal->tanggal;
-                    $d    = new DateTime($date);
-                    $hari = $d->format('l');
-                    switch ($hari) {
-                        case 'Sunday':
-                            $hari = 'Minggu';
-                            break;
-                        case 'Monday':
-                            $hari = 'Senin';
-                            break;
-                        case 'Tuesday':
-                            $hari = 'Selasa';
-                            break;
-                        case 'Wednesday':
-                            $hari = 'Rabu';
-                            break;
-                        case 'Thursday':
-                            $hari = 'Kamis';
-                            break;
-                        case 'Friday':
-                            $hari = "Jum'at";
-                            break;
-                        case 'Saturday':
-                            $hari = "Sabtu";
-                            break;
-                    }
-                ?>
-                Jadwal Audisi : {{ $hari }}, {{Carbon\Carbon::parse($jadwal->tanggal)->locale('id')->format('d M Y') }}
+                Jadwal Audisi : {{ $jadwal->tanggal }}
             </div>
             <div class="item">
                 Dari mana Anda tahu tentang JYC : {{ $cab->info_jyc }}
