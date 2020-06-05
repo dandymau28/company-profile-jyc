@@ -18,7 +18,7 @@ class indexBerita extends Controller
     public function berita()
     {
         //3 Berita Terbaru
-        $beritaTerbaru = DB::table('berita')->whereNull('deleted_at')->latest()->simplePaginate(3);
+        $beritaTerbaru = DB::table('berita')->whereNull('deleted_at')->whereNotNull('tgl_publish')->latest()->simplePaginate(3);
 
         // return $beritaTerbaru;
 
@@ -27,6 +27,7 @@ class indexBerita extends Controller
             $beritaCarouselTerbaru = DB::table('berita')
             ->latest()
             ->whereNull('deleted_at')
+            ->whereNotNull('tgl_publish')
             ->take(5)
             ->get();
         } catch (Exception $e) {
@@ -53,6 +54,7 @@ class indexBerita extends Controller
         {
             $hitung = DB::table('berita')
                     ->whereNull('deleted_at')
+                    ->whereNotNull('tgl_publish')
                     ->where('kategori', $index->nama_kategori)
                     ->count();
             
