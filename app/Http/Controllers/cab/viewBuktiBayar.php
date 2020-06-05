@@ -17,9 +17,14 @@ class viewBuktiBayar extends Controller
                 ->select('cab.*','kode_pembayaran_cab.kode_bayar','kode_pembayaran_cab.foto_bukti')
                 ->first();
 
+        $batch = DB::table('info_oprec')
+                ->where('status', 'buka')
+                ->latest()
+                ->first();
+
         $data_jadwal = DB::table('jadwal_audisi')
             ->whereNull('deleted_at')
-            ->whereRaw(DB::raw('year(created_at) = year(CURRENT_DATE)'))
+            ->where('batch', $batch->batch)
             ->get();
         
         $jadwal = [];
