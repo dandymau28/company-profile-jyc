@@ -250,7 +250,7 @@ span.navbar-toggler-icon {
 }
 
 #isi-detail-berita p {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
 }
 
 #isi-detail-berita blockquote {
@@ -353,6 +353,10 @@ li.breadcrumb-item {
 
     .isi-berita {
         font-size: 1.1rem;
+    }
+
+    #isi-detail-berita p {
+        font-size: 1.2rem;
     }
 
     .text-berita h1 {
