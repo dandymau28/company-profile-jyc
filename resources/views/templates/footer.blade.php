@@ -44,7 +44,7 @@
             </div>
             <div class="text-white">
                 <div>
-                    <i class="fab fa-whatsapp pr-2"></i><span class="text-light">+62-813-7777-2303</span>
+                    <i class="fab fa-whatsapp pr-2"></i><span id="no_wa" class="text-light">+62-813-7777-2303</span>
                 </div>
                 <div>
                     <i class="far fa-envelope pr-2"></i>jakartayouthchoir@gmail.com

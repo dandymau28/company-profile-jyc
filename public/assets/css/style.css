@@ -546,3 +546,7 @@ a.nav-link.active:hover {
     display: none;
 }
 
+#no_wa {
+    color: white;
+}
+
