@@ -19,6 +19,7 @@ class adminController extends Controller
         {
             $hitung = DB::table('berita')
                     ->whereNull('deleted_at')
+                    ->whereNotNull('tgl_publish')
                     ->where('kategori', $index->nama_kategori)
                     ->count();
             
