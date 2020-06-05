@@ -534,7 +534,7 @@ a.nav-link.active:hover {
     background-color: rgba(183, 28, 28, 0.95);
 }
 
-input.invalid {
+.invalid {
     background-color: #ffdddd;
 }
 

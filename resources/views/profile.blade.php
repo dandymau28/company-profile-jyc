@@ -144,9 +144,9 @@
             <div class="col-sm-8">
                 <nav class="tab-struktur">
                     <div class="nav nav-tabs row justify-content-between text-center" id="nav-tab" role="tablist">
-                        <a class="struktur-items col m-0" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">2016 - 2017</a>
+                        <a class="struktur-items col m-0" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="false">2016 - 2017</a>
                         <a class="struktur-items col m-0" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">2018 - 2019</a>
-                        <a class="struktur-items active col m-0" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">2020 - 2021</a>
+                        <a class="struktur-items active col m-0" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="true">2020 - 2021</a>
                     </div>
                 </nav>
             </div>

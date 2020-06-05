@@ -96,7 +96,7 @@
                                 <div class="form-row">
                                     <div class="col form-group">
                                         <label for="nama_lengkap">Nama Lengkap <span class="text-danger"><strong>*</strong></span></label>
-                                        <input id="nama_lengkap" name="nama_lengkap" oninput="this.className='form-control'" type="text" class="form-control" placeholder="Nurul Anisa, S.Sn" required>
+                                        <input id="nama_lengkap" name="nama_lengkap" oninput="this.className='form-control'" type="text" class="form-control wajib" placeholder="Nurul Anisa, S.Sn" required>
                                         <div class="invalid-feedback">
                                             Nama tidak boleh kosong.
                                         </div>
@@ -104,7 +104,7 @@
                                     <div class="col form-group">
                                         <label for="nama_panggilan">Nama Panggilan <span class="text-danger"><strong>*</strong></span></label>
                                         <input id="nama_panggilan" oninput="this.className='form-control'" name="nama_panggilan" type="text"
-                                         class="form-control"
+                                         class="form-control wajib"
                                             placeholder="Nisa" required>
                                     </div>
                                 </div>
@@ -112,7 +112,7 @@
                                     <div class="col form-group">
                                         <label for="nik">NIK <span class="text-danger"><strong>*</strong></span></label>
                                         <input id="nik" name="nik" oninput="this.className='form-control'" type="text"
-                                         class="form-control"
+                                         class="form-control wajib"
                                             placeholder="3271046504930002" required>
                                     </div>
                                     <div class="col form-group">
@@ -126,7 +126,7 @@
                                     <div class="col form-group">
                                         <label for="email">Email <span class="text-danger"><strong>*</strong></span></label>
                                         <input id="email" oninput="this.className='form-control'" name="email" type="email"
-                                         class="form-control"
+                                         class="form-control wajib"
                                             placeholder="anisanurul69@hotmail.com" required>
                                     </div>
                                     <div class="col form-group">
@@ -140,26 +140,26 @@
                                     <div class="col form-group">
                                         <label for="tempat_lahir">Tempat Lahir <span class="text-danger"><strong>*</strong></span></label>
                                         <input id="tempat_lahir" name="tempat_lahir" type="text" oninput="this.className='form-control'"
-                                         class="form-control"
+                                         class="form-control wajib"
                                             placeholder="Jepara" required>
                                     </div>
                                     <div class="col form-group">
                                         <label for="tanggal_lahir">Tanggal Lahir <span class="text-danger"><strong>*</strong></span><small> (max 25 tahun)</small></label>
                                         <input id="tanggal_lahir" oninput="this.className='form-control'" name="tanggal_lahir" type="date"
-                                         class="form-control" required>
+                                         class="form-control wajib" required>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="col form-group">
                                         <label for="pekerjaan">Profesi / Pekerjaan <span class="text-danger"><strong>*</strong></span></label>
                                         <input id="pekerjaan" oninput="this.className='form-control'" name="pekerjaan" type="text"
-                                         class="form-control"
+                                         class="form-control wajib"
                                             placeholder="Sekretaris" required>
                                     </div>
                                     <div class="col form-group">
                                         <label for="institusi">Perusahaan / Institusi <span class="text-danger"><strong>*</strong></span></label>
                                         <input id="institusi" oninput="this.className='form-control'" name="institusi" type="text"
-                                         class="form-control"
+                                         class="form-control wajib"
                                             placeholder="PT Mencari Cinta Sejati" required>
                                     </div>
                                 </div>
@@ -172,30 +172,30 @@
                                     <div class="col form-group">
                                         <label for="foto">Pas Foto <span class="text-danger"><strong>* </strong></span><small>(3x4)</small></label>
                                         <input id="foto" oninput="this.className='form-control'" name="foto" type="file"
-                                         class="form-control" required>
+                                         class="form-control wajib" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="alamat">Alamat Lengkap <span class="text-danger"><strong>*</strong></span></label>
-                                    <textarea name="alamat" oninput="this.className='form-control'" id="alamat" class="form-control" rows="2"
+                                    <textarea name="alamat" oninput="this.className='form-control'" id="alamat" class="form-control wajib" rows="2"
                                         placeholder="Jalan Gang Tersempit No.69, Kel. Besar, Kec. Tegar, Kota Jepara"
                                         required></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="info_jyc">Dari mana Anda mengetahui tentang JYC ? <span class="text-danger"><strong>*</strong></span></label>
-                                    <textarea name="info_jyc" oninput="this.className='form-control'" id="info_jyc" class="form-control" rows="2"
+                                    <textarea name="info_jyc" oninput="this.className='form-control'" id="info_jyc" class="form-control wajib" rows="2"
                                         placeholder="Pertama, begini begini begini, lalu begitu. Terus begini begitu dan akhirnya begono."
                                         required></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="tentang_jyc">Apa yang Anda ketahui tentang JYC ? <span class="text-danger"><strong>*</strong></span></label>
-                                    <textarea name="tentang_jyc" oninput="this.className='form-control'" id="tentang_jyc" class="form-control" rows="2"
+                                    <textarea name="tentang_jyc" oninput="this.className='form-control'" id="tentang_jyc" class="form-control wajib" rows="2"
                                         placeholder="JYC itu, begini begini begini, lalu begitu. Terus begini begitu dan akhirnya begono."
                                         required></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="motivasi">Motivasi mengikuti JYC ? <span class="text-danger"><strong>*</strong></span></label>
-                                    <textarea name="motivasi" oninput="this.className='form-control'" id="motivasi" class="form-control" rows="2"
+                                    <textarea name="motivasi" oninput="this.className='form-control'" id="motivasi" class="form-control wajib" rows="2"
                                         placeholder="Setelah gabung jadi anggota JYC, aku ingin begini, aku ingin begitu, ingin ini ingin itu banyak sekali."
                                         required></textarea>
                                 </div>
@@ -647,7 +647,8 @@
         // This function deals with validation of the form fields
         var x, y, i, valid = true;
         x = document.getElementsByClassName("tab");
-        y = $('#regForm').find('[required]');
+        // y = $('#regForm').find('[required]');
+        y = $('#regForm').find('.wajib');
         // y = x[currentTab].getElementsByTagName("input");
         // A loop that checks every input field in the current tab:
         for (i = 0; i < y.length; i++) {
