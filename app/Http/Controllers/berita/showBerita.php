@@ -14,6 +14,7 @@ class showBerita extends Controller
     {
         $berita = DB::table('berita')
             ->whereNull('deleted_at')
+            ->whereNotNull('tgl_publish')
             ->where('slug', $slug)
             ->first();
         
@@ -23,12 +24,15 @@ class showBerita extends Controller
 
             //menghitung kategori
         $kategori = DB::table('kategori')
+                    ->whereNull('deleted_at')
                     ->latest()->get();
         $koleksi = [];
-        // return $kategori;
+         // return $kategori;
         foreach($kategori as $index) 
         {
             $hitung = DB::table('berita')
+                    ->whereNull('deleted_at')
+                    ->whereNotNull('tgl_publish')
                     ->where('kategori', $index->nama_kategori)
                     ->count();
             
