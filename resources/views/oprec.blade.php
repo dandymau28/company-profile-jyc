@@ -127,13 +127,13 @@
                                         <label for="email">Email <span class="text-danger"><strong>*</strong></span></label>
                                         <input id="email" oninput="this.className='form-control'" name="email" type="email"
                                          class="form-control wajib"
-                                            placeholder="anisanurul69@hotmail.com" required>
+                                            placeholder="anisanurul69@gmail.com" required>
                                     </div>
                                     <div class="col form-group">
                                         <label for="instagram">Instagram</label>
                                         <input id="instagram" name="instagram" type="text"
                                          class="form-control"
-                                            placeholder="nisaaah69">
+                                            placeholder="nisaaahh">
                                     </div>
                                 </div>
                                 <div class="form-row">
@@ -141,7 +141,7 @@
                                         <label for="tempat_lahir">Tempat Lahir <span class="text-danger"><strong>*</strong></span></label>
                                         <input id="tempat_lahir" name="tempat_lahir" type="text" oninput="this.className='form-control'"
                                          class="form-control wajib"
-                                            placeholder="Jepara" required>
+                                            placeholder="Jakarta" required>
                                     </div>
                                     <div class="col form-group">
                                         <label for="tanggal_lahir">Tanggal Lahir <span class="text-danger"><strong>*</strong></span><small> (max 25 tahun)</small></label>
@@ -160,14 +160,14 @@
                                         <label for="institusi">Perusahaan / Institusi <span class="text-danger"><strong>*</strong></span></label>
                                         <input id="institusi" oninput="this.className='form-control'" name="institusi" type="text"
                                          class="form-control wajib"
-                                            placeholder="PT Mencari Cinta Sejati" required>
+                                            placeholder="PT Tokopedia" required>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="col form-group">
                                         <label for="agama">Agama</label>
                                         <input class="form-control" id="agama" name="agama" type="text"
-                                         placeholder="Agama A">
+                                         placeholder="Islam">
                                     </div>
                                     <div class="col form-group">
                                         <label for="foto">Pas Foto <span class="text-danger"><strong>* </strong></span><small>(3x4)</small></label>
@@ -178,25 +178,25 @@
                                 <div class="form-group">
                                     <label for="alamat">Alamat Lengkap <span class="text-danger"><strong>*</strong></span></label>
                                     <textarea name="alamat" oninput="this.className='form-control'" id="alamat" class="form-control wajib" rows="2"
-                                        placeholder="Jalan Gang Tersempit No.69, Kel. Besar, Kec. Tegar, Kota Jepara"
+                                        placeholder="Jalan Mawar No. 53 RT001/RW003 Kel. Kebungaan Kec. Kebun Raya, Jakarta Timur, DKI Jakarta, 13220"
                                         required></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="info_jyc">Dari mana Anda mengetahui tentang JYC ? <span class="text-danger"><strong>*</strong></span></label>
                                     <textarea name="info_jyc" oninput="this.className='form-control'" id="info_jyc" class="form-control wajib" rows="2"
-                                        placeholder="Pertama, begini begini begini, lalu begitu. Terus begini begitu dan akhirnya begono."
+                                        placeholder="Ceritakan darimana anda mengetahui informasi tentang JYC selama ini!"
                                         required></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="tentang_jyc">Apa yang Anda ketahui tentang JYC ? <span class="text-danger"><strong>*</strong></span></label>
                                     <textarea name="tentang_jyc" oninput="this.className='form-control'" id="tentang_jyc" class="form-control wajib" rows="2"
-                                        placeholder="JYC itu, begini begini begini, lalu begitu. Terus begini begitu dan akhirnya begono."
+                                        placeholder="Ceritakan apa saja hal-hal atau informasi yang anda ketahui tentang JYC!"
                                         required></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="motivasi">Motivasi mengikuti JYC ? <span class="text-danger"><strong>*</strong></span></label>
                                     <textarea name="motivasi" oninput="this.className='form-control'" id="motivasi" class="form-control wajib" rows="2"
-                                        placeholder="Setelah gabung jadi anggota JYC, aku ingin begini, aku ingin begitu, ingin ini ingin itu banyak sekali."
+                                        placeholder="Jelaskan apa yang menjadi motivasi anda untuk bergabung menjadi anggota JYC!"
                                         required></textarea>
                                 </div>
                             </div>
@@ -244,7 +244,7 @@
                                     </div>
                                     <div class="col-3 form-group">
                                         <input name="jabatan[]" type="text"
-                                            class="form-control" placeholder="Jabatan">
+                                            class="form-control" placeholder="Kepala Divisi SDM">
                                     </div>
                                     <div class="col-3 form-group">
                                         <input name="tahun_aktif_org[]" type="text"
@@ -268,7 +268,7 @@
                                     <div class="col form-group">
                                         <input name="tempat_seni[]" type="text"
                                          class="form-control"
-                                            placeholder="Tempat">
+                                            placeholder="Tempat (Kota)">
                                     </div>
                                     <div class="col form-group">
                                         <input name="tingkat_seni[]" type="text"
@@ -277,7 +277,7 @@
                                     </div>
                                     <div class="col form-group">
                                         <input name="juara_seni[]" type="text"
-                                            class="form-control" placeholder="Juara">
+                                            class="form-control" placeholder="Penghargaan">
                                     </div>
                                 </div>
                                 <button data-for="rowKesenian" type="button"
@@ -295,7 +295,7 @@
                                     </div>
                                     <div class="col form-group">
                                         <input name="tempat_non[]" type="text"
-                                            class="form-control" placeholder="Tempat">
+                                            class="form-control" placeholder="Tempat (Kota)">
                                     </div>
                                     <div class="col form-group">
                                         <input name="tingkat_non[]" type="text"
@@ -304,7 +304,7 @@
                                     </div>
                                     <div class="col form-group">
                                         <input name="juara_non[]" type="text"
-                                            class="form-control" placeholder="Juara">
+                                            class="form-control" placeholder="Penghargaan">
                                     </div>
                                 </div>
                                 <button data-for="rowNonKesenian" type="button"
@@ -323,7 +323,7 @@
                                         <select name="tingkat_kemampuan[]" class="custom-select">
                                             <option selected disabled value="">Tingkat Penguasaan</option>
                                             <option value="Pemula">Pemula</option>
-                                            <option value="Menengah - Cukup">Menengah - Cukup</option>
+                                            <option value="Menengah - Cukup">Cukup - Menengah</option>
                                             <option value="Menengah">Menengah</option>
                                             <option value="Menengah - Mahir">Menengah - Mahir</option>
                                             <option value="Mahir">Mahir</option>
@@ -343,7 +343,7 @@
                                     <div class="col-6 form-group">
                                         <input name="keahlian_lain" type="text"
                                          class="form-control"
-                                            placeholder="MC, Guiding, ...">
+                                            placeholder="MC, Public Speaking, ...">
                                     </div>
                                 </div>
                                 <div class="custom-control custom-checkbox">
