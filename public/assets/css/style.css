@@ -549,4 +549,29 @@ a.nav-link.active:hover {
 #no_wa {
     color: white;
 }
+@supports (-webkit-appearance:none) {
+    .img-fluid {
+        width: 100%;
+        height: auto;
+    }
+
+    .text-light {
+        color: #f8f9fa;
+    }
+}
+
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) {
+    .img-fluid {
+        width: 100%;
+        height: auto;
+    }
+
+    .text-light {
+        color: #f8f9fa;
+    }
+    /*
+      Define here the CSS styles applied only to Safari browsers
+      (any version and any device)
+     */
+}
 
