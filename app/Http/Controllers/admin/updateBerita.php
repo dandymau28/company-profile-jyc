@@ -28,12 +28,21 @@ class updateBerita extends Controller
                 //     $pathPhoto = 'public/assets/img/705-1585565895.jpg';
                 // }
 
+                $data = DB::table('berita')->whereNull('deleted_at')->whereNotNull('tgl_publish')->latest()->first();
+                $latestID = $data->id;
+                $currentID = $latestID + 1;
+
                 //upload foto
                 if($request->file('image')){
                     $uploadFoto = $request->file('image');
                     $oldName = explode('.',$request->input('pathPhoto'));
-                    $name = $oldName[0]. '.' .$uploadFoto->getClientOriginalExtension();
-                    $pathPhoto = $uploadFoto->storeAs($name, "");
+                    if($oldName[0] = 'no-image-available') {
+                        $name = 'banner'.'-'.$currentID.'.'.$uploadFoto->getClientOriginalExtension();
+                        $pathPhoto = $uploadFoto->storeAs('public/assets/img', $name);
+                    } else {
+                        $name = $oldName[0]. '.' .$uploadFoto->getClientOriginalExtension();
+                        $pathPhoto = $uploadFoto->storeAs($name, "");
+                    }
                 } else {
                     $pathPhoto = $request->input('pathPhoto');
                 }
