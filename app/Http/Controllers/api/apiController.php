@@ -19,11 +19,11 @@ class apiController extends Controller
         
         try {
             $search = DB::table('berita')
-                        ->where('tag', 'like', "%{$data}%")
                         ->whereNull('deleted_at')
                         ->whereNotNull('tgl_publish')
-                        ->Where('kategori', 'like', "%{$data}%")
-                        ->Where('judul', 'like', "%{$data}%")
+                        ->where('tag', 'like', "%{$data}%")
+                        ->orWhere('kategori', 'like', "%{$data}%")
+                        ->orWhere('judul', 'like', "%{$data}%")
                         ->simplePaginate(3);
         } catch (Exception $e) {
             return view('berita', [
