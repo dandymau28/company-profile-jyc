@@ -555,6 +555,10 @@ a.nav-link.active:hover {
         width: 100%;
         height: auto;
     }
+
+    .text-light {
+        color: #f8f9fa;
+    }
     /*
       Define here the CSS styles applied only to Safari browsers
       (any version and any device)
