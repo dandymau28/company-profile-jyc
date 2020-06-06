@@ -57,6 +57,17 @@
                             @endphp
                         </div>
                         @endif
+
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul style="list-style-type: none;">
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+
                         <div class="form-group mb-3">
                             <input type="text" class="form-control" name="judul" id="" placeholder="Masukkan Judul..." value="{{$berita->judul}}">
                         </div>

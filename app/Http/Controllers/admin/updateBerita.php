@@ -8,6 +8,8 @@ use \Carbon\Carbon;
 use Illuminate\Support\Str;
 use DB;
 use App\Http\Controllers\loginSystem\statusAuth as Admin;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rule;
 
 class updateBerita extends Controller
 {
@@ -15,9 +17,27 @@ class updateBerita extends Controller
     {
                 $admin = new Admin;
                 $admin = $admin->checkAuth()->id;
+                
+                $messages = [
+                    'slug.unique' => 'Sudah ada judul yang sama. Pastikan Anda memposting judul yang berbeda',
+                    'required' => ':attribute harus terisi',
+                    'size' => ':attribute ukuran tidak lebih dari 1MB',
+                    'mimes' => ':attribute format file harus berupa JPEG, JPG, atau PNG'
+                ];
+
+                $validatedData = Validator::make($request->all(),[
+                    'image' => 'file|size:1024|mimes:jpeg,jpg,png',
+                    'isi_berita' => 'required'
+                ],$messages);
 
                 //slug judul
                 $slug = Str::slug($request->judul,'-');
+
+                $checkSlug = ['slug' => $slug];
+                Validator::make($checkSlug, [
+                    'slug' => 'unique:berita,slug,NULL,id,deleted_at,NULL',
+                ], $messages)->validate();
+
 
                 //upload foto
                 // if($request->file('image')){
