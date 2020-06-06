@@ -28,16 +28,15 @@ class updateBerita extends Controller
                 //     $pathPhoto = 'public/assets/img/705-1585565895.jpg';
                 // }
 
-                $data = DB::table('berita')->whereNull('deleted_at')->whereNotNull('tgl_publish')->latest()->first();
-                $latestID = $data->id;
-                $currentID = $latestID + 1;
-
                 //upload foto
                 if($request->file('image')){
                     $uploadFoto = $request->file('image');
                     $oldName = explode('.',$request->input('pathPhoto'));
                     if($oldName[0] = 'no-image-available') {
-                        $name = 'banner'.'-'.$currentID.'.'.$uploadFoto->getClientOriginalExtension();
+                        $name = 'banner'.'-'.$id.'.'.$uploadFoto->getClientOriginalExtension();
+                        $pathPhoto = $uploadFoto->storeAs('public/assets/img', $name);
+                    } else if (explode('-', $oldName[0]) != $id) {
+                        $name = 'banner'.'-'.$id.'.'.$uploadFoto->getClientOriginalExtension();
                         $pathPhoto = $uploadFoto->storeAs('public/assets/img', $name);
                     } else {
                         $name = $oldName[0]. '.' .$uploadFoto->getClientOriginalExtension();
@@ -66,9 +65,16 @@ class updateBerita extends Controller
                     $publish = NULL;
                     $status = 'belum_terbit';
                 } else {
-                    $publish = Carbon::now();
-                    $status = 'terbit';
+                    $cekData = DB::table('berita')->where('id', $id)->first();
+                    if ($cekData->tgl_publish != NULL) {
+                        $publish = $cekData->tgl_publish;
+                        $status = 'terbit';
+                    } else {
+                        $publish = Carbon::now();
+                        $status = 'terbit';
+                    }
                 }
+                
 
                 //simpan data
                 try {
