@@ -22,8 +22,8 @@ class apiController extends Controller
                         ->where('tag', 'like', "%{$data}%")
                         ->whereNull('deleted_at')
                         ->whereNotNull('tgl_publish')
-                        ->orWhere('kategori', 'like', "%{$data}%")
-                        ->orWhere('judul', 'like', "%{$data}%")
+                        ->Where('kategori', 'like', "%{$data}%")
+                        ->Where('judul', 'like', "%{$data}%")
                         ->simplePaginate(3);
         } catch (Exception $e) {
             return view('berita', [
