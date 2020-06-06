@@ -15,7 +15,7 @@ class beritaController extends Controller
                                 ->whereNull('deleted_at')
                                 ->whereNotNull('tgl_publish')
                                 ->where('penting', '1')
-                                ->latest()
+                                ->orderBy('tgl_publish', 'desc')
                                 ->take(3)
                                 ->get();
         } catch (Exception $e) {
