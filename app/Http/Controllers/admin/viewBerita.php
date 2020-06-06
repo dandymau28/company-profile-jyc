@@ -10,7 +10,7 @@ class viewBerita extends Controller
 {
     public  function viewBerita()
     {
-        $berita = DB::table('berita')->whereNull('deleted_at')->whereNotNull('tgl_publish')->latest()->get();
+        $berita = DB::table('berita')->whereNull('deleted_at')->whereNotNull('tgl_publish')->orderBy('tgl_publish', 'desc')->get();
 
         $beritaDraft = DB::table('berita')->whereNull('deleted_at')->whereNull('tgl_publish')->latest()->get();
 
