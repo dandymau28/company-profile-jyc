@@ -550,3 +550,14 @@ a.nav-link.active:hover {
     color: white;
 }
 
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) {
+    .img-fluid {
+        width: 100%;
+        height: auto;
+    }
+    /*
+      Define here the CSS styles applied only to Safari browsers
+      (any version and any device)
+     */
+}
+
