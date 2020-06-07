@@ -76,7 +76,7 @@
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 mt-5">
             @foreach ($beritas as $berita)
             <div class="col mb-4 ">
-              <div class="card h-100" data-aos="flip-left" data-aos-duration="1500">
+              <div class="card h-100" data-aos="flip-left" data-aos-duration="2000">
                 <div class="img-hover-zoom img-hover-zoom--brightness ">
                     <a class="h-50" href="/berita/{{ $berita->slug }}">
                         <img src="{{Storage::url($berita->banner)}}" class="card-img-top img-fluid" alt="...">

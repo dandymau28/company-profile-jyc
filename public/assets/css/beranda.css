@@ -273,25 +273,13 @@
 
 .intro-text {
     padding: 20px;
-    font-size: 13pt;
+    font-size: 1rem;
 }
 
-@media (min-width: 576px) and (max-width: 991.98px) {
-    .intro-text p {
-        font-size: 12pt;
-        padding: 10px;
-    }
-}
-
-/* @media (min-width: 768px) and (max-width: 991.98px) {
+@media (max-width: 575.98px) {
     .intro-text {
-        font-size: 10pt;
-    }
-} */
-
-@media (min-width: 992px) and (max-width: 1199.98px) {
-    .intro-text {
-        font-size: 12pt;
+        padding: 20px;
+        font-size: 0.8rem;
     }
 }
 
