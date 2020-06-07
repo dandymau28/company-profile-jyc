@@ -215,21 +215,37 @@ span.navbar-toggler-icon {
 }
 
 #banner-berita {
-    background: url(../img/banner-page/berita.JPG) no-repeat center center fixed;
+    /* background: url(../img/banner-page/berita.JPG) no-repeat center center fixed;
     display: table;
     height: 40vh;
     position: relative;
     width: 100%;
+    background-size: cover; */
+
+    background: url(../img/banner-page/berita.JPG);
+    /* no-repeat center center fixed */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
+    height: 250px;
+    width: 100%;
 }
 
 .text-berita {
-    background-color: rgba(0, 0, 0, 0.6);
+    /* background-color: rgba(0, 0, 0, 0.6);
     color: #f8f9fe;
     display: table-cell;
     text-align: center;
     vertical-align: middle;
-    letter-spacing: .1rem;
+    letter-spacing: .1rem; */
+
+    background-color: rgba(0, 0, 0, 0.6);
+    background-size: cover;
+    color: #f8f9fe;
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
 }
 
 .text-berita h1 {
@@ -342,14 +358,14 @@ li.breadcrumb-item {
         margin: auto;
     }
 
-    .text-berita {
+    /* .text-berita {
         background-color: rgba(0, 0, 0, 0.6);
         color: #f8f9fe;
         display: table-cell;
         text-align: center;
         vertical-align: middle;
         letter-spacing: .2rem;
-    }
+    } */
 
     .isi-berita {
         font-size: 1.1rem;
@@ -359,12 +375,12 @@ li.breadcrumb-item {
         font-size: 1.2rem;
     }
 
-    .text-berita h1 {
+    /* .text-berita h1 {
         text-shadow: rgba(255, 255, 255, 0.1);
         font-size: 3.5rem;
         font-weight: 900;
         letter-spacing: 1rem;
-    }
+    } */
 
     #sidebar-berita {
         border-left: 1px solid #dee2e6 !important;

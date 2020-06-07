@@ -11,7 +11,7 @@
 
     <!-- Banner Prestasi -->
     <div id="banner-prestasi">
-        <div class="container text-prestasi">
+        <div class="container-fluid text-prestasi text-center">
             <h1 class="display-judul">PRESTASI</h1>
             <h4 class="">JAKARTA YOUTH CHOIR</h4>
         </div>
