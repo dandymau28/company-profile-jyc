@@ -20,11 +20,17 @@ class storeBerita extends Controller
 
         switch ($request->input('action')) {
             case 'post':
+                $messages = [
+                    'slug.unique' => 'Sudah ada judul yang sama. Pastikan Anda memposting judul yang berbeda',
+                    'required' => ':attribute harus terisi',
+                    'size' => ':attribute ukuran tidak lebih dari 1MB',
+                    'mimes' => ':attribute format file harus berupa JPEG, JPG, atau PNG'
+                ];
+
                 $validatedData = Validator::make($request->all(),[
-                    'judul' => 'required|unique:berita,judul',
                     'image' => 'file|max:1024|mimes:png,jpg,jpeg',
                     'isi_berita' => 'required'
-                ]);
+                ], $messages);
                 if($validatedData->fails()){
                     return back()->with('error',$validatedData->errors());
                 };
@@ -32,13 +38,18 @@ class storeBerita extends Controller
                 //slug judul
                 $slug = Str::slug($request->judul,'-');
 
+                $checkSlug = ['slug' => $slug];
+                Validator::make($checkSlug, [
+                    'slug' => 'unique:berita,slug,NULL,id,deleted_at,NULL',
+                ], $messages)->validate();
+
                 //get ID for banner
                 $data = DB::table('berita')->whereNull('deleted_at')->whereNotNull('tgl_publish')->latest()->first();
                 if(!$data){
                     $currentID = 1;
                 } else {
-                   $latestID = $data->id;
-                   $currentID = $latestID +1;
+                    $latestID = $data->id;
+                    $currentID = $latestID +1;
                 }
                 //upload foto
                 if($request->file('image')){
@@ -95,17 +106,28 @@ class storeBerita extends Controller
                 break;
 
             case 'save':
+                $messages = [
+                    'slug.unique' => 'Sudah ada judul yang sama. Pastikan Anda memposting judul yang berbeda',
+                    'required' => ':attribute harus terisi',
+                    'size' => ':attribute ukuran tidak lebih dari 1MB',
+                    'mimes' => ':attribute format file harus berupa JPEG, JPG, atau PNG'
+                ];
+
                 $validatedData = Validator::make($request->all(),[
-                    'judul' => 'required|unique:berita,judul',
                     'image' => 'file|size:1024|mimes:jpeg,jpg,png',
                     'isi_berita' => 'required'
-                ]);
+                ], $messages);
                 if($validatedData->fails()){
                     return back()->with('error',$validatedData->errors());
                 };
 
                 //slug judul
                 $slug = Str::slug($request->judul,'-');
+
+                $checkSlug = ['slug' => $slug];
+                Validator::make($checkSlug, [
+                    'slug' => 'unique:berita,slug,NULL,id,deleted_at,NULL',
+                ], $messages)->validate();
 
                 //get ID for banner
                 $data = DB::table('berita')->whereNull('deleted_at')->whereNotNull('tgl_publish')->latest()->first();

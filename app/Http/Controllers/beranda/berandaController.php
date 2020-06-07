@@ -17,7 +17,7 @@ class berandaController extends Controller
     {
         try {
             //4 Berita Terbaru
-            $beritaTerbaru = DB::table('berita')->latest()->whereNull('deleted_at')->whereNotNull('tgl_publish')->take(4)->get();
+            $beritaTerbaru = DB::table('berita')->orderBy('tgl_publish', 'desc')->whereNull('deleted_at')->whereNotNull('tgl_publish')->take(4)->get();
         } catch (Exception $e) {
             return $e;
         }
@@ -32,7 +32,7 @@ class berandaController extends Controller
                 ->where('penting','1')
                 ->whereNull('deleted_at')
                 ->whereNotNull('tgl_publish')
-                ->latest()
+                ->orderBy('tgl_publish', 'desc')
                 ->take(5)
                 ->get();
         }catch (Exception $e) {

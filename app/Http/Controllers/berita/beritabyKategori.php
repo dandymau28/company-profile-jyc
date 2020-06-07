@@ -16,6 +16,7 @@ class beritabyKategori extends Controller
         $berita = DB::table('berita')
                 ->whereNull('deleted_at')
                 ->whereNotNull('tgl_publish')
+                ->orderBy('tgl_publish', 'desc')
                 ->where('kategori',$kategori)
                 ->simplePaginate(3);
 

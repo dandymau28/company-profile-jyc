@@ -18,14 +18,14 @@ class indexBerita extends Controller
     public function berita()
     {
         //3 Berita Terbaru
-        $beritaTerbaru = DB::table('berita')->whereNull('deleted_at')->whereNotNull('tgl_publish')->latest()->simplePaginate(3);
+        $beritaTerbaru = DB::table('berita')->whereNull('deleted_at')->whereNotNull('tgl_publish')->orderBy('tgl_publish', 'desc')->simplePaginate(3);
 
         // return $beritaTerbaru;
 
         try {
             //Berita Terbaru untuk Carousel
             $beritaCarouselTerbaru = DB::table('berita')
-            ->latest()
+            ->orderBy('tgl_publish', 'desc')
             ->whereNull('deleted_at')
             ->whereNotNull('tgl_publish')
             ->take(5)
@@ -70,7 +70,7 @@ class indexBerita extends Controller
                                 ->whereNull('deleted_at')
                                 ->whereNotNull('tgl_publish')
                                 ->where('penting', '1')
-                                ->latest()
+                                ->orderBy('tgl_publish', 'desc')
                                 ->take(3)
                                 ->get();
         } catch (Exception $e) {
