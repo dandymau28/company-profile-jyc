@@ -553,7 +553,7 @@ a.nav-link.active:hover {
     display: none;
 }
 
-#no_wa {
+.no_wa {
     color: #f8f9fa;
     -webkit-text-fill-color: #f8f9fa;
 }
