@@ -16,22 +16,22 @@
 
     <!-- Banner Kegiatan -->
     <div id="banner-kegiatan">
-        <div class="container text-kegiatan">
+        <div class="container-fluid text-kegiatan text-center">
             <h1 class="display-judul">KEGIATAN</h1>
-            <h4 class="">JAKARTA YOUTH CHOIR</h4>
+            <h4>JAKARTA YOUTH CHOIR</h4>
         </div>
     </div>
 
     <!-- Latihan Rutin -->
-    <div class="latihan-rutin mb-5">
+    <div class="latihan-rutin mt-5 mb-5">
         <h3>LATIHAN RUTIN</h3>
         <div class="container">
             <h2 class="text-center pt-3">Rahasia Sukses Berprestasi : Latihan ala JYC</h2>
             <div class="row latihan-text">
-                <div class="col-md-6 pt-4" data-aos="fade-up" data-aos-duration="1500"> <strong><em>“Practice makes perfect”</em></strong> , pastinya kata ini tidaklah asing ditelinga banyak orang pada kehidupan sehari-hari khususnya untuk kita yang berkecimpung di dunia paduan suara. <b>Jakarta Youth Choir</b>, sama seperti paduan suara pada umumnya, bisa berprestasi dan menunjukkan kualitas dirinya saat ini tentunya tidaklah instan. <b>Jakarta Youth Choir</b> dapat cemerlang berkat proses suka duka Latihan bersama. <b>Jakarta Youth Choir</b> biasa melakukan latihan rutin minimal satu pekan sekali, saat ini pada setiap hari Rabu berdasarkan kesepakatan anggota yang bertempat di <b>Gedung Dinas Pemuda dan Olahraga Provinsi DKI Jakarta</b>.</div>
-                <div class="col-md-6 pt-4" data-aos="fade-up" data-aos-duration="1500">Latihan rutin ini dibimbing oleh <strong> <em>Founder & Choirmaster</em> Jakarta Youth Choir</strong>, yaitu Septo Adi Kristanto Simanjuntak, atau dikenal dengan Kak Cepo, beserta Tim Kepelatihan. Latihan biasanya akan lebih intens dilakukan ketika <b>Jakarta Youth Choir</b> mengisi acara tertentu, mengadakan konser, serta mengikuti lomba bertaraf nasional maupun internasional. Untuk meningkatkan semangat dalam latihan, <b>Jakarta Youth Choir</b> melakukan latihan paduan suara tidak hanya di lingkungan <em>indoor</em> saja, melainkan juga <em>outdoor</em>.</div>
+                <p class="col-md-6 pt-4" data-aos="fade-up" data-aos-duration="1500"> <strong><em>“Practice makes perfect”</em></strong> , pastinya kata ini tidaklah asing ditelinga banyak orang pada kehidupan sehari-hari khususnya untuk kita yang berkecimpung di dunia paduan suara. <b>Jakarta Youth Choir</b>, sama seperti paduan suara pada umumnya, bisa berprestasi dan menunjukkan kualitas dirinya saat ini tentunya tidaklah instan. <b>Jakarta Youth Choir</b> dapat cemerlang berkat proses suka duka Latihan bersama. <b>Jakarta Youth Choir</b> biasa melakukan latihan rutin minimal satu pekan sekali, saat ini pada setiap hari Rabu berdasarkan kesepakatan anggota yang bertempat di <b>Gedung Dinas Pemuda dan Olahraga Provinsi DKI Jakarta</b>.</p>
+                <p class="col-md-6 pt-4" data-aos="fade-up" data-aos-duration="1500">Latihan rutin ini dibimbing oleh <strong> <em>Founder & Choirmaster</em> Jakarta Youth Choir</strong>, yaitu Septo Adi Kristanto Simanjuntak, atau dikenal dengan Kak Cepo, beserta Tim Kepelatihan. Latihan biasanya akan lebih intens dilakukan ketika <b>Jakarta Youth Choir</b> mengisi acara tertentu, mengadakan konser, serta mengikuti lomba bertaraf nasional maupun internasional. Untuk meningkatkan semangat dalam latihan, <b>Jakarta Youth Choir</b> melakukan latihan paduan suara tidak hanya di lingkungan <em>indoor</em> saja, melainkan juga <em>outdoor</em>.</p>
             </div>
-            <p class="text-justify latihan-text pt-3" data-aos="fade-up" data-aos-duration="1500"><b>Jakarta Youth Choir</b> juga menghadirkan berbagai <em>choirmaster</em> dari berbagai latar belakang Paduan Suara di Indonesia yang terkenal dan berpengalaman sebagai pelatih tamu untuk memaksimalkan pengembangan kemampuan para <em>chorister</em>nya. Yuk pantau terus proses latihan kami untuk mengharumkan nama Jakarta dan Indonesia dengan mengikuti akun resmi instagram <a href="https://www.instagram.com/jktyouthchoir"><b>@JktYouthChoir</b></a> dan media sosial lainnya.</p>
+            <p class="text-justify latihan-text pt-3 mb-5" data-aos="fade-up" data-aos-duration="1500"><b>Jakarta Youth Choir</b> juga menghadirkan berbagai <em>choirmaster</em> dari berbagai latar belakang Paduan Suara di Indonesia yang terkenal dan berpengalaman sebagai pelatih tamu untuk memaksimalkan pengembangan kemampuan para <em>chorister</em>nya. Yuk pantau terus proses latihan kami untuk mengharumkan nama Jakarta dan Indonesia dengan mengikuti akun resmi instagram <a href="https://www.instagram.com/jktyouthchoir"><b>@JktYouthChoir</b></a> dan media sosial lainnya.</p>
         </div>
     </div>
 
@@ -39,11 +39,11 @@
     <div class="container banner-wcg mt-5 mb-5">
         <h3>KEGIATAN 2020</h3>
         <img src="{{asset('assets/img/kegiatan/banner-wcg.png')}}" class="img-fluid" alt="Responsive image">
-        <p class="wcg-text" data-aos="fade-up" data-aos-duration="1500">Mengikuti penerapan PSBB yang telah diatur dalam <b>Peraturan Pemerintah No. 21 Tahun 2020</b> yang dituangkan dalam <b>Permenkes RI No. 9 Tahun 2020</b> tentang Pedoman PSBB Dalam Rangka Percepatan Penanganan <b>Covid-19</b>, Jakarta Youth Choir menghentikan sementara seluruh jadwal latihan, konser, maupun partisipasi dalam kompetisi paduan suara hingga situasi kondusif dan terdapat arahan lebih lanjut dari <b>Gubernur DKI Jakarta</b>.</p>
+        <p data-aos="fade-up" data-aos-duration="1500">Mengikuti penerapan PSBB yang telah diatur dalam <b>Peraturan Pemerintah No. 21 Tahun 2020</b> yang dituangkan dalam <b>Permenkes RI No. 9 Tahun 2020</b> tentang Pedoman PSBB Dalam Rangka Percepatan Penanganan <b>Covid-19</b>, Jakarta Youth Choir menghentikan sementara seluruh jadwal latihan, konser, maupun partisipasi dalam kompetisi paduan suara hingga situasi kondusif dan terdapat arahan lebih lanjut dari <b>Gubernur DKI Jakarta</b>.</p>
     </div>
 
     <!-- Jakarta National Choir Competition -->
-    <div class="parallax-window text-center text-white JNCC mt-5" data-parallax="scroll" data-image-src="{{ asset('assets/img/kegiatan/assets_jncc.jpg') }}">
+    <div class="parallax-window text-center text-white JNCC" data-parallax="scroll" data-image-src="{{ asset('assets/img/kegiatan/assets_jncc.jpg') }}">
         <div class="container text-center py-5">
             <div class="row justify-content-center">
                 <div class="col text-center pt-3">
@@ -60,23 +60,16 @@
         <h3 class="text-center">PENERIMAAN ANGGOTA BARU</h3>
         <div class="container">
             <h2 class="text-center pt-3"><a href="{{ route('oprec') }}">Penerimaan 2020</a></h2>
-            <div class="row latihan-text mt-4">
-                {{-- <div class="col-md-6" data-aos="fade-up" data-aos-duration="1500">Eksis di dunia paduan suara, JYC tentunya juga memerlukan sebuah regenerasi seiring
-                    berjalannya waktu. Hal ini diperlukan untuk menjadikan JYC lebih besar dan lebih berkembang
-                    dari sebelumnya. Kegiatan <a href="{{ route('oprec') }}"><em>Open Recruitment</em></a> merupakan salah satu aplikasi kegiatan yang
-                    dilaksanakan oleh JYC setiap tahunnya. Kegiatan ini untuk mencari dan menjaring pemuda
-                    pemudi berbakat dalam bidang seni khususnya dibidang paduan suara serta memiliki visi, misi,
-                    maupun tujuan yang sama dengan JYC.
-                </div> --}}
-                <div class="col-md-6" data-aos="fade-up" data-aos-duration="1500">Eksis di dunia paduan suara, Jakarta Youth Choir (JYC) memerlukan sebuah regenerasi seiring berjalannya waktu. Hal ini diperlukan untuk menjadikan JYC lebih besar dan lebih berkembang dari sebelumnya. Kegiatan <a href="{{ route('oprec') }}"><em>Open Recruitment</em></a> merupakan salah satu aplikasi kegiatan yang dilaksanakan oleh JYC setiap tahunnya. Kegiatan ini untuk mencari dan menjaring pemuda pemudi berbakat dalam bidang seni khususnya dibidang paduan suara serta memiliki visi, misi, maupun tujuan yang sama dengan JYC.
-                </div>
-                <div class="col-md-6" data-aos="fade-up" data-aos-duration="1500">Dibawah naungan DISPORA DKI Jakarta, JYC merupakan wadah yang sangat tepat untuk
+            <div class="row latihan-text">
+                <p class="col-md-6 pt-4" data-aos="fade-up" data-aos-duration="1500">Eksis di dunia paduan suara, Jakarta Youth Choir (JYC) memerlukan sebuah regenerasi seiring berjalannya waktu. Hal ini diperlukan untuk menjadikan JYC lebih besar dan lebih berkembang dari sebelumnya. Kegiatan <a href="{{ route('oprec') }}"><em>Open Recruitment</em></a> merupakan salah satu aplikasi kegiatan yang dilaksanakan oleh JYC setiap tahunnya. Kegiatan ini untuk mencari dan menjaring pemuda pemudi berbakat dalam bidang seni khususnya dibidang paduan suara serta memiliki visi, misi, maupun tujuan yang sama dengan JYC.
+                </p>
+                <p class="col-md-6 pt-4" data-aos="fade-up" data-aos-duration="1500">Dibawah naungan DISPORA DKI Jakarta, JYC merupakan wadah yang sangat tepat untuk
                     tumbuh kembang para pemuda sekitar Ibukota untuk berkontribusi aktif mengharumkan DKI
                     Jakarta maupun Indonesia. Setiap waktunya, kemampuan para <em>chorister</em> JYC terus
                     diasah dengan latihan rutin yang diorganisasikan langsung oleh Kepengurusan JYC dan dilatih
                     oleh <em>choirmaster</em> kebanggaan Septo Adi Kristanto Simanjuntak, atau biasa dipanggil Kak Cepo,
                     beserta tim kepelatihan.</b>
-                </div>
+                </p>
             </div>
             <p class="text-justify latihan-text pt-3" data-aos="fade-up" data-aos-duration="1500">Sejak berdiri pada tahun 2015, JYC sudah membuka pendaftaran secara resmi setiap tahunnya. Pada tahun 2020, dengan bangga JYC kembali membuka kesempatan bagi para pemuda-pemudi terbaik yang memiliki minat di dunia paduan suara untuk mengeksplorasi diri dan berprestasi bersama JYC.</p>
         </div>

@@ -2,13 +2,13 @@
 
 /* Banner Profile*/
 #banner-kegiatan {
-    background: url(../img/banner-page/kegiatan.JPG) no-repeat center center fixed;
+    background: url(../img/banner-page/kegiatan.JPG);
     display: table;
     height: 40vh;
     position: relative;
     width: 100%;
     background-size: cover;
-    background-position-y: -300px;
+    background-position: center;
 }
 
 .text-kegiatan {
@@ -43,6 +43,29 @@
     width: 287px;
 }
 
+.latihan-rutin p {
+    font-size: 1rem;
+}
+
+.latihan-rutin h2 {
+    color: #b71c1c
+}
+
+@media (max-width: 767.98px) {
+    .latihan-rutin h2 {
+        font-size: 1.5rem;
+        font-weight: bolder;
+        margin-top: 20px;
+        margin-bottom: -10px;
+        padding: 10px;
+    }
+
+    .latihan-rutin p {
+        font-size: 1rem;
+        margin-bottom: 0px;
+    }
+}
+
 .latihan-rutin a {
     color: #b71c1c;
 }
@@ -71,45 +94,29 @@
     }
 }
 
-/* Banner WCG */
+/* BANNER WCG */
 
 .banner-wcg h3 {
     color: #707070;
     margin-right: auto;
     margin-left: auto;
+    margin-top: 80px;
     padding-bottom: 22px;
     text-align: center;
     border-bottom: 1.5px solid #C12821;
     width: 287px;
 }
 
-.wcg-text {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    font-size: 20px;
+.banner-wcg p {
+    padding: 20px 0px 20px 0px;
+    font-size: 1rem;
     text-align: justify;
 }
-
-/* Medium devices (tablets, 768px and up) */
-
-@media (max-width: 1199.98px) {
-    .wcg-text {
-        font-size: 18px;
-        padding : 20px;
-    }
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-    .wcg-text {
-        font-size: 20px;
-    }
-}
-
 
 /* KEGIATAN - JNCC */
 .JNCC {
     background-color: rgba(0, 0, 0, 0.65);
+    margin-top: 100px;
 }
 
 /* .JNCC h3 {

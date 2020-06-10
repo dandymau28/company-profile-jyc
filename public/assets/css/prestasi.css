@@ -2,13 +2,13 @@
 
 /* Banner Profile*/
 #banner-prestasi {
-    background: url(../img/banner-page/prestasi.jpg) no-repeat center center fixed;
+    background: url(../img/banner-page/prestasi.jpg);
     display: table;
-    height: 70vh;
+    height: 40vh;
     position: relative;
     width: 100%;
     background-size: cover;
-    background-position-y: -250px;
+    background-position: center;
 }
 
 .text-prestasi {

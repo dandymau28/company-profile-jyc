@@ -16,25 +16,20 @@
 }
 
 #banner-profile {
-  background: url(../img/banner-page/profil.JPG) no-repeat center center fixed;
+  background: url(../img/banner-page/profil.JPG);
   display: table;
   height: 40vh;
   position: relative;
   width: 100%;
   background-size: cover;
-  background-position-y: -700px;
+  background-position: center;
 }
 
-@media (max-width: 1500px) {
-  #banner-profile {
-    background: url(../img/banner-page/profil.JPG) no-repeat center center fixed;
-    display: table;
-    height: 30vh;
-    position: relative;
-    width: 100%;
-    background-size: cover;
-    background-position-y: -300px;
-  }
+.text-profile h1 {
+  text-shadow: rgba(255, 255, 255, 0.1);
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: .5rem;
 }
 
 .text-profile {
@@ -53,6 +48,25 @@
   letter-spacing: .5rem;
 }
 
+/* VISI MISI */
+.visi h4 {
+  margin-top: -20px;
+}
+
+.misi ul {
+  margin-top: -20px;
+}
+
+
+@media (max-width: 767.98px) {
+  .visi h4 {
+    font-size: 1.2rem;
+  }
+
+  .misi h5 {
+    font-size: 1rem;
+  }
+}
 
 /* SEJARAH */
 @media (max-width: 991.98px) {
@@ -77,6 +91,12 @@
   color: #FFFFFF;
   background-color: #b71c1cf2;
   text-decoration: none;
+}
+
+@media (max-width: 767.98px) {
+  .struktur-items {
+    font-size: 0.8rem;
+  }
 }
 
 

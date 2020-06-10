@@ -215,12 +215,19 @@ span.navbar-toggler-icon {
 }
 
 #banner-berita {
-    background: url(../img/banner-page/berita.JPG) no-repeat center center fixed;
+    background: url(../img/banner-page/berita.JPG);
     display: table;
     height: 40vh;
     position: relative;
     width: 100%;
     background-size: cover;
+    background-position: center;
+}
+
+@media(min-width: 1200px) {
+    #banner-berita {
+        background-position-y: -100px;
+    }
 }
 
 .text-berita {
@@ -342,14 +349,14 @@ li.breadcrumb-item {
         margin: auto;
     }
 
-    .text-berita {
+    /* .text-berita {
         background-color: rgba(0, 0, 0, 0.6);
         color: #f8f9fe;
         display: table-cell;
         text-align: center;
         vertical-align: middle;
         letter-spacing: .2rem;
-    }
+    } */
 
     .isi-berita {
         font-size: 1.1rem;
@@ -359,12 +366,12 @@ li.breadcrumb-item {
         font-size: 1.2rem;
     }
 
-    .text-berita h1 {
+    /* .text-berita h1 {
         text-shadow: rgba(255, 255, 255, 0.1);
         font-size: 3.5rem;
         font-weight: 900;
         letter-spacing: 1rem;
-    }
+    } */
 
     #sidebar-berita {
         border-left: 1px solid #dee2e6 !important;
@@ -549,29 +556,5 @@ a.nav-link.active:hover {
 #no_wa {
     color: white;
 }
-@supports (-webkit-appearance:none) {
-    .img-fluid {
-        width: 100%;
-        height: auto;
-    }
 
-    .text-light {
-        color: #f8f9fa;
-    }
-}
-
-@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) {
-    .img-fluid {
-        width: 100%;
-        height: auto;
-    }
-
-    .text-light {
-        color: #f8f9fa;
-    }
-    /*
-      Define here the CSS styles applied only to Safari browsers
-      (any version and any device)
-     */
-}
 
