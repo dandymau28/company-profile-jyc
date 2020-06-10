@@ -554,7 +554,8 @@ a.nav-link.active:hover {
 }
 
 #no_wa {
-    color: white;
+    color: #f8f9fa;
+    -webkit-text-fill-color: #f8f9fa;
 }
 
 

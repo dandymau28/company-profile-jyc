@@ -41,8 +41,9 @@
                         <i class="far fa-clock"></i>
                         <span>{{ \Carbon\Carbon::parse($berita->tgl_publish)->locale('id')->diffForHumans() }}</span>
                     </div>
-                    <div id="banner-detail-berita" class="mt-5 d-flex justify-content-center">
-                        <img class="img-fluid" src="{{Storage::url($berita->banner)}}" alt="Gambar Blog">
+                    <div id="banner-detail-berita" class="mt-5 d-flex justify-content-center row">
+                        <img class="img-fluid col-12" src="{{Storage::url($berita->banner)}}" alt="Gambar Blog">
+                        {{-- <img class="img-fluid " src="{{asset('assets/img/kegiatan/banner-wcg.png')}}" alt="Gambar Blog"> --}}
                     </div>
                     <div id="isi-detail-berita" class="text-justify my-4">
                         {!! $berita->isi_berita !!}
