@@ -31,6 +31,11 @@
       <form action="{{route('login-post')}}" method="post">
       @method('POST')
       @csrf
+        @if (Session::has('errors'))
+        <div class="alert alert-warning" role="alert">
+          {{ $errors }}
+        </div>
+        @endif
         <div class="input-group mb-3">
           <input type="text" class="form-control" placeholder="Email" name="username">
           <div class="input-group-append">
