@@ -21,7 +21,7 @@ class authController extends Controller
         if (Auth::attempt($credentials)) {
             return redirect()->intended('admin');
         } else {
-            return 'gagal';
+            return back()->with('errors', 'Username/Password Salah');
         }
     }
 
