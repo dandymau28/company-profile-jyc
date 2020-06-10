@@ -1,3 +1,5 @@
+<meta content="telephone=no" name="format-detection">
+
 <!-- Boostrap 4.0 -->
 <link rel="stylesheet" href="{{ asset('bootstrap-4.4.1-dist') }}/css/bootstrap.min.css">
 <link rel="stylesheet" href="{{ asset('fontawesome-free-5.12.1-web') }}/css/all.css">
