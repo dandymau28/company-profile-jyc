@@ -98,6 +98,7 @@ Route::post('/berlangganan','subscribe\subscribeController@store')->name('subscr
 Route::get('/berlangganan/{unsubscribe?}','subscribe\subscribeController@destroy');
 
 
+
 // Admin route
 Route::group([
     'prefix' => 'admin'
@@ -136,6 +137,9 @@ Route::group([
     Route::get('/cab/verif/{id}', 'cab\updateVerify@verify');
     Route::get('/cab/unverif/{id}','cab\updateVerify@unverify');
     Route::get('/cab/change/{id}', 'cab\changeStatus@change');
+
+    //Show Detail Bukti Pembayaran
+    Route::get('/cab/details/{id}','admin\showDetailBukti@show');
 
     //Berita
     Route::get('/berita/buat', 'admin\createBerita@create')->name('buat-berita');

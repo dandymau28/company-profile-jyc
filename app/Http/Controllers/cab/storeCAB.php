@@ -171,7 +171,7 @@ class storeCAB extends Controller
 
             sendMailCAB::dispatch($data);
 
-        } elseif ($pendaftar >= $batas_kandidat && $pendaftar < $batas_pendaftar) {
+        } elseif ($pendaftar >= $oprec->batas_kandidat && $pendaftar <= $oprec->batas_pendaftar) {
             DB::table('cab')->where('id', $id)->update([
                 'status_cab' => 'waiting_list'
             ]);
