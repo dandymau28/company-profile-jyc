@@ -39,12 +39,13 @@ class updateVerify extends Controller
 
         $kode_bayar = $cab->kode_bayar;
         $nama = $data->nama_panggilan;
+        $nama_panjang = $data->nama_lengkap;
         //tambah dispatch untuk mengirim verifikasi email
         // VerifMail::dispatch($data->email, $pdf);
 
         //send email
         Mail::to($data->email)
-            ->queue(new verifMail($kode_bayar, $nama, $linkGrup));
+            ->queue(new verifMail($kode_bayar, $nama, $linkGrup, $nama_lengkap));
 
         return back()->with('success','berhasil verifikasi');
     }

@@ -16,17 +16,19 @@ class verifMail extends Mailable
     public $pdf;
     public $nama;
     public $link;
+    public $nama_file;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($kode, $nama, $link)
+    public function __construct($kode, $nama, $link, $nama_file)
     {
         $this->kode = $kode;
         $this->nama = $nama;
         $this->link = $link;
+        $this->nama_file = $nama_file;
         // $this->pdf = $pdf;
     }
 
@@ -43,7 +45,7 @@ class verifMail extends Mailable
                     ->subject('Berhasil Pembayaran!')
                     ->with(['nama' => $this->nama, 'linkGrup' => $this->link])
                     // ->with(['kode' => $this->kode]);
-                    ->attachData($pdf->exportPDF($this->kode), 'data-diri.pdf', [
+                    ->attachData($pdf->exportPDF($this->kode), $nama_file.'.pdf', [
                         'mime' => 'application/pdf'
                     ]);
     }
