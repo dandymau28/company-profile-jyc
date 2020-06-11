@@ -34,11 +34,19 @@ class storeCAB extends Controller
                     ->where('batch', $oprec->batch)
                     ->where('nik', $request->input('nik'))
                     ->orWhere('no_passport', $request->input('no_passport'))
+                    ->orWhere('email', $request->input('email'))
+                    ->orWhere('instagram', $request->input('instagram'))
                     ->first();
 
             if(!empty($data)) {
-                if($data->nik == $request->input('nik') || $data->no_passport == $request->input('no_passport')) {
-                    return back()->with('error','NIK/No. Passport sudah pernah digunakan');
+                if($data->nik == $request->input('nik')) {
+                    return back()->with('error','NIK sudah pernah digunakan');
+                } elseif ($data->no_passport == $request->input('no_passport')) {
+                    return back()->with('error','No. Passport sudah pernah digunakan');
+                } elseif ($data->email == $request->input('email')) {
+                    return back()->with('error','e-mail sudah pernah digunakan');
+                } elseif ($data->instagram == $request->input('instagram')) {
+                    return back()->with('error','ID Instagram sudah pernah digunakan');
                 }
             }
         } catch (Exception $e) {
