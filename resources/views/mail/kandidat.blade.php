@@ -117,7 +117,7 @@
     <p><b>Dear, {{$data->nama_panggilan}}</b></p>
     <i>Terima kasih telah mendaftar, untuk selanjutnya bisa transfer ke norek 0000 a.n AtasNama</i>
     <p>Jika sudah transfer, bisa kirim bukti pembayaran melalui link di bawah</p>
-    <a href="http://127.0.0.1/kegiatan/oprec/upload-bukti-bayar/{{$data->kode_bayar}}">Upload Bukti Pembayaran</a>
+    <a href="https://www.jakartayouthchoir.com/kegiatan/oprec/upload-bukti-bayar/{{$data->kode_bayar}}">Upload Bukti Pembayaran</a>
     @else
     <p><b>Dear, {{$data->nama_panggilan}}</b></p>
     <p>Terima kasih telah mendaftar</p>

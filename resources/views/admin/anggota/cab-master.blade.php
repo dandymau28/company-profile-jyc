@@ -134,9 +134,13 @@
 @push('js')
 <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript">
+
+var baseURL = "https://www.jakartayouthchoir.com"
+var local = "http://127.0.0.1:8000"
+
 $.ajax({
     method: "GET",
-    url: "http://127.0.0.1:8000/api/cab/get"
+    url: "/api/cab/get"
 })
     .done(function(response) {
         if(response.code === 200) {
@@ -179,11 +183,11 @@ $.ajax({
                         render: function(data, type, full) {
                             if (full.status != 'paid') {
                                 return (
-                                    '<a class="btn btn-primary btn-sm" href="http://127.0.0.1:8000/admin/cab/verif/' + full.id +'">Verifikasi</a>' 
+                                    '<a class="btn btn-primary btn-sm" href="' + baseURL + '/admin/cab/verif/' + full.id +'">Verifikasi</a>' 
                                 );
                             } else {
                                 return (
-                                    '<a class="btn btn-danger btn-sm" href="http://127.0.0.1:8000/admin/cab/unverif/' + full.id +'">Batal Verifikasi</a>' 
+                                    '<a class="btn btn-danger btn-sm" href="' + baseURL + '/admin/cab/unverif/' + full.id +'">Batal Verifikasi</a>' 
                                 );
                             }
                         }
@@ -191,7 +195,7 @@ $.ajax({
                     {
                         render: function(data, type, full) {
                             return (
-                                '<a class="btn btn-primary btn-sm" href="http://127.0.0.1:8000/admin/cab/id/' + full.id +'">Detail</a>' 
+                                '<a class="btn btn-primary btn-sm" href="' + baseURL + '/admin/cab/details/' + full.id +'" target="_blank">Detail</a>' 
                             );
                         }
                     }
@@ -205,7 +209,7 @@ $.ajax({
 
     $.ajax({
     method: "GET",
-    url: "http://127.0.0.1:8000/api/cab/getWL"
+    url: "/api/cab/getWL"
 })
     .done(function(response) {
         if(response.code === 200) {
@@ -230,7 +234,7 @@ $.ajax({
                     {
                         render: function(data, type, full) {
                             return (
-                                '<a class="btn btn-primary btn-sm" href="http://127.0.0.1:8000/admin/cab/change/' + full.id +'">Ubah Jadi Kandidat</a>' 
+                                '<a class="btn btn-primary btn-sm" href="' + baseURL + '/admin/cab/change/' + full.id +'">Ubah Jadi Kandidat</a>' 
                             );
                         }
                     }
