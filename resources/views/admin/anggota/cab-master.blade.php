@@ -136,6 +136,7 @@
 <script type="text/javascript">
 
 var baseURL = "https://www.jakartayouthchoir.com"
+var local = "http://127.0.0.1:8000"
 
 $.ajax({
     method: "GET",
@@ -194,7 +195,7 @@ $.ajax({
                     {
                         render: function(data, type, full) {
                             return (
-                                '<a class="btn btn-primary btn-sm" href="' + baseURL + '/admin/cab/id/' + full.id +'">Detail</a>' 
+                                '<a class="btn btn-primary btn-sm" href="' + baseURL + '/admin/cab/details/' + full.id +'" target="_blank">Detail</a>' 
                             );
                         }
                     }
