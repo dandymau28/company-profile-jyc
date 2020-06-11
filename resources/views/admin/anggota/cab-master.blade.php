@@ -90,7 +90,7 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                            <h5 class="card-title">Kandidat CAB</h5>
                             <table class="table table-bordered" id="tabelCAB">
                                 <thead>
                                     <tr>
@@ -108,7 +108,7 @@
                     </div>
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                            <h5 class="card-title">Waiting List</h5>
                             <table class="table table-bordered" id="tabelWLCAB">
                                 <thead>
                                     <tr>

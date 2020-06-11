@@ -559,12 +559,8 @@ a.nav-link.active:hover {
     -webkit-text-fill-color: #f8f9fa;
 }
 
-/* Coba fix banner berita stretch */
-
-/* @media only screen and (max-width: 768px) {
-    For mobile phones:
-    #banner-detail-berita img {
-        width: 150px;
-        height: 100px;
-    }
-  } */
+#nav-tab a.struktur-items.active {
+    color: #FFFFFF;
+    background-color: #b71c1cf2;
+    text-decoration: none;
+}
