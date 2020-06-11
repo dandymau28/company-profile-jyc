@@ -173,7 +173,7 @@
 
 <script>
     $(document).ready(function () {
-        var baseURL = "http://localhost:8000";
+        var baseURL = "https://www.jakartayouthchoir.com";
 
         $.ajax({
             url: '/api/videos/all',
