@@ -59,7 +59,6 @@
             <a href="{{ $linkGrup }}">Link Grup Audisi</a>
         </div>
     </div>
-    <a href="http://127.0.0.1:8000/kegiatan/oprec/form/{{$kode}}">Form Data Diri</a>
     <div class="footer-mail fixed-bottom">
         <h4 class="text-center">Jakarta Youth Choir</h4>
         <h5 class="text-center">We Sing For The City and The Country</h5>

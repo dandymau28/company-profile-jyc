@@ -151,6 +151,9 @@
             <div class="item">
                 Motivasi mengikuti JYC : {{ $cab->motivasi }}
             </div>
+            <div class="item">
+                Keahlian Lain yang Dimiliki : {{ $cab->keahlian_lain }}
+            </div>
             <table class="table-banyak">
                 <tr>
                     @if($padus->count() == 0)
