@@ -102,7 +102,7 @@
                 </tr>
             </table>
             <p>Setelah melakukan pembayaran, silahkan upload bukti pembayaran melalui link berikut ini:</p>
-            <a href="http://127.0.0.1:8000/kegiatan/oprec/upload-bukti-bayar/{{$data->kode_bayar}}">Upload Bukti Pembayaran</a>
+            <a href="https://www.jakartayouthchoir.com/kegiatan/oprec/upload-bukti-bayar/{{$data->kode_bayar}}">Upload Bukti Pembayaran</a>
             @else
             <p>Mohon maaf {{$data->nama_panggilan}}, jumlah pendaftar sudah melebihi batas, kamu termasuk dalam waiting list. Jika kamu berkesempatan untuk mengikuti audisi, akan diinformasikan lebih lanjut melalui <a href="https://www.instagram.com/jktyouthchoir">instagram</a>. Pantau terus sosial media kita yaa, tetap semangat :)</p>
             @endif
