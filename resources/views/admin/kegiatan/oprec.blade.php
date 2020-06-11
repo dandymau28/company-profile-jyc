@@ -125,7 +125,7 @@
                         @method('post')
                         <div class="form-group col-5">
                             <label for="tanggal">Tanggal</label>
-                            <input type="text" name="tanggal" id="tanggal" class="form-control" placeholder="17 Agustus"
+                            <input type="text" name="tanggal" id="tanggal" class="form-control" placeholder="Senin, 17 Agustus 2020"
                                 required>
                         </div>
                         <div class="form-group col-5">
