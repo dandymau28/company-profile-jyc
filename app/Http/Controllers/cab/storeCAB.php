@@ -57,7 +57,7 @@ class storeCAB extends Controller
             DB::beginTransaction();
             $uploadFoto = $request->file('foto');
             $name = 'foto'.'-'.trim($request->input('nama_panggilan')).'.'.$uploadFoto->getClientOriginalExtension();
-            $pathPhoto = $uploadFoto->storeAs('public/assets/cab', $name);
+            $pathPhoto = $uploadFoto->storeAs('public/cab', $name);
         
             //identitas cab
             $cab = new CAB;
