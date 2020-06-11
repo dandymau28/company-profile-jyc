@@ -140,7 +140,7 @@
                 Agama : {{ $cab->agama ? $cab->agama : "-" }}
             </div>
             <div class="item">
-                Jadwal Audisi : {{ $jadwal->tanggal }}
+                Jadwal Audisi : {{ Carbon\Carbon::parse($jadwal->tanggal)->locale('id')->format('d M Y') }}
             </div>
             <div class="item">
                 Dari mana Anda tahu tentang JYC : {{ $cab->info_jyc }}
