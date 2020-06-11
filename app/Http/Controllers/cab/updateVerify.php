@@ -10,6 +10,7 @@ use App\Http\Controllers\cab\cabController as Pdf;
 use DB;
 use App\Mail\verifMail;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Auth;
 
 class updateVerify extends Controller
 {
@@ -17,10 +18,12 @@ class updateVerify extends Controller
     {
         try {
             DB::beginTransaction();
+            $user_id = Auth::id();
             $update = DB::table('kode_pembayaran_cab')
                 ->where('id_cab',$id)
                 ->update([
-                    'status' => 'paid'
+                    'status' => 'paid',
+                    'verified_by' => $user_id
                 ]);
             DB::commit();
         } catch (Exception $e) {
