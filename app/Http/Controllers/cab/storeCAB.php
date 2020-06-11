@@ -61,7 +61,7 @@ class storeCAB extends Controller
         
             //identitas cab
             $cab = new CAB;
-            $cab->foto = $pathPhoto;
+            $cab->foto = 'cab/'.$name;
             $cab->nama_lengkap = $request->input('nama_lengkap');
             $cab->nik = $request->input('nik');
             $cab->no_passport = $request->input('no_passport');
