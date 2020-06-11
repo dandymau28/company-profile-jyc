@@ -28,6 +28,7 @@ Route::get('/coming-soon', function () {
 //Oprec
 Route::get('/pendaftaran','cab\viewForm@create');
 Route::post('/pendaftaran','cab\storeCAB@store');
+
 //Prorotype tampilan mail
 Route::get('/kegiatan/oprec/mail1', function () {
     return view('mail.kandidat', ["title" => "Terimakasih telah mendaftar"]);
