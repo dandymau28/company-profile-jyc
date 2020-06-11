@@ -15,16 +15,18 @@ class verifMail extends Mailable
     public $kode;
     public $pdf;
     public $nama;
+    public $link;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($kode, $nama)
+    public function __construct($kode, $nama, $link)
     {
         $this->kode = $kode;
         $this->nama = $nama;
+        $this->link = $link;
         // $this->pdf = $pdf;
     }
 
@@ -39,7 +41,7 @@ class verifMail extends Mailable
 
         return $this->view('mail.verified')
                     ->subject('Berhasil Pembayaran!')
-                    ->with(['nama' => $this->nama])
+                    ->with(['nama' => $this->nama, 'linkGrup' => $this->link])
                     // ->with(['kode' => $this->kode]);
                     ->attachData($pdf->exportPDF($this->kode), 'data-diri.pdf', [
                         'mime' => 'application/pdf'
