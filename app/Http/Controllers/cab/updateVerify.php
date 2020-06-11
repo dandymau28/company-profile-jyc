@@ -31,6 +31,8 @@ class updateVerify extends Controller
         
         $cab = CAB::find($id)->kodebayar()->first();
         $data = DB::table('cab')->where('id',$id)->first();
+        $audisiCAB = CAB::find($id)->audisi()->first();
+        $linkGrup = $audisiCAB->link_grup;
 
         $kode_bayar = $cab->kode_bayar;
         $nama = $data->nama_panggilan;
@@ -39,7 +41,7 @@ class updateVerify extends Controller
 
         //send email
         Mail::to($data->email)
-            ->queue(new verifMail($kode_bayar, $nama));
+            ->queue(new verifMail($kode_bayar, $nama, $linkGrup));
 
         return back()->with('success','berhasil verifikasi');
     }

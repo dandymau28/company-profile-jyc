@@ -55,6 +55,8 @@
             <h4 class="text-center">Dear, {{ $nama }}</h4>
             <h5>Pembayaranmu telah berhasil!</h5>
             <h5>Selanjutnya, silahkan cetak form dibawah ini. Form <b>WAJIB</b> dibawa saat audisi.</h5>
+            <h5>Jangan lupa untuk bergabung ke dalam grup agar tidak ketinggalan informasi :)</h5>
+            <a href="{{ $linkGrup }}">Link Grup Audisi</a>
         </div>
     </div>
     <a href="http://127.0.0.1:8000/kegiatan/oprec/form/{{$kode}}">Form Data Diri</a>

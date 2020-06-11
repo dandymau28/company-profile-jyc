@@ -125,7 +125,7 @@
                                 <div class="form-row">
                                     <div class="col form-group">
                                         <label for="email">Email <span class="text-danger"><strong>*</strong></span></label>
-                                        <input id="email" oninput="this.className='form-control'" name="email" type="email"
+                                        <input id="email" oninput="this.className='form-control'" name="email" type="text"
                                          class="form-control wajib"
                                             placeholder="anisanurul69@gmail.com" required>
                                     </div>
@@ -184,19 +184,19 @@
                                 <div class="form-group">
                                     <label for="info_jyc">Dari mana Anda mengetahui tentang JYC ? <span class="text-danger"><strong>*</strong></span></label>
                                     <textarea name="info_jyc" oninput="this.className='form-control'" id="info_jyc" class="form-control wajib" rows="2"
-                                        placeholder="Ceritakan darimana anda mengetahui informasi tentang JYC selama ini!"
+                                        placeholder="Ceritakan darimana anda mengetahui informasi tentang JYC selama ini"
                                         required></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="tentang_jyc">Apa yang Anda ketahui tentang JYC ? <span class="text-danger"><strong>*</strong></span></label>
                                     <textarea name="tentang_jyc" oninput="this.className='form-control'" id="tentang_jyc" class="form-control wajib" rows="2"
-                                        placeholder="Ceritakan apa saja hal-hal atau informasi yang anda ketahui tentang JYC!"
+                                        placeholder="Ceritakan apa saja hal-hal atau informasi yang anda ketahui tentang JYC"
                                         required></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="motivasi">Motivasi mengikuti JYC ? <span class="text-danger"><strong>*</strong></span></label>
                                     <textarea name="motivasi" oninput="this.className='form-control'" id="motivasi" class="form-control wajib" rows="2"
-                                        placeholder="Jelaskan apa yang menjadi motivasi anda untuk bergabung menjadi anggota JYC!"
+                                        placeholder="Jelaskan apa yang menjadi motivasi anda untuk bergabung menjadi anggota JYC"
                                         required></textarea>
                                 </div>
                             </div>

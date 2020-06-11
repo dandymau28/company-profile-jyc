@@ -16,7 +16,7 @@ class prestasiController extends Controller
                 ->get();
 
             $gelar = DB::table('penghargaan')
-                ->latest()
+                // ->latest()
                 ->get();
         } catch (Exception $e) {
             $prestasi = $e->getMessage();
