@@ -183,7 +183,8 @@ span.navbar-toggler-icon {
     display: none;
     -webkit-border-radius: 60px;
     -moz-border-radius: 60px;
-    border-radius: 60px
+    border-radius: 60px;
+    z-index: 5000;
 }
 
 #scroll span {
