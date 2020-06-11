@@ -21,9 +21,10 @@ class cabController extends Controller
 {
     public function countCAB()
     {
-        $oprec = DB::table('info_oprec')->whereNull('deleted_at')->latest()->first();
+        $oprec = DB::table('info_oprec')->whereNull('deleted_at')->where('status','buka')->latest()->first();
 
         $data = DB::table('cab')
+                ->whereNull('deleted_at')
                 ->where('batch', $oprec->batch)
                 ->count();
 
@@ -86,7 +87,7 @@ class cabController extends Controller
 
     public function configOprec()
     {
-        $data = DB::table('info_oprec')->whereNull('deleted_at')->latest()->first();
+        $data = DB::table('info_oprec')->whereNull('deleted_at')->where('status','buka')->latest()->first();
 
         return $data;
     }
