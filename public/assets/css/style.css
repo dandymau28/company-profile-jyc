@@ -413,11 +413,16 @@ li.breadcrumb-item {
         margin: auto;
     }
 
-    div#lightgallery>a>img.img-fluid {
+    div#lightgallery>a>img.img-galeri {
         /* max-width: auto; */
-        width: 375px !important;
+        width: 375px;
         height: 250px;
     }
+}
+
+div#lightgallery>a>img.img-galeri {
+    max-width: 100%;
+    height: auto;
 }
 
 .prestasi h3 {
