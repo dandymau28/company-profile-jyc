@@ -171,7 +171,7 @@
                                     </div>
                                     <div class="col form-group">
                                         <label for="foto">Pas Foto <span class="text-danger"><strong>* </strong></span><small>(3x4)</small></label>
-                                        <input id="foto" oninput="this.className='form-control'" name="foto" type="file"
+                                        <input id="foto" onchange="this.className='form-control'" name="foto" type="file"
                                          class="form-control wajib" required>
                                     </div>
                                 </div>
