@@ -104,8 +104,8 @@
                 </div>
                 <div id="lightgallery" class="my-3 row">
                     @foreach ($fotos as $foto)
-                    <a class="col-12 col-sm-6 col-md-4 pb-2 pb-md-4" href="" data-responsive="{{Storage::url($foto->alamat_foto)}}" data-src="{{Storage::url($foto->alamat_foto)}}" data-sub-html="<h4>{{ $foto->nama_kategori }}</h4><p>{{ $foto->deskripsi }}</p>">
-                        <img class="img-responsive img-fluid" src="{{Storage::url($foto->alamat_foto)}}">
+                    <a class="col-12 col-sm-6 col-md-4 pb-1 pb-md-1" href="" data-responsive="{{Storage::url($foto->alamat_foto)}}" data-src="{{Storage::url($foto->alamat_foto)}}" data-sub-html="<h4>{{ $foto->nama_kategori }}</h4><p>{{ $foto->deskripsi }}</p>">
+                        <img class="img-responsive img-galeri" src="{{Storage::url($foto->alamat_foto)}}">
                     </a>
                     @endforeach
                 </div>

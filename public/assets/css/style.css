@@ -413,9 +413,10 @@ li.breadcrumb-item {
         margin: auto;
     }
 
-    div#lightgallery>a>img.img-fluid {
+    div#lightgallery>a>img.img-galeri {
         width: 375px;
         height: 250px;
+        vertical-align: auto;
     }
 }
 
