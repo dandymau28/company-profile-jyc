@@ -73,6 +73,45 @@
     <!-- Daftar Pemenang -->
     <div class="container daftar-pemenang">
             <h3>DAFTAR PEMENANG</h3>
+
+            <div class="row my-5 text-center justify-content-around">
+                <div class="col-lg-3 my-3" data-aos="flip-left" data-aos-duration="1500">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Juara 1</h4>
+                            <p class="card-text">SMAN 47 Jakarta</p>
+                        </div>
+                            <img class="card-img img-fluid" src="{{asset('assets/img/jncc/pemenang.png')}}" alt="img">
+                        <div class="card-body tim-pemenang">
+                            <h4>FABAVOSSA YOUTH CHOIR</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 my-3" data-aos="flip-left" data-aos-duration="1500">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Juara 2</h4>
+                            <p class="card-text">SMAN 2 Tangerang</p>
+                        </div>
+                            <img class="card-img img-fluid" src="{{asset('assets/img/jncc/pemenang.png')}}" alt="img">
+                        <div class="card-body tim-pemenang">
+                            <h4>ARUTALA CHOIR</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 my-3" data-aos="flip-left" data-aos-duration="1500">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Juara 3</h4>
+                            <p class="card-text">SMAN 71 Jakarta</p>
+                        </div>
+                            <img class="card-img img-fluid" src="{{asset('assets/img/jncc/pemenang.png')}}" alt="img">
+                        <div class="card-body tim-pemenang">
+                            <h4>GITA PATRIA SAPTA CHOIR</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
             <div class="row my-5 text-center">
                 <div class="col-lg-3 my-3" data-aos="flip-left" data-aos-duration="1500">
