@@ -413,7 +413,7 @@ li.breadcrumb-item {
         margin: auto;
     }
 
-    #lightgallery a img.img-fluid {
+    div#lightgallery>a>img.img-fluid {
         width: 375px;
         height: 250px;
     }
