@@ -413,10 +413,10 @@ li.breadcrumb-item {
         margin: auto;
     }
 
-    div#lightgallery>a>img.img-galeri {
-        width: 375px;
+    div#lightgallery>a>img.img-fluid {
+        max-width: auto;
+        width: 375px !important;
         height: 250px;
-        vertical-align: auto;
     }
 }
 
