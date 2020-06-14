@@ -183,106 +183,122 @@
         <table class="table table-bordered text-center" data-aos="fade-up" data-aos-duration="1500">
             <thead>
             <tr>
-                <th>NO</th>
-                <th>PESERTA TERDAFTAR</th>
-                <th>PESERTA HADIR</th>
+                <th>PERINGKAT</th>
+                <th>ASAL SEKOLAH</th>
+                <th>PADUAN SUARA</th>
+                <th>MEDAL</th>
             </tr>
             </thead>
             <tbody>
             <tr>
                 <td>1</td>
-                <td>SMAN 71 Jakarta</td>
-                <td>SMAN 71 JAKARTA</td>
+                <td>SMAN 47 JAKARTA</td>
+                <td>FABAVOSSA YOUTH CHOIR</td>
+                <td>GOLD</td>
             </tr>
             <tr>
                 <td>2</td>
-                <td>SMKN 26 Jakarta</td>
-                <td>SMKN 26 Jakarta</td>
+                <td>SMAN 2 TANGERANG SELATAN</td>
+                <td>ARUTALA CHOIR</td>
+                <td>GOLD</td>
             </tr>
             <tr>
                 <td>3</td>
-                <td>SMKN 16 Jakarta</td>
-                <td>SMKN 16 Jakarta</td>
+                <td>SMAN 71 JAKARTA</td>
+                <td>GITA PATRIA SAPTA EKA</td>
+                <td>GOLD</td>
             </tr>
             <tr>
                 <td>4</td>
-                <td>SMAN 3 Depok</td>
-                <td>SMAN 3 Depok</td>
+                <td>SMAN 48 Jakarta</td>
+                <td>GITASKARA</td>
+                <td>GOLD</td>
             </tr>
             <tr>
                 <td>5</td>
-                <td>SMAN 76 Jakarta</td>
-                <td>SMAN 76 Jakarta</td>
+                <td>SMAN 1 GARUT</td>
+                <td>PSM 91</td>
+                <td>GOLD</td>
             </tr>
             <tr>
                 <td>6</td>
-                <td>SMAN 13 Jakarta</td>
-                <td>SMAN 13 Jakarta</td>
+                <td>SMAN 68 Jakarta</td>
+                <td>TOSLA 68</td>
+                <td>SILVER</td>
             </tr>
             <tr>
                 <td>7</td>
-                <td>SMAN 68 Jakarta</td>
-                <td>SMAN 68 Jakarta</td>
+                <td>SMAN 61 Jakarta</td>
+                <td>GRADEVOLE</td>
+                <td>SILVER</td>
             </tr>
             <tr>
                 <td>8</td>
-                <td>SMAN 2 Tangsel</td>
-                <td>SMAN 2 Tangsel</td>
+                <td>SMAN 96 Jakarta</td>
+                <td>BUNGA BANGSA CHOIR</td>
+                <td>SILVER</td>
             </tr>
             <tr>
                 <td>9</td>
-                <td>SMAN 61 Jakarta</td>
-                <td>SMAN 61 Jakarta</td>
+                <td>SMA YASPEN TUGU IBU 1 DEPOK</td>
+                <td>TUSCHO CHOIR</td>
+                <td>SILVER</td>
             </tr>
             <tr>
                 <td>10</td>
-                <td>SMAN 47 Jakarta</td>
-                <td>SMAN 47 Jakarta</td>
+                <td>SMAN 3 Depok</td>
+                <td>MEZZOVOICES CHOIR</td>
+                <td>SILVER</td>
             </tr>
             <tr>
                 <td>11</td>
-                <td>SMAN 1 Karawang</td>
-                <td>SMAN 1 Karawang</td>
+                <td>SMAN 13 Jakarta</td>
+                <td>SHYMPHONY OF KHATULISTIWA</td>
+                <td>SILVER</td>
             </tr>
             <tr>
                 <td>12</td>
-                <td>SMAN 96 Jakarta</td>
-                <td>SMAN 96 Jakarta</td>
+                <td>SMAN 1 Karawang</td>
+                <td>NADA VOKALIA SMANSAKA</td>
+                <td>SILVER</td>
             </tr>
             <tr>
                 <td>13</td>
-                <td>SMA Tugu Ibu</td>
-                <td>SMA Tugu Ibu</td>
+                <td>SMAN 7 Tangsel</td>
+                <td>VOSEUTH CHOIR</td>
+                <td>BRONZE</td>
             </tr>
             <tr>
                 <td>14</td>
-                <td>SMAN 7 Tangsel</td>
-                <td>SMAN 7 Tangsel</td>
+                <td>SMAN 76 Jakarta</td>
+                <td>VENIX CHOIR</td>
+                <td>BRONZE</td>
             </tr>
             <tr>
                 <td>15</td>
-                <td>SMAN 1 Garut</td>
-                <td>SMAN 1 Garut</td>
+                <td>SMKN 16 Jakarta</td>
+                <td>NAMBLAS CHOIR</td>
+                <td>BRONZE</td>
             </tr>
             <tr>
                 <td>16</td>
-                <td>SMAN 48 Jakarta</td>
-                <td>SMAN 48 Jakarta</td>
+                <td>SMKN 26 Jakarta</td>
+                <td>ADHIGANA</td>
+                <td>BRONZE</td>
             </tr>
             <tr>
                 <td>17</td>
                 <td>SMAN 38 Jakarta</td>
-                <td>SMAN 38 Jakarta</td>
-            </tr>
-            <tr>
-                <td>18</td>
-                <td>SMAN 81 Jakarta</td>
-                <td></td>
+                <td>RESTYER VOICE</td>
+                <td>BRONZE</td>
             </tr>
             </tbody>
         </table>
     </div>
-
+    <div class="container d-flex justify-content-center mb-md-5 mb-3">
+        <iframe width="854" height="480" src="https://www.youtube.com/embed/pw5G39qGpK8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    
     @include('templates.footer')
 </body>
 @include('templates.foot')
