@@ -134,6 +134,7 @@ span.navbar-toggler-icon {
     }
 
 }
+
 /* ====================================== */
 
 /**** FOOTER****/
@@ -412,6 +413,11 @@ li.breadcrumb-item {
         margin: auto;
     }
 
+    div#lightgallery>a>img.img-fluid {
+        /* max-width: auto; */
+        width: 375px;
+        height: 250px;
+    }
 }
 
 .prestasi h3 {

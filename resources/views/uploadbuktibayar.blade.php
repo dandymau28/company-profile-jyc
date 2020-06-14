@@ -96,6 +96,9 @@
                                     <option value={{ $item->id }}>{{ $item->tanggal }}</option>
                                     @endforeach
                                 </select>
+                                <div class="alert alert-danger" role="alert">
+                                    Jadwal yang sudah dipilih, tidak dapat diganti dengan alasan apapun!
+                                  </div>
                                 <div class="row">
                                     <div class="col">
                                         <label for="image">Silahkan unggah bukti pembayaran</label>
