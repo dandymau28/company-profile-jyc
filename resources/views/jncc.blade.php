@@ -81,7 +81,7 @@
                             <h4 class="card-title">Juara 1</h4>
                             <p class="card-text">SMAN 47 Jakarta</p>
                         </div>
-                            <img class="card-img img-fluid" src="{{asset('assets/img/jncc/pemenang.png')}}" alt="img">
+                            <img class="card-img img-fluid" src="{{asset('assets/img/jncc/juara1.jpg')}}" alt="img">
                         <div class="card-body tim-pemenang">
                             <h4>FABAVOSSA YOUTH CHOIR</h4>
                         </div>
@@ -93,7 +93,7 @@
                             <h4 class="card-title">Juara 2</h4>
                             <p class="card-text">SMAN 2 Tangerang</p>
                         </div>
-                            <img class="card-img img-fluid" src="{{asset('assets/img/jncc/pemenang.png')}}" alt="img">
+                            <img class="card-img img-fluid" src="{{asset('assets/img/jncc/juara2.jpg')}}" alt="img">
                         <div class="card-body tim-pemenang">
                             <h4>ARUTALA CHOIR</h4>
                         </div>
@@ -105,7 +105,7 @@
                             <h4 class="card-title">Juara 3</h4>
                             <p class="card-text">SMAN 71 Jakarta</p>
                         </div>
-                            <img class="card-img img-fluid" src="{{asset('assets/img/jncc/pemenang.png')}}" alt="img">
+                            <img class="card-img img-fluid" src="{{asset('assets/img/jncc/juara3.jpg')}}" alt="img">
                         <div class="card-body tim-pemenang">
                             <h4>GITA PATRIA SAPTA CHOIR</h4>
                         </div>
@@ -121,7 +121,7 @@
                             <h4 class="card-title">Konduktor Terbaik</h4>
                             <p class="card-text">SMAN 47 Jakarta</p>
                         </div>
-                            <img class="card-img img-fluid" src="{{asset('assets/img/jncc/pemenang.png')}}" alt="img">
+                            <img class="card-img img-fluid" src="{{asset('assets/img/jncc/konduktor.jpg')}}" alt="img">
                         <div class="card-body tim-pemenang">
                             <h4>FABAVOSSA YOUTH CHOIR</h4>
                         </div>
@@ -135,7 +135,7 @@
                             <h4 class="card-title">Koreografi Terbaik</h4>
                             <p class="card-text">SMAN 71 JAKARTA</p>
                         </div>
-                            <img class="card-img img-fluid" src="{{asset('assets/img/jncc/pemenang.png')}}" alt="img">
+                            <img class="card-img img-fluid" src="{{asset('assets/img/jncc/koreo.jpg')}}" alt="img">
                         <div class="card-body tim-pemenang">
                             <h4>GITA PATRIA SAPTA EKA</h4>
                         </div>
@@ -150,7 +150,7 @@
                             <h4 class="card-title">Kostum Terbaik</h4>
                             <p class="card-text">SMAN 68 JAKARTA</p>
                         </div>
-                            <img class="card-img img-fluid" src="{{asset('assets/img/jncc/pemenang.png')}}" alt="img">
+                            <img class="card-img img-fluid" src="{{asset('assets/img/jncc/kostum.jpg')}}" alt="img">
                         <div class="card-body tim-pemenang">
                             <h4>TOSLA 68</h4>
                         </div>
@@ -164,7 +164,7 @@
                             <h4 class="card-title">Favorit Sosial Media</h4>
                             <p class="card-text">SMKN 38 JAKARTA</p>
                         </div>
-                            <img class="card-img img-fluid" src="{{asset('assets/img/jncc/pemenang.png')}}" alt="img">
+                            <img class="card-img img-fluid" src="{{asset('assets/img/jncc/favorit.jpg')}}" alt="img">
                         <div class="card-body tim-pemenang">
                             <h4>RESTYER VOICE</h4>
                         </div>
@@ -176,7 +176,7 @@
         </div>
 
     <!-- Daftar Peserta -->
-    <div class="container daftar-peserta">
+    <div class="container daftar-peserta table-responsive">
         <h3>DAFTAR PESERTA</h3>
 
         <!-- Tabel Daftar Peserta -->
