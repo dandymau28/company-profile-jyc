@@ -33,10 +33,10 @@ class updateBerita extends Controller
                 //slug judul
                 $slug = Str::slug($request->judul,'-');
 
-                $checkSlug = ['slug' => $slug];
-                Validator::make($checkSlug, [
-                    'slug' => 'unique:berita,slug,NULL,id,deleted_at,NULL',
-                ], $messages)->validate();
+                // $checkSlug = ['slug' => $slug];
+                // Validator::make($checkSlug, [
+                //     'slug' => 'unique:berita,slug,NULL,id,deleted_at,NULL',
+                // ], $messages)->validate();
 
 
                 //upload foto

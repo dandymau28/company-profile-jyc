@@ -45,7 +45,7 @@ class updateVerify extends Controller
 
         //send email
         Mail::to($data->email)
-            ->queue(new verifMail($kode_bayar, $nama, $linkGrup, $nama_lengkap));
+            ->queue(new verifMail($kode_bayar, $nama, $linkGrup, $nama_panjang));
 
         return back()->with('success','berhasil verifikasi');
     }
