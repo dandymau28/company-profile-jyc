@@ -571,6 +571,6 @@ a.nav-link.active:hover {
     text-decoration: none;
 }
 
-.statcounter {
+span.statcounter {
     display: none;
 }
