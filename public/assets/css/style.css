@@ -570,3 +570,7 @@ a.nav-link.active:hover {
     background-color: #b71c1cf2;
     text-decoration: none;
 }
+
+.statcounter {
+    display: none;
+}
