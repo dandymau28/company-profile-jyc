@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
+    @include('templates.head')
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    @include('templates.head')
     <link  href="{{asset('lightGallery-master/dist/css/lightgallery.css')}}" rel="stylesheet">
     {{-- <link  href="{{asset('assets/css/jquery.carousel-3d.default.css')}}" rel="stylesheet"> --}}
     <title>{{$title}} - Jakarta Youth Choir</title>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    @include('templates.head')
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    @include('templates.head')
     <title>{{$title}} - Jakarta Youth Choir</title>
 </head>
 <body>

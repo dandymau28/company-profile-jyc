@@ -1,3 +1,11 @@
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-170960007-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-170960007-1');
+</script>
 <meta content="telephone=no" name="format-detection">
 
 <!-- Boostrap 4.0 -->
@@ -21,4 +29,6 @@
 <link rel="stylesheet" href="{{ asset('assets') }}/css/style.css">
 <link rel="icon" type="image/png" href="{{ asset('assets') }}/img/logo-jyc-bulat.png" />
 <span class="d-none" id="nav-active">{{$nav}}</span>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
 
