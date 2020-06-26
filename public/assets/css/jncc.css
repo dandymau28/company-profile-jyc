@@ -2,8 +2,8 @@
 
 /* JNCC PAGE - BANNER JNCC */
 .banner-jncc {
-    background-image: url(../img/jncc/banner-jncc.png);
-    background-size: cover;
+    /* background-image: url(../img/jncc/banner-jncc.png); */
+    /* background-size: cover; */
     height: 1000px;
 }
 
@@ -16,7 +16,6 @@
         background-size: cover;
     }
 }
-
 
 .banner-jncc h1 {
     color: #FFFFFF;

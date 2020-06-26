@@ -13,8 +13,8 @@
     @include('templates.navbar')
 
     <!-- Jumbotron JNCC -->
-    <div class="jumbotron jumbotron-fluid banner-jncc">
-        <div class="container">
+    <div class="parallax-window banner-jncc" data-parallax="scroll" data-image-src="{{ asset('assets/img/jncc/banner-jncc.png') }}">
+        <div class="container text-center">
             <div class="row align-items-center">
                 <div class="col" data-aos="fade-right" data-aos-duration="2000">
                     <h1>JNCC</h1>
@@ -25,6 +25,20 @@
             </div>
         </div>
     </div>
+
+    <!-- Jumbotron JNCC -->
+    <!-- <div class="jumbotron jumbotron-fluid banner-jncc">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col" data-aos="fade-right" data-aos-duration="2000">
+                    <h1>JNCC</h1>
+                </div>
+                <div class="col" data-aos="fade-left" data-aos-duration="2000">
+                    <p>Jakarta<br>National<br>Choir<br>Competition</p>
+                </div>
+            </div>
+        </div>
+    </div> -->
 
     <!-- Text JNCC -->
     <div class="container">
@@ -302,6 +316,7 @@
     @include('templates.footer')
 </body>
 @include('templates.foot')
+<script src="{{ asset('assets/js/parallax.js') }}"></script>
 @push('js')
     <script src="{{ asset('assets/js/moment.js') }}"></script>
 @endpush
