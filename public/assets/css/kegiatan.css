@@ -175,6 +175,14 @@
     font-weight: bolder;
 }
 
+.JNCC a {
+    color:#e92323;
+}
+
+.JNCC a:hover {
+    color: #921717;
+}
+
 /* KEGIATAN - JNCC MOBILE */
 @media (max-width: 767.98px) {
     .JNCC h3 {

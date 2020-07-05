@@ -49,7 +49,10 @@
                 <div class="col text-center pt-3">
                     <h3 class="text-bold">COMING SOON</h3>
                     <a href="{{route('jncc')}}"><h5>JNCC</h5></a>
-                    <p>Jakarta National Choir Competition </p>
+                    <p>Jakarta National Choir Competition</p>
+                    <h3>Vol. 2</h3>
+                    <hr>
+                    <p>Dikarenakan adanya pandemi COVID-19, dengan berat hati pelaksanaan JNCC Vol.2 akan ditunda hingga situasi kembali kondusif. Follow dan nyalakan notifikasi pada akun Instagram <a href="https://www.instagram.com/jkt_ncc/">@jkt_ncc</a> untuk pemberitahuan lebih lanjut</p>
                 </div>
             </div>
         </div>
