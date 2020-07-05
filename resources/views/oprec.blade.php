@@ -26,9 +26,11 @@
                     <div class="row text-dark bg-light p-3 p-sm-4 p-md-5 text-left mt-2">
                         <div class="col-12">
                             <h4 class="pt-2">Mohon maaf</h4>
-                            <h5>Pendaftaran belum dibuka</h5>
-                            <p class="text-justify">Mohon maaf, Jakarta Youth Choir tidak sedang menerima anggota baru,
-                            pantau terus sosial media Jakarta Youth Choir agar tidak ketinggalan informasi Oprec :)</p>
+                            <h5>Pendaftaran ditunda</h5>
+                            <p class="text-justify">Dikarenakan pandemi COVID-19 yang belum mereda, 
+                                dengan berat hati pelaksanaan Penerimaan Anggota Baru JYC akan ditunda hingga 
+                                situasi kembali kondusif. Jangan lupa follow dan nyalakan notifikasimu pada akun 
+                                instagram @jktyouthchoir agar tidak ketinggalan informasi penting selanjutnya ya!</p>
                             <!-- <p><strong>CP: +62812-8921-8785 (Febri)</strong></p> -->
                         </div>
                         <div class="col-12 pt-3">
