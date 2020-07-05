@@ -61,12 +61,12 @@
         <div class="container">
             <h2 class="text-center pt-3"><a href="{{ route('oprec') }}">Penerimaan 2020</a></h2>
             <div class="row latihan-text">
-                <p class="col-md-6 pt-4" data-aos="fade-up" data-aos-duration="1500">Eksis di dunia paduan suara, Jakarta Youth Choir (JYC) memerlukan sebuah regenerasi seiring berjalannya waktu. Hal ini diperlukan untuk menjadikan JYC lebih besar dan lebih berkembang dari sebelumnya. Kegiatan <a href="{{ route('oprec') }}"><em>Open Recruitment</em></a> merupakan salah satu aplikasi kegiatan yang dilaksanakan oleh JYC setiap tahunnya. Kegiatan ini untuk mencari dan menjaring pemuda pemudi berbakat dalam bidang seni khususnya dibidang paduan suara serta memiliki visi, misi, maupun tujuan yang sama dengan JYC.
+                <p class="col-md-6 pt-4" data-aos="fade-up" data-aos-duration="1500">Eksis di dunia paduan suara, Jakarta Youth Choir (JYC) memerlukan sebuah regenerasi seiring berjalannya waktu. Hal ini diperlukan untuk menjadikan JYC lebih besar dan lebih berkembang dari sebelumnya. Kegiatan <a href="{{ route('oprec') }}"><em>Open Recruitment</em></a> merupakan salah satu aplikasi kegiatan yang dilaksanakan oleh JYC setiap tahunnya. Kegiatan ini untuk mencari dan menjaring pemuda pemudi berbakat dalam bidang seni khususnya di bidang paduan suara serta memiliki visi, misi, maupun tujuan yang sama dengan JYC.
                 </p>
                 <p class="col-md-6 pt-4" data-aos="fade-up" data-aos-duration="1500">Dibawah naungan DISPORA DKI Jakarta, JYC merupakan wadah yang sangat tepat untuk
                     tumbuh kembang para pemuda sekitar Ibukota untuk berkontribusi aktif mengharumkan DKI
                     Jakarta maupun Indonesia. Setiap waktunya, kemampuan para <em>chorister</em> JYC terus
-                    diasah dengan latihan rutin yang diorganisasikan langsung oleh Kepengurusan JYC dan dilatih
+                    diasah dengan latihan rutin yang diatur langsung oleh Kepengurusan JYC dan dilatih
                     oleh <em>choirmaster</em> kebanggaan Septo Adi Kristanto Simanjuntak, atau biasa dipanggil Kak Cepo,
                     beserta tim kepelatihan.</b>
                 </p>
