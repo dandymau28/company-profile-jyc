@@ -12,18 +12,23 @@
 */
 
 // Route::get('/', function () {
-//     return view('beranda', ["title" => "Beranda"]);
-// })->name('beranda');
+    //     return view('beranda', ["title" => "Beranda"]);
+    // })->name('beranda');
+    
+// Comingsoon Page
+Route::get('/coming-soon', function () {
+    return view('comingsoon.index');
+})->name('coming-soon');
+
+Route::get('{any}', function () {
+    return view('comingsoon.index');
+})->where('any','.*');
 
 // JNCC Page
 Route::get('/kegiatan/jncc', function () {
     return view('jncc', ["title" => "Jakarta National Choir Competition", "nav" => "kegiatan"]);
 })->name('jncc');
 
-// Comingsoon Page
-Route::get('/coming-soon', function () {
-    return view('comingsoon.index');
-})->name('coming-soon');
 
 //Oprec
 Route::get('/pendaftaran','cab\viewForm@create');
