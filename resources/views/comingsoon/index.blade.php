@@ -5,13 +5,15 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>WeBuild - Bootstrap Coming Soon Template</title>
+    <title>Jakarta Youth Choir</title>
     <meta content="" name="descriptison">
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="{{asset('comingsoon')}}/assets/img/favicon.png" rel="icon">
-    <link href="{{asset('comingsoon')}}/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link rel="icon" type="image/png" href="{{ asset('assets') }}/img/logo-jyc-bulat.png" />
+
+    {{-- <link href="{{asset('comingsoon')}}/assets/img/favicon.png" rel="icon">
+    <link href="{{asset('comingsoon')}}/assets/img/apple-touch-icon.png" rel="apple-touch-icon"> --}}
 
     <!-- Google Fonts -->
     <link
@@ -56,8 +58,8 @@
     <section id="hero">
         <div class="hero-container">
             <h1>JAKARTA YOUTH CHOIR</h1>
-            <h2>We're working hard to improve our website and we'll ready to launch after</h2>
-            <div class="countdown" data-count="2020/4/6" data-template="%w weeks %d days <br> %H:%M:%S"></div>
+            <h2>Mohon maaf, halaman sedang dalam perbaikan.</h2>
+            {{-- <div class="countdown" data-count="2020/4/6" data-template="%w weeks %d days <br> %H:%M:%S"></div> --}}
         </div>
     </section><!-- End Hero -->
 
