@@ -20,9 +20,9 @@ Route::get('/coming-soon', function () {
     return view('comingsoon.index');
 })->name('coming-soon');
 
-// Route::get('{any}', function () {
-//     return view('comingsoon.index');
-// })->where('any','.*');
+Route::get('{any}', function () {
+    return view('comingsoon.index');
+})->where('any','.*');
 
 // JNCC Page
 Route::get('/kegiatan/jncc', function () {
